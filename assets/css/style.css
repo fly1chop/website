@@ -2581,6 +2581,13 @@ section {
 @media (max-width: 992px) {
   .mt-10{
     margin-top:0.2rem;
-    height: 32me0px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mt-10{
+    margin-top:0.2rem;
+    height: 240px;
   }
 }
