@@ -2575,6 +2575,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   height: 550px;
+
 /*    -webkit-animation: fadeIn 0.5s ease-out;
   animation: fadeIn 0.5s ease-out;*/
 }
@@ -2585,9 +2586,9 @@ section {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   .mt-10{
     margin-top:0.2rem;
-    height: 240px;
+    height: 180px;
   }
 }
