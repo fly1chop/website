@@ -596,7 +596,7 @@ h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #0b2341;
+  color: black;
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
@@ -605,7 +605,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {
-  color: rgba(27,80,118,255);
+  color: rgba(27,80,189,255);
 }
 
 .nav-menu .drop-down ul {
