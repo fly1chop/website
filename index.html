@@ -14,6 +14,7 @@
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link
@@ -101,7 +102,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="staticHome">
       <div class="container2" data-aos="fade-down">
-                        <img class="img-fluid mt-10 moving-img" src="assets/img/slide/wearemoving.png"> 
+                        <img class="img-fluid mt-10 moving-img" src="assets/img/slide/wearemoving.png" data-aos="zoom-in-down" data-aos-duration="700" data-aos-easing="linear"> 
       </div>
     </section>
 
@@ -116,7 +117,7 @@
             url(assets/img/slide/moving_cover2.jpg)">
             <div class="carousel-container" style="padding-bottom: 380px;">
               <div class="container">
-                <img class="img-fluid mt-10 moving-img" src="assets/img/slide/wearemoving.png"> 
+                <img class="img-fluid mt-10 moving-img" src="assets/img/slide/wearemoving.png" data-aos="zoom-in-down" data-aos-duration="700" data-aos-easing="linear"> 
 <!--                 <h2 class="animate__animated animate__fadeInUp"
                   style="text-align: left; font-size:350%; color:white">
                   <br>
@@ -539,8 +540,12 @@
       <script src="assets/vendor/counterup/counterup.min.js"></script>
       <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
       <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
       <!-- Template Main JS File -->
       <script src="assets/js/main.js"></script>
     </body>

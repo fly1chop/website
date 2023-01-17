@@ -1867,6 +1867,8 @@ section {
   animation: fadeIn 0.5s ease-out;
 }
 
+
+
 .specials .details h3 {
   font-size: 26px;
   font-weight: 600;
@@ -2573,10 +2575,12 @@ section {
   margin-left: auto;
   margin-right: auto;
   height: 550px;
+/*    -webkit-animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;*/
 }
 @media (max-width: 992px) {
   .mt-10{
     margin-top:0.2rem;
-    height: 350px;
+    height: 320px;
   }
 }
