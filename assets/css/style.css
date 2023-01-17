@@ -605,7 +605,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {
-  color: rgba(27,80,189,255);
+  color: rgba(27,80,235,255);
 }
 
 .nav-menu .drop-down ul {
@@ -2581,6 +2581,6 @@ section {
 @media (max-width: 992px) {
   .mt-10{
     margin-top:0.2rem;
-    height: 320px;
+    height: 32me0px;
   }
 }
