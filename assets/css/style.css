@@ -2574,3 +2574,9 @@ section {
   margin-right: auto;
   height: 600px;
 }
+@media (max-width: 992px) {
+  .mt-10{
+    margin-top:0.2rem;
+    height: 400px;
+  }
+}
