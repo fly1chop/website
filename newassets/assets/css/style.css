@@ -11457,7 +11457,7 @@ animation-play-state: play;
 .proimg{
   border-radius: 15px;
   height:65%;
-  margin-left: 10%;
+  margin-left: 25%;
 }
 @media (max-width: 1200px) {
 .proimg{
