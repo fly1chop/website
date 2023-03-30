@@ -4,6 +4,7 @@ body {
 font-family: 'Ubuntu', sans-serif;
   color: #444444;
   text-align: justify;
+
 }
 
 a {
@@ -10701,6 +10702,11 @@ left: 64%;
   color:rgba(27,80,118,255);
   font-size: 22px;
 }
+.pro-title{
+  color:rgba(27,80,118,255);
+  font-size: 22px;
+  font-weight: 700;
+}
 .specials {
   overflow: hidden;
 }
@@ -10946,6 +10952,9 @@ font-size: 34px;
 }
 .mymt{
   margin-top: 12px;
+}
+.mymt2{
+  margin-top: 60px !important;
 }
 /*.card:hover .card-img-top{
    transform: scale(1.1);
