@@ -11661,6 +11661,7 @@ thead {
 }
 .text-it-only{
   font-style: italic;
+  margin-top: -12px !important;
 }
 .mob-lan{
   display: none !important;
