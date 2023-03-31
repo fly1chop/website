@@ -11693,12 +11693,11 @@ thead {
   margin-top: 120px !important;
 }
 .text-it{
-  font-style: italic;
+/*  font-style: italic;*/
   font-weight: 600;
 }
 .text-it-only{
-  font-style: italic;
-  margin-top: -12px !important;
+  margin-top: -11px !important;
 }
 .mob-lan{
   display: none !important;
