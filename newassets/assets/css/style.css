@@ -11703,7 +11703,7 @@ thead {
 .mob-lan{
   display: none !important;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
     .logo-mob{
       display:block;
     }
@@ -11869,6 +11869,8 @@ thead {
 .table-box{
   padding-left:150px !important;
   padding-right:150px !important;
+
+
 }
   @media (max-width: 1000px) {
 
@@ -11877,26 +11879,46 @@ thead {
   padding-right:40px !important;
 }
     }
+  @media (max-width: 800px) {
+    thead th{
+      font-size: 15px;
+    }
+    td{
+      font-size:14px;
+    }
 
+  }
 table{
   text-align: center;
   background-color: rgba(249, 242, 232, 0.5);
 
 }
 td{
-      padding-top: 15px !important;
+  font-family: 'Cabin', sans-serif;
+
+  padding-top: 15px !important;
   padding-bottom: 15px !important;
+  background-color: rgb(239,239,241)!important;
+  weight:600;
 }
 thead th{
+  font-family: 'Cabin', sans-serif;
+
+  font-size: 18px;
+  weight:600;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  background-color: rgba(187, 155, 101 ) !important;
+  background-color: #a17652 !important;
+
+}
+table.table-bordered {
+
 }
 table.table-bordered > thead > tr > th{
-    border:3px solid white;
+    border:3px solid #F7F7F7;
 }
 table.table-bordered > tbody > tr > td{
-    border:3px solid white;
+    border:3px solid #F7F7F7;
 }
   #specials .section-title2{
     font-size: 19px !important;
@@ -11904,6 +11926,10 @@ table.table-bordered > tbody > tr > td{
   }
 .text-it-no{
   font-style: italic;
+}
+.logo-course{
+  width:100px;
+  margin-bottom: 0;
 }
 /*.table-responsive {
   // Other values...
