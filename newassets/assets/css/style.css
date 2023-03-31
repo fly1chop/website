@@ -475,7 +475,10 @@ h6 {
   font-weight: 700;
 /*  text-shadow: -1px 0 2px gray;*/
 }
-
+.capstone-intro{
+      text-align: justify;
+    text-align-last: center;
+}
 #hero .btn-get-started {
   font-size: 47px;
   display: inline-block;
@@ -490,6 +493,9 @@ h6 {
   color:rgba(254,187,57,255);
   animation: mover 1s infinite  alternate;
 }
+/*.capb{
+  animation: mover 1s infinite  alternate;
+}*/
 @keyframes mover {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
@@ -746,7 +752,9 @@ section {
 .contact {
   padding-bottom: 80px;
 }
-
+.carousel{
+  width:70%;
+}
 .contact .info-box {
   color: #444444;
   background: #fff;
@@ -11459,7 +11467,7 @@ animation-play-state: play;
 }
 .proimg{
   border-radius: 15px;
-  height:65%;
+  height:75%;
   margin-left: 25%;
 }
 @media (max-width: 1200px) {
