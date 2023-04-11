@@ -11175,6 +11175,14 @@ button.btn.btn-link i {
 
 
 }
+@media only screen and (max-width: 401px) {
+  .card{
+    margin-left:29px;
+    margin-right:30px;
+
+  }
+  }
+
 /* Bar Graph Horizontal */
 .bar-graph .year {
 
@@ -11883,11 +11891,20 @@ thead {
       width: 70%;
     }
   }
-  @media (max-width: 500px) {
+
+    @media (max-width: 600px) {
         #services .card{
 /*        padding: 0 !important;
         margin: 0 !important;*/
-        margin-left:55px !important;
+        margin-left:75px !important;
+    }
+
+  }
+    @media (max-width: 401px) {
+        #services .card{
+/*        padding: 0 !important;
+        margin: 0 !important;*/
+        margin-left:54px !important;
     }
 
   }
