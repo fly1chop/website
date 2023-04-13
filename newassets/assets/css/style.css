@@ -11717,6 +11717,7 @@ thead {
   list-style: none !important;
 }
 .index-team{
+  text-align: justify;
   font-size: 17px;
 }
 .team-more{
