@@ -111,6 +111,7 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
+    select('#navbarul').classList.toggle('navbar-mobile-ul')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
@@ -297,10 +298,7 @@ elem = $('.typed');
     });
   }
       
-  /**
-   * Initiate Pure Counter 
-   */
-  // new PureCounter();
+
       const startAnimation = (entries, observer) => {
         entries.forEach(entry => {
           entry.target.classList.toggle("barOne", entry.isIntersecting);

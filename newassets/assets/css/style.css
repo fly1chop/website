@@ -343,7 +343,7 @@ h6 {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
+  top: 90px;
   right: 15px;
   bottom: 15px;
   left: 15px;
@@ -11498,6 +11498,14 @@ animation-play-state: play;
   
 /*  margin-left: 25%;*/
 }
+.proimg2{
+/*      margin: auto;    
+    display: block;*/
+  border-radius: 15px;
+  height:85%;
+  
+/*  margin-left: 25%;*/
+}
 .logo-mob{
   display: none;
 }
@@ -11513,6 +11521,9 @@ animation-play-state: play;
 }*/
 .proimg{
   height:75%;
+}
+.proimg2{
+  height:50%;
 }
 }
 .text-black{
@@ -11738,11 +11749,11 @@ thead {
   margin-top: 120px !important;
 }
 .text-it{
-  font-style: italic;
+/*  font-style: italic;*/
   font-weight: 600;
 }
 .text-it2{
-  font-style: italic;
+/*  font-style: italic;*/
   font-weight: 600;
   margin-top: -11px;
 }
