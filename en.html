@@ -55,7 +55,7 @@
       </div>
 
  <nav id="navbar" class="navbar">
-        <ul id="navbarul">
+        <ul id="navbarul" class="myul">
           <li><a class="nav-link scrollto active myhover" href="en.html" data-aos="zoom-in"
       src="logo.png" data-aos-once ="True">Home</a></li>
           <li><a class="nav-link scrollto myhover" href="en/capstone.html" data-aos="zoom-in"
@@ -74,7 +74,7 @@
 
         </ul>
       <i class="bi bi-list mobile-nav-toggle" data-aos="zoom-in"
-      data-aos-once ="True"></i>
+      data-aos-once ="True" id="mobile-btn"></i>
          <div class="right">
           <a class="text-gray lan" href="kn.html" data-aos="zoom-in"
       src="logo.png" data-aos-once ="True"><span class="kor">English</span>&nbsp|&nbsp<span class="gray">한국어</span></a>    
@@ -528,6 +528,20 @@ $(window).scroll(function () {
       once: true
     });
       </script>
+      <script>
+$(document).ready(function () {
+    $(document).click(function (event) {
+
+        var clickover = $(event.target);
+        var _opened = $("#navbar").hasClass("navbar-mobile");
+        console.log(_opened);
+        if (_opened === true && !clickover.hasClass("mobile-nav-toggle")) {
+            $("#mobile-btn").trigger("click");
+            console.log("ABCDEF");
+        }
+    });
+});
+      </script>
   <!-- Template Main JS File -->
   <script src="newassets/assets/js/main.js"></script>
 <!--   <script>
@@ -543,7 +557,7 @@ $(window).scroll(function () {
        }
     });
 });    
-
+<script
   </script> -->
 </body>
 
