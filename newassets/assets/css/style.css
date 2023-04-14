@@ -10764,7 +10764,7 @@ left: 64%;
 
 
 .specials .details h3 {
-  font-size: 26px;
+  font-size: 29px;
   font-weight: 600;
   margin-bottom: 20px;
   color: #433f39;
@@ -11979,6 +11979,9 @@ table{
   background-color: rgba(249, 242, 232, 0.5);
 
 }
+.table-summer th{
+background-color: rgba(27,80,118,255)   !important;
+}
 td{
   font-family: 'Cabin', sans-serif;
 
@@ -12017,9 +12020,7 @@ table.table-bordered > tbody > tr > td{
   width:100px;
   margin-bottom: 0;
 }
-/*.table-responsive {
-  // Other values...
-  overflow-x: auto;
-  overflow-y: hidden;
-  // Other values...
-}*/
+.adcs{
+  font-size: 13px !important;
+}
+
