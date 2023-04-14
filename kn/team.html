@@ -63,7 +63,7 @@
       src="logo.png" data-aos-once ="True">Contact</a></li>
         </ul>
       <i class="bi bi-list mobile-nav-toggle" data-aos="zoom-in"
-      src="logo.png" data-aos-once ="True"></i>
+      src="logo.png" data-aos-once ="True"id="mobile-btn"></i>
          <div class="right">
           <a class="text-gray lan" href="../kn.html.html" data-aos="zoom-in"
       src="logo.png" data-aos-once ="True"><span class="kor">English</span>&nbsp|&nbsp<span class="gray">한국어</span></a>  
@@ -513,7 +513,22 @@
   <script src="../newassets/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="../newassets/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../newassets/assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
+      <script>
+$(document).ready(function () {
+    $(document).click(function (event) {
+
+        var clickover = $(event.target);
+        var _opened = $("#navbar").hasClass("navbar-mobile");
+        console.log(_opened);
+        if (_opened === true && !clickover.hasClass("mobile-nav-toggle")) {
+            $("#mobile-btn").trigger("click");
+            console.log("ABCDEF");
+        }
+    });
+});
+      </script>
   <!-- Template Main JS File -->
   <script src="../newassets/assets/js/main.js"></script>
 

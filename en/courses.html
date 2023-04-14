@@ -66,7 +66,7 @@
       src="logo.png" data-aos-once ="True">Contact</a></li>
         </ul>
       <i class="bi bi-list mobile-nav-toggle" data-aos="zoom-in"
-      data-aos-once ="True"></i>
+      data-aos-once ="True"id="mobile-btn"></i>
          <div class="right">
           <a class="text-gray lan" href="../kn.html" data-aos="zoom-in"
       src="logo.png" data-aos-once ="True"><span class="kor">English</span>&nbsp|&nbsp<span class="gray">한국어</span></a>  
@@ -776,6 +776,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js" integrity="sha512-S/H9RQ6govCzeA7F9D0m8NGfsGf0/HjJEiLEfWGaMCjFzavo+DkRbYtZLSO+X6cZsIKQ6JvV/7Y9YMaYnSGnAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.2/swiper-bundle.min.js" integrity="sha512-LGC9ji+Ma2hNS7Dnt7iFOYJgez3pcjaHDeMXSVm0pO8R477pEGwTepZK0P2xBmVHTk8gLzoxpopsMv4TgVZceA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Template Main JS File -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+      <script>
+$(document).ready(function () {
+    $(document).click(function (event) {
+
+        var clickover = $(event.target);
+        var _opened = $("#navbar").hasClass("navbar-mobile");
+        console.log(_opened);
+        if (_opened === true && !clickover.hasClass("mobile-nav-toggle")) {
+            $("#mobile-btn").trigger("click");
+            console.log("ABCDEF");
+        }
+    });
+});
+      </script>
     <script src="../newassets/assets/js/main.js"></script>
     <script src="../newassets/assets/js/main2.js"></script>
   </body>
