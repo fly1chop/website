@@ -11966,19 +11966,25 @@ thead {
 }
     }
   @media (max-width: 800px) {
-    thead th{
-      font-size: 15px;
+    .table-spring th{
+      font-size: 12px;
     }
     td{
-      font-size:14px;
+      font-size:12px;
     }
-
+.table-summer th{
+  font-size: 12px;
   }
+  .table-summer td{
+  font-size: 12px;
+  }
+}
 table{
   text-align: center;
   background-color: rgba(249, 242, 232, 0.5);
 
 }
+
 .table-summer th{
 background-color: rgba(27,80,118,255)   !important;
 }
@@ -12022,5 +12028,100 @@ table.table-bordered > tbody > tr > td{
 }
 .adcs{
   font-size: 13px !important;
+}
+.nav-tabs{
+  cursor: pointer;
+}
+.nav-tab li .active{
+  color:blue !important;
+}
+
+a:hover,a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.tab .nav-tabs{
+    border: none;
+    margin-bottom: 10px;
+}
+.tab .nav-tabs li{
+  border: none;
+}
+.tab .nav-tabs li a{
+    display: block;
+    padding: 5px 10px;
+    margin: 0 10px 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(27,80,118,255);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a{
+    background: #fff;
+    color: rgba(254,187,57,255) ;
+    border: none;
+}
+.tab .nav-tabs li a:before{
+    content: "";
+    width: 3px;
+    height: 0;
+    background: rgba(27,80,118,255);
+    margin: 0 auto;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover:before,
+.tab .nav-tabs li.active a:before{ height: 25px; }
+.tab .nav-tabs li a:after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(254,187,57,255) ;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover:after,
+.tab .nav-tabs li.active a:after{
+    bottom: -10px;
+    opacity: 1;
+}
+.tab .tab-content{
+    padding: 0px;
+    margin-top: 0;
+    background: #F6F6F6;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 25px;
+    border: 5px dashed #fff;
+    letter-spacing: 1px;
+    position: relative;
+}
+.tab .tab-content h3{
+    font-size: 24px;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 479px){
+    .tab .nav-tabs{ margin-bottom: 0; }
+    .tab .nav-tabs li{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
