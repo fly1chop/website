@@ -565,6 +565,18 @@ section {
   font-family: "Poppins", sans-serif;
 /*  border-bottom: solid 2px black;*/
 }
+
+.section-title2-kr{
+  display: block;
+  padding-bottom: 28px;
+    color:rgba(27,80,118,255);
+
+  font-size: 30px !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+/*  border-bottom: solid 2px black;*/
+}
 /*.section-title2:after{
   content: "";
   width: 120px;
