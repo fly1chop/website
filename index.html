@@ -1,496 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>LognCoding 로그엔코딩 </title>
-    <meta name="description" content="카네기멜론, 스탠퍼드, UC 버클리, 컬럼비아 대학교 등 다양한 코딩 분야의
-      전문가들과 함께하는 입시 맞춤형 코딩 교육. 로그엔코딩은 빠르고 효율적으로 알려진 Log(n) 알고리즘으로
-      학습과 프로젝트 개발에도 가장 효율적이고 최적화된 교육을 제공합니다. 수업 및 프로젝트 문의는 Tel: 02-540-1628 |
-      kakao: logncoding"/>
-    <meta content="" name="keywords" />
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>LognCoding</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Google Fonts -->
+  <!-- Favicons -->
+  <link href="newassets/assets/img/favicon.png" rel="icon">
+  <link href="newassets/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js" integrity="sha512-t4NGjfaRaGCjmiTGBsiG3w8FCp8ZY7dPlwZAXfeoGPARUT/rt3OP0NpQkblSgZy/2R8vPTXiEcq/zcWIJ8NusQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet" />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link href="newassets/assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-      />
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
-      rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="newassets/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="newassets/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="newassets/assets/css/style.css" rel="stylesheet">
 
 
-    <meta name="naver-site-verification"
-      content="ac4f3731879db7223b8e7ae204f39d995366e265" />
-    <meta name="google-site-verification"
-      content="8ymNMZD2U2JR4I4Z7Kaoq_LQUPbZqMCBJ8J3vAoi0A4" />
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="fixed-top">
-      <div class="container clearfix">
-        <div class="contact-info float-left">
-          
-          <i class="icofont-phone"></i>02-540-1628
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
 
-          <i class="icofont-kakaotalk" style="color: yellow"></i>logncoding
-
-          <!-- <i class="icofont-envelope"></i>
-        <a href="mailto:info@logncoding.com">info@logncoding.com</a> -->
-        </div>
-
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Squadfree</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <!-- <a href="index.html"><img src="newassets/assets/img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
-    </section>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
+ <nav id="navbar" class="navbar">
+        <ul id="navbarul" class="myul">
+          <li><a class="nav-link scrollto active myhover" href="index.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Home</a></li>
+          <li><a class="nav-link scrollto myhover" href="en/capstone.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Capstone</a></li>
+          <li><a class="nav-link scrollto myhover" href="en/courses.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Courses</a></li>   
+          <li><a class="nav-link scrollto  myhover" href="en/team.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Team</a></li>
+<!--           <li><a class="nav-link scrollto myhover" href="eco8.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Capstone</a></li> -->
+       
+          <li><a class="nav-link scrollto myhover" href="en/contactUs.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">Contact</a></li>
+                <li><a class="nav-link scrollto myhover mob-lan" href="kr.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">한국어</a></li>
+
+        </ul>
+      <i class="bi bi-list mobile-nav-toggle" data-aos="zoom-in"
+      data-aos-once ="True" id="mobile-btn"></i>
+         <div class="right">
+          <a class="text-gray lan" href="kr.html" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True"><span class="kor">English</span>&nbsp|&nbsp<span class="gray">한국어</span></a>    
+    </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+
+
+  <section id="hero">
+
+    <div class="hero-container">
+      <div class="eraser mt-3">
+      <img src="newassets/assets/img/logo_en.png" alt="" class="img-fluid mt-5 logoen mb-4" data-aos="fade-in" data-aos-duration="2000"
+      src="logo.png" data-aos-once ="True">
+    </div>
+
+<!-- 로그엔코딩은 학생의 학습에 가장 효율적이고 최적화된 솔루션을 제공합니다. </h2> -->
+      <!-- <h2 class="mt-5">분야별 코딩 전문가들이 모여 결성된 선생님들</h2> -->
+<!--       <div id="app" class="mt-5" data-aos="zoom-in"
+      src="logo.png" data-aos-once ="True">
+        <p id="hi"></p>
+
+
+   </div> -->
+<div>
+<div class="mt-5">
+<h2 class="typ mx-5" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="800">&nbsp<span class="typed mt-5 color-blue" data-typed-items="Personalized coding education, Tailored to your story"></span></h2>
+   </div>
+
+
+   </div>
+      <a href="#our-values" class="btn-get-started scrollto mt-5" 
+      src="logo.png" data-aos-once ="True" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="800"><i class="bx bx-chevrons-down" data-aos="fade-in" data-aos-duration="2000"
+      src="logo.png" data-aos-once ="True"></i></a>
+    </div>
+
+
+
+
+<!--     <div class="background background0"></div>
+<div class="background background1"></div>
+<div class="background background2"></div>
+<div class="background background3"></div>
+<div class="background background4"></div>
+<div class="background background5"></div>
+<div class="background background6"></div> -->
+<!-- <div class="background background7"></div> -->
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= About Section ======= -->
+    <section id="our-values" class="our-values">
       <div class="container">
-        <div class="logo float-left">
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <a href="index.html">
-            <img style="vertical-align:top" src="assets/img/logo.png" alt="">
-          </a>
+          <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Program</h2>
         </div>
+<!--                             <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>What We Do</h2>
+        </div> -->
+        <div class="row no-gutters  mb-5">
+<div class="col-md-4 d-flex align-items-stretch">
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
+                              <h5 class="card-title pb-3"><i class="fa-solid fa-diagram-project"></i> <a href="en/capstone.html"> Capstone Program</a></h5>
 
-        <nav class="nav-menu float-right d-none d-lg-block">
-          <ul>
-            <li class="active">
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="eco8.html">Project Eco8</a>
-            </li>
-            <!-- <li>
-              <a href="cubs.html">Project Cubs</a>
-            </li> -->
-            <li>
-              <a href="team.html">Team</a>
-            </li>
-            <li>
-              <a href="courses.html">Courses</a>
-            </li>
-            <li>
-              <a href="contactUs.html">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- .nav-menu -->
+              <div class="card-body">
+                <p class="card-text pt-4">Collaborative <strong>team based projects</strong> to build solutions that meets <strong>client's objectives</strong>
+</p>
+                <br>
+                
+                <div class="read-more mymt"><a href="en/capstone.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
+                              <h5 class="card-title pb-3"><i class="fa-solid fa-person-breastfeeding"></i> <a href=""> Personal Project</a></h5>
+              <div class="card-body">
+                <p class="card-text mb-1 pt-4"><strong>Tailored projects</strong> according to your story, goals, and passion</p>
+                <br>
+                <br>
+                                <div class="read-more mymt"><a href="en/courses.html"></a></div>
+                <!-- <div class="read-more mymt"><a href="eco8.html"><i class="bi bi-arrow-right"></i> Read More</a></div> -->
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
+                              <h5 class="card-title pb-3"><i class="fa-solid fa-chalkboard"></i> <a href="en/courses.html"> Customized Courses</a></h5>
+              <div class="card-body">
+                <p class="card-text pt-3 mb-1"><strong>Customized curriculum</strong> with topics ranging from Algorithm to Data Science, App Dev., UI/UX, and more</p>
+                <!-- <div class="read-more mymt pt-3"> -->
+                  <br>
+                               <div class="read-more mymt mb-2"><a href="en/courses.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
+
+
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+
       </div>
-    </header>
-    <!-- End Header -->
 
-
-    <!-- ======= Hero Section ======= -->
-    <section id="staticHome">
-      <div class="container2" data-aos="fade-down">
-                        <img class="img-fluid mt-10 moving-img" src="assets/img/slide/wearemoving.png" data-aos="flip-right" data-aos-duration="700" data-aos-easing="linear"> 
-      </div>
     </section>
 
-    <section id="hero">
-      <div id="heroCarousel" class="carousel slide carousel-fade"
-        data-ride="carousel">
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+   <!--  <section id="capstone-section" class="programs">
+      <div class="container">
+          <div class="row content mt-5 mx-5">
 
-        <div class="carousel-inner slide1" role="listbox">
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image:
-            url(assets/img/slide/moving_cover2.jpg)">
-           <!-- <div class="carousel-item active"> -->
-            <div class="carousel-container" style="padding-bottom: 380px;">
-              <div class="container img-container">
-                <img class="img-fluid mt-10 moving-img img" src="assets/img/slide/wearemoving.png"> 
-                <div class="overlay"></div>
-<!--                 <h2 class="animate__animated animate__fadeInUp"
-                  style="text-align: left; font-size:350%; color:white">
-                  <br>
-                  <span style="color:rgba(254,187,57,255); margin-left: -10px">Log</span>N
-                </h2> -->
-              </div>
-            </div>
+              <div class="col-lg-7 px-5" data-aos="fade-right" data-aos-delay="150">
+                              <h1 class="bigger-text2 text-black mt-5">Capstone Program</h1>
+                        <p class="mt-5">
+                            Group Project Education:
+                        </p>
+                        <ul>
+                          <li>Learn & develop real-world applicable solutions</li>
+                        </ul>
+                        <p class="">
+                            Past Clients and Mentors from:
+                        </p>
+                        <ul  class=" mb-5">
+                          <li>Cheil Worldwide (Samsung),  Korean Red Cross, UC Berkeley, Carnegie Mellon, Rochester Institute of Technology and <a href="capstone.html"><span class="color-blue text-bold">More</span></a></li>
+                        </ul>
+                      </div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="300">
+                  <img class="img-fluid cap" src="newassets/assets/img/capstone program pic1.jpg">
+            
+                </div>
+ 
+
           </div>
+        </div>
+         </section>
+        <section  id="personal-section" class="programs bg-darks">
+        <div class="container">
+          <div class="row content mt-5 mx-5 personal">
 
+              <div class="col-lg-7 px-5" data-aos="fade-left" data-aos-delay="150">
+                              <h1 class="bigger-text2 text-black mt-5 ps-5">Personal Projects</h1>
+                              <p class="mt-3 ps-5 ms-3">Design & Customize Your Project
+</p>
+                        <p class=" ps-5 ms-3">
+                            To match YOUR:
+                        </p>
+                        <ul class="ps-5 mb-5">
+                          <li class="ps-5">PASSION</li>
+                          <li class="ps-5">INTERESTS</li>
+                          <li class="ps-5">GOALS</li>
 
-          <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image:
-            url(assets/img/slide/cover2.png)">
-            <div class="carousel-container">
-              <div class="container" style="padding-bottom: 200px;">
-                <h2 class="animate__animated animate__fadeInDown"
-                  style="text-align: center; font-size:310%;">
-                  <span style="color:white">L</span>
-                  <span style="color:rgba(254,187,57,255); margin-left: -17px">o</span>
-                  <span style="color:white; margin-left: -17px">g</span>
-                  <span style="color:rgba(254,187,57,255) ; margin-left: -9px;">n</span>
-                  핵심 프로젝트 트랙
+                        </ul>
+                      </div>
+                <div class="col-lg-5 order-lg-first order-sm-last" data-aos="fade-right" data-aos-delay="300">
+                  <img class="img-fluid cap" src="newassets/assets/img/personal projects personal.jpg">
+            
+                </div>
+ 
 
-                </h2>
-                <h4 class="animate__animated animate__fadeInUp"
-                  style="text-align: center; font-size:160%; color:white">
-                  <br> 다양한 핵심 역량을 키울 수 있는
-                  <span style="color:rgba(254,187,57,255)">맞춤형 프로젝트</span> 개발
-                </h4>
-              </div>
-            </div>
           </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background-image:
-            url(assets/img/slide/cover1.png)">
-            <div class="carousel-container">
-              <div class="container">
-                <h2 class="animate__animated animate__fadeInDown"
-                  style="text-align: center; font-size:3vw">
-                  Carnegie Mellon, UC Berkeley, Georgia Tech 등</h2>
-                <h2 class="animate__animated animate__fadeInDown"
-                  style="text-align: center; font-size:3vw">
-                  다양한 코딩 분야의 전문가들과 함께하는</h2>
-                <h2 class="animate__animated animate__fadeInUp"
-                  style="text-align: center; font-size:3vw; color:rgba(254,187,57,255)">
-                  입시 맞춤형 코딩 교육
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          <a class="carousel-control-prev" href="#heroCarousel" role="button"
-            data-slide="prev">
-            <span class="carousel-control-prev-icon icofont-simple-left"
-              aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a class="carousel-control-next" href="#heroCarousel" role="button"
-            data-slide="next">
-            <span class="carousel-control-next-icon icofont-simple-right"
-              aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </section>
-      <!-- End Hero -->
+              <section id="courses-section" class="programs">
+        <div class="container">
+          <div class="row content mt-5 mx-5">
 
-      <main id="main">
+              <div class="col-lg-7 px-5" data-aos="fade-right" data-aos-delay="150">
+                              <h1 class="bigger-text2 text-black mt-5">Tailored Learning</h1>
+                        <p class="mt-5 ms-3">
+                            Learn from our team of experts
+                        </p>
+                        <ul class=" mb-5">
+                          <li>With Professional backgrounds: NASA, Google, Microsoft, Facebook and <a href="team.html"><span class="color-blue text-bold">More</span></a></li>
+                        </ul>
 
+                      </div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="300">
+                  <img class="img-fluid cap" src="newassets/assets/img/capstone program pic1.jpg">
+            
+                </div>
+ 
 
-        <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
-          <div class="container" data-aos="zoom-in">
-            <div class="text-center">
-              <h3>Why Log n?</h3>
-              <br>
-              <p> 코드에서 가장 빠르고 효율적으로 알려진 Log(n) 알고리즘
-                <br> 로그엔코딩은 학생의 학습에 가장 효율적이고 최적화된 솔루션을 제공합니다.
-              </p>
-            </div>
-          </div>
-        </section>
-        <!-- End Cta Section -->
-
-
-
-        <!-- ======= Counts Section ======= -->
-        <!-- <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-        <div class="row no-gutters">
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch ">
-            <div class="count-box ">
-              <i class="icofont-computer"></i>
-              <span data-toggle="counter-up">10</span>
-              <p>
-                <strong style="color: #106c70 ">Courses</strong>
-                <br> AP CS 시험 대비반, 프로젝트반 등
-                <br> 로그엔에서 현재 진행하는 수업 과목 수
-              </p>
-              <a style="font-size: 80% " href="courses.html ">자세히 &raquo;</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="icofont-code"></i>
-              <span data-toggle="counter-up">128</span>
-              <p>
-                <strong style="color: #106c70">Projects</strong>
-                <br> 로그엔코딩에서 개발한 다양한
-                <br> 코딩 프로젝트들
-              </p>
-              <a style="font-size: 80%" href="3sigma.html">자세히 &raquo;</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="icofont-ui-calendar"></i>
-              <span data-toggle="counter-up">1038</span>
-              <p>
-                <strong style="color: #106c70 ">Experience</strong>
-                <br> 로그앤코딩 선생님들이 기업에서 활동한 실무 경험 시간 (개월)
-              </p>
-              <a style="font-size: 80% " href="team.html ">자세히 &raquo;</a>
-            </div>
           </div>
 
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch ">
-            <div class="count-box ">
-              <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">19</span>
-              <p>
-                <strong style="color: #106c70 ">Instructors</strong>
-                <br> 해외 명문대 졸업과 글로벌 최고 IT기업 경력을 갖춘 선생님들
-              </p>
-              <a style="font-size: 80% " href="team.html ">자세히 &raquo;</a>
-            </div>
+
+      </div>
+    </section> -->
+
+ <section id="services">
+
+      <div class="container">
+                    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Fields</h2>
+        </div>
+
+
+        <div class="row ser">
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                            <img class="card-img-top" src="newassets/assets/img/Fields/algorithm.png" alt="Card image cap">
+                          </div>
+              <div class="card-body">
+            <!-- <div class="service-icon"><i class="bi bi-database"></i></div> -->
+            <h4 class="service-title2">Algorithm </h4>
+          </div>
+        </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                                                      <img class="card-img-top" src="newassets/assets/img/Fields/data-science.png" alt="Card image cap">
+                                                    </div>
+              <div class="card-body">
+            <h4 class="service-title2">Data Analytics</h4>
+          </div>
+        </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100" data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                                                      <img class="card-img-top" src="newassets/assets/img/Fields/ml.png" alt="Card image cap">
+                          </div>
+
+              <div class="card-body">
+            <h4 class="service-title2">Machine Learning</h4>
+          </div>
+        </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                                                      <img class="card-img-top" src="newassets/assets/img/Fields/development.png" alt="Card image cap">
+                                                    </div>
+              <div class="card-body">
+            <h4 class="service-title2">Web | App Dev.</h4>
+          </div>
+        </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                                                      <img class="card-img-top" src="newassets/assets/img/Fields/ui.png" alt="Card image cap">
+                                                    </div>
+              <div class="card-body">
+            <h4 class="service-title2">UI|UX Design</h4>
           </div>
         </div>
       </div>
-    </section> -->
-        <!-- End Counts Section -->
+          <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                                                      <img class="card-img-top" src="newassets/assets/img/Fields/game-development.png" alt="Card image cap">
+</div>
+              <div class="card-body">
 
-        <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us section-bg">
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
-              <h2>About</h2>
-              <p>The Approach</p>
-            </div>
-            <div class="row">
-
-              <div class="col-md-6">
-                <div class="content">
-                  <h3>분야별 코딩 전문가들이 모여 결성된 팀
-                  </h3>
-
-                  <br>
-                </div>
-
-                <div class="accordion-list">
-                  <ul>
-                    <li>
-                      <a data-toggle="collapse" class="collapse"
-                        href="#accordion-list-1">
-                        <span>01</span> Our Mission
-                        <i class="bx bx-chevron-down icon-show"></i>
-                        <i class="bx bx-chevron-up icon-close"></i>
-                      </a>
-                      <div id="accordion-list-1" class="collapse show"
-                        data-parent=".accordion-list">
-                        <p>
-                          로그엔은 학생들이 미래에 빠르게 변하는 사회에 중요한 역량인 코딩을 학습하고 경험할 수 있는
-                          선진화된 교육을 제공 </p>
-                        <!--  하여 향후에 스스로 코딩을 할 줄 아는 인재를 양성 -->
-                      </div>
-                    </li>
-
-                    <li>
-                      <a data-toggle="collapse" href="#accordion-list-2"
-                        class="collapsed">
-                        <span>02</span> Our Philosophy
-                        <i class="bx bx-chevron-down icon-show"></i>
-                        <i class="bx bx-chevron-up icon-close"></i>
-                      </a>
-                      <div id="accordion-list-2" class="collapse"
-                        data-parent=".accordion-list">
-                        <p>
-                          원하는 코드를 가장 효율적인 방법으로 직접 작성할 수 있는 인재를 양성하여 사회에 공헌하는 것
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <a data-toggle="collapse" href="#accordion-list-3"
-                        class="collapsed">
-                        <span>03</span> Our Story
-                        <i class="bx bx-chevron-down icon-show"></i>
-                        <i class="bx bx-chevron-up icon-close"></i>
-                      </a>
-                      <div id="accordion-list-3" class="collapse"
-                        data-parent=".accordion-list">
-                        <p>
-                          로그엔 코딩은 이러한 철학을 함께하는 사람들이 모인 교육기관 이다.
-                          코딩의 트렌드를 가장 잘 알고 있으며 해당 업계에 종사하고 있는 현직자들이 학생들의 진로에 도움을
-                          주고
-                          미래를 같이 설계해 나가고자 한다.
-                        </p>
-                      </div>
-                    </li>
-
-                  </ul>
-                </div>
-
-              </div>
-
-              <div class="col-lg-5 home-people">
-                <img src="assets/img/about2.png" class="img-fluid"alt=""/>
-              </div>
-
-            </div>
-
+                        <h4 class="service-title2">3D Game Dev.</h4>
           </div>
-        </section>
-        <!-- End Why Us Section -->
-
-        <!-- ======= Our Process Section ======= -->
-        <section id="process" class="process">
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
-              <h2>Steps</h2>
-              <p>The Process</p>
-            </div>
-            <div class="row" data-aos="fade-up">
-              <div class="col-md-5">
-                <img src="assets/img/lecture.png" class="img-fluid"alt=""/>
-              </div>
-              <div class="col-md-7 pt-4" style="padding-left:60px">
-                <h3>
-                  1. 다양한 분야의 강의
-                </h3>
-                <p class="font-italic">
-                  코딩을 처음 배우는 학생들을 위한 개념반부터 Data Science, Robotics 등 다양한 Special Topics까지 다루는 특화된
-                  커리큘럼</p>
-                <ul>
-                  <li>
-                    미국 명문대 출신들 강사진
-                  </li>
-                  <li>
-                    영어로 코딩을 전문적으로 가르치는 강의
-                  </li>
-                  <li>
-                    카네기멜론, 버클리 등 명문대 CS 컬리큘럼 도입
-                  </li>
-                  <li>
-                    6-8 학년 대상으로 하는 Junior 커리큘럼
-                  </li>
-                  <li>
-                    9-12 학년 대상으로 하는 Senior 커리큘럼
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="row" data-aos="fade-up" style="padding-top: 70px;">
-              <div class="col-md-5">
-                <img src="assets/img/project.png" class="img-fluid"alt=""/>
-              </div>
-              <div class="col-md-7 pt-4" style="padding-left:60px">
-                <h3>
-                  2. 맞춤형 개인 프로젝트
-                </h3>
-                <p class="font-italic">
-                  강의에서 배운 개념을 응용해 학생이 희망하는 전공과 관심 분야에 맞춰진 프로젝트를 기획 후 개발하는 과정
-                </p>
-                <ul>
-                  <li>
-                    수업에 한정되지 않은 실무적인 코딩 경험과 결과물 완성
-                  </li>
-                  <li>
-                    차별화된 나만의 프로젝트 개발 후 포트폴리오 제작
-                  </li>
-                  <li>
-                    문과, 디자인 등 다양한 전공에 적용할 수 있는 맞춤형 프로젝트
-                  </li>
-                  <li>
-                    앱 개발부터 AI/머신러닝 등 핵심 역량을 키우는 프로젝트 수행
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-
-            <div class="row" data-aos="fade-up" style="padding-top: 70px;">
-              <div class="col-md-5">
-                <img src="assets/img/capstone1.png" class="img-fluid"alt=""/>
-              </div>
-              <div class="col-md-7 pt-4" style="padding-left:60px">
-                <h3>
-                  3. 기업, 세계 명문대들과 함께하는 캡스톤 프로그램
-                </h3>
-                <p class="font-italic">
-                  매 분기마다 실제 기업과 협력해 그룹 프로젝트를 진행하는 과정
-                  <br>
-                  <strong>2022년 겨울: Eco8, Cubs </strong>
-                </p>
-                <ul>
-                  <li>
-                    기업과 함께 실무적인 코딩을 접할 수 있는 인턴과 같은 경험
-                  </li>
-                  <li>
-                    다른 학생들과 함께 기업 및 사회에 기여하는 결과물 창출
-                  </li>
-                  <li>
-                    각 팀을 담당하는 해당 분야의 전문가인 로그엔코딩 선생님 지도 하에 진행
-                  </li>
-                  <li>
-                    프로젝트 진행 과정을 문서화하여 학습한 내용을 공식적인 자료로 정리
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-
-
+        </div>
           </div>
-        </section>
-        <!-- End Process -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                             <img class="card-img-top" src="newassets/assets/img/Fields/robot.png" alt="Card image cap">
+                            </div>
+                        <div class="card-body">
 
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about section-bg">
-          <div class="container" data-aos="fade-up">
+                        <h4 class="service-title2"> Robotics 
+</h4>
+                      </div>
+                    </div>
+                      </div>
 
-            <div class="section-title">
+                                                  <div class="col-lg-3 col-md-6 col-sm-12 service-item mt-4">
+                        <div class="card h-100"data-aos="flip-left" data-aos-delay="200">
+                           <div class="image-box mt-4">
+                             <img class="card-img-top" src="newassets/assets/img/Fields/hacking.png" alt="Card image cap">
+                            </div>
+                        <div class="card-body">
+
+                        <h4 class="service-title2">Cybersecurity</h4>
+                      </div>
+                    </div>
+                      </div>
+                    </div>
+
+
+      </div>
+    </section>
+
+ <section id="program-languages scroll-spy">
+
+      <div class="container">
+                    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Most Used Programming Languages in LogN</h2>
+        </div>
+        <div class="bar-graph bar-graph-horizontal bar-graph-one">
+
+              <div class="bar-one">
+                <span class="year mx-5">Python</span>
+                <div class="bar firstBar" data-percentage="28%"></div>
+              </div>
+              <div class="bar-two">
+                <span class="year mx-5">JavaScript</span>
+                <div class="bar secondBar" data-percentage="20%"></div>
+              </div>
+              <div class="bar-three">
+                <span class="year mx-5">C++</span>
+                <div class="bar thirdBar" data-percentage="15%"></div>
+              </div>
+              <div class="bar-four">
+                <span class="year mx-5">Java</span>
+                <div class="bar fourthBar" data-percentage="12%"></div>
+              </div>
+                            <div class="bar-five">
+                <span class="year mx-5">HTML/CSS</span>
+                <div class="bar fifthBar" data-percentage="10%"></div>
+              </div>
+              <div class="bar-six">
+                <span class="year mx-5">SQL</span>
+                <div class="bar sixthBar" data-percentage="7%"></div>
+              </div>
+                      <div class="bar-seven">
+                <span class="year mx-5">C#</span>
+                <div class="bar seventhBar" data-percentage="5%"></div>
+              </div>
+                        <div class="bar-eight">
+                <span class="year mx-5">Ruby</span>
+                <div class="bar eigthBar" data-percentage="2%"></div>
+              </div>
+                                    <div class="bar-nine">
+                <span class="year mx-5">Swift</span>
+                <div class="bar ninthBar" data-percentage="1%"></div>
+              </div>
+
+            </div>
+          </div>
+    </section>
+
+<div id="chart"></div>
+<section id="about" class="about section-bg">
+          <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
               <h2>Team</h2>
-              <p>The People</p>
             </div>
 
             <div class="row" style="overflow: hidden">
-
-              <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left"
-                data-aos-delay="100">
-                <img style="padding-left: 60px;" src="assets/img/teacherbanner.png"
-                  class="img-fluid" alt="">
-              </div>
-
-              <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                <h3>로그엔의 엘리트 선생님들</h3>
-                <br>
-                <p class="font-italic"> </p>
-                <p>
-                  언제나 최신 기술과 알고리즘 파악, 강의 및 프로젝트 커리큘럼 업데이트 등을 통해 그 누구보다 앞서나가는 교육을
-                  하는 로그엔 팀입니다.
+              <div class="col-lg-6"data-aos="fade-right">
+                <!-- <h3>Elite Team in LogN</h3> -->
+                <p class="index-team mx-3">
+We are a team, composed of specialized experts who have graduated from universities across the world with a variety of engineering backgrounds. </p>
+<p class="index-team mx-3">
+Our global members combine their experiences at top tech companies such as: Google, Microsoft and organizations from NASA to highly delivering startups to provide thought provoking research lab topics for engaging the minds of our students.
                 </p>
-                <a href="team.html" class="learn-more-btn">자세히 보러가기</a>
+
+                                                                <a href="en/team.html"  class="btn btn-primary ms-3 team mb-3" >View Our Team</a>
+
               </div>
+              <div class="col-lg-6" >
+                <img src="newassets/assets/img/teacherbanner.png"
+                  class="img-fluid tim ms-5 mb-5" alt="" data-aos="fade-left"
+                >
+                      <a href="en/team.html"  class="btn btn-primary team2 btn-margin" >View Our Team</a>
+
+                                <!-- <a href="en/team.html" class="learn-more-btn mt-1 team2" ><span class="color-blue text-bold team-more ms-2" >View Team</span></a> -->
+              </div>
+
+
             </div>
 
           </div>
         </section>
-        <!-- End About Section -->
 
+    <!-- ======= Contact Section ======= -->
 
-        <!-- ======= Footer ======= -->
-        <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out"
-          data-aos-duration="500">
+  <!-- ======= Footer ======= -->
+        <footer id="footer">
 
           <div class="footer-top">
             <div class="container">
@@ -498,61 +467,98 @@
 
                 <div class="col-lg-10 col-md-10 footer-contact"
                   data-aos="fade-up" data-aos-delay="100">
-
-                  <strong>Phone:</strong> 02-540-1628
+                  <strong>Phone:</strong> +82-2-540-1628
                   <br>
                   <strong>Kakao:</strong> logncoding
                   <br>
-                  <strong>Address: </strong> 서울특별시 강남구 언주로174길 17 서우빌딩 3층
+                  <strong>Address: </strong> Eonju-ro 174-girl 17 (3F), Gangnam-gu, Seoul, Korea
                   <br>
-                  <strong>학원 등록번호: </strong> 제14243호
+                  <strong>Academy Registration Number: </strong> No. 14243
                 </p>
               </div>
-              <!-- <div class="col-lg-2 col-md-2 footer-links" data-aos="fade-up" data-aos-delay="400">
-            <img style="height: 60%; float: right; vertical-align: middle;" src="assets/img/logo.png" alt="">
-          </div> -->
+
             </div>
 
           </div>
-        </div>
-
-
-        <div class="container">
+        
           <div class="copyright"> &copy; Copyright
             <strong>
               2023
               <span style="color:rgba(254,187,57,255)"> LognCoding.</span>
             </strong>All Rights Reserved
           </div>
-        </div>
+          </div>
+          <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
       </footer>
-      <!-- End Footer -->
 
-      <a href="#" class="back-to-top">
-        <i class="icofont-simple-up"></i>
-      </a>
 
-      <!-- Vendor JS Files -->
-      <script src="assets/vendor/jquery/jquery.min.js"></script>
-      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
-      <script src="assets/vendor/venobox/venobox.min.js"></script>
-      <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-      <script src="assets/vendor/counterup/counterup.min.js"></script>
-      <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-      <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="newassets/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <!-- <script src="newassets/assets/vendor/aos/aos.js"></script> -->
+  <!-- <script src="newassets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+  <script src="newassets/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="newassets/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="newassets/assets/vendor/php-email-form/validate.js"></script> -->
+  <script src="newassets/assets/vendor/typed.js/typed.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script>
+
+$(window).scroll(function () {
+    var y = $(window).scrollTop(),
+        x = $('.bar').offset().top - 200;
+    if (y > x) {
+        $('.bar').addClass('fadeInUp').removeClass('fadeOutDown');
+    } else {
+        $('.bar').removeClass('fadeInUp').addClass('fadeOutDown');
+    }
+});
+  </script>
+  <script src="assets/vendor/aos/aos.js"></script>
       <script>
         AOS.init({
       duration: 1000,
       once: true
     });
       </script>
-      <!-- Template Main JS File -->
-      <script src="assets/js/main.js"></script>
-    </body>
 
-  </html>
+      <script>
+$(document).ready(function () {
+    $(document).click(function (event) {
+
+        var clickover = $(event.target);
+        var _opened = $("#navbar").hasClass("navbar-mobile");
+        console.log(_opened);
+        if (_opened === true && !clickover.hasClass("mobile-nav-toggle")) {
+            $("#mobile-btn").trigger("click");
+            console.log("ABCDEF");
+        }
+    });
+});
+      </script>
+  <!-- Template Main JS File -->
+  <script src="newassets/assets/js/main.js"></script>
+<!--   <script>
+    $(document).ready(function(){
+    $(document).mouseup(function(e){
+       var menu = $('.navbar-mobile-ul');
+       var button = $('.bi-x')
+       if (!menu.is(e.target) 
+       && menu.has(e.target).length === 0) 
+       {
+          menu.fadeOut();
+          button.fadeOut();
+       }
+    });
+});    
+<script
+  </script> -->
+</body>
+
+</html>

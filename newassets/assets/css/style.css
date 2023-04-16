@@ -774,7 +774,7 @@ section {
   padding-bottom: 80px;
 }
 .carousel{
-  width:70%;
+  width:80%;
 }
 .contact .info-box {
   color: #444444;
@@ -928,7 +928,7 @@ section {
 
 #footer .footer-top .footer-info {
   margin-top: -90px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   background: white;
   color: #2f4d5a;
   border-top: 4px solid rgba(27,80,118,255);
@@ -1055,14 +1055,9 @@ section {
   border-top: 1px solid #385b6b;
   text-align: center;
   padding-top: 30px;
+  margin-bottom: -20px;
 }
 
-#footer .credits {
-  padding-top: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
-}
 
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {
@@ -11199,6 +11194,9 @@ button.btn.btn-link i {
   .bar-graph{
     margin-left: -40px;
   }
+  .yellow-arrow{
+    display: none;
+  }
 
   }
 
@@ -11510,6 +11508,41 @@ animation-play-state: play;
   
 /*  margin-left: 25%;*/
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+/*  border: 1px solid black;*/
+  background-image: none;
+}
+.prev-btn{
+  font-size: 24px;
+  color:black;
+}
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 350px;
+  overflow: hidden;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: black;
+}
+/*.carousel{
+  border-radius: 20px;
+}*/
 .proimg2{
 /*      margin: auto;    
     display: block;*/
@@ -11771,6 +11804,8 @@ thead {
 }
 .deliv{
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4.5px;
   text-decoration-color: rgba(254,187,57,255)
 }
 .text-it-only{
