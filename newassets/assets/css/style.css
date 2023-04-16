@@ -78,7 +78,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 24px 0;
-  background: rgba(103, 176, 209, 0.8);
+  background: red;
 }
 
 #header.header-transparent {
@@ -115,6 +115,10 @@ h6 {
 }
 
 @media (max-width: 768px) {
+/*  #header{
+      
+  padding: 12px 0px 0px 0px !important;
+  }*/
   #header.header-scrolled {
     padding: 15px 0;
   }
@@ -316,6 +320,7 @@ h6 {
     position: relative;
     margin: 0 !important;
     text-align: right !important;  
+
   }
   .navbar ul {
     display: none;
@@ -11818,6 +11823,8 @@ thead {
 @media (max-width: 1000px) {
     .logo-mob{
       display:block;
+      height: 30px;
+      margin:0;
     }
     .mob-lan{
       display: inline-block !important;
