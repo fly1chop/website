@@ -12010,8 +12010,13 @@ thead {
         margin: 0 !important;*/
         margin-left:54px !important;
     }
-
-  }
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 250px;
+  overflow: hidden;
+}
+}
 .mytable{
   width: 500px;
 }
