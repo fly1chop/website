@@ -115,10 +115,8 @@ h6 {
 }
 
 @media (max-width: 768px) {
-/*  #header{
-      
-  padding: 12px 0px 0px 0px !important;
-  }*/
+/*.navbar{ height: 4px;}
+.navbar a{font-size:4x;}*/
   #header.header-scrolled {
     padding: 15px 0;
   }
@@ -11457,6 +11455,13 @@ animation-play-state: play;
     margin-left: 0;
     padding-bottom: 30px;
   }
+  .carousel{
+    width: 95%;
+  }
+/*  .carousel-item img {
+  object-fit: none;
+  width:100%;
+}*/
 }
 
 #about .about-content {
