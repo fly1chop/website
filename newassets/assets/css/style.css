@@ -777,7 +777,7 @@ section {
   padding-bottom: 80px;
 }
 .carousel{
-  width:80%;
+  width:85%;
 }
 .contact .info-box {
   color: #444444;
@@ -11200,6 +11200,10 @@ button.btn.btn-link i {
   .yellow-arrow{
     display: none;
   }
+  .img-capstone{
+    margin-top: 30px important;
+  }
+
 
   }
 
