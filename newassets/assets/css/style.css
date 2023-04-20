@@ -12216,6 +12216,15 @@ a:hover,a:focus{
 
 }
 
+@media (max-width: 401px) {
+
+.main-nav-list ul{
+    left: 45%;
+}
+
+}
+
+
 .wrapper{
     display: none;
     flex-direction: column;
