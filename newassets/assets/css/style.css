@@ -12219,7 +12219,7 @@ a:hover,a:focus{
 @media (max-width: 401px) {
 
 .main-nav-list ul{
-    left: 45%;
+    left: 44%;
 }
 
 }
@@ -12358,7 +12358,7 @@ a:hover,a:focus{
 
 .main-nav-list a{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 3px;
     margin-bottom: 15px;
     opacity: 0;
