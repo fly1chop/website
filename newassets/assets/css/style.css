@@ -12224,7 +12224,9 @@ a:hover,a:focus{
 
 }
 
-
+.goToK{
+  font-size: 18px !important;
+}
 .wrapper{
     display: none;
     flex-direction: column;
@@ -12356,7 +12358,7 @@ a:hover,a:focus{
 
 .main-nav-list a{
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 3px;
     margin-bottom: 15px;
     opacity: 0;
