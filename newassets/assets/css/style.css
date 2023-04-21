@@ -12013,6 +12013,7 @@ thead {
 /*        padding: 0 !important;
         margin: 0 !important;*/
         margin-left:54px !important;
+
     }
 .carousel-item img {
   object-fit: cover;
@@ -12020,6 +12021,15 @@ thead {
   height: 250px;
   overflow: hidden;
 }
+
+.schedule-menu{
+  font-size: 15px !important;
+}
+.tab .nav-tabs li{
+
+  width:45% !important;
+}
+
 }
 .mytable{
   width: 500px;
@@ -12415,3 +12425,4 @@ a:hover,a:focus{
 .masthead-mob{
   margin-top: -28px;
 }
+
