@@ -12027,7 +12027,7 @@ thead {
 }
 .tab .nav-tabs li{
 
-  width:45% !important;
+  width:46% !important;
 }
 
 }
@@ -12425,4 +12425,17 @@ a:hover,a:focus{
 .masthead-mob{
   margin-top: -28px;
 }
-
+/*Table*/
+@media (max-width: 401px) {
+.mob-table{
+  display: none;
+}
+.table{
+  font-size: 10px !important;
+  margin: 0;
+}
+.table-box{
+    padding-left:10px !important;
+  padding-right:10px !important
+}
+}
