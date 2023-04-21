@@ -10986,7 +10986,7 @@ font-size: 34px;
 .mymt2{
   margin-top: 60px !important;
 }
-/*.card:hover .card-img-top{
+/*.card:hover ƒ#s{
    transform: scale(1.1);
   transition: all .5s;
   opacity:1.0;
@@ -11020,14 +11020,16 @@ font-size: 34px;
   text-align: center;
 }
 #services .card{
-  height: 100px;
+  height: auto;
   width: 70%;
   border-radius: 15%;
 }
 .card-img-top{
-  width:25%;
+/*  width:25%;*/
+    width: 50px;
+    height: auto;
   padding-top:18px;
-  height:70px;
+/*  height:70px;*/
   left:50%;
   object-fit:content;
   opacity: 0.85;
@@ -11571,7 +11573,7 @@ animation-play-state: play;
 .img-capstone{
   text-align: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
 
 }
 @media (max-width: 600px) {
@@ -11645,10 +11647,10 @@ animation-play-state: play;
 /*    background: linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)), url("../img/top-img_mobile.jpg");*/
     background-position: 0 50%; 
   }
-  .card-img-top{
+/*  .card-img-top{
     width:15%;
     height:50px;
-}
+}*/
 .mycard{
   left:12%;
   width: 15rem !important;
@@ -11855,7 +11857,10 @@ thead {
   }
 
 }
-
+/*.member-img{
+      margin-left: 53px;
+  margin-right: 53px;
+}*/
 @media (max-width: 966px) {
   .mobile-x-5{
   margin-left: 33px;
@@ -11873,9 +11878,9 @@ thead {
   .card{
     margin-left: 8% !important;
   }
-    .card-img-top{
+/*    .card-img-top{
     width:20%;
-}
+}*/
 /*.team-more{
   margin-left: 20px !important;
 }*/
@@ -11897,9 +11902,9 @@ thead {
     .card{
     margin-left: 16% !important;
   }
-    .card-img-top{
+/*    .card-img-top{
     width:20%;
-}
+}*/
   .cap-mobile{
     font-size: 28px !important;
 
