@@ -12207,7 +12207,7 @@ a:hover,a:focus{
 
 @media (max-width: 971px) {
 .wrapper{
-    display: flex !important;
+    display:flex!important;
 
   }
 .wrapper.active{
@@ -12233,7 +12233,7 @@ a:hover,a:focus{
 .wrapper{
     display: none;
     flex-direction: column;
-    height: 100vh;
+/*    height: 100vh;*/
     margin: 0 auto;
     max-width: 1550px;
     padding-top: .5rem;
