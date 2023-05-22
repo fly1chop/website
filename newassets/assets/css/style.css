@@ -12449,3 +12449,6 @@ a:hover,a:focus{
   filter: brightness(1.1) contrast(1.1);
 
 }
+.bordered-image {
+  border: 1px solid #CFCBCA;
+}
