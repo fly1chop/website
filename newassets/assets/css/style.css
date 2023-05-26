@@ -12455,3 +12455,33 @@ a:hover,a:focus{
 .bordered-image {
   border: 1px solid #CFCBCA;
 }
+.apply-now{
+            all: unset;
+          font-family: Helvetica, Arial, sans-serif;
+          display: inline-block;
+          max-width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background-color: rgba(27,80,118,255);
+          font-size: 27px;
+          border-radius: 25px;
+          color: #fff;
+          padding: 0 30px;
+          font-weight: bold;
+          height: 80px;
+          cursor: pointer;
+          line-height: 50px;
+          text-align: center;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          text-decoration: none;
+          max-width: 100%;
+          transition: 0.3s;
+}
+.apply-now:hover{
+            background-color: white;
+            color:rgba(27,80,118,255);
+            border: 1px solid rgba(27,80,118,255);
+
+}
