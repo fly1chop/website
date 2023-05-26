@@ -12489,8 +12489,8 @@ a:hover,a:focus{
           cursor: pointer;
           line-height: 50px;
           text-align: center;
-          margin-top: 50px;
-          margin-bottom: 50px;
+          margin-top: 10px;
+          margin-bottom: 10px;
           text-decoration: none;
           max-width: 100%;
           transition: 0.3s;
