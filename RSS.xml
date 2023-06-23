@@ -4,5 +4,17 @@
     <title>Logncoding 로그엔코딩 로그엔코딩학원</title>
     <link>http://logncoding.com</link>
     <description>Logncoding 로그엔코딩 로그엔코딩학원</description>
+    <item>
+      <title>Team</title>
+      <link>http://logncoding.com/en/team.html</link>
+      <description>로그엔코딩 Team 소개</description>
+      <guid>http://logncoding.com/en/team.html</guid>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://logncoding.com/en/contactUs.html</link>
+      <description>로그엔코딩 Contact Info</description>
+      <guid>http://logncoding.com/en/contactUs.html</guid>
+    </item>
   </channel>
 </rss>
