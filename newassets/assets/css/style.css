@@ -50,7 +50,13 @@ h6 {
   color: #fff;
   line-height: 0;
 }
-
+.color-black{
+  color: black;
+}
+.nobullet{
+  list-style: none;
+  font-size: 17px;
+}
 .back-to-top:hover {
   background: #86c0da;
   color: #fff;
@@ -12086,6 +12092,12 @@ thead {
   padding-right:150px !important;
   height:1450px;
 
+}
+.color-red{
+  color:#C33729;
+}
+.table-box-small{
+  height:1050px;
 }
   @media (max-width: 1000px) {
 
