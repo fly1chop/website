@@ -141,7 +141,9 @@ h6 {
     margin: 0 auto;
     text-align: center;
 }
-
+.upcoming{
+  color:rgba(27,80,118,255);
+}
 .navbar ul {
   margin: 0;
   padding: 0;
@@ -11513,8 +11515,8 @@ animation-play-state: play;
 }
 .app-apply{
   cursor: pointer;
-    background-color: rgba(27,80,118,255);
-    border: 1px solid rgba(27,80,118,255);
+    background-color: rgba(27,80,118,255); 
+    border: 1px solid #555769;
   color:white;
     font-size: 15px;
   display:inline-block;
