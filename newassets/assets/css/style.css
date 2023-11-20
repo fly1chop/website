@@ -144,6 +144,9 @@ h6 {
 .upcoming{
   color:rgba(27,80,118,255);
 }
+.minus-margin{
+  margin-top: -16px;
+}
 .navbar ul {
   margin: 0;
   padding: 0;
