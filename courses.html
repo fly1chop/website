@@ -123,14 +123,14 @@
 
                 <div class="tab justify-content-center" role="tabpanel"data-aos="zoom-out">
                   <ul  class="nav nav-tabs justify-content-center mytable-ul" role="tablist">
-                    <li class="nav-link active" data-bs-toggle="tab" data-bs-target="#winter" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><a>2023 Winter Break</a></li>
-                    <li class="nav-link" data-bs-toggle="tab" data-bs-target="#winter2" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><a>2024 Spring Semester</a></li>
+                    <!-- <li class="nav-link active" data-bs-toggle="tab" data-bs-target="#winter" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><a>2023 Winter Break</a></li> -->
+                    <li class="nav-link active" data-bs-toggle="tab" data-bs-target="#winter2" type="button" role="tab" aria-controls="nav-profile" aria-selected="true"><a>2024 Spring Semester</a></li>
                   </ul>
                   
 <div class="tab-content tabs" id="nav-tabContent" data-aos="fade-up">
 
 
-                                                            <div role="tabpanel" class="table-box table-box-small tab-pane mt-5 active" id ="winter">
+<!--                                                             <div role="tabpanel" class="table-box table-box-small tab-pane mt-5 active" id ="winter">
                     <div class="table-responsive " style="position: relative;">
                       <ul class="color-black nobullet mb-5">
                         <li class="mb-2"><i class="bi bi-calendar-check"></i> Week1: 12/19-12/23</li>
@@ -228,11 +228,11 @@
                       </table>
                     </div>
                   </div>
-
+ -->
 
 
                                                  <div role="tabpanel" class="table-box tab-pane mt-5" id ="winter2">
-                    <div class="table-re간ponsive " style="position: relative;">
+                    <div class="table-responsive " style="position: relative;">
                       <ul class="color-black nobullet mb-5">
                         <li class="mb-2"><i class="bi bi-calendar-check"></i> Period: 24.01.08 - 24.03.24</li>
                    
@@ -251,7 +251,7 @@
                           <tr>
                             <td class="align-middle color-red" rowspan="3">Stanford Logic - Competition Preparation</td>
                             <td class="align-middle"  rowspan="1">7-9pm</td>
-                            <td class="align-middle" rowspan="1">Tues.</td>
+                            <td class="align-middle" rowspan="1">Fri.</td>
 
                           </tr>
                           <tr>
@@ -267,7 +267,7 @@
                                           <tr>
                             <td class="align-middle color-red" rowspan="2">Stanford CS - Competition Preparation</td>
                             <td class="align-middle"  rowspan="1">7-9pm</td>
-                            <td class="align-middle" rowspan="1">Fri.</td>
+                            <td class="align-middle" rowspan="1">Tue.</td>
 
                           </tr>
                           <tr>
@@ -873,7 +873,7 @@ $(document).ready(function () {
 
   document.addEventListener('DOMContentLoaded', function () {
     const summerTab = document.getElementById('fall');
-    const fallTab = document.getElementById('winter');
+    const fallTab = document.getElementById('winter2');
 
     // Show the 'fall' table and hide the 'summer' table
     fallTab.classList.add('active');
