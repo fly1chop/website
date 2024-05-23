@@ -12095,18 +12095,19 @@ thead {
 .table-box{
   padding-left:150px !important;
   padding-right:150px !important;
-  height:1550px;
+  height:1950px;
 
 }
 .color-red{
   color:#C33729;
 }
 .table-box-small{
-  height:1200px;
+  height:2500px;
 }
   @media (max-width: 1000px) {
 
     .table-box{
+      height:2450px;
   padding-left:40px !important;
   padding-right:40px !important;
 }
