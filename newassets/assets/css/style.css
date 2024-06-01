@@ -12089,6 +12089,11 @@ thead {
 }
 
 }
+
+.border-top{
+  border-top: 3px solid black !important;
+}
+
 .mytable{
   width: 500px;
 }

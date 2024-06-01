@@ -119,7 +119,29 @@
         <h2>Schedule </h2>
 
       </div>
+   <div class="row justify-content-center">
+          <div class="col-12">
+            <center>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="../newassets/assets/img/adimg.jpeg" alt="Welcome Image" class="img-fluid">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+            </center>
+          </div>
+        </div>
 <div class="row justify-content-center">
           <div class="col-12">
             <center>
@@ -993,6 +1015,12 @@ $(document).ready(function () {
     });
   });
       </script>
+              <script>
+    window.onload = function() {
+      var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+      myModal.show();
+    }
+  </script>
     <script src="../newassets/assets/js/main.js"></script>
     <script src="../newassets/assets/js/main2.js"></script>
   </body>
