@@ -61,6 +61,14 @@
       border-radius: 12px;
       margin-right: 10px;
     }
+        #openModal{
+          font-size: 18px;
+      color:#6F6F6F;
+      cursor: pointer;
+    }
+    #openModal:hover{
+      color:black;
+    }
   </style>
 </head>
 
@@ -349,7 +357,7 @@
                                                        <h2 class="color-blue mt-5 mb-4 myh2"><span class="smallspan">NEW</span></h2>
 
                                                                                                <tr>
-                            <td class="align-middle" rowspan="2" colspan=1>RBL(Research Based Learning)</td>
+                            <td class="align-middle" rowspan="2" colspan=1>RBL(Research Based Learning) <i id="openModal" data-bs-toggle="modal" data-bs-target="#myModal"class="bi bi-search"></i></td>
                             <td class="align-middle"  rowspan="1">알고리즘</td>
                                   <td class="align-middle"  rowspan="1">G9 ~ G11</td>
                             <td class="align-middle" rowspan="1">7 - 9pm</td>
@@ -368,7 +376,7 @@
 
 
                                                                    <tr>
-                            <td class="align-middle" rowspan="1" colspan=1>PBL(Project Based Learning)</td>
+                            <td class="align-middle" rowspan="1" colspan=1>PBL(Project Based Learning) <i id="openModal" data-bs-toggle="modal" data-bs-target="#myModal"class="bi bi-search"></i></td>
                             <td class="align-middle"  rowspan="1">게임 개발</td>
 
                             <td class="align-middle"  rowspan="1">G6 ~ G9</td>
@@ -1097,12 +1105,12 @@ $(document).ready(function () {
     });
   });
       </script>
-              <script>
+<!--               <script>
     window.onload = function() {
       var myModal = new bootstrap.Modal(document.getElementById('myModal'));
       myModal.show();
     }
-  </script>
+  </script> -->
     <script src="../newassets/assets/js/main.js"></script>
     <script src="../newassets/assets/js/main2.js"></script>
   </body>
