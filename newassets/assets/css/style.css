@@ -12117,7 +12117,11 @@ thead {
   padding-right:40px !important;
 }
     }
+
+
+
   @media (max-width: 800px) {
+
     .table-spring th{
       font-size: 12px;
     }
@@ -12129,6 +12133,29 @@ thead {
   }
   .table-summer td{
   font-size: 12px;
+  }
+}
+.mobile-courses{
+  display: none;
+
+  }
+
+  @media (max-width: 700px) {
+    .table-summer{
+      display: none;
+    }
+    .mobile-courses{
+      display: block;
+    }
+    .table-box{
+      height:1650px;
+  padding-left:40px !important;
+  padding-right:40px !important;
+}
+.table-h{
+  display: none;
+}
+    }
   }
 }
 table{
