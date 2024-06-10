@@ -10991,6 +10991,9 @@ font-size: 34px;
 .ital{
   font-style: italic;
 }
+.mt-6{
+  margin-top: 70px;
+}
 .mymt{
   margin-top: 12px;
 }
@@ -12100,7 +12103,7 @@ thead {
 .table-box{
   padding-left:150px !important;
   padding-right:150px !important;
-  height:2550px;
+  height:2600px;
 
 }
 .color-red{
@@ -12112,7 +12115,7 @@ thead {
   @media (max-width: 1000px) {
 
     .table-box{
-      height:3150px;
+      height:3300px;
   padding-left:40px !important;
   padding-right:40px !important;
 }
