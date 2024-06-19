@@ -12315,6 +12315,66 @@ a:hover,a:focus{
 
 }
 
+
+
+  .btn-primary2 {
+    width: 120px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: rgba(254, 187, 57, 0.88);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  .btn-primary2:hover {
+    background-color: rgba(27, 80, 118, 0.88);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .color-black a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .color-black a:hover {
+    text-decoration: underline;
+    color: rgba(27, 80, 118, 1);
+  }
+
+  .card.card-body {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card.card-body:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .myl {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .myl li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .myl li:last-child {
+    border-bottom: none;
+  }
+
 @media (max-width: 971px) {
 .wrapper{
     display:flex!important;

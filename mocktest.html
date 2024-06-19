@@ -55,14 +55,26 @@
     right: 10px; /* 화면 오른쪽으로부터의 거리, 숫자만 변경 */
     bottom: 50px; /* 화면 아래쪽으로부터의 거리, 숫자만 변경 */
     }
+    .chatfor{
+          position: fixed;
+    z-index: 9999;
+    right: 2px;
+    bottom: 100px;
+    }
 }
 /* 모바일 화면 */
 @media (max-width:767px) {
     #kakao-talk-channel-chat-button {
     position: fixed;
     z-index: 9999;
-    right: 15px; /* 화면 오른쪽으로부터의 거리, 숫자만 변경 */
-    bottom: 30px; /* 화면 아래쪽으로부터의 거리, 숫자만 변경 */
+    right: 15px;
+    bottom: 30px; 
+    }
+        .chatfor{
+          position: fixed;
+    z-index: 9999;
+    right: 7px;
+    bottom: 70px;
     }
 }
 </style>
@@ -539,6 +551,46 @@ Our global members combine their experiences at top tech companies such as: Goog
             </strong>All Rights Reserved
           </div>
           </div>
+<div class="position-fixed p-3 d-flex flex-column align-items-end chatfor" style="right: 2px; bottom: 100px;">
+  <button class="btn btn-primary2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+    aria-expanded="false" aria-controls="collapseOne" data-bs-parent=".chatfor">
+    CS 대회
+  </button>
+  <div class="collapse mb-3" id="collapseOne" data-bs-parent=".chatfor">
+    <div class="card card-body">
+      <ul class="color-black myl">
+        <li><a href="https://example.com/option1" target="_blank">ACSL</a></li>
+        <li><a href="https://example.com/option2" target="_blank">USACO</a></li>
+        <li><a href="https://example.com/option3" target="_blank">ILO</a></li>
+      </ul>
+    </div>
+  </div>
+  <button class="btn btn-primary2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+    aria-expanded="false" aria-controls="collapseTwo" data-bs-parent=".chatfor">
+    개인 프로젝트
+  </button>
+  <div class="collapse mb-3" id="collapseTwo" data-bs-parent=".chatfor">
+    <div class="card card-body">
+      <ul class="color-black myl">
+        <li><a href="https://example.com/optionA" target="_blank">Option A</a></li>
+        <li><a href="https://example.com/optionB" target="_blank">Option B</a></li>
+        <li><a href="https://example.com/optionC" target="_blank">Option C</a></li>
+      </ul>
+    </div>
+  </div>
+  <button class="btn btn-primary2 mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+    aria-expanded="false" aria-controls="collapseThree" data-bs-parent=".chatfor">
+    GPA / AP
+  </button>
+  <div class="collapse mb-3" id="collapseThree" data-bs-parent=".chatfor">
+    <div class="card card-body">
+      <ul class="color-black myl">
+        <li><a href="https://example.com/optionX" target="_blank">AP CS A</a></li>
+        <li><a href="https://example.com/optionY" target="_blank">AP CS P</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 <div id="kakao-talk-channel-chat-button"></div>
 
  <a href="#" class="back-to-top position-fixed bottom-0 end-0 p-3 d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
