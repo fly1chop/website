@@ -55,7 +55,7 @@ h6 {
 }
 .nobullet{
   list-style: none;
-  font-size: 17px;
+  font-size: 21px;
 }
 .back-to-top:hover {
   background: #86c0da;
@@ -12158,9 +12158,10 @@ thead {
       display: block;
     }
     .table-box{
-      height:1650px;
-  padding-left:40px !important;
-  padding-right:40px !important;
+      height:1750px;
+      background-color: none;
+  padding-left:5px !important;
+  padding-right:5px !important;
 }
 .table-h{
   display: none;
