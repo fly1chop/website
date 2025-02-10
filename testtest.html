@@ -46,25 +46,98 @@
         .swiper-slide-thumb-active {
             border: 3px solid #4CAF50;
         }
-/* Rolling Carousel Styles */
 .rolling-carousel {
-  overflow: hidden;
-  white-space: nowrap;
   position: relative;
+  background: #000A2E;
+  overflow: hidden;
 }
 
-.rolling-carousel-inner {
-  display: inline-flex;
-  animation: scroll 15s linear infinite;
-  transition: transform 0.5s ease-in-out;
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.banner-content {
+  width: 90%; /* Ensure responsiveness */
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 3 / 1; /* Maintain elliptical aspect ratio */
+  padding: 40px; /* Increase padding for better spacing */
+  background: #f9f9f9;
+  border-radius: 50px; /* Use a pixel value instead of percentage */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: visible !important; /* Ensure the shape is visible */
+}
+.swiper-slide {
+  overflow: visible; /* Allow child content to overflow */
 }
 
-.rolling-carousel img {
-  width: auto;
-  height: 300px; /* Adjust as needed */
-  margin-right: 10px;
-  object-fit: cover;
+/* Title Styling */
+.banner-content .banner-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #555;
 }
+
+/* Description Text */
+.banner-content .banner-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.banner-content .custom-button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0056b3;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #e8f0ff;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-content .custom-button:hover {
+  background: #0056b3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hover Effect for Interactivity */
+.banner-content:hover {
+  transform: scale(1.02); /* Slight scale-up effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.swiper-slide-active .banner-content {
+  opacity: 1; /* Make the active slide visible */
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+  bottom: 10px;
+  position: absolute;
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4CAF50;
+  opacity: 1;
+}
+
+
+
 
 @keyframes scroll {
   from {
@@ -228,7 +301,6 @@
 
    
 
-    <!-- Why Us Section -->
     <section id="program" class=" section dark-background">
 
       <!-- Section Title -->
@@ -240,21 +312,58 @@
       </div>
 
       <!-- End Section Title -->
-      <h4 class="mt-5">Stanford, CMU, Cornell 등 아이비리그를 타겟으로 한 문과/ 이과/ 예체능 융합 EC 토탈 솔루션</h4>
+      <h4 class="mt-1">Stanford, CMU, Cornell 등 아이비리그를 타겟으로 한 문과/ 이과/ 예체능 융합 EC 토탈 솔루션</h4>
 
-      <p>* 로그엔코딩 학생들은 다수 신분노출이 어려운 학생들이 많아, 수업과정/ 실제 학생들을 촬영할 수 없는 점 양해부탁드립니다. </p>
+      <p class="mb-4">* 로그엔코딩 학생들은 다수 신분노출이 어려운 학생들이 많아, 수업과정/ 실제 학생들을 촬영할 수 없는 점 양해부탁드립니다. </p>
 
-<div class="rolling-carousel">
-  <div class="rolling-carousel-inner" id="rollingBanner">
-    <img src="banner1.jpg" alt="Banner 1">
-    <img src="banner2.jpg" alt="Banner 2">
-    <img src="banner3.jpg" alt="Banner 3">
-    <!-- Repeat banners for smooth scrolling -->
-    <img src="banner1.jpg" alt="Banner 1">
-    <img src="banner2.jpg" alt="Banner 2">
-    <img src="banner3.jpg" alt="Banner 3">
+<div class="swiper-container rolling-carousel">
+  <div class="swiper-wrapper">
+    <!-- Banner 1 -->
+    <div class="swiper-slide">
+      <div class="banner-content">
+        <div class="banner-title">캡스톤프로그램</div>
+        <div class="banner-description">
+          대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아
+          세계적인 기업, 명문 대학 연구기관, 글로벌 NGO 등에게 실질적인 솔루션을 제공할 수 있는 기회.
+        </div>
+        <div class="banner-link">
+          <a href="#" class="custom-button">로그엔코딩만의 독보적인 커리어를 확인해보세요 ▶</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner 2 -->
+    <div class="swiper-slide">
+      <div class="banner-content">
+        <div class="banner-title">개인 프로젝트</div>
+        <div class="banner-description">
+          학생의 활동 이력과 공백을 탐색하여 Computer Science, Medical, Economics 등의
+          다양한 희망 전공과 연계해 자신만의 스토리를
+        </div>
+        <div class="banner-link">
+          <a href="#" class="custom-button">프리미엄 1:1 커스텀 프로젝트, 압도적인 퀄리티를 느껴보세요 ▶</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner 3 -->
+    <div class="swiper-slide">
+      <div class="banner-content">
+        <div class="banner-title">수업</div>
+        <div class="banner-description">
+          코딩 전문가들과 함께하는 가장 효율적인 커리큘럼, python, java, c++ 등 코딩
+          언어 수업을 포함하여 데이터 사이언스, 로보틱스, 웹개발, ui/ux 등 다양한 트
+          랙의 프로그래밍 수업을 통한 실력 배양
+        </div>
+        <div class="banner-link">
+          <a href="#" class="custom-button">시간표 확인하기 ▶</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
 
 <div class="container mt-5">
   <div class="row g-4">
@@ -289,7 +398,7 @@
 </div>
 
 
-    </section><!-- /Why Us Section -->
+    </section>
 
 
     <section id="program" class=" section light-background">
@@ -378,51 +487,7 @@
             });
         });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".hover-card");
-    const banner = document.querySelector(".rolling-carousel-inner");
-    const bannerWidth = 300; // Width of a single banner image
-    const totalBanners = 3; // Total unique banners (not repeated ones)
 
-    let isHovered = false;
-    let currentIndex = 0; // To track the current position
-
-    // Rolling animation logic
-    const startRolling = () => {
-      banner.classList.remove("paused");
-      banner.style.animation = "scroll 15s linear infinite";
-    };
-
-    const stopRolling = (targetIndex) => {
-      banner.classList.add("paused");
-      currentIndex = targetIndex;
-      const newPosition = -(targetIndex * bannerWidth);
-      banner.style.animation = "none"; // Stop the rolling animation
-      banner.style.transform = `translateX(${newPosition}px)`; // Move to the target
-    };
-
-    cards.forEach((card) => {
-      card.addEventListener("mouseover", function () {
-        isHovered = true;
-        const target = parseInt(this.getAttribute("data-target"));
-        stopRolling(target);
-      });
-
-      card.addEventListener("mouseleave", function () {
-        isHovered = false;
-        startRolling(); // Resume rolling when the mouse leaves
-      });
-    });
-
-    // Resume rolling every 15 seconds if not hovered
-    setInterval(() => {
-      if (!isHovered) {
-        currentIndex = (currentIndex + 1) % totalBanners; // Cycle through banners
-        const newPosition = -(currentIndex * bannerWidth);
-        banner.style.transform = `translateX(${newPosition}px)`;
-      }
-    }, 15000); // Adjust duration to match animation speed
-  });
 </script>
 
 
@@ -454,6 +519,36 @@
 
     new Typed("#hero-typed", options);
   });
+document.addEventListener("DOMContentLoaded", function () {
+  var bannerSwiper = new Swiper('.rolling-carousel', {
+    effect: 'fade', // Enables fade effect
+    fadeEffect: {
+      crossFade: true // Smooth fading transition
+    },
+    loop: true,
+    autoplay: {
+      delay: 6000, // Change every 4 seconds
+      disableOnInteraction: false // Keep autoplay running even after interaction
+    },
+    speed: 2500, // Transition speed for smooth fade effect
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  });
+
+  // Handle hover event for cards
+  document.querySelectorAll(".hover-card").forEach((card, index) => {
+    card.addEventListener("mouseenter", function () {
+      bannerSwiper.slideToLoop(index); // Move to corresponding banner
+      bannerSwiper.autoplay.stop(); // Stop autoplay while hovering
+    });
+
+    card.addEventListener("mouseleave", function () {
+      bannerSwiper.autoplay.start(); // Resume autoplay after hover
+    });
+  });
+});
 </script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
