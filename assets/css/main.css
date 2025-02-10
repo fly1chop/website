@@ -29,8 +29,10 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #000A2E;
+  --background-color: white;
   --surface-color: #ffffff;
+    --default-color: black;
+  --heading-color: black;
 }
 .bg-white{
   background-color:white;
@@ -533,7 +535,8 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  padding-top: 30px;
   position: relative;
 }
 
@@ -632,9 +635,9 @@ h6 {
 }
 
 .footer .copyright {
-  padding-top: 25px;
+/*  padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);*/
 }
 
 .footer .copyright p {
@@ -767,7 +770,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 30px 0;
   scroll-margin-top: 85px;
   overflow: clip;
 }
@@ -795,8 +798,8 @@ section,
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: white;
+  background: color-mix(in srgb, white, transparent 0%);
+  color: #000A2E;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -811,8 +814,40 @@ section,
   font-family: var(--heading-font);
 }
 
-.section-title div .description-title {
+.section-title2 div .description-title {
+  color: #000A2E;
+}
+
+.section-title2 {
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.section-title2 h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, #000A2E, transparent 0%);
   color: white;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-family: var(--default-font);
+}
+
+.section-title2 div {
+  color: #000A2E;
+  margin: 10px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.section-title2 div .description-title {
+  color: #000A2E;
 }
 
 /*--------------------------------------------------------------
@@ -1518,10 +1553,6 @@ section,
   margin-right: 8px;
   color: var(--accent-color);
 }
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.capimg{
+  width: 65%;
 }
