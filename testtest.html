@@ -235,44 +235,7 @@
 .col-lg-4:last-child .divider {
   display: none;
 }
-/* Floating Buttons Container */
-.floating-buttons {
-    position: fixed;
-    right: 20px; /* Adjust distance from right */
-    bottom: 100px; /* Adjust distance from bottom */
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px; /* Spacing between buttons */
-    z-index: 1000; /* Ensures buttons are on top */
-}
 
-/* Individual Floating Buttons */
-.floating-btn {
-    width: 50px;
-    height: 50px;
-    background-color: #2D5F7F; /* Blue color */
-    color: white;
-    border: none;
-    border-radius: 50%; /* Circular shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-/* Hover Effect */
-.floating-btn:hover {
-    background-color: #000A2E; /* Darker blue */
-    transform: scale(1.1);
-}
-
-/* Icon Styling */
-.floating-btn i {
-    font-size: 1.2rem;
-}
 
 
 .contact-card, .transport-card {
@@ -326,7 +289,13 @@
           <li><a href="#video-s" class="active">About</a></li>
           <li><a href="#program">Capstone</a></li>
           <li><a href="newteam.html">Team</a></li>
-
+          <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="tracks.html">Project Track</a></li>
+              <li><a href="tracks.html">Competition Track</a></li>
+              <li><a href="tracks.html">Dropdown 3</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>

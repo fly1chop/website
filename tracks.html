@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LognCoding</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+<style>
+
+  .nav-tabs-custom {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    border-bottom: none;
+  }
+  .nav-tabs-custom .nav-link {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 12px 30px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 30px;
+  }
+  .nav-tabs-custom .nav-link.active {
+    color: white;
+    background-color: #000A2E;
+  }
+</style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="testtest.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logo.png" alt="">
+        <!-- <h1 class="sitename">Remember</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+<!--           <li><a href="#hero" class="active">About</a></li>
+          <li><a href="#about">Capstone</a></li> -->
+          <li><a href="#video-s">About</a></li>
+          <li><a href="#program">Capstone</a></li>
+          <li><a href="newteam.html" class="active">Team</a></li>
+          <!-- <li><a href="#contact">Personal Project</a></li> -->
+          <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="tracks.html">Project Track</a></li>
+              <li><a href="tracks.html">Competition Track</a></li>
+              <li><a href="tracks.html">Dropdown 3</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Blog</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+  <main class="main">
+
+ <section id="" class="section light-background py-5">
+
+<div class="container my-5">
+  <ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist" style="margin-bottom: 75px;">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="project-tab" data-bs-toggle="tab" data-bs-target="#project" type="button" role="tab" aria-controls="project" aria-selected="true">
+        Project Track
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="competition-tab" data-bs-toggle="tab" data-bs-target="#competition" type="button" role="tab" aria-controls="competition" aria-selected="false">
+        Competition Track
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-4" id="myTabContent">
+    <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
+                                                    <img class="mx-auto"
+                                src="newassets/assets/img/courses/winter2024_0.jpeg"
+                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
+                            />
+    </div>
+    <div class="tab-pane fade" id="competition" role="tabpanel" aria-labelledby="competition-tab">
+                                                    <img class="mx-auto"
+                                src="newassets/assets/img/courses/winter2024_1.jpeg"
+                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
+                            />
+    </div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+
+<div class="floating-buttons">
+    <button class="floating-btn" onclick="alert('Button 1 clicked!')">
+        <i class="bi bi-house-door"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 2 clicked!')">
+        <i class="bi bi-info-circle"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 3 clicked!')">
+        <i class="bi bi-chat-dots"></i>
+    </button>
+    <button id="scroll-top" class="floating-btn">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+</div>
+
+
+  </main>
+
+
+
+<div class="floating-buttons">
+    <button class="floating-btn" onclick="alert('Button 1 clicked!')">
+        <i class="bi bi-house-door"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 2 clicked!')">
+        <i class="bi bi-info-circle"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 3 clicked!')">
+        <i class="bi bi-chat-dots"></i>
+    </button>
+    <button id="scroll-top" class="floating-btn">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+</div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">로그엔코딩</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- PHP Email Form Validation (Replace with CDN if available) -->
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- AOS (Animate On Scroll) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- GLightbox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+
+
+
+<!-- PureCounter -->
+<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.1.1/dist/purecounter_vanilla.js"></script>
+
+<!-- ImagesLoaded -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+
+<!-- Isotope Layout -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
+
+<!-- Swiper.js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+  AOS.init({
+    once: true, // Animation runs only once
+    offset: 200, // Offset from the top to trigger animations
+    duration: 1000, // Default duration for animations
+  });
+</script>
+
+</body>
+
+</html>

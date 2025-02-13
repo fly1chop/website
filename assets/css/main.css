@@ -161,58 +161,6 @@ h6 {
   }
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -657,7 +605,7 @@ h6 {
   inset: 0;
   z-index: 999999;
   overflow: hidden;
-  background: var(--background-color);
+  background: #000A2E;
   transition: all 0.6s ease-out;
 }
 
@@ -667,7 +615,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-color: #F4C400 transparent #F4C400 transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1205,4 +1153,43 @@ section,
 
 .capimg{
   width: 65%;
+}
+
+/* Floating Buttons Container */
+.floating-buttons {
+    position: fixed;
+    right: 20px; /* Adjust distance from right */
+    bottom: 100px; /* Adjust distance from bottom */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Spacing between buttons */
+    z-index: 1000; /* Ensures buttons are on top */
+}
+
+/* Individual Floating Buttons */
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #2D5F7F; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.floating-btn:hover {
+    background-color: #000A2E; /* Darker blue */
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+.floating-btn i {
+    font-size: 1.2rem;
 }
