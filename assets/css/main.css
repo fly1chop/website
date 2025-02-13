@@ -809,7 +809,12 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('../img/image.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+
 .hero-con{
   margin-top:-65px;
 }
@@ -831,7 +836,7 @@ section,
 }
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, black, transparent 15%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -864,13 +869,13 @@ section,
   margin: 30px 0 0 0;
   border-radius: 50px;
   transition: 0.5s;
-  border: 2px solid var(--accent-color);
+  border: 2px solid #F4C400;
 }
 
 .hero .btn-get-started:hover {
   color: var(--contrast-color);
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+  background: #F4C400;
+  border-color: #F4C400;
 }
 
 @media (max-width: 768px) {
