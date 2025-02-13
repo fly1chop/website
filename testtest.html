@@ -34,8 +34,11 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+
+
         .swiper-thumbnail {
-            height: 70px;
+            height: 70px !important;
             cursor: pointer;
             border-radius: 5px;
             transition: transform 0.3s ease-in-out;
@@ -47,30 +50,57 @@
             border: 3px solid #4CAF50;
         }
 .rolling-carousel {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
   position: relative;
   background: #000A2E;
   overflow: hidden;
+  width: 100%; /* Ensures it takes full width */
 }
 
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
+
+
 .banner-content {
-  width: 90%; /* Ensure responsiveness */
-  max-width: 800px;
+  width: 100%;
+  max-width: 1200px;
   height: auto;
-  aspect-ratio: 3 / 1; /* Maintain elliptical aspect ratio */
-  padding: 40px; /* Increase padding for better spacing */
-  background: #f9f9f9;
-  border-radius: 50px; /* Use a pixel value instead of percentage */
+  aspect-ratio: 3 / 1;
+  padding: 40px;
+  background: url('assets/img/content1.jpg') no-repeat center center; /* Set background image */
+  background-size: cover; /* Ensure the image covers the content */
+  border-radius: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
-  overflow: visible !important; /* Ensure the shape is visible */
+  overflow: visible !important;
+  position: relative; /* Important for overlay */
+  color: white; /* Ensure text is readable */
+
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Centers items vertically */
+  align-items: center; /* Centers items horizontally */
+  min-height: 300px; /* Ensures it has enough height */
 }
-.swiper-slide {
-  overflow: visible; /* Allow child content to overflow */
+
+/* Optional: Add a semi-transparent overlay */
+.banner-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  border-radius: 50px; /* Same as .banner-content */
 }
+
+/* Ensure the text and buttons are above the overlay */
+.banner-content * {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Title Styling */
 .banner-content .banner-title {
@@ -78,14 +108,14 @@
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #555;
+  color: white;
 }
 
 /* Description Text */
 .banner-content .banner-description {
   font-size: 1rem;
   line-height: 1.6;
-  color: #666;
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -110,7 +140,6 @@
 
 /* Hover Effect for Interactivity */
 .banner-content:hover {
-  transform: scale(1.02); /* Slight scale-up effect */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
@@ -118,25 +147,19 @@
   opacity: 1; /* Make the active slide visible */
 }
 
-/* Pagination Styling */
-.swiper-pagination {
-  bottom: 10px;
-  position: absolute;
+
+.rolling-carousel .swiper-slide {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center;
+  width: 100%; /* Ensures each slide takes full width */
 }
 
-.swiper-pagination-bullet {
-  background: white;
-  width: 12px;
-  height: 12px;
-  opacity: 0.7;
+.banner-content {
+
+  margin: auto; /* Centers the element horizontally */
 }
-
-.swiper-pagination-bullet-active {
-  background: #4CAF50;
-  opacity: 1;
-}
-
-
 
 
 @keyframes scroll {
@@ -158,7 +181,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 12px 35px;
   font-size: 1.1rem;
   font-weight: 500;
   color: #ffffff;
@@ -181,6 +204,108 @@
   margin-right: 10px;
   font-size: 1.2rem;
 }
+.unified-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Dividers between cards */
+.divider {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 60%;
+  background: #ddd;
+}
+
+/* Remove divider for last card */
+.col-lg-4:last-child .divider {
+  display: none;
+}
+/* Floating Buttons Container */
+.floating-buttons {
+    position: fixed;
+    right: 20px; /* Adjust distance from right */
+    bottom: 100px; /* Adjust distance from bottom */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Spacing between buttons */
+    z-index: 1000; /* Ensures buttons are on top */
+}
+
+/* Individual Floating Buttons */
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #2D5F7F; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.floating-btn:hover {
+    background-color: #000A2E; /* Darker blue */
+    transform: scale(1.1);
+}
+
+/* Icon Styling */
+.floating-btn i {
+    font-size: 1.2rem;
+}
+
+
+.contact-card, .transport-card {
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Left Card: Contact */
+.contact-card {
+  background: white;
+}
+
+/* Right Card: Public Transport */
+.transport-card {
+  background: #000A2E; /* Dark background */
+  color: white !important;
+}
+
+/* Yellow Line Below Title */
+.yellow-line {
+  width: 40px;
+  height: 3px;
+  background-color: #FFC107;
+  margin-top: 5px;
+}
+
+/* Make cards stick together */
+.contact-card, .transport-card {
+  margin-bottom: 0;
+}
+
 
 </style>
 </head>
@@ -198,28 +323,10 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-<!--           <li><a href="#hero" class="active">About</a></li>
-          <li><a href="#about">Capstone</a></li> -->
+          <li><a href="#video-s" class="active">About</a></li>
+          <li><a href="#program">Capstone</a></li>
           <li><a href="newteam.html">Team</a></li>
 
-<!--           <li><a href="#contact">Personal Project</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -235,7 +342,7 @@
     <section id="hero" class="hero section dark-background">
 
 
-      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="container text-center hero-con" data-aos="fade-up" data-aos-delay="100" >
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <img class="img-fluid d-block w-30 mx-auto hero-logo" src="assets/img/logo.png" >
@@ -247,8 +354,13 @@
       </div>
 
     </section><!-- /Hero Section -->
-<section class=" section light-background">
-  <div class="container dark-background" >
+<section class=" section light-background" id="video-s">
+      <div class="container section-title2" data-aos="fade-up">
+        <h2>About</h2>
+        <div><span><span class="description-title">로그앤코딩</span></div>
+      </div>
+  <div class="container" >
+
 <div class="max-w-5xl mx-auto my-10">
         <!-- <h2 class="text-2xl font-semibold text-center mb-4">Featured Videos</h2> -->
 
@@ -316,8 +428,8 @@
 
       <p class="mb-4">* 로그엔코딩 학생들은 다수 신분노출이 어려운 학생들이 많아, 수업과정/ 실제 학생들을 촬영할 수 없는 점 양해부탁드립니다. </p>
 
-<div class="swiper-container rolling-carousel">
-  <div class="swiper-wrapper">
+<div class="swiper-container rolling-carousel mt-md-5 mb-md-5 d-block mx-auto text-center">
+  <div class="swiper-wrapper sg">
     <!-- Banner 1 -->
     <div class="swiper-slide">
       <div class="banner-content">
@@ -366,26 +478,26 @@
 
 
 <div class="container mt-5">
-  <div class="row g-4">
-    <!-- Card 1 -->
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 text-center hover-card" data-target="0">
+  <div class="card unified-card text-center">
+    <div class="row g-0">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 position-relative hover-card">
         <div class="card-body">
           <h5 class="card-title">캡스톤 프로젝트</h5>
         </div>
+        <div class="divider"></div> <!-- Divider -->
       </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 text-center hover-card" data-target="1">
+      
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 position-relative hover-card">
         <div class="card-body">
           <h5 class="card-title">개인 프로젝트</h5>
         </div>
+        <div class="divider"></div> <!-- Divider -->
       </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="col-lg-4 col-md-6">
-      <div class="card h-100 text-center hover-card" data-target="2">
+      
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-12 hover-card">
         <div class="card-body">
           <h5 class="card-title">수업</h5>
         </div>
@@ -393,6 +505,7 @@
     </div>
   </div>
 </div>
+
 
 
 </div>
@@ -432,6 +545,96 @@
     </section>
 
 
+    <section id="result" class=" ection dark-background">
+
+      <!-- Section Title -->
+      <div class="container " data-aos="fade-up">
+         <div class="container " data-aos="fade-up">
+        <div class="section-title">
+        <h2>Achievements</h2>
+                <div><span class="description-title">확실한 결과물로 결과까지 로그엔코딩</span></div>
+
+      </div>
+      <h3 class="text-center mt-4 mb-5">로그엔코딩 대학교 합격 리스트</h3>
+
+                <img src="assets/img/result.png" alt="Image 2" class="img-fluid rounded shadow capimg d-block mx-auto">
+
+
+</div>
+
+
+    </section>
+<section id="contact" class="section light-background">
+  <div class="container">
+      <div class="container section-title2" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div><span><span class="description-title">오시는 길</span></div>
+      </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12">
+            <iframe  class="d-block mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1305611293283!2d127.03322361526259!3d37.52841947980509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3866d9664bb%3A0x90a9663ae03e690b!2s17%20Eonju-ro%20174-gil%2C%20Gangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678455598812!5m2!1sen!2skr"               frameborder="0"
+              style="border: 0; width: 80%; height: 384px"
+              allowfullscreen></iframe>
+
+          </div>
+        </div>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Left Side: Contact Info -->
+    <div class="col-md-6">
+      <div class="card contact-card text-start" data-aos="flip-up" data-aos-delay="100">
+        <div class="card-body">
+          <h5 class="fw-bold">서울시 강남구 압구정로 208, 본경빌딩 3층</h5>
+          <div class="yellow-line"></div> <!-- Yellow Line -->
+          <div class="d-flex flex-column mt-3">
+            <p><strong class="text-dark">대표번호</strong> <span class="text-muted ms-2">02-6954-1601</span></p>
+            <p><strong class="text-dark">운영시간</strong></p>
+            <p class="text-muted">월-금 / am 09:00 ~ pm 19:00</p>
+            <p class="text-muted">주말 / am 09:00 ~ pm 18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Public Transport -->
+    <div class="col-md-6">
+      <div class="card transport-card text-start text-white" data-aos="flip-up" data-aos-delay="200">
+        <div class="card-body">
+          <h5 class="fw-bold" style="color:white;">대중교통 이용시</h5>
+          <div class="yellow-line"></div> <!-- Yellow Line -->
+          <p class="mt-3"><strong>지하철</strong> <span class="ms-2" style="color:#c8c8c8 !important"> 3호선 압구정역(현대백화점) 2번 출구</span></p>
+          <p><strong>버스</strong></p>
+          <p  style="color:#c8c8c8 !important">[간선버스] 143, 147, 148, 240, 301, 362, 463, 472</p>
+          <p style="color:#c8c8c8 !important">[지선버스] 3011, 4211, 4318</p>
+          <p style="color:#c8c8c8 !important">[공항버스] 6006</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <button class="floating-btn" onclick="alert('Button 1 clicked!')">
+        <i class="bi bi-house-door"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 2 clicked!')">
+        <i class="bi bi-info-circle"></i>
+    </button>
+    <button class="floating-btn" onclick="alert('Button 3 clicked!')">
+        <i class="bi bi-chat-dots"></i>
+    </button>
+    <button id="scroll-top" class="floating-btn">
+        <i class="bi bi-arrow-up-short"></i>
+    </button>
+</div>
 
 
 
@@ -448,7 +651,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -536,8 +739,6 @@ document.addEventListener("DOMContentLoaded", function () {
       clickable: true
     }
   });
-
-  // Handle hover event for cards
   document.querySelectorAll(".hover-card").forEach((card, index) => {
     card.addEventListener("mouseenter", function () {
       bannerSwiper.slideToLoop(index); // Move to corresponding banner
