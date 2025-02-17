@@ -86,7 +86,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: black;
+  --background-color: #000A2E;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --contrast-color: #000000;
@@ -855,9 +855,6 @@ section,
   top: calc(50% - 47px);
 }
 
-/*#program{
-  color:white !important;
-}*/
 
 .capimg{
   width: 65%;
@@ -872,7 +869,6 @@ section,
     gap: 15px; 
     z-index: 1000; 
 }
-
 
 .floating-btn {
     width: 50px;
@@ -895,8 +891,13 @@ section,
     background-color: #000A2E; 
     transform: scale(1.1);
 }
-
 /* Icon Styling */
 .floating-btn i {
     font-size: 1.2rem;
+}
+.w-70{
+  width: 70% !important;
+}
+.smallimg{
+  max-height: 110px;
 }

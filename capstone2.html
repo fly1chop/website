@@ -44,6 +44,37 @@
     color: white;
     background-color: #000A2E;
   }
+
+  .card {
+    background-color: #000A2E; 
+    color: white; 
+    border-radius: 12px;
+    width: 160px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .card i {
+    font-size: 2.5rem; 
+    color:white !important;
+  }
+
+  .card h5 {
+    font-size: 1rem; 
+    font-weight: bold;
+    color:white !important;
+    margin-top: 10px;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .row-cols-2 .col, .row-cols-md-4 .col {
+    display: flex;
+    justify-content: center;
+  }
+
 </style>
 </head>
 
@@ -91,30 +122,102 @@
   <ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist" style="margin-bottom: 75px;">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="project-tab" data-bs-toggle="tab" data-bs-target="#project" type="button" role="tab" aria-controls="project" aria-selected="true">
-        Project Track
+        로그엔코딩
       </button>
     </li>
-    <li class="nav-item" role="presentation">
+    <a href="newteam.html"><li class="nav-item" role="presentation">
       <button class="nav-link" id="competition-tab" data-bs-toggle="tab" data-bs-target="#competition" type="button" role="tab" aria-controls="competition" aria-selected="false">
-        Competition Track
+        강사진 소개
       </button>
-    </li>
+    </li></a>
   </ul>
 
   <div class="tab-content mt-4" id="myTabContent">
     <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
-                                                    <img class="mx-auto"
-                                src="newassets/assets/img/courses/winter2024_0.jpeg"
-                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
-                            />
+        <div class="row">
+          <div class="col-md-6"  data-aos="fade-right" data-aos-duration="1000">
+              <img class="img-fluid" src="assets/img/content1.jpg" class="d-block mx-auto w-70">
+          </div>
+              <div class="col-md-6 px-md-5"  data-aos="fade-left" data-aos-duration="1000">
+                          <img src="assets/img/logo.png" alt="" class="smallimg">
+                          <p class="mt-4">독보적인 퀄리티와 커리큘럼으로
+보장된 실력 향상과 상위 엘리트들을 위한 프리미엄 클래스</p>
+          </div>
+
+        </div>
     </div>
     <div class="tab-pane fade" id="competition" role="tabpanel" aria-labelledby="competition-tab">
-                                                    <img class="mx-auto"
-                                src="newassets/assets/img/courses/winter2024_1.jpeg"
-                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
-                            />
+
     </div>
   </div>
+  <div class="container mt-5">
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    <!-- Card 1 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
+        <i class="bi bi-bar-chart-line-fill" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Data Science</h5>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
+        <i class="bi bi-code-slash" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Web Development</h5>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-left" data-aos-duration="1000">
+        <i class="bi bi-cpu" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">AI & Machine Learning</h5>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-left" data-aos-duration="1000">
+        <i class="bi bi-laptop" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Cybersecurity</h5>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
+        <i class="bi bi-database" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Database Management</h5>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
+        <i class="bi bi-phone" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Mobile Development</h5>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow" data-aos="flip-left" data-aos-duration="1000">
+        <i class="bi bi-palette" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">UI/UX Design</h5>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col">
+      <div class="card text-center p-3 shadow" data-aos="flip-left" data-aos-duration="1000">
+        <i class="bi bi-graph-up" style="font-size: 2rem; color: #000A2E;"></i>
+        <h5 class="mt-2">Business Analytics</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
 
 
