@@ -718,6 +718,9 @@ section,
 .section-title2 div .description-title {
   color: #000A2E;
 }
+.section-description{
+  font-size: 16px;
+}
 
 /*--------------------------------------------------------------
 # Hero Section

@@ -74,7 +74,20 @@
     display: flex;
     justify-content: center;
   }
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body {
+    text-align: center;
+  }
+    .img-fluid.zoom:hover {
+    transform: scale(1.1);
+  }
+  .zoom{
+        transition: transform 0.3s ease-in-out;
 
+  }
 </style>
 </head>
 
@@ -93,8 +106,8 @@
         <ul>
 <!--           <li><a href="#hero" class="active">About</a></li>
           <li><a href="#about">Capstone</a></li> -->
-          <li><a href="#video-s">About</a></li>
-          <li><a href="#program">Capstone</a></li>
+          <li><a href="about2.html">About</a></li>
+          <li><a href="capstone2.html">Capstone</a></li>
           <li><a href="newteam.html" class="active">Team</a></li>
           <!-- <li><a href="#contact">Personal Project</a></li> -->
           <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -114,115 +127,31 @@
   </header>
 
   <main class="main">
-  <main class="main">
 
- <section id="" class="section light-background py-5">
-
-<div class="container my-5">
-  <ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist" style="margin-bottom: 75px;">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="project-tab" data-bs-toggle="tab" data-bs-target="#project" type="button" role="tab" aria-controls="project" aria-selected="true">
-        로그엔코딩
-      </button>
-    </li>
-    <a href="newteam.html"><li class="nav-item" role="presentation">
-      <button class="nav-link" id="competition-tab" data-bs-toggle="tab" data-bs-target="#competition" type="button" role="tab" aria-controls="competition" aria-selected="false">
-        강사진 소개
-      </button>
-    </li></a>
-  </ul>
-
-  <div class="tab-content mt-4" id="myTabContent">
-    <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
-        <div class="row">
-          <div class="col-md-6"  data-aos="fade-right" data-aos-duration="1000">
-              <img class="img-fluid" src="assets/img/content1.jpg" class="d-block mx-auto w-70">
-          </div>
-              <div class="col-md-6 px-md-5"  data-aos="fade-left" data-aos-duration="1000">
-                          <img src="assets/img/logo.png" alt="" class="smallimg">
-                          <p class="mt-4">독보적인 퀄리티와 커리큘럼으로
-보장된 실력 향상과 상위 엘리트들을 위한 프리미엄 클래스</p>
-          </div>
-
+<section id="image-grid" class="section light-background py-5">
+        <div class="container section-title2" data-aos="fade-up">
+        <h2>문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h2>
+        <div><span><span class="description-title">Capstone Project</span></div>
+        <div class="text-box">
+          <p class="mt-4 section-description">대학 수준의 캡스톤 프로그램을 대학 입시 포트폴리오로</p>
+          <p class="section-description">데이터 사이언스, 머신러닝, 로보틱스, 웹/앱 개발, 비즈니스 등 다양한 분야 의 전문가들의 도움으로</p>
+          <p class="section-description">글로벌 기업, 명문 대학 연구기관, 글로벌 NGO 등 실질적인 솔루션을 제공</p>
         </div>
-    </div>
-    <div class="tab-pane fade" id="competition" role="tabpanel" aria-labelledby="competition-tab">
-
+      </div>
+  <div class="container">
+    <div class="row row-cols-2 row-cols-md-4 g-3">
+      <div class="col"><img src="assets/img/bb1.jpg" alt="Grid Image 1" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb2.png" alt="Grid Image 2" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb3.png" alt="Grid Image 3" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb2.png" alt="Grid Image 4" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb3.png" alt="Grid Image 5" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb2.png" alt="Grid Image 6" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb1.jpg" alt="Grid Image 7" class="img-fluid zoom"></div>
+      <div class="col"><img src="assets/img/bb3.png" alt="Grid Image 8" class="img-fluid zoom"></div>
     </div>
   </div>
-  <div class="container mt-5">
-  <div class="row row-cols-2 row-cols-md-4 g-4">
-    <!-- Card 1 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
-        <i class="bi bi-bar-chart-line-fill" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Data Science</h5>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
-        <i class="bi bi-code-slash" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Web Development</h5>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-left" data-aos-duration="1000">
-        <i class="bi bi-cpu" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">AI & Machine Learning</h5>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-left" data-aos-duration="1000">
-        <i class="bi bi-laptop" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Cybersecurity</h5>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
-        <i class="bi bi-database" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Database Management</h5>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow"   data-aos="flip-right" data-aos-duration="1000">
-        <i class="bi bi-phone" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Mobile Development</h5>
-      </div>
-    </div>
-
-    <!-- Card 7 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow" data-aos="flip-left" data-aos-duration="1000">
-        <i class="bi bi-palette" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">UI/UX Design</h5>
-      </div>
-    </div>
-
-    <!-- Card 8 -->
-    <div class="col">
-      <div class="card text-center p-3 shadow" data-aos="flip-left" data-aos-duration="1000">
-        <i class="bi bi-graph-up" style="font-size: 2rem; color: #000A2E;"></i>
-        <h5 class="mt-2">Business Analytics</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-
 </section>
+
 
 
 
