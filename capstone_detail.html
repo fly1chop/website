@@ -25,7 +25,10 @@
 <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
 <style>
-
+html {
+  scroll-padding-top: 180px !important;
+  scroll-behavior: smooth !important;
+}
   .nav-tabs-custom {
     display: flex;
     justify-content: center;
@@ -45,115 +48,102 @@
     background-color: #000A2E;
   }
 
-  .card {
-    background-color: #000A2E; 
-    color: white; 
-    border-radius: 12px;
-    width: 160px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .card i {
-    font-size: 2.5rem; 
-    color:white !important;
-  }
-
-  .card h5 {
-    font-size: 1rem; 
-    font-weight: bold;
-    color:white !important;
-    margin-top: 10px;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .row-cols-2 .col, .row-cols-md-4 .col {
-    display: flex;
-    justify-content: center;
-  }
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  .card-body {
-    text-align: center;
-  }
-    .img-fluid.zoom:hover {
-    transform: scale(1.1);
-  }
-  .zoom{
-        transition: transform 0.3s ease-in-out;
-
-  }
- .image-overlay {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  height: 250px; /* Set a fixed height for all images */
-  width: 100%; /* Responsive width */
+/*.project-row {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px;
+}*/
+
+.left-content {
+  color: black;
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
 }
 
-.image-overlay img {
-  width: 100%;
+
+.pro-title {
+  color: #000A2E !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-it, .text-it-only {
+  font-size: 1rem;
+  color: #585858;
+  margin-top: 1px;
+  margin-bottom: 12px;
+  font-style: italic;
+
+}
+.minus-margin{
+  margin-top: -14px;
+}
+.project-list {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.app-closed, .pro-complete {
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.app-closed {
+  background-color: #A0A0A0;
+  color: white;
+}
+
+.pro-complete {
+  background-color: #CB2308;
+  color: white;
+}
+
+.pro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-top: 15px;
+}
+
+/* Right Image Column */
+.right-content {
+  border-radius: 16px;
+  overflow: hidden;
   height: 100%;
-  object-fit: cover; /* Uniform image size */
+}
+
+.right-content img {
+  width: 70%;
+/*  height: 100%;*/
+  object-fit: cover;
+  border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
 
-.image-overlay:hover img {
-  transform: scale(1.1);
-  filter: brightness(70%);
+.right-content:hover img {
+  transform: scale(1.05);
+  filter: brightness(80%);
 }
 
-.overlay-content {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.image-overlay:hover .overlay-content {
-  opacity: 1;
-}
-
-.overlay-content h5 {
-  font-size: 1.2rem;
-  color:white;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.overlay-content .btn {
-  padding: 5px 12px;
-  font-size: 0.9rem;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-.overlay-content .btn:hover {
-  background-color: #0056b3;
-  color: white;
-}
-.btn-primary{
-  background-color:  #F4C400 !important;
-  border: 1px solid  #F4C400 !important;
-}
-.btn-primary:hover{
-  background-color:  #000A2E !important;
-  border: 1px solid  #000A2E !important;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .pro-title {
+    font-size: 1.5rem;
+  }
+  .text-it, .text-it-only, .pro-text {
+    font-size: 0.9rem;
+  }
 }
 
 </style>
@@ -198,55 +188,67 @@
 
 <section id="image-grid" class="section light-background py-5">
         <div class="container section-title2" data-aos="fade-up">
-        <h2>문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h2>
-        <div><span><span class="description-title">Capstone Project</span></div>
-        <div class="text-box">
-          <p class="mt-4 section-description">대학 수준의 캡스톤 프로그램을 대학 입시 포트폴리오로</p>
-          <p class="section-description">데이터 사이언스, 머신러닝, 로보틱스, 웹/앱 개발, 비즈니스 등 다양한 분야 의 전문가들의 도움으로</p>
-          <p class="section-description">글로벌 기업, 명문 대학 연구기관, 글로벌 NGO 등 실질적인 솔루션을 제공</p>
-        </div>
+        <h2>캡스톤 프로그램</h2>
+        <div><span><span class="description-title">Project Detail</span></div>
       </div>
 <div class="container">
-  <div class="row row-cols-2 row-cols-md-4 g-3">
-    <div class="col"  data-aos="flip-right">
-      <div class="image-overlay">
-        <img src="newassets/assets/img/XR.png" alt="Grid Image 1" class="img-fluid zoom">
-        <div class="overlay-content">
-          <h5>Project XR</h5>
-          <a href="capstone_detail.html#projectxr"><button class="btn btn-primary btn-sm">More</button></a>
-        </div>
-      </div>
-    </div>
-    <div class="col" data-aos="flip-right">
-      <div class="image-overlay">
-        <img src="assets/img/bb2.png" alt="Grid Image 2" class="img-fluid zoom">
-        <div class="overlay-content">
-          <h5>Metaverse Project</h5>
-          <a href="capstone_detail.html#projectmeta"><button class="btn btn-primary btn-sm">More</button></a>
-        </div>
-      </div>
-    </div>
-    <div class="col" data-aos="flip-left">
-      <div class="image-overlay">
-        <img src="assets/img/bb3.png" alt="Grid Image 3" class="img-fluid zoom">
-        <div class="overlay-content">
-          <h5>Project 3</h5>
-          <a href="capstone_detail.html"><button class="btn btn-primary btn-sm">More</button></a>
-        </div>
-      </div>
-    </div>
-    <div class="col" data-aos="flip-left">
-      <div class="image-overlay">
-        <img src="assets/img/bb1.jpg" alt="Grid Image 4" class="img-fluid zoom">
-        <div class="overlay-content">
-          <h5>Project 4</h5>
-          <a href="capstone_detail.html"><button class="btn btn-primary btn-sm">More</button></a>
-        </div>
-      </div>
-    </div>
+<div class="row mt-4" id="projectxr">
+  <!-- Left Text Column -->
 
+  <div class="col-md-6 left-content ps-md-5"  data-aos="fade-right">
+    <h4 class="pro-title">Project XR</h4>
+    <p class="">Client: GIST VR (under CMU HCI Institute)</p>
+    <!-- <p class="minus-margin"></p> -->
+    <p class="text-it-only">Duration: 2023 Winter - 2024 Spring</p>
+
+    <ul class="project-list">
+      <li class="app-closed">Application Closed</li>
+      <li class="pro-complete">Completed</li>
+    </ul>
+
+    <p class="text-justify">
+가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서 가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여 학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여 사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할 수 있는 방법들을 개발하고 연구합니다.
+
+
+    </p>
+  </div>
+
+  <!-- Right Image Column -->
+  <div class="col-md-6 right-content  ps-md-5"  data-aos="fade-left">
+    <img class="d-block mx-auto" src="newassets/assets/img/XR.png" alt="Project XR">
   </div>
 </div>
+
+<div class="row sup-margin"  id="projectmeta">
+  <!-- Left Text Column -->
+
+  <div class="col-md-6 left-content ps-md-5"  data-aos="fade-right">
+    <h4 class="pro-title">The Metaverse Project</h4>
+    <p class="">Client: UPPURPLE</p>
+    <!-- <p class="minus-margin"></p> -->
+    <p class="text-it-only">Duration: 2023 Summer - Fall</p>
+
+    <ul class="project-list">
+      <li class="app-closed">Application Closed</li>
+      <li class="pro-complete">Completed</li>
+    </ul>
+
+    <p class="text-justify">
+메타버스는 4차 산업 시대에 가장 대두되는 분야 중 하나이며 다양한 분야의 기업들이 투자와 개발을 진행하고 있습니다. 정부 지원 사업으로 진행되는 이번 메타버스 프로젝트를 통해 코딩의 최신 트렌드를 학습하고 이를 바탕으로 4차 산업시대의 주역이 될 수 있는 기회가 되기를 바랍니다.
+
+    </p>
+  </div>
+
+  <!-- Right Image Column -->
+  <div class="col-md-6 right-content  ps-md-5"  data-aos="fade-left">
+    <img class="d-block mx-auto" src="assets/img/bb2.png" alt="Project XR">
+  </div>
+</div>
+
+
+
+</div>
+
 
 </section>
 

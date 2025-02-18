@@ -52,6 +52,8 @@
   scroll-behavior: smooth;
 }
 
+
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -903,4 +905,10 @@ section,
 }
 .smallimg{
   max-height: 110px;
+}
+.sup-margin{
+  margin-top: 100px !important;
+}
+.text-justify{
+  text-align: justify;
 }
