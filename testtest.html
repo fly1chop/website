@@ -286,7 +286,55 @@
   opacity: 0.85;
   line-height: 1.5;
 }
+  .program-mobile{
+ display: none;
+  }
+@media (max-width: 800px){
+  .program-desktop{
+    display: none;
+  }
+  .program-mobile{
+    display: block;
+  }
+ .program-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+  }
 
+  .card-header {
+    background: #000A2E;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .card-body {
+    padding: 15px;
+    color:black;
+  }
+
+  .program-icon {
+    width: 60px;
+    height: 60px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+  }
+
+  .contact-card, .transport-card {
+  height: 350px;
+}
+  .contact-card, .transport-card p{
+  color:white;
+}
+}
 </style>
 </head>
 
@@ -398,15 +446,21 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <p class="text-italic">비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다.</p>
+    <p class="text-italic mt-3 mb-4">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다.</p>
+                    <div class="text-center mt-4"   data-aos="fade-up">
+          <a href="#more" class="custom-button  d-inline-flex align-items-center">
+            <i class="bi bi-youtube"></i> 유튜브 채널 바로가기
+          </a>
+        </div>
   </div>
   
 </section>
 
    
 
-    <section id="program" class=" section dark-background">
+    <section id="program" class=" section dark-background program-desktop">
 
       <!-- Section Title -->
       <div class="container ">
@@ -416,10 +470,8 @@
 
       </div>
 
-      <!-- End Section Title -->
       <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">Stanford, CMU, Cornell 등 아이비리그를 타겟으로 한 문과/ 이과/ 예체능 융합 EC 토탈 솔루션</h4>
 
-      <!-- <p class="mb-4" data-aos="fade-right"> * 로그엔코딩 학생들은 다수 신분노출이 어려운 학생들이 많아, 수업과정/ 실제 학생들을 촬영할 수 없는 점 양해부탁드립니다. </p> -->
 
 <div class="swiper-container rolling-carousel mt-md-5 mb-md-5 d-block mx-auto text-center"  data-aos="fade-up">
   <div class="swiper-wrapper sg">
@@ -496,7 +548,71 @@
 
     </section>
 
+<section id="program" class=" section dark-background program-mobile">
+  <div class="container">
+    <!-- Section Title -->
+      <div class="container ">
+        <div class="section-title"  data-aos="fade-up">
+        <h2>Courses</h2>
+                <div><span class="description-title">Program Tracks</span></div>
 
+      </div>
+
+      <h4 class="mt-1  text-center"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h4>
+
+      <h4 class="mt-1 text-center"  data-aos="fade-right">국제학교 전문 코딩학원</h4>
+      <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h4>
+
+    <!-- Program Cards (Mobile Friendly) -->
+    <div class="program-card" data-aos="fade-up">
+      <div class="card-header">Fundamental Track</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+                      <div class="program-icon"></div>
+
+          </div>
+          <div class="col-8">
+                      <p>국제학교 특성화 맞춤 class<br>다수 국제 학교 출강 강사진 수업</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card" data-aos="fade-up">
+      <div class="card-header">Competition Track</div>
+      <div class="card-body">
+                <div class="row">
+          <div class="col-4">
+        <div class="program-icon"></div>
+
+          </div>
+          <div class="col-8">
+        <p>코딩 국제 대회<br>EC 필수 국제 대회<br>우리 아이 맞춤 대회 트랙 진단</p>
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <div class="program-card" data-aos="fade-up">
+      <div class="card-header">Project Track</div>
+      <div class="card-body">
+                <div class="row">
+          <div class="col-4">
+                      <div class="program-icon"></div>
+          </div>
+          <div class="col-8">
+        <p>보딩준비 개인 맞춤 프로젝트<br>희망 전공/개인 맞춤형 프로젝트</p>
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
     <section id="program" class=" section light-background">
       <div class="container">
       <!-- Section Title -->
@@ -505,7 +621,7 @@
         <div><span><span class="description-title">캡스톤 프로그램 파트너</span></div>
       </div><!-- End Section Title -->
 
-      <h4 class="mt-2 text-center"  data-aos="fade-right">>문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h4>
+      <h4 class="mt-2 text-center"  data-aos="fade-right">문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h4>
 
       <p class="text-center mb-4"  data-aos="fade-right">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다. </p>
         <div class="container mt-4">
@@ -567,7 +683,7 @@
   <div class="row">
     <!-- Left Side: Contact Info -->
     <div class="col-md-6">
-      <div class="card contact-card text-start" data-aos="flip-up" data-aos-delay="100">
+      <div class="card contact-card text-start mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="100">
         <div class="card-body">
           <h5 class="fw-bold">서울시 강남구 압구정로 208, 본경빌딩 3층</h5>
           <div class="yellow-line"></div> <!-- Yellow Line -->
@@ -583,7 +699,7 @@
 
     <!-- Right Side: Public Transport -->
     <div class="col-md-6">
-      <div class="card transport-card text-start text-white" data-aos="flip-up" data-aos-delay="200">
+      <div class="card transport-card text-start text-white mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="200">
         <div class="card-body">
           <h5 class="fw-bold" style="color:white;">대중교통 이용시</h5>
           <div class="yellow-line"></div> <!-- Yellow Line -->
