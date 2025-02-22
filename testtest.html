@@ -37,18 +37,31 @@
 
 
 
-        .swiper-thumbnail {
-            height: 70px !important;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .swiper-thumbnail:hover {
-            transform: scale(1.1);
-        }
-        .swiper-slide-thumb-active {
-            border: 3px solid #4CAF50;
-        }
+.swiper-slide.thumbnail-slide {
+    width: 280px !important;
+    height: 180px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.swiper-slide-thumb-active {
+    border: 3px solid #4CAF50;
+}
+
 .rolling-carousel {
   display: flex;
   justify-content: center; /* Centers horizontally */
@@ -176,12 +189,19 @@
 }
 
 
-.custom-button {
+
+.custom-button i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+
+.custom-button-sm {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 35px;
-  font-size: 1.1rem;
+  padding: 9px 28px;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #ffffff;
   background: #000A2E;; 
@@ -192,17 +212,18 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.custom-button:hover {
+.custom-button-sm:hover {
   transform: translateY(-3px);
   color: lightgray;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
 
-.custom-button i {
+.custom-button-sm i {
   margin-right: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
+
 .unified-card {
   background: white;
   border-radius: 15px;
@@ -286,9 +307,42 @@
   opacity: 0.85;
   line-height: 1.5;
 }
-  .program-mobile{
+/*  .program-mobile{
  display: none;
-  }
+  }*/
+
+
+.course-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+}
+
+.course-card .card-header {
+    background: #222B3E; 
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.course-card .card-body {
+    padding: 20px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.course-card .highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
 @media (max-width: 800px){
   .contact-card h5{
     font-size: 1.05rem;
@@ -347,9 +401,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="testtest.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo_en.png" alt="">
-        <!-- <h1 class="sitename">Remember</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -362,7 +414,6 @@
           </li>
 
           <li><a href="capstone2.html">Capstone</a></li>
-          <!-- <li><a href="newteam.html">Team</a></li> -->
           <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="tracks.html">Project Track</a></li>
@@ -413,8 +464,8 @@
             <div class="swiper-container main-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <video controls poster="https://via.placeholder.com/400x250">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <video controls poster="assets/img/thumbnails/interview1.png">
+                            <source src="assets/video/video.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="swiper-slide">
@@ -438,13 +489,13 @@
         <!-- Thumbnail Navigation -->
         <div class="swiper-container thumbnail-swiper mt-4">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 1">
+                <div class="swiper-slide thumbnail-slide">
+                    <img src="assets/img/thumbnails/interview1.png" class="swiper-thumbnail" alt="Thumbnail 1">
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide thumbnail-slide">
                     <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 2">
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide thumbnail-slide">
                     <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 3">
                 </div>
             </div>
@@ -461,11 +512,12 @@
   
 </section>
 
+
+
    
 
     <section id="program" class=" section dark-background program-desktop">
 
-      <!-- Section Title -->
       <div class="container ">
         <div class="section-title"  data-aos="fade-up">
         <h2>Program</h2>
@@ -478,7 +530,6 @@
 
 <div class="swiper-container rolling-carousel mt-md-5 mb-md-5 d-block mx-auto text-center"  data-aos="fade-up">
   <div class="swiper-wrapper sg">
-    <!-- Banner 1 -->
     <div class="swiper-slide">
       <div class="banner-content">
         <div class="banner-title">캡스톤프로그램</div>
@@ -492,7 +543,6 @@
       </div>
     </div>
 
-    <!-- Banner 2 -->
     <div class="swiper-slide">
       <div class="banner-content">
         <div class="banner-title">개인 프로젝트</div>
@@ -506,7 +556,6 @@
       </div>
     </div>
 
-    <!-- Banner 3 -->
     <div class="swiper-slide">
       <div class="banner-content">
         <div class="banner-title">수업</div>
@@ -527,17 +576,14 @@
 
 <div class="container mt-5">
   <div class="d-flex justify-content-between flex-wrap">
-    <!-- Card 1 -->
     <div class="modern-card"  data-aos="flip-up">
       <h5 class="modern-title">캡스톤 프로젝트</h5>
     </div>
 
-    <!-- Card 2 -->
     <div class="modern-card" data-aos="flip-up">
       <h5 class="modern-title">개인 프로젝트</h5>
     </div>
 
-    <!-- Card 3 -->
     <div class="modern-card" data-aos="flip-up">
       <h5 class="modern-title">수업</h5>
     </div>
@@ -551,9 +597,8 @@
 
     </section>
 
-<section id="program" class=" section dark-background program-mobile">
+<!-- <section id="courses" class=" section dark-background course-mobile">
   <div class="container">
-    <!-- Section Title -->
       <div class="container ">
         <div class="section-title"  data-aos="fade-up">
         <h2>Courses</h2>
@@ -566,7 +611,6 @@
       <h4 class="mt-1 text-center"  data-aos="fade-right">국제학교 전문 코딩학원</h4>
       <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h4>
 
-    <!-- Program Cards (Mobile Friendly) -->
     <div class="program-card" data-aos="fade-up">
       <div class="card-header">Fundamental Track</div>
       <div class="card-body">
@@ -615,7 +659,301 @@
       </div>
     </div>
   </div>
+</section> -->
+<section id="competition-track" class="section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-down">Competition Track</h2>
+
+    <div class="timeline">
+      <!-- Timeline Line -->
+      <div class="timeline-line"></div>
+
+      <!-- ES Section (Left) -->
+      <div class="timeline-item left" data-aos="fade-right">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <i class="bi bi-award-fill"></i> ES
+          </div>
+          <ul class="timeline-list">
+            <li>스크래치올림피아드</li>
+            <li>VEX IQ</li>
+            <li>IROC</li>
+          </ul>
+        </div>
+        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
+      </div>
+
+      <!-- MS Section (Right) -->
+      <div class="timeline-item right" data-aos="fade-left">
+        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <i class="bi bi-bookmark-star-fill"></i> MS
+          </div>
+          <ul class="timeline-list">
+            <li>ACSL</li>
+            <li>USACO</li>
+            <li>Technovation</li>
+            <li>Stanford 주관 Logic Olympiad</li>
+            <li><span class="highlight">Upenn</span> 와튼 DS</li>
+            <li class="highlight-red">Technovation Girls</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HS Section (Left) -->
+      <div class="timeline-item left" data-aos="fade-right">
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <i class="bi bi-trophy-fill"></i> HS
+          </div>
+          <ul class="timeline-list">
+            <li>ACSL</li>
+            <li>USACO</li>
+            <li>Technovation</li>
+            <li>VEX IQ/V5</li>
+            <li>IROC</li>
+          </ul>
+        </div>
+        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
+
+
+<section id="courses" class=" section dark-background course-desktop">
+  <div class="container">
+    <!-- Section Title -->
+      <div class="container ">
+        <div class="section-title"  data-aos="fade-up">
+        <h2>Courses</h2>
+                <div><span class="description-title">Program Tracks</span></div>
+
+      </div>
+
+      <h4 class="mt-1  text-center section-description"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h4>
+      <h4 class="mt-1 text-center section-description"  data-aos="fade-right">국제학교 전문 코딩학원</h4>
+      <h4 class="mt-1 mb-5 text-center section-description"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h4>
+
+      <div class="row mb-5">
+        <div class="col-md-6">
+            <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-right" data-aos-duration="800">
+        </div>
+        <div class="col-md-6">
+          <div class="card course-card mt-5" data-aos="fade-left" data-aos-duration="800">
+              <div class="card-header text-white">
+                  <h4 class="m-0">Fundamental Track</h4>
+              </div>
+              <div class="card-body text-center">
+                  <p class="mb-4">국제학교 특성화 맞춤 <span class="highlight">class</span></p>
+
+                  <p class="fw-bold"> 실제 <span class="highlight">SFS, YISS, St. Paul</span> 등</p>
+                  <p class="mb-4" style="margin-top:-10px;">다수 국제 학교 출강 강사진 직접 수업</p>
+
+                  <p class="fw-bold">Carnegie Mellon 출신 대표의</p>
+                  <p class="fw-bold" style="margin-top:-10px;">CMU CS커리큘럼 기반 수업 진행</p>
+                  <div class="text-center mt-3"   data-aos="fade-up">
+                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                      <i class="bi bi-arrow-right-circle me-2"></i> More
+                    </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="row align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-6">
+            <img src="assets/img/bb2.png" class="img-fluid course-img d-block mx-auto" alt="Image 2" data-aos="fade-right" data-aos-duration="800">
+        </div>
+        <div class="col-md-6">
+            <div class="card course-card" data-aos="fade-left" data-aos-duration="800">
+                <div class="card-header text-white">
+                    <h4 class="m-0">Competition Track</h4>
+                </div>
+                <div class="card-body text-center">
+                    <p class="fw-bold mb-2">코딩 국제 대회</p>
+                    <p class="fw-bold mb-2">EC 필수 국제 대회</p>
+                    <p class="fw-bold mb-2">우리 아이 맞춤 대회 트랙 진단</p>
+                    <div class="text-center mt-3"   data-aos="fade-up">
+                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                      <i class="bi bi-arrow-right-circle me-2"></i> More
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-6">
+            <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-right" data-aos-duration="800">
+        </div>
+        <div class="col-md-6">
+          <div class="card course-card mt-5" data-aos="fade-left" data-aos-duration="800">
+              <div class="card-header text-white">
+                  <h4 class="m-0">Project Track</h4>
+              </div>
+              <div class="card-body text-center">
+                    <p class="fw-bold mb-2">보딩준비 개인 맞춤 프로젝트</p>
+                    <p class="fw-bold mb-2">희망 전공 / 개인 맞춤형 프로젝트</p>
+                    <p class="fw-bold mb-2">커스텀 테마 프로젝트</p>
+                    <div class="text-center mt-3"   data-aos="fade-up">
+                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                      <i class="bi bi-arrow-right-circle me-2"></i> More
+                    </a>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<section id="fundamental" class="section light-background">
+  <div class="container">
+    <div class="section-title2 text-center" data-aos="fade-up">
+      <h2>Courses</h2>
+      <div><span class="description-title">Fundamental Tracks</span></div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="track-card mx-auto" data-aos="flip-up" data-aos-duration="800">
+          <h3 class="mb-4">ACSL</h3>
+          <p><strong>▶ Python1 Python2</strong></p>
+          <p>ACSL 준비하기 위한 테마</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="track-card mx-auto" data-aos="flip-up" data-aos-duration="800">
+          <h3 class="mb-4">USACO</h3>
+          <p><strong>▶ Python1 Python2</strong></p>
+          <p>A~~~~~</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="track-card mx-auto" data-aos="flip-up" data-aos-duration="800">
+          <h3 class="mb-4">ACSL</h3>
+          <p><strong>▶ Python1 Python2</strong></p>
+          <p>ACSL 준비하기 위한 테마</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="track-card mx-auto" data-aos="flip-up" data-aos-duration="800">
+          <h3 class="mb-4">ACSL</h3>
+          <p><strong>▶ Python1 Python2</strong></p>
+          <p>ACSL 준비하기 위한 테마</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4" data-aos="fade-up">
+      <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
+        더 많은 테마 확인하기
+      </button>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
+        우리 아이 맞춤 트랙 진단 받기 <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+<!-- Modal for User Input -->
+<div class="modal fade" id="lognCodingModal" tabindex="-1" aria-labelledby="lognCodingModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4 text-center" style="border-radius: 15px; background: white; max-width: 400px; margin: auto;">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body text-start">
+        <!-- 학년 (Grade) -->
+        <div>
+                <img src="assets/img/logo.png" alt="" style="max-width:160px;" class="img-fluid d-block mx-auto mb-4">
+              </div>
+        <label class="fw-bold" for="grade">학년</label>
+        <input type="text" id="grade" class="form-control border-dark mb-3" placeholder="예: 중3">
+
+        <!-- 학교 (School) -->
+        <label class="fw-bold" for="school">학교</label>
+        <input type="text" id="school" class="form-control border-dark mb-3" placeholder="학교 이름">
+
+        <!-- 연락처 (Contact) -->
+        <label class="fw-bold" for="contact">연락처</label>
+        <input type="text"  class="form-control border-dark mb-3" placeholder="010-1234-5678">
+
+        <!-- 관심 프로그램/대회 (Interest Program/Competition) -->
+        <label class="fw-bold">관심 프로그램/대회</label>
+        <div class="d-flex flex-column align-items-start ps-2">
+          <div class="form-check">
+            <input class="form-check-input border-dark" type="radio" name="interest" id="internationalComp" value="국제대회">
+            <label class="form-check-label" for="internationalComp">국제대회</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input border-dark" type="radio" name="interest" id="python" value="Python">
+            <label class="form-check-label" for="python">Python</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input border-dark" type="radio" name="interest" id="robotics" value="Robotics">
+            <label class="form-check-label" for="robotics">Robotics</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input border-dark" type="radio" name="interest" id="makers" value="Makers">
+            <label class="form-check-label" for="makers">Makers</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer border-0 d-flex justify-content-center">
+        <button type="button" class="custom-button-sm" data-bs-dismiss="modal">닫기</button>
+        <button type="button" class="custom-button-sm" onclick="submitForm()">제출</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</section>
+
+<section id="achievements" class="section dark-background text-center py-5">
+  <div class="container">
+    <h2 class="text-white fw-bold mb-5" data-aos="fade-down" data-aos-duration="1000">Our Achievements</h2>
+
+    <!-- Achievement Badges -->
+    <div class="d-flex flex-column align-items-center mt-4">
+      <div class="achievement-badge" data-aos="fade-right" data-aos-delay="200">2024 <span class="highlight-text">Technovation Girls</span> 한국 유일 본선 진출</div>
+      <div class="achievement-badge" data-aos="fade-left" data-aos-delay="400">2024 ILO 한국 유일 Finalist</div>
+      <div class="achievement-badge" data-aos="fade-right" data-aos-delay="600">2025 GENIUS Olympiad Korea 한국 1등 (Robotics)</div>
+      <div class="achievement-badge" data-aos="fade-left" data-aos-delay="800">2024 VEX National 우승</div>
+      <div class="achievement-badge" data-aos="fade-up" data-aos-delay="1000">2024 VEX IQ Asia 대표 출전</div>
+    </div>
+
+    <!-- More Info Button -->
+    <div class="mt-4" data-aos="zoom-in" data-aos-delay="1200">
+      <a href="#" class="custom-button-lg">
+        <i class="bi bi-play-fill"></i> 자세히 확인하기
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
     <section id="program" class=" section light-background">
       <div class="container">
       <!-- Section Title -->
