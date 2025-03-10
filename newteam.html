@@ -109,40 +109,48 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  .spec{
+    margin-top: 1rem !important;
+  }
+}
 </style>
 </head>
 
 <body class="index-page">
 
+
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="testtest.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo_en.png" alt="">
-        <!-- <h1 class="sitename">Remember</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-<!--           <li><a href="#hero" class="active">About</a></li>
-          <li><a href="#about">Capstone</a></li> -->
-          <li><a href="about2.html">About</a></li>
-          <li><a href="capstone2.html">Capstone</a></li>
-          <li><a href="newteam.html" class="active">Team</a></li>
-          <!-- <li><a href="#contact">Personal Project</a></li> -->
-          <li class="dropdown"><a href="tracks.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li  class="dropdown"><a href="about2.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="tracks.html">Project Track</a></li>
-              <li><a href="tracks.html">Competition Track</a></li>
-              <li><a href="tracks.html">Dropdown 3</a></li>
+              <li><a href="about2.html">About Us</a></li>
+              <li><a href="newteam.html">Team</a></li>
             </ul>
           </li>
+
+          <li><a href="capstone2.html">Capstone</a></li>
+          <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="tracks.html">Fundamental Track</a></li>
+              <li><a href="tracks.html">Competition Track</a></li>
+              <li><a href="tracks.html">Project Track</a></li>
+            </ul>
+          </li>
+                    <li><a href="testtest.html#personal-project">Personal Project</a></li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Blog</a>
+      <a class="btn-getstarted" href="index.html">Blog</a>
 
     </div>
   </header>
@@ -158,7 +166,7 @@
     <!-- First Row -->
     <div class="row align-items-center mb-5" data-aos="fade-right" data-aos-duration="1000">
       <!-- Text Section -->
-      <div class="col-md-8">
+      <div class="col-md-8 order-2 order-md-1 spec">
         <div class="p-4 bg-light rounded shadow">
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><strong>로그엔코딩 총괄 원장</strong></li>
@@ -169,8 +177,8 @@
         </div>
       </div>
       <!-- Image Section -->
-      <div class="col-md-4 text-center">
-        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" style="width: 200px; height: 200px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+      <div class="col-md-4 text-center order-1  order-md-2">
+        <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mt-5 mt-md-0" style="width: 200px; height: 200px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
           <span>대표님 사진</span>
         </div>
       </div>
@@ -179,7 +187,7 @@
     <!-- Second Row -->
     <div class="row align-items-center flex-row-reverse mb-5" data-aos="fade-left" data-aos-duration="1000">
       <!-- Text Section -->
-      <div class="col-md-8">
+      <div class="col-md-8 order-2 order-md-1 spec">
         <div class="p-4 bg-light rounded shadow">
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><strong>로그엔코딩 총괄 원장</strong></li>
@@ -190,7 +198,7 @@
         </div>
       </div>
       <!-- Image Section -->
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center order-1  order-md-2">
         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" style="width: 200px; height: 200px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
           <span>대표님 사진</span>
         </div>
@@ -200,7 +208,7 @@
     <!-- Third Row -->
     <div class="row align-items-center mb-5" data-aos="fade-right" data-aos-duration="1000">
       <!-- Text Section -->
-      <div class="col-md-8">
+      <div class="col-md-8 order-2 order-md-1 spec">
         <div class="p-4 bg-light rounded shadow">
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><strong>로그엔코딩 총괄 원장</strong></li>
@@ -211,7 +219,7 @@
         </div>
       </div>
       <!-- Image Section -->
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center order-1  order-md-2">
         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" style="width: 200px; height: 200px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
           <span>대표님 사진</span>
         </div>
@@ -221,7 +229,7 @@
     <!-- Fourth Row -->
     <div class="row align-items-center flex-row-reverse mb-5" data-aos="fade-left" data-aos-duration="1000">
       <!-- Text Section -->
-      <div class="col-md-8">
+      <div class="col-md-8 order-2 order-md-1 spec">
         <div class="p-4 bg-light rounded shadow">
           <ul class="list-unstyled mb-0">
             <li class="mb-2"><strong>로그엔코딩 총괄 원장</strong></li>
@@ -232,7 +240,7 @@
         </div>
       </div>
       <!-- Image Section -->
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 text-center order-1  order-md-2">
         <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" style="width: 200px; height: 200px; margin: auto; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
           <span>대표님 사진</span>
         </div>
@@ -240,8 +248,81 @@
     </div>
   </div>
 </section>
+   <section data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <!-- <section id="team" class="specials"> -->
+
+      <div class="container">
+
+  <div class="container section-title2" data-aos="fade-up">
+    <h2>Main Instructuors</h2>
+    <div><span><span class="description-title">Instructuors</span></div>
+  </div>
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img">
+                <img src="newassets/assets/img/team_EN/JY.png " class="img-fluid " alt=" " />
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team_EN/Kijun.png " class="img-fluid " alt=" " />
+              </div>
+            </div>
+          </div>
 
 
+
+          <!-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team/ted.png " class="img-fluid " alt=" " />
+
+              </div>
+            </div>
+          </div> -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team_EN/scott.png " class="img-fluid " alt=" " />
+
+              </div>
+            </div>
+          </div>
+             <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team_EN/Ellie.png " class="img-fluid " alt=" " />
+              </div>
+            </div>
+          </div>
+
+                              <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team_EN/leanna.png " class="img-fluid " alt=" " />
+
+              </div>
+            </div>
+          </div>
+
+                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch ">
+            <div class="member ">
+              <div class="member-img ">
+                <img src="newassets/assets/img/team_EN/ted.png " class="img-fluid " alt=" " />
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+</div>
+</section>
 
 
 <div class="floating-buttons">

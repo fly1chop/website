@@ -109,45 +109,55 @@
   color: black;
 
 }
+ .course-img{
+  max-width: 50%;
+ }
+ @media (max-width: 768px) {
+   .course-img{
 
+  max-width: 100%;
+}
+ }
 </style>
 </head>
 
 <body class="index-page">
 
+
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="testtest.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo_en.png" alt="">
-        <!-- <h1 class="sitename">Remember</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-<!--           <li><a href="#hero" class="active">About</a></li>
-          <li><a href="#about">Capstone</a></li> -->
-          <li><a href="about2.html">About</a></li>
-          <li><a href="capstone2.html">Capstone</a></li>
-          <li><a href="newteam.html">Team</a></li>
-          <!-- <li><a href="#contact">Personal Project</a></li> -->
-          <li class="dropdown"  class="active"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li  class="dropdown"><a href="about2.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="tracks.html">Project Track</a></li>
-              <li><a href="tracks.html">Competition Track</a></li>
-              <li><a href="tracks.html">Dropdown 3</a></li>
+              <li><a href="about2.html">About Us</a></li>
+              <li><a href="newteam.html">Team</a></li>
             </ul>
           </li>
+
+          <li><a href="capstone2.html">Capstone</a></li>
+          <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="tracks.html">Fundamental Track</a></li>
+              <li><a href="tracks.html">Competition Track</a></li>
+              <li><a href="tracks.html">Project Track</a></li>
+            </ul>
+          </li>
+                    <li><a href="testtest.html#personal-project">Personal Project</a></li>
+
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Blog</a>
+      <a class="btn-getstarted" href="index.html">Blog</a>
 
     </div>
   </header>
-
   <main class="main">
 
  <section id="" class="section light-background py-5">
@@ -168,15 +178,15 @@
 
   <div class="tab-content mt-4" id="myTabContent">
     <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
-                                                    <img class="mx-auto"
+                                                    <img class="mx-auto course-img"
                                 src="newassets/assets/img/courses/winter2024_0.jpeg"
-                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
+                                style="margin-top:20px; margin-left: auto; margin-right: auto; display: block"
                             />
     </div>
     <div class="tab-pane fade" id="competition" role="tabpanel" aria-labelledby="competition-tab">
-                                                    <img class="mx-auto"
+                                                    <img class="mx-auto course-img"
                                 src="newassets/assets/img/courses/winter2024_1.jpeg"
-                                style="max-width: 50%; margin-top:20px; margin-left: auto; margin-right: auto; display: block"
+                                style="margin-top:20px; margin-left: auto; margin-right: auto; display: block"
                             />
     </div>
   </div>
@@ -196,7 +206,7 @@
             “우리 아이가 코딩을 배운 적은 없는데, 흥미를 지속적으로 가질 수 있게 하고 싶어요!”
           </p>
         </div>
-        <div class="testimonial-label">
+        <div class="testimonial-label mb-5 mb-md-0">
           "테마 정규 프로그램" <br> (영크리에이터 테마 + 4주 미션 프로그램)
         </div>
       </div>
@@ -208,7 +218,7 @@
             “고등학생 아이인데 대학 입시에 필요한 ec프로그램을 하고 싶어요. 퀄리티 좋은 결과물로 한번에 끝내고 싶어요.”
           </p>
         </div>
-        <div class="testimonial-label">
+        <div class="testimonial-label mb-5 mb-md-0">
           "테마 정규 프로그램" <br> (캡스톤 프로그램 + pp)
         </div>
       </div>
