@@ -872,6 +872,9 @@
         </ul>
       </div>
     </div>
+
+    <!-- Scroll Hint for Mobile -->
+    <div class="scroll-hint">← Swipe to see more →</div>
   </div>
 </section>
 
@@ -1615,6 +1618,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const trackWrapper = document.querySelector(".track-wrapper");
+  if (trackWrapper) {
+    trackWrapper.scrollLeft = 30; // Small shift to indicate scrolling
+  }
+});
+
+
 </script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
