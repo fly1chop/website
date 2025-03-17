@@ -1054,151 +1054,13 @@ section,
   font-size: 1.5rem;
   margin-right: 10px;
 }
-/* Timeline Base */
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px 0;
-}
 
-/* Timeline Vertical Line */
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(to bottom, #F4C400, #000A2E);
-  transform: translateX(-50%);
-}
 
-/* Timeline Item */
-.timeline-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 50px;
-}
 
-/* Circular Marker */
-.timeline-marker {
-  width: 25px;
-  height: 25px;
-  background: #000A2E;
-  border: 4px solid #000A2E;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: #000A2E;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
 
-.timeline-content {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  width: 40%;
-  text-align: left;
-  transition: transform 0.3s;
-}
 
-.timeline-header {
-  font-size: 1.3rem;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 8px;
-  background: #000A2E;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-/* Center Align List */
-.timeline-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
 
-/* List Items */
-.timeline-list li {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  padding: 8px 0;
-  width: 100%;
-  text-align: center;
-  transition: color 0.3s ease-in-out;
-}
 
-/*.timeline-list li:hover {
-  color: #007bff;
-}*/
-
-/* Divider */
-.timeline-list hr {
-  width: 40%;
-  border: 1px solid #F4C400;
-  margin: 5px 0;
-}
-
-/* Left & Right Positioning */
-.timeline-item.left .timeline-content {
-  order: 1;
-  text-align: right;
-  margin-right: auto;
-}
-
-.timeline-item.right .timeline-content {
-  order: 2;
-  text-align: left;
-  margin-left: auto;
-}
-
-.highlight {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.highlight-red {
-  color: red;
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .timeline-line {
-    left: 20px;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .timeline-item.left .timeline-content,
-  .timeline-item.right .timeline-content {
-    width: 90%;
-    text-align: left;
-    margin: auto;
-  }
-
-  .timeline-marker {
-    left: 20px;
-  }
-}
 .quality-section {
   background-color: #f9f9f9;
   padding: 60px 0;
@@ -1283,6 +1145,140 @@ section,
     margin: 0 auto !important;
     width: 250px;
     height: 250px;
+  }
+}
+
+
+
+
+/* Main Section Styling */
+#competition-track {
+  background: #000A2E;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+#competition-track h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F4C400;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#competition-track h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #F4C400;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Track Card Container */
+.track-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  justify-content: center;
+  scroll-snap-type: x mandatory;
+}
+
+.track-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  min-width: 250px;
+  max-width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #FFF;
+  scroll-snap-align: center;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(244, 196, 0, 0.3);
+}
+
+/* Icons */
+.track-card i {
+  font-size: 32px;
+  color: #F4C400;
+  margin-bottom: 10px;
+}
+
+/* Headings */
+.track-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #F4C400;
+  margin-bottom: 12px;
+}
+
+/* List */
+.track-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.track-card ul li {
+  font-size: 14px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 6px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.track-card ul li:hover {
+  background: rgba(244, 196, 0, 0.2);
+}
+
+/* Highlighted Text */
+.highlight {
+  font-weight: bold;
+  color: #F4C400;
+}
+
+.highlight-red {
+  font-weight: bold;
+  color: #FF5C5C;
+}
+
+/* Scrollbar Customization */
+.track-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.track-wrapper::-webkit-scrollbar-thumb {
+  background: #F4C400;
+  border-radius: 10px;
+}
+
+.track-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #competition-track {
+    padding: 40px 10px;
+  }
+
+  .track-card {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+
+  #competition-track h2 {
+    font-size: 24px;
   }
 }
 

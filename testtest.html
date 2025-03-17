@@ -475,6 +475,9 @@
     .hero-con{
       margin-top: -110px;
     }
+    .thumbnail-swiper{
+      display: none;
+    }
 }
 
 /* Additional Info */
@@ -649,10 +652,6 @@
                         </video>
                     </div>
                 </div>
-
-                <!-- Navigation Buttons -->
-<!--                 <div class="swiper-button-next text-white"></div>
-                <div class="swiper-button-prev text-white"></div> -->
             </div>
         </div>
 
@@ -830,66 +829,53 @@
     </div>
   </div>
 </section> -->
-<section id="competition-track" class="section py-5">
+<section id="competition-track">
   <div class="container">
-    <h2 class="text-center fw-bold mb-5" data-aos="fade-down">Competition Track</h2>
+    <h2 data-aos="fade-down">Competition Track</h2>
 
-    <div class="timeline">
-      <!-- Timeline Line -->
-      <div class="timeline-line"></div>
-
-      <!-- ES Section (Left) -->
-      <div class="timeline-item left" data-aos="fade-right">
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <i class="bi bi-award-fill"></i> ES
-          </div>
-          <ul class="timeline-list">
-            <li>스크래치올림피아드</li>
-            <li>VEX IQ</li>
-            <li>IROC</li>
-          </ul>
-        </div>
-        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
+    <div class="track-wrapper">
+      <!-- Elementary School (ES) -->
+      <div class="track-card" data-aos="fade-right">
+        <i class="bi bi-award-fill"></i>
+        <h3>Elementary School</h3>
+        <ul>
+          <li>스크래치올림피아드</li>
+          <li>VEX IQ</li>
+          <li>IROC</li>
+        </ul>
       </div>
 
-      <!-- MS Section (Right) -->
-      <div class="timeline-item right" data-aos="fade-left">
-        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <i class="bi bi-bookmark-star-fill"></i> MS
-          </div>
-          <ul class="timeline-list">
-            <li>ACSL</li>
-            <li>USACO</li>
-            <li>Technovation</li>
-            <li>Stanford 주관 Logic Olympiad</li>
-            <li><span class="highlight">Upenn</span> 와튼 DS</li>
-            <li class="highlight-red">Technovation Girls</li>
-          </ul>
-        </div>
+      <!-- Middle School (MS) -->
+      <div class="track-card" data-aos="fade-up">
+        <i class="bi bi-bookmark-star-fill"></i>
+        <h3>Middle School</h3>
+        <ul>
+          <li>ACSL</li>
+          <li>USACO</li>
+          <li>Technovation</li>
+          <li>Stanford 주관 Logic Olympiad</li>
+          <li><span class="highlight">Upenn</span> 와튼 DS</li>
+          <li class="highlight-red">Technovation Girls</li>
+        </ul>
       </div>
 
-      <!-- HS Section (Left) -->
-      <div class="timeline-item left" data-aos="fade-right">
-        <div class="timeline-content">
-          <div class="timeline-header">
-            <i class="bi bi-trophy-fill"></i> HS
-          </div>
-          <ul class="timeline-list">
-            <li>ACSL</li>
-            <li>USACO</li>
-            <li>Technovation</li>
-            <li>VEX IQ/V5</li>
-            <li>IROC</li>
-          </ul>
-        </div>
-        <div class="timeline-marker"><i class="bi bi-circle-fill"></i></div>
+      <!-- High School (HS) -->
+      <div class="track-card" data-aos="fade-left">
+        <i class="bi bi-trophy-fill"></i>
+        <h3>High School</h3>
+        <ul>
+          <li>ACSL</li>
+          <li>USACO</li>
+          <li>Technovation</li>
+          <li>VEX IQ/V5</li>
+          <li>IROC</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 
