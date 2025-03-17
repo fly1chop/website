@@ -914,10 +914,51 @@ section,
     transition: background 0.3s, transform 0.2s;
 }
 
-.course-img{
+/*.course-img{
   width: 65%;
   border-radius: 30px;
   max-width: 500px;
+}
+*/
+  #courses h4{
+    font-weight: 700;
+  }
+ #courses h4::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: white;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+
+  .course-img {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle properly */
+    border: 3px solid rgba(255, 255, 255, 0.3); /* Optional border for a cleaner look */
+    transition: transform 0.3s ease-in-out;
+  }
+    .course-img:hover {
+    transform: scale(1.05);
+  }
+
+@media (max-width: 768px) {
+  .course-img {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image fills the circle properly */
+    border: 3px solid rgba(255, 255, 255, 0.3); /* Optional border for a cleaner look */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Hover Effect (Optional: Slight Scale Effect) */
+
 }
 
 /* Hover Effect */
@@ -1153,7 +1194,7 @@ section,
 
 /* Main Section Styling */
 #competition-track {
-  background: #000A2E;
+  background: white;
   padding: 60px 15px;
   text-align: center;
 }
@@ -1190,11 +1231,11 @@ section,
 
 /* Improved Track Card Styling */
 .track-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(135deg, rgba(0, 10, 46, 1), rgba(0, 10, 46, 0.9));
   backdrop-filter: blur(15px);
   padding: 25px;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(244, 196, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0,0, 0, 0.2);
   min-width: 280px;
   max-width: 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1361,4 +1402,102 @@ section,
     font-size: 24px;
   }
 }
+
+
+.course-card2 {
+  background: #000A2E;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: white;
+  border: 2px solid #F4C400;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+}
+
+.course-card2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #5850d9, #000A2E);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hover Effect */
+.course-card2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(244, 196, 0, 0.3);
+  border-color: rgba(244, 196, 0, 0.6);
+}
+
+/* Course Title */
+.course-card2 h3 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Description Text */
+.course-card2 p {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin: 5px 0;
+}
+
+/* Strong Highlight */
+.course-card2 strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Button for More Info */
+.course-card2 .course-btn {
+  background: #F4C400;
+  color: #000A2E;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 12px;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.course-card2 .course-btn:hover {
+  background: #FFC107;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-card2 {
+    min-height: 180px;
+    padding: 20px;
+  }
+  .course-card2 h3 {
+    font-size: 18px;
+  }
+  .course-card2 p {
+    font-size: 13px;
+  }
+}
+
 
