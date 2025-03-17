@@ -1207,14 +1207,14 @@ section,
 }
 
 /* Hover Effect - Floating Neon Glow */
-.track-card:hover {
+/*.track-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 25px rgba(244, 196, 0, 0.4);
   border-color: rgba(244, 196, 0, 0.6);
-}
+}*/
 
 /* Adding a glowing border on hover */
-.track-card::before {
+/*.track-card::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1226,7 +1226,7 @@ section,
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   border-radius: 16px;
-}
+}*/
 
 .track-card:hover::before {
   opacity: 1;
@@ -1245,14 +1245,33 @@ section,
   transform: scale(1.2);
 }
 
-/* Modern Headings */
+/* Modern Heading Style */
 .track-card h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  color: #F4C400;
+  text-transform: uppercase;
+  text-align: center;
   margin-bottom: 16px;
   letter-spacing: 1px;
+  background: #F4C400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
 }
+
+/* Underline Effect */
+.track-card h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #F4C400;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+
 
 /* Modernized List Items with Dividers */
 .track-card ul {
