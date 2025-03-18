@@ -1047,7 +1047,7 @@ section,
 .achievement-badge {
   background: #fbc02d; /* Yellow */
   color: black;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 30px;
@@ -1225,9 +1225,12 @@ section,
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 10px;
-  justify-content: center;
+  justify-content: flex-start; /* Ensures left scroll is possible */
   scroll-snap-type: x mandatory;
+  width: 100%; /* Ensures full-width scrolling */
+  white-space: nowrap; /* Prevents items from breaking */
 }
+
 
 /* Improved Track Card Styling */
 .track-card {
@@ -1501,3 +1504,37 @@ section,
 }
 
 
+
+#achievements-box {
+  background: url('../img/testimonials-bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; 
+  padding: 80px 0; 
+  position: relative;
+  color: white; 
+}
+
+
+#achievements-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+
+#achievements-box > * {
+  position: relative;
+  z-index: 2;
+}
+.btn-box {
+  position: absolute !important;
+  top: 90%; 
+  transform: translateX(-50%);
+  width: 100%; 
+  text-align: center;
+}

@@ -1,1642 +1,1407 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>LognCoding</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-<style>
-        .video-container {
-            width: 75%; 
-            margin: auto; 
-        }
-        .swiper-slide video {
-            width: 100%; 
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-
-
-.swiper-slide.thumbnail-slide {
-    width: 280px !important;
-    height: 180px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-.swiper-thumbnail:hover {
-    transform: scale(1.1);
-}
-
-.swiper-slide-thumb-active {
-    border: 3px solid #4CAF50;
-}
-
-.rolling-carousel {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  position: relative;
-  background: #000A2E;
-  overflow: hidden;
-  width: 100%; /* Ensures it takes full width */
-}
-
-
-
-.banner-content {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  aspect-ratio: 3 / 1;
-  padding: 40px;
-  background: url('assets/img/content1.jpg') no-repeat center center; /* Set background image */
-  background-size: cover; /* Ensure the image covers the content */
-  border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  overflow: visible !important;
-  position: relative; /* Important for overlay */
-  color: white; /* Ensure text is readable */
-
-  display: flex; /* Enables flexbox */
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Centers items vertically */
-  align-items: center; /* Centers items horizontally */
-  min-height: 300px; /* Ensures it has enough height */
-}
-
-/* Optional: Add a semi-transparent overlay */
-.banner-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  border-radius: 50px; /* Same as .banner-content */
-}
-
-/* Ensure the text and buttons are above the overlay */
-.banner-content * {
-  position: relative;
-  z-index: 1;
-}
-
-
-/* Title Styling */
-.banner-content .banner-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: white;
-}
-
-/* Description Text */
-.banner-content .banner-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 20px;
-}
-
-/* Button Styling */
-.banner-content .custom-button {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #0056b3;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: #e8f0ff;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-}
-
-.banner-content .custom-button:hover {
-  background: #0056b3;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.banner-content:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
-}
-
-.swiper-slide-active .banner-content {
-  opacity: 1; 
-}
-
-
-.rolling-carousel .swiper-slide {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
-  width: 100%; 
-}
-
-.banner-content {
-
-  margin: auto; 
-}
-
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-/* Paused animation */
-.paused {
-  animation-play-state: paused !important;
-}
-
-
-
-.custom-button i {
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-
-
-.custom-button-sm {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 24px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #ffffff;
-  background: #000A2E;; 
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.custom-button-sm:hover {
-  transform: translateY(-3px);
-  color: lightgray;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
-
-.custom-button-sm i {
-  margin-right: 10px;
-  font-size: 1rem;
-}
-
-.unified-card {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.divider {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 2px;
-  height: 60%;
-  background: #ddd;
-}
-
-.col-lg-4:last-child .divider {
-  display: none;
-}
-
-
-
-.contact-card, .transport-card {
-  height: 300px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-.contact-card {
-  background: white;
-}
-
-.transport-card {
-  background: #000A2E;
-  color: white !important;
-}
-
-.yellow-line {
-  width: 40px;
-  height: 3px;
-  background-color: #FFC107;
-  margin-top: 5px;
-}
-
-.contact-card, .transport-card {
-  margin-bottom: 0;
-}
-.modern-card {
-  background: linear-gradient(135deg, #1a2b50, #2e4b8c);
-  border-radius: 20px;
-  padding: 25px;
-  color: #fff;
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-  width: 30%;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-.modern-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-.modern-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-.modern-description {
-  font-size: 1rem;
-  opacity: 0.85;
-  line-height: 1.5;
-}
-/*  .program-mobile{
- display: none;
-  }*/
-
-
-.course-card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background: white;
-}
-
-.course-card .card-header {
-    background: #222B3E; 
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 8px 8px 0 0;
-}
-
-.course-card .card-body {
-    padding: 20px;
-}
-
-.course-card p {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-.course-card .highlight {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-
-@media (max-width: 800px){
-  .contact-card h5{
-    font-size: 1.05rem;
-  }
-  .program-desktop{
-    display: none;
-  }
-  .program-mobile{
-    display: block;
-  }
- .program-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 15px;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .card-header {
-    background: #000A2E;
-    color: white;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .card-body {
-    padding: 15px;
-    color:black;
-  }
-
-  .program-icon {
-    width: 60px;
-    height: 60px;
-    background: #ddd;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-  }
-
-  .contact-card, .transport-card {
-  height: 350px;
-}
-  .contact-card, .transport-card p{
-  color:white;
-}
-}
-/* Program Section */
-.mobile-program-section {
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
-
-.background-image {
-    background: url('assets/img/testimonials-bg.jpg') no-repeat center center;
-    background-size: cover;
-    height: 300px; 
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; 
-}
-
-.background-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-}
-
-/* White Card */
-.mobile-program-card {
-    background: white;
-    color: black;
-    padding: 30px;
-    border-radius: 20px;
-    margin-top: 120px; /* Adjust to overlay slightly on the image */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
-/* Individual Sections inside the card */
-.program-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Icon Styling */
-.icon i {
-    font-size: 40px;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-/* Program Titles */
-.program-title {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.4;
-}
-
-/*#personal-project{
-  display: none;
-}*/
-/* Responsive Design */
-@media (max-width: 768px) {
-/*  #personal-project{
-    display: block;
-  }*/
-    .background-image {
-        height: 150px; /* Adjust for mobile */
-    }
-    .mobile-program-card {
-        padding: 20px;
-        margin-top: 100px;
-    }
-    .hero-con{
-      margin-top: -110px;
-    }
-    .thumbnail-swiper{
-      display: none;
-    }
-}
-
-/* Additional Info */
-.additional-info {
-    background: black;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-
-.info-list {
-    list-style: none;
-    padding: 0;
-}
-
-.info-list li {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 5px;
-}
-
-#mobile-program-2 {
-    background: white;
-    padding: 30px 0;
-    text-align: center;
-}
-
-#mobile-program-2 .section-title h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#mobile-program-2 .section-title p {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-#mobile-program-2 .text-danger {
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.program-box {
-    border: 2px solid #000A2E; 
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background: white;
-    transition: transform 0.2s ease-in-out;
-}
-
-.program-box:hover {
-    transform: translateY(-3px);
-}
-
-.program-box .icon {
-    font-size: 40px;
-    color: black;
-    margin-bottom: 10px;
-}
-
-.custom-button-sm {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 9px 16px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 10px;
-  background: white;
-  transition: all 0.3s ease-in-out;
-}
-
-.custom-button-sm:hover {
-  background: black;
-  color: white;
-  transform: translateY(-2px);
-}
-
-
-</style>
-</head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="testtest.html" class="logo d-flex align-items-center me-auto">
-        <img src="assets/img/logo_en.png" alt="">
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li  class="dropdown"><a href="about2.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="about2.html">About Us</a></li>
-              <li><a href="newteam.html">Team</a></li>
-            </ul>
-          </li>
-
-          <li><a href="capstone2.html">Capstone</a></li>
-          <li class="dropdown"><a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="tracks.html">Fundamental Track</a></li>
-              <li><a href="tracks.html">Competition Track</a></li>
-              <li><a href="tracks.html">Project Track</a></li>
-            </ul>
-          </li>
-                    <li><a href="testtest.html#personal-project">Personal Project</a></li>
-
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html">Blog</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-
-      <div class="container text-center hero-con" data-aos="fade-up" data-aos-delay="100" >
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <img class="img-fluid d-block w-30 mx-auto hero-logo" src="assets/img/logo_en.png" >
-<p class="typ mx-5">
-  <span class="typed" id="hero-typed"></span>
-</p>            
-<!-- <a href="#about" class="btn-get-started ">Get Started</a> -->
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-<section class=" section light-background" id="video-s">
-      <div class="container section-title2" data-aos="fade-up">
-        <!-- <h2>About</h2> -->
-        <div><span><span class="description-title">로그앤코딩</span></div>
-      </div>
-  <div class="container" >
-
-<div class="max-w-5xl mx-auto my-10">
-        <!-- <h2 class="text-2xl font-semibold text-center mb-4">Featured Videos</h2> -->
-
-        <!-- Main Video Carousel (75% width) -->
-        <div class="video-container mt-5">
-            <div class="swiper-container main-swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <video controls poster="assets/img/thumbnails/interview1.png">
-                            <source src="assets/video/video.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="swiper-slide">
-                        <video controls poster="https://via.placeholder.com/400x250">
-                            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="swiper-slide">
-                        <video controls poster="https://via.placeholder.com/400x250">
-                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Thumbnail Navigation -->
-        <div class="swiper-container thumbnail-swiper mt-4">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide thumbnail-slide">
-                    <img src="assets/img/thumbnails/interview1.png" class="swiper-thumbnail" alt="Thumbnail 1">
-                </div>
-                <div class="swiper-slide thumbnail-slide">
-                    <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 2">
-                </div>
-                <div class="swiper-slide thumbnail-slide">
-                    <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 3">
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <p class="text-italic mt-3 mb-4">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다.</p>
-                    <div class="text-center mt-4"   data-aos="fade-up">
-          <a href="#more" class="custom-button  d-inline-flex align-items-center">
-            <i class="bi bi-youtube"></i> 유튜브 채널 바로가기
-          </a>
-        </div>
-  </div>
-  
-</section>
-
-
-
-   
-
-    <section id="program" class=" section dark-background program-desktop">
-
-      <div class="container ">
-        <div class="section-title"  data-aos="fade-up">
-        <h2>Program</h2>
-                <div><span class="description-title">프로그램</span></div>
-
-      </div>
-
-      <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">Stanford, CMU, Cornell 등 아이비리그를 타겟으로 한 문과/ 이과/ 예체능 융합 EC 토탈 솔루션</h4>
-
-
-<div class="swiper-container rolling-carousel mt-md-5 mb-md-5 d-block mx-auto text-center"  data-aos="fade-up">
-  <div class="swiper-wrapper sg">
-    <div class="swiper-slide">
-      <div class="banner-content">
-        <div class="banner-title">캡스톤프로그램</div>
-        <div class="banner-description">
-          대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아
-          세계적인 기업, 명문 대학 연구기관, 글로벌 NGO 등에게 실질적인 솔루션을 제공할 수 있는 기회.
-        </div>
-        <div class="banner-link">
-          <a href="#" class="custom-button">로그엔코딩만의 독보적인 커리어를 확인해보세요 ▶</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper-slide">
-      <div class="banner-content">
-        <div class="banner-title">개인 프로젝트</div>
-        <div class="banner-description">
-          학생의 활동 이력과 공백을 탐색하여 Computer Science, Medical, Economics 등의
-          다양한 희망 전공과 연계해 자신만의 스토리를
-        </div>
-        <div class="banner-link">
-          <a href="#" class="custom-button">프리미엄 1:1 커스텀 프로젝트, 압도적인 퀄리티를 느껴보세요 ▶</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper-slide">
-      <div class="banner-content">
-        <div class="banner-title">수업</div>
-        <div class="banner-description">
-          코딩 전문가들과 함께하는 가장 효율적인 커리큘럼, python, java, c++ 등 코딩
-          언어 수업을 포함하여 데이터 사이언스, 로보틱스, 웹개발, ui/ux 등 다양한 트
-          랙의 프로그래밍 수업을 통한 실력 배양
-        </div>
-        <div class="banner-link">
-          <a href="#" class="custom-button">시간표 확인하기 ▶</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="container mt-5">
-  <div class="d-flex justify-content-between flex-wrap">
-    <div class="modern-card"  data-aos="flip-up">
-      <h5 class="modern-title">캡스톤 프로젝트</h5>
-    </div>
-
-    <div class="modern-card" data-aos="flip-up">
-      <h5 class="modern-title">개인 프로젝트</h5>
-    </div>
-
-    <div class="modern-card" data-aos="flip-up">
-      <h5 class="modern-title">수업</h5>
-    </div>
-  </div>
-</div>
-
-
-
-</div>
-
-
-    </section>
-
-
-
-
-<section id="courses" class=" section dark-background course-desktop">
-  <div class="container">
-    <!-- Section Title -->
-      <div class="container ">
-        <div class="section-title"  data-aos="fade-up">
-        <!-- <h2>Courses</h2> -->
-                <div><span class="description-title">Program Tracks</span></div>
-
-      </div>
-
-      <h3 class="mt-1  text-center section-description"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h3>
-      <h3 class="mt-1 text-center section-description"  data-aos="fade-right">국제학교 전문 코딩학원</h3>
-      <h3 class="mt-1 mb-5 text-center section-description"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h3>
-
-      <div class="row mb-5">
-        <div class="col-md-6">
-            <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-down" data-aos-duration="800">
-        </div>
-        <div class="col-md-6">
-          <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
-              <div class="text-white">
-                  <h4 class="m-0 text-center mb-4">Fundamental Track</h4>
-              </div>
-              <div class="text-center">
-                  <p class="mb-4">국제학교 특성화 맞춤 <span class="highlight">Class</span></p>
-
-                  <p class="fw-bold"> 실제 <span class="highlight">SFS, YISS, St. Paul</span> 등</p>
-                  <p class="mb-4" style="margin-top:-10px;">다수 국제 학교 출강 강사진 직접 수업</p>
-
-                  <p class="fw-bold">Carnegie Mellon 출신 대표의</p>
-                  <p class="fw-bold" style="margin-top:-10px;">CMU CS커리큘럼 기반 수업 진행</p>
-                  <div class="text-center mt-4"   data-aos="fade-down">
-                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
-                      <i class="bi bi-arrow-right-circle me-2"></i> More
-                    </a>
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>LognCoding</title>
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      <!-- Fonts -->
+      <link href="https://fonts.googleapis.com" rel="preconnect">
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+      <link href="assets/css/main.css" rel="stylesheet">
+      <style>
+         .video-container {
+         width: 75%; 
+         margin: auto; 
+         }
+         .swiper-slide video {
+         width: 100%; 
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         }
+         .swiper-slide.thumbnail-slide {
+         width: 280px !important;
+         height: 180px !important;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         .swiper-thumbnail {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: transform 0.3s ease-in-out;
+         }
+         .swiper-thumbnail:hover {
+         transform: scale(1.1);
+         }
+         .swiper-slide-thumb-active {
+         border: 3px solid #4CAF50;
+         }
+         .rolling-carousel {
+         display: flex;
+         justify-content: center; /* Centers horizontally */
+         align-items: center; /* Centers vertically */
+         position: relative;
+         background: #000A2E;
+         overflow: hidden;
+         width: 100%; /* Ensures it takes full width */
+         }
+         .banner-content {
+         width: 100%;
+         max-width: 1200px;
+         height: auto;
+         aspect-ratio: 3 / 1;
+         padding: 40px;
+         background: url('assets/img/content1.jpg') no-repeat center center; /* Set background image */
+         background-size: cover; /* Ensure the image covers the content */
+         border-radius: 50px;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+         text-align: center;
+         overflow: visible !important;
+         position: relative; /* Important for overlay */
+         color: white; /* Ensure text is readable */
+         display: flex; /* Enables flexbox */
+         flex-direction: column; /* Stack items vertically */
+         justify-content: center; /* Centers items vertically */
+         align-items: center; /* Centers items horizontally */
+         min-height: 300px; /* Ensures it has enough height */
+         }
+         /* Optional: Add a semi-transparent overlay */
+         .banner-content::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+         border-radius: 50px; /* Same as .banner-content */
+         }
+         /* Ensure the text and buttons are above the overlay */
+         .banner-content * {
+         position: relative;
+         z-index: 1;
+         }
+         /* Title Styling */
+         .banner-content .banner-title {
+         font-size: 1.5rem;
+         font-weight: bold;
+         margin-bottom: 10px;
+         text-transform: uppercase;
+         color: white;
+         }
+         /* Description Text */
+         .banner-content .banner-description {
+         font-size: 1rem;
+         line-height: 1.6;
+         color: white;
+         margin-bottom: 20px;
+         }
+         /* Button Styling */
+         .banner-content .custom-button {
+         font-size: 1rem;
+         font-weight: 600;
+         color: #0056b3;
+         text-decoration: none;
+         padding: 8px 16px;
+         border-radius: 20px;
+         background: #e8f0ff;
+         display: inline-block;
+         transition: all 0.3s ease-in-out;
+         }
+         .banner-content .custom-button:hover {
+         background: #0056b3;
+         color: #fff;
+         transform: scale(1.05);
+         }
+         .banner-content:hover {
+         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); 
+         }
+         .swiper-slide-active .banner-content {
+         opacity: 1; 
+         }
+         .rolling-carousel .swiper-slide {
+         display: flex;
+         justify-content: center; 
+         align-items: center; 
+         text-align: center;
+         width: 100%; 
+         }
+         .banner-content {
+         margin: auto; 
+         }
+         @keyframes scroll {
+         from {
+         transform: translateX(0);
+         }
+         to {
+         transform: translateX(-100%);
+         }
+         }
+         /* Paused animation */
+         .paused {
+         animation-play-state: paused !important;
+         }
+         .custom-button i {
+         margin-right: 10px;
+         font-size: 1.2rem;
+         }
+         .custom-button-sm {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         padding: 6px 24px;
+         font-size: 0.7rem;
+         font-weight: 500;
+         color: #ffffff;
+         background: #000A2E;; 
+         border: none;
+         border-radius: 30px;
+         text-decoration: none;
+         transition: transform 0.3s, box-shadow 0.3s;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         }
+         .custom-button-sm:hover {
+         transform: translateY(-3px);
+         color: lightgray;
+         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+         text-decoration: none;
+         }
+         .custom-button-sm i {
+         margin-right: 10px;
+         font-size: 1rem;
+         }
+         .unified-card {
+         background: white;
+         border-radius: 15px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         }
+         .card-body {
+         padding: 20px;
+         }
+         .card-title {
+         font-size: 1.2rem;
+         font-weight: bold;
+         }
+         .divider {
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translateY(-50%);
+         width: 2px;
+         height: 60%;
+         background: #ddd;
+         }
+         .col-lg-4:last-child .divider {
+         display: none;
+         }
+         .contact-card, .transport-card {
+         height: 300px;
+         border-radius: 15px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+         }
+         .contact-card {
+         background: white;
+         }
+         .transport-card {
+         background: #000A2E;
+         color: white !important;
+         }
+         .yellow-line {
+         width: 40px;
+         height: 3px;
+         background-color: #FFC107;
+         margin-top: 5px;
+         }
+         .contact-card, .transport-card {
+         margin-bottom: 0;
+         }
+         .modern-card {
+         background: linear-gradient(135deg, #1a2b50, #2e4b8c);
+         border-radius: 20px;
+         padding: 25px;
+         color: #fff;
+         text-align: center;
+         transition: all 0.3s ease-in-out;
+         width: 30%;
+         margin-bottom: 20px;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+         }
+         .modern-card:hover {
+         transform: translateY(-8px);
+         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+         }
+         .modern-title {
+         font-size: 1.75rem;
+         font-weight: bold;
+         margin-bottom: 8px;
+         }
+         .modern-description {
+         font-size: 1rem;
+         opacity: 0.85;
+         line-height: 1.5;
+         }
+         /*  .program-mobile{
+         display: none;
+         }*/
+         .course-card {
+         border: none;
+         border-radius: 10px;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+         overflow: hidden;
+         background: white;
+         }
+         .course-card .card-header {
+         background: #222B3E; 
+         padding: 15px;
+         font-weight: bold;
+         text-align: center;
+         border-radius: 8px 8px 0 0;
+         }
+         .course-card .card-body {
+         padding: 20px;
+         }
+         .course-card p {
+         font-size: 1rem;
+         margin-bottom: 8px;
+         }
+         .course-card .highlight {
+         font-weight: bold;
+         text-decoration: underline;
+         }
+         @media (max-width: 800px){
+         .contact-card h5{
+         font-size: 1.05rem;
+         }
+         .program-desktop{
+         display: none;
+         }
+         .program-mobile{
+         display: block;
+         }
+         .program-card {
+         background: white;
+         border-radius: 10px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         margin-bottom: 20px;
+         padding: 15px;
+         text-align: center;
+         overflow: hidden;
+         }
+         .card-header {
+         background: #000A2E;
+         color: white;
+         padding: 10px;
+         font-size: 1.2rem;
+         font-weight: bold;
+         border-radius: 8px 8px 0 0;
+         }
+         .card-body {
+         padding: 15px;
+         color:black;
+         }
+         .program-icon {
+         width: 60px;
+         height: 60px;
+         background: #ddd;
+         border-radius: 50%;
+         margin: 0 auto 10px;
+         }
+         .contact-card, .transport-card {
+         height: 350px;
+         }
+         .contact-card, .transport-card p{
+         color:white;
+         }
+         }
+         /* Program Section */
+         .mobile-program-section {
+         position: relative;
+         width: 100%;
+         text-align: center;
+         }
+         .background-image {
+         background: url('assets/img/testimonials-bg.jpg') no-repeat center center;
+         background-size: cover;
+         height: 300px; 
+         width: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 0; 
+         }
+         .background-image::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5); 
+         }
+         /* White Card */
+         .mobile-program-card {
+         background: white;
+         color: black;
+         padding: 30px;
+         border-radius: 20px;
+         margin-top: 120px; /* Adjust to overlay slightly on the image */
+         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+         max-width: 90%;
+         margin-left: auto;
+         margin-right: auto;
+         position: relative;
+         }
+         /* Individual Sections inside the card */
+         .program-item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         }
+         /* Icon Styling */
+         .icon i {
+         font-size: 40px;
+         color: #000;
+         margin-bottom: 10px;
+         }
+         /* Program Titles */
+         .program-title {
+         font-size: 15px;
+         font-weight: bold;
+         text-align: center;
+         line-height: 1.4;
+         }
+         /*#personal-project{
+         display: none;
+         }*/
+         /* Responsive Design */
+         @media (max-width: 768px) {
+         /*  #personal-project{
+         display: block;
+         }*/
+         .background-image {
+         height: 150px; /* Adjust for mobile */
+         }
+         .mobile-program-card {
+         padding: 20px;
+         margin-top: 100px;
+         }
+         .hero-con{
+         margin-top: -110px;
+         }
+         .thumbnail-swiper{
+         display: none;
+         }
+         }
+         /* Additional Info */
+         .additional-info {
+         background: black;
+         padding: 20px;
+         border-radius: 15px;
+         margin-top: 20px;
+         }
+         .info-list {
+         list-style: none;
+         padding: 0;
+         }
+         .info-list li {
+         font-size: 14px;
+         line-height: 1.6;
+         margin-bottom: 5px;
+         }
+         #mobile-program-2 {
+         background: white;
+         padding: 30px 0;
+         text-align: center;
+         }
+         #mobile-program-2 .section-title h2 {
+         font-size: 22px;
+         font-weight: bold;
+         margin-bottom: 10px;
+         }
+         #mobile-program-2 .section-title p {
+         font-size: 14px;
+         line-height: 1.6;
+         }
+         #mobile-program-2 .text-danger {
+         font-weight: bold;
+         font-size: 16px;
+         margin-top: 10px;
+         }
+         .program-box {
+         border: 2px solid #000A2E; 
+         border-radius: 10px;
+         padding: 15px;
+         text-align: center;
+         background: white;
+         transition: transform 0.2s ease-in-out;
+         }
+         .program-box:hover {
+         transform: translateY(-3px);
+         }
+         .program-box .icon {
+         font-size: 40px;
+         color: black;
+         margin-bottom: 10px;
+         }
+         .custom-button-sm {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         padding: 9px 16px;
+         font-size: 0.9rem;
+         font-weight: 600;
+         color: black;
+         text-decoration: none;
+         border: 2px solid black;
+         border-radius: 10px;
+         background: white;
+         transition: all 0.3s ease-in-out;
+         }
+         .custom-button-sm:hover {
+         background: black;
+         color: white;
+         transform: translateY(-2px);
+         }
+      </style>
+   </head>
+   <body class="index-page">
+      <header id="header" class="header d-flex align-items-center sticky-top">
+         <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="testtest.html" class="logo d-flex align-items-center me-auto">
+            <img src="assets/img/logo_en.png" alt="">
+            </a>
+            <nav id="navmenu" class="navmenu">
+               <ul>
+                  <li  class="dropdown">
+                     <a href="about2.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                     <ul>
+                        <li><a href="about2.html">About Us</a></li>
+                        <li><a href="newteam.html">Team</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="capstone2.html">Capstone</a></li>
+                  <li class="dropdown">
+                     <a href="course.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                     <ul>
+                        <li><a href="tracks.html">Fundamental Track</a></li>
+                        <li><a href="tracks.html">Competition Track</a></li>
+                        <li><a href="tracks.html">Project Track</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="testtest.html#personal-project">Personal Project</a></li>
+               </ul>
+               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <a class="btn-getstarted" href="index.html">Blog</a>
+         </div>
+      </header>
+      <main class="main">
+         <!-- Hero Section -->
+         <section id="hero" class="hero section dark-background">
+            <div class="container text-center hero-con" data-aos="fade-up" data-aos-delay="100" >
+               <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                     <img class="img-fluid d-block w-30 mx-auto hero-logo" src="assets/img/logo_en.png" >
+                     <p class="typ mx-5">
+                        <span class="typed" id="hero-typed"></span>
+                     </p>
+                     <!-- <a href="#about" class="btn-get-started ">Get Started</a> -->
                   </div>
-              </div>
-          </div>
-        </div>
-      </div>
-
-
-       <div class="row align-items-center flex-md-row-reverse" style="margin-top: 120px;">
-        <div class="col-md-6">
-            <img src="assets/img/bb2.png" class="img-fluid course-img d-block mx-auto" alt="Image 2" data-aos="fade-down" data-aos-duration="800">
-        </div>
-        <div class="col-md-6">
-            <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
-                <div class="text-white">
-                    <h4 class="m-0 text-center mb-4">Competition Track</h4>
+               </div>
+            </div>
+         </section>
+         <!-- /Hero Section -->
+         <section class=" section light-background" id="video-s">
+            <div class="container section-title2" data-aos="fade-up">
+               <!-- <h2>About</h2> -->
+               <div><span><span class="description-title">로그앤코딩</span></div>
+            </div>
+            <div class="container" >
+               <div class="max-w-5xl mx-auto my-10">
+                  <!-- <h2 class="text-2xl font-semibold text-center mb-4">Featured Videos</h2> -->
+                  <!-- Main Video Carousel (75% width) -->
+                  <div class="video-container mt-5">
+                     <div class="swiper-container main-swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <video controls poster="assets/img/thumbnails/interview1.png">
+                                 <source src="assets/video/video.mp4" type="video/mp4">
+                              </video>
+                           </div>
+                           <div class="swiper-slide">
+                              <video controls poster="https://via.placeholder.com/400x250">
+                                 <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                              </video>
+                           </div>
+                           <div class="swiper-slide">
+                              <video controls poster="https://via.placeholder.com/400x250">
+                                 <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                              </video>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Thumbnail Navigation -->
+                  <div class="swiper-container thumbnail-swiper mt-4">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide thumbnail-slide">
+                           <img src="assets/img/thumbnails/interview1.png" class="swiper-thumbnail" alt="Thumbnail 1">
+                        </div>
+                        <div class="swiper-slide thumbnail-slide">
+                           <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 2">
+                        </div>
+                        <div class="swiper-slide thumbnail-slide">
+                           <img src="https://via.placeholder.com/100x60" class="swiper-thumbnail" alt="Thumbnail 3">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <p class="text-italic mt-3 mb-4">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다.</p>
+               <div class="text-center mt-4"   data-aos="fade-up">
+                  <a href="#more" class="custom-button  d-inline-flex align-items-center">
+                  <i class="bi bi-youtube"></i> 유튜브 채널 바로가기
+                  </a>
+               </div>
+            </div>
+         </section>
+         <section id="mobile-program" class="mobile-program-section d-md-none">
+            <div class="container">
+               <div class="background-image"></div>
+               <div class="row justify-content-center">
+                  <div class="col-12">
+                     <div class="mobile-program-card">
+                        <div class="row text-center">
+                           <div class="col-4">
+                              <div class="program-item">
+                                 <div class="icon">
+                                    <i class="bi bi-tools"></i>
+                                 </div>
+                                 <h4 class="program-title">보딩 전문<br>개인 맞춤 프로그램</h4>
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <div class="program-item">
+                                 <div class="icon">
+                                    <i class="bi bi-bank"></i>
+                                 </div>
+                                 <h4 class="program-title">희망 전공 / 학과<br>맞춤 커스텀 프로그램</h4>
+                              </div>
+                           </div>
+                           <div class="col-4">
+                              <div class="program-item">
+                                 <div class="icon">
+                                    <i class="bi bi-lightbulb"></i>
+                                 </div>
+                                 <h4 class="program-title">입문 맞춤<br>테마 프로그램</h4>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="additional-info text-center mt-4">
+               <ul class="info-list">
+                  <li><i class="bi bi-check-circle-fill"></i> CMU, UC <span class="highlight">Berkeley, Cornell, Columbia</span> 등 명문대 출신 대표 및 강사진!</li>
+                  <li><i class="bi bi-check-circle-fill"></i> SFS, YISS, St. Paul등 다수 국제 학교 출강 강사진</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 서울외국인학교(SFS) ES/HS Robotics 팀 코치진</li>
+                  <li><i class="bi bi-check-circle-fill"></i> CMU 출신 원장의 CMU CS 커리큘럼 기반 수업</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 융합형 EC 지원</li>
+                  <li>(<span class="highlight">Stanford, CMU, Cornell</span> 등 아이비리그 타겟 문이과 EC 프로젝트 특화)</li>
+               </ul>
+            </div>
+         </section>
+         <section id="program" class=" section dark-background program-desktop">
+            <div class="container ">
+               <div class="section-title"  data-aos="fade-up">
+                  <h2>Program</h2>
+                  <div><span class="description-title">프로그램</span></div>
+               </div>
+               <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">Stanford, CMU, Cornell 등 아이비리그를 타겟으로 한 문과/ 이과/ 예체능 융합 EC 토탈 솔루션</h4>
+               <div class="swiper-container rolling-carousel mt-md-5 mb-md-5 d-block mx-auto text-center"  data-aos="fade-up">
+                  <div class="swiper-wrapper sg">
+                     <div class="swiper-slide">
+                        <div class="banner-content">
+                           <div class="banner-title">캡스톤프로그램</div>
+                           <div class="banner-description">
+                              대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아
+                              세계적인 기업, 명문 대학 연구기관, 글로벌 NGO 등에게 실질적인 솔루션을 제공할 수 있는 기회.
+                           </div>
+                           <div class="banner-link">
+                              <a href="#" class="custom-button">로그엔코딩만의 독보적인 커리어를 확인해보세요 ▶</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="banner-content">
+                           <div class="banner-title">개인 프로젝트</div>
+                           <div class="banner-description">
+                              학생의 활동 이력과 공백을 탐색하여 Computer Science, Medical, Economics 등의
+                              다양한 희망 전공과 연계해 자신만의 스토리를
+                           </div>
+                           <div class="banner-link">
+                              <a href="#" class="custom-button">프리미엄 1:1 커스텀 프로젝트, 압도적인 퀄리티를 느껴보세요 ▶</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="banner-content">
+                           <div class="banner-title">수업</div>
+                           <div class="banner-description">
+                              코딩 전문가들과 함께하는 가장 효율적인 커리큘럼, python, java, c++ 등 코딩
+                              언어 수업을 포함하여 데이터 사이언스, 로보틱스, 웹개발, ui/ux 등 다양한 트
+                              랙의 프로그래밍 수업을 통한 실력 배양
+                           </div>
+                           <div class="banner-link">
+                              <a href="#" class="custom-button">시간표 확인하기 ▶</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container mt-5">
+                  <div class="d-flex justify-content-between flex-wrap">
+                     <div class="modern-card"  data-aos="flip-up">
+                        <h5 class="modern-title">캡스톤 프로젝트</h5>
+                     </div>
+                     <div class="modern-card" data-aos="flip-up">
+                        <h5 class="modern-title">개인 프로젝트</h5>
+                     </div>
+                     <div class="modern-card" data-aos="flip-up">
+                        <h5 class="modern-title">수업</h5>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="courses" class=" section dark-background course-desktop">
+            <div class="container">
+               <!-- Section Title -->
+               <div class="container ">
+                  <div class="section-title"  data-aos="fade-up">
+                     <!-- <h2>Courses</h2> -->
+                     <div><span class="description-title">Program Tracks</span></div>
+                  </div>
+                  <h3 class="mt-1  text-center section-description"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h3>
+                  <h3 class="mt-1 text-center section-description"  data-aos="fade-right">국제학교 전문 코딩학원</h3>
+                  <h3 class="mt-1 mb-5 text-center section-description"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h3>
+                  <div class="row mb-5">
+                     <div class="col-md-6">
+                        <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-down" data-aos-duration="800">
+                     </div>
+                     <div class="col-md-6">
+                        <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
+                           <div class="text-white">
+                              <h4 class="m-0 text-center mb-4">Fundamental Track</h4>
+                           </div>
+                           <div class="text-center">
+                              <p class="mb-4">국제학교 특성화 맞춤 <span class="highlight">Class</span></p>
+                              <p class="fw-bold"> 실제 <span class="highlight">SFS, YISS, St. Paul</span> 등</p>
+                              <p class="mb-4" style="margin-top:-10px;">다수 국제 학교 출강 강사진 직접 수업</p>
+                              <p class="fw-bold">Carnegie Mellon 출신 대표의</p>
+                              <p class="fw-bold" style="margin-top:-10px;">CMU CS커리큘럼 기반 수업 진행</p>
+                              <div class="text-center mt-4"   data-aos="fade-down">
+                                 <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                                 <i class="bi bi-arrow-right-circle me-2"></i> More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row align-items-center flex-md-row-reverse" style="margin-top: 120px;">
+                     <div class="col-md-6">
+                        <img src="assets/img/bb2.png" class="img-fluid course-img d-block mx-auto" alt="Image 2" data-aos="fade-down" data-aos-duration="800">
+                     </div>
+                     <div class="col-md-6">
+                        <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
+                           <div class="text-white">
+                              <h4 class="m-0 text-center mb-4">Competition Track</h4>
+                           </div>
+                           <div class="text-center">
+                              <p class="fw-bold mb-2">코딩 <span class="highlight">국제 대회</span></p>
+                              <p class="fw-bold mb-2">EC 필수 국제 대회</p>
+                              <p class="fw-bold mb-2">우리 아이 <span class="highlight">맞춤 대회 트랙</span> 진단</p>
+                              <div class="text-center mt-3"   data-aos="fade-down">
+                                 <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                                 <i class="bi bi-arrow-right-circle me-2"></i> More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mb-5" style="margin-top: 120px;">
+                     <div class="col-md-6">
+                        <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-down" data-aos-duration="800">
+                     </div>
+                     <div class="col-md-6">
+                        <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
+                           <div class="text-white">
+                              <h4 class="m-0 text-center mb-4">Project Track</h4>
+                           </div>
+                           <div class="text-center">
+                              <p class="fw-bold mb-2">보딩준비 개인 맞춤 프로젝트</p>
+                              <p class="fw-bold mb-2"><span class="highlight">희망 전공 / 개인 맞춤형</span> 프로젝트</p>
+                              <p class="fw-bold mb-2">커스텀 테마 프로젝트</p>
+                              <div class="text-center mt-3"   data-aos="fade-down">
+                                 <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
+                                 <i class="bi bi-arrow-right-circle me-2"></i> More
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- <section id="courses" class=" section dark-background course-mobile">
+            <div class="container">
+                <div class="container ">
+                  <div class="section-title"  data-aos="fade-up">
+                  <h2>Courses</h2>
+                          <div><span class="description-title">Program Tracks</span></div>
+            
                 </div>
-                <div class="text-center">
-                    <p class="fw-bold mb-2">코딩 <span class="highlight">국제 대회</span></p>
-                    <p class="fw-bold mb-2">EC 필수 국제 대회</p>
-                    <p class="fw-bold mb-2">우리 아이 <span class="highlight">맞춤 대회 트랙</span> 진단</p>
-                    <div class="text-center mt-3"   data-aos="fade-down">
-                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
-                      <i class="bi bi-arrow-right-circle me-2"></i> More
-                    </a>
+            
+                <h4 class="mt-1  text-center"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h4>
+            
+                <h4 class="mt-1 text-center"  data-aos="fade-right">국제학교 전문 코딩학원</h4>
+                <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h4>
+            
+              <div class="program-card" data-aos="fade-up">
+                <div class="card-header">Fundamental Track</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-4">
+                                <div class="program-icon"></div>
+            
+                    </div>
+                    <div class="col-8">
+                                <p>국제학교 특성화 맞춤 class<br>다수 국제 학교 출강 강사진 수업</p>
+            
+                    </div>
                   </div>
                 </div>
-            </div>
-        </div>
-      </div>
-      <div class="row mb-5" style="margin-top: 120px;">
-        <div class="col-md-6">
-            <img class="img-fluid course-img d-block mx-auto mt-4" src="assets/img/bb2.png" data-aos="fade-down" data-aos-duration="800">
-        </div>
-        <div class="col-md-6">
-          <div class="mt-5" data-aos="fade-down" data-aos-duration="800">
-              <div class="text-white">
-                  <h4 class="m-0 text-center mb-4">Project Track</h4>
               </div>
-              <div class="text-center">
-                    <p class="fw-bold mb-2">보딩준비 개인 맞춤 프로젝트</p>
-                    <p class="fw-bold mb-2"><span class="highlight">희망 전공 / 개인 맞춤형</span> 프로젝트</p>
-                    <p class="fw-bold mb-2">커스텀 테마 프로젝트</p>
-                    <div class="text-center mt-3"   data-aos="fade-down">
-                    <a href="#more" class="custom-button-sm d-inline-flex align-items-center">
-                      <i class="bi bi-arrow-right-circle me-2"></i> More
-                    </a>
+            
+              <div class="program-card" data-aos="fade-up">
+                <div class="card-header">Competition Track</div>
+                <div class="card-body">
+                          <div class="row">
+                    <div class="col-4">
+                  <div class="program-icon"></div>
+            
+                    </div>
+                    <div class="col-8">
+                  <p>코딩 국제 대회<br>EC 필수 국제 대회<br>우리 아이 맞춤 대회 트랙 진단</p>
+            
+                    </div>
                   </div>
-              </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
-<!-- <section id="courses" class=" section dark-background course-mobile">
-  <div class="container">
-      <div class="container ">
-        <div class="section-title"  data-aos="fade-up">
-        <h2>Courses</h2>
-                <div><span class="description-title">Program Tracks</span></div>
-
-      </div>
-
-      <h4 class="mt-1  text-center"  data-aos="fade-right">미국 보딩, 명문대 합격자 다수</h4>
-
-      <h4 class="mt-1 text-center"  data-aos="fade-right">국제학교 전문 코딩학원</h4>
-      <h4 class="mt-1 mb-4 text-center"  data-aos="fade-right">국제학교(유학생) 개인별 로드맵 구축!</h4>
-
-    <div class="program-card" data-aos="fade-up">
-      <div class="card-header">Fundamental Track</div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-4">
-                      <div class="program-icon"></div>
-
-          </div>
-          <div class="col-8">
-                      <p>국제학교 특성화 맞춤 class<br>다수 국제 학교 출강 강사진 수업</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="program-card" data-aos="fade-up">
-      <div class="card-header">Competition Track</div>
-      <div class="card-body">
-                <div class="row">
-          <div class="col-4">
-        <div class="program-icon"></div>
-
-          </div>
-          <div class="col-8">
-        <p>코딩 국제 대회<br>EC 필수 국제 대회<br>우리 아이 맞춤 대회 트랙 진단</p>
-
-          </div>
-        </div>
-      </div>
-      </div>
-
-    <div class="program-card" data-aos="fade-up">
-      <div class="card-header">Project Track</div>
-      <div class="card-body">
-                <div class="row">
-          <div class="col-4">
-                      <div class="program-icon"></div>
-          </div>
-          <div class="col-8">
-        <p>보딩준비 개인 맞춤 프로젝트<br>희망 전공/개인 맞춤형 프로젝트</p>
-
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<section id="competition-track" class="section light-background">
-  <div class="container">
-      <div class="container ">
-        <div class="section-title2"  data-aos="fade-up">
-        <!-- <h2>Courses</h2> -->
-                <div><span class="description-title">Competition Tracks</span></div>
-
-      </div>
-    <div class="track-wrapper">
-      <!-- Elementary School (ES) -->
-      <div class="track-card" data-aos="fade-right">
-        <h3>Elementary School</h3>
-        <ul>
-          <li>스크래치올림피아드</li>
-          <li>VEX IQ</li>
-          <li>IROC</li>
-        </ul>
-      </div>
-
-      <!-- Middle School (MS) -->
-      <div class="track-card" data-aos="fade-up">
-        <h3>Middle School</h3>
-        <ul>
-          <li>ACSL</li>
-          <li>USACO</li>
-          <li>Technovation</li>
-          <li>Stanford 주관 Logic Olympiad</li>
-          <li><span class="highlight">Upenn</span> 와튼 DS</li>
-          <li class="highlight-red">Technovation Girls</li>
-        </ul>
-      </div>
-
-      <!-- High School (HS) -->
-      <div class="track-card" data-aos="fade-left">
-        <h3>High School</h3>
-        <ul>
-          <li>ACSL</li>
-          <li>USACO</li>
-          <li>Technovation</li>
-          <li>VEX IQ/V5</li>
-          <li>IROC</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Scroll Hint for Mobile -->
-    <div class="scroll-hint mt-4">← Swipe to see more →</div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-<section id="fundamental" class="section dark-background">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <!-- <h2>Courses</h2> -->
-      <div><span class="description-title">Fundamental Tracks</span></div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col-6">
-        <div class="course-card2 mx-auto" data-aos="flip-up" data-aos-duration="800">
-          <h3>ACSL</h3>
-          <p><strong>▶ Python1 Python2</strong></p>
-          <p>ACSL 준비하기 위한 테마</p>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="course-card2 mx-auto mt-0 mt-md-4" data-aos="flip-up" data-aos-duration="800">
-          <h3>USACO</h3>
-          <p><strong>▶ Python1 Python2</strong></p>
-          <p>Programming & algorithms training</p>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="course-card2 mx-auto mt-4 mt-md-4" data-aos="flip-up" data-aos-duration="800">
-          <h3>ACSL</h3>
-          <p><strong>▶ Python1 Python2</strong></p>
-          <p>ACSL 준비하기 위한 테마</p>
-        </div>
-      </div>
-
-      <div class="col-6">
-        <div class="course-card2 mx-auto mt-4 mt-md-4" data-aos="flip-up" data-aos-duration="800">
-          <h3>ACSL</h3>
-          <p><strong>▶ Python1 Python2</strong></p>
-          <p>ACSL 준비하기 위한 테마</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-4" data-aos="fade-up">
-      <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
-        더 많은 테마 확인하기
-      </button>
-    </div>
-
-    <div class="text-center mt-5" data-aos="fade-up">
-      <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
-        우리 아이 맞춤 트랙 진단 받기 <i class="bi bi-arrow-right"></i>
-      </button>
-    </div>
-  </div>
-
-<!-- Modal for User Input -->
-<div class="modal fade" id="lognCodingModal" tabindex="-1" aria-labelledby="lognCodingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-4 text-center" style="border-radius: 15px; background: white; max-width: 400px; margin: auto;">
-      <div class="modal-header border-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body text-start">
-        <!-- 학년 (Grade) -->
-        <div>
-                <img src="assets/img/logo.png" alt="" style="max-width:160px;" class="img-fluid d-block mx-auto mb-4">
-              </div>
-        <label class="fw-bold" for="grade">학년</label>
-        <input type="text" id="grade" class="form-control border-dark mb-3" placeholder="예: 중3">
-
-        <!-- 학교 (School) -->
-        <label class="fw-bold" for="school">학교</label>
-        <input type="text" id="school" class="form-control border-dark mb-3" placeholder="학교 이름">
-
-        <!-- 연락처 (Contact) -->
-        <label class="fw-bold" for="contact">연락처</label>
-        <input type="text"  class="form-control border-dark mb-3" placeholder="010-1234-5678">
-
-        <!-- 관심 프로그램/대회 (Interest Program/Competition) -->
-        <label class="fw-bold">관심 프로그램/대회</label>
-        <div class="d-flex flex-column align-items-start ps-2">
-          <div class="form-check">
-            <input class="form-check-input border-dark" type="radio" name="interest" id="internationalComp" value="국제대회">
-            <label class="form-check-label" for="internationalComp">국제대회</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input border-dark" type="radio" name="interest" id="python" value="Python">
-            <label class="form-check-label" for="python">Python</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input border-dark" type="radio" name="interest" id="robotics" value="Robotics">
-            <label class="form-check-label" for="robotics">Robotics</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input border-dark" type="radio" name="interest" id="makers" value="Makers">
-            <label class="form-check-label" for="makers">Makers</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer border-0 d-flex justify-content-center">
-        <button type="button" class="custom-button-sm" data-bs-dismiss="modal">닫기</button>
-        <button type="button" class="custom-button-sm" onclick="submitForm()">제출</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-</section>
-
-<section id="achievements" class="section dark-background text-center py-5">
-  <div class="container">
-    <h2 class="text-white fw-bold mb-5" data-aos="fade-down" data-aos-duration="1000">Our Achievements</h2>
-
-    <!-- Achievement Badges -->
-    <div class="d-flex flex-column align-items-center mt-4">
-      <div class="achievement-badge" data-aos="fade-right" data-aos-delay="200">2024 <span class="highlight-text">Technovation Girls</span> 한국 유일 본선 진출</div>
-      <div class="achievement-badge" data-aos="fade-left" data-aos-delay="400">2024 ILO 한국 유일 Finalist</div>
-      <div class="achievement-badge" data-aos="fade-right" data-aos-delay="600">2025 GENIUS Olympiad Korea 한국 1등 (Robotics)</div>
-      <div class="achievement-badge" data-aos="fade-left" data-aos-delay="800">2024 VEX National 우승</div>
-      <div class="achievement-badge" data-aos="fade-up" data-aos-delay="1000">2024 VEX IQ Asia 대표 출전</div>
-    </div>
-
-    <!-- More Info Button -->
-    <div class="mt-4" data-aos="zoom-in" data-aos-delay="1200">
-      <a href="#" class="custom-button-lg">
-        <i class="bi bi-play-fill"></i> 자세히 확인하기
-      </a>
-    </div>
-  </div>
-</section>
-
-
-
-    <section id="program" class=" section light-background">
-      <div class="container">
-      <!-- Section Title -->
-      <div class="container section-title2" data-aos="fade-up">
-        <h2>Our Partners</h2>
-        <div><span><span class="description-title">캡스톤 프로그램 파트너</span></div>
-      </div><!-- End Section Title -->
-
-      <h4 class="mt-2 text-center"  data-aos="fade-right">문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h4>
-
-      <p class="text-center mb-4"  data-aos="fade-right">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다. </p>
-        <div class="container mt-4">
-            <div class="row">
-              <div class="col-lg-6 col-md-6 mb-3">
-                <img src="newassets/assets/img/XR.png" alt="Image 1" class="img-fluid rounded shadow capimg d-block mx-auto"   data-aos="fade-right">
-              </div>
-              <div class="col-lg-6 col-md-6 mb-3">
-                <img src="newassets/assets/img/XR.png" alt="Image 2" class="img-fluid rounded shadow capimg d-block mx-auto"   data-aos="fade-left">
+                </div>
+                </div>
+            
+              <div class="program-card" data-aos="fade-up">
+                <div class="card-header">Project Track</div>
+                <div class="card-body">
+                          <div class="row">
+                    <div class="col-4">
+                                <div class="program-icon"></div>
+                    </div>
+                    <div class="col-8">
+                  <p>보딩준비 개인 맞춤 프로젝트<br>희망 전공/개인 맞춤형 프로젝트</p>
+            
+                    </div>
+                  </div>
+                </div>
+                </div>
               </div>
             </div>
-          </div>
-        <div class="text-center mt-3"   data-aos="fade-up">
-          <a href="#more" class="custom-button  d-inline-flex align-items-center">
-            <i class="bi bi-arrow-right-circle me-2"></i> More
-          </a>
-        </div>
-      </div>
-
-    </section>
-
-
-
-<!-- Mobile Program Section -->
-<section id="mobile-program" class="mobile-program-section d-md-none">
-  <div class="container">
-     <div class="background-image"></div>
-    <div class="row justify-content-center">
-
-      <div class="col-12">
-<div class="mobile-program-card">
-  <div class="row text-center">
-    <div class="col-4">
-      <div class="program-item">
-        <div class="icon">
-          <i class="bi bi-tools"></i>
-        </div>
-        <h4 class="program-title">보딩 전문<br>개인 맞춤 프로그램</h4>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="program-item">
-        <div class="icon">
-          <i class="bi bi-bank"></i>
-        </div>
-        <h4 class="program-title">희망 전공 / 학과<br>맞춤 커스텀 프로그램</h4>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="program-item">
-        <div class="icon">
-          <i class="bi bi-lightbulb"></i>
-        </div>
-        <h4 class="program-title">입문 맞춤<br>테마 프로그램</h4>
-      </div>
-    </div>
-  </div>
-</div>
-
-      </div>
-
-    </div>
-  </div>
-
-<div class="additional-info text-center mt-4">
-<ul class="info-list">
-    <li><i class="bi bi-check-circle-fill"></i> CMU, UC <span class="highlight">Berkeley, Cornell, Columbia</span> 등 명문대 출신 대표 및 강사진!</li>
-    <li><i class="bi bi-check-circle-fill"></i> SFS, YISS, St. Paul등 다수 국제 학교 출강 강사진</li>
-    <li><i class="bi bi-check-circle-fill"></i> 서울외국인학교(SFS) ES/HS Robotics 팀 코치진</li>
-    <li><i class="bi bi-check-circle-fill"></i> CMU 출신 원장의 CMU CS 커리큘럼 기반 수업</li>
-    <li><i class="bi bi-check-circle-fill"></i> 융합형 EC 지원</li>
-    <li>(<span class="highlight">Stanford, CMU, Cornell</span> 등 아이비리그 타겟 문이과 EC 프로젝트 특화)</li>
-</ul>
-
-</div>
-
-
-</section>
-
-<section id="mobile-program-2" class="mobile-program-section d-md-none">
-  <div class="container">
-          <div class="container section-title2" data-aos="fade-up">
-        <h2>Program</h2>
-        <div><span><span class="description-title">로그앤 프로그램</span></div>
-      </div>
-
-      <h5 class="text-center mb-5"  data-aos="fade-right" style="font-size:20px;">Stanford, CMU, Cornell등 아이비리그를 타겟으로 한 문과 / 이과 / 예체능 융합 EC 토탈 솔루션</h5>
-
-
-<div class="row text-center justify-content-center">
-  <div class="col-4">
-    <div class="program-box" data-bs-toggle="modal" data-bs-target="#courseScheduleModal">
-      <div class="icon"><i class="bi bi-window"></i></div>
-      <h4 class="program-title">COURSE SCHEDULE</h4>
-    </div>
-  </div>
-
-  <div class="col-4">
-    <div class="program-box" data-bs-toggle="modal" data-bs-target="#capstoneProjectModal">
-      <div class="icon"><i class="bi bi-cpu"></i></div>
-      <h4 class="program-title">CAPSTONE PROJECT</h4>
-    </div>
-  </div>
-
-  <div class="col-4">
-    <div class="program-box" data-bs-toggle="modal" data-bs-target="#personalProjectModal">
-      <div class="icon"><i class="bi bi-puzzle"></i></div>
-      <h4 class="program-title">PERSONAL PROJECT</h4>
-    </div>
-  </div>
-</div>
-
-    <p class="note text-center mt-3">
-      *로그앤코딩 학생들은 다수 신분노출이 어려운 학생들이 많아,<br>
-      수업과정/ 실제 학생들을 촬영할 수 없는 점 양해 부탁드립니다.
-    </p>
-  </div>
-
-
-  <!-- Course Schedule Modal -->
-<div class="modal fade" id="courseScheduleModal" tabindex="-1" aria-labelledby="courseScheduleLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
-      
-      <!-- Remove this section if the button is not necessary -->
-      <div class="modal-header border-0 p-0">
-        <button type="button" class="btn-close ms-auto p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body pt-0">
-        <h2 class="fw-bold">수업</h2>
-        <p class="mb-4" style="color:black;">
-          코딩 전문가들과 함께하는 가장 효율적인 커리큘럼, python,<br>
-          java, c++ 등 코딩 언어 수업을 포함하여 데이터 사이언스,<br>
-          로보틱스, 웹개발, UI/UX 등 다양한 트랙의 프로그래밍 수업을 통한 실력 배양
-        </p>
-
-        <!-- Styled Button -->
-        <a href="#" class="custom-button-sm d-inline-flex align-items-center">
-          대회/ 프로젝트 확인
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Capstone Project Modal -->
-<div class="modal fade" id="capstoneProjectModal" tabindex="-1" aria-labelledby="capstoneProjectLabel" aria-hidden="true">
- <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
-      <div class="modal-header border-0 p-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <h2 class="fw-bold">캡스톤 프로젝트</h2>
-        <p class="mt-3 mb-4" style="color:black;">
-          대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아<br>
-          <strong>세계적인 기업, 명문 대학 연구기관, 글로벌 NGO</strong> 등에게 실질적인 솔루션을
-제공할 수 있는 기회. <br>
-        </p>
-
-        <a href="#" class="custom-button-sm d-inline-flex align-items-center">
-          로그엔코딩만의 독보적인 커리어를 확인해보세요 ▶
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="personalProjectModal" tabindex="-1" aria-labelledby="personalProjectLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
-      <div class="modal-header border-0 p-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <h2 class="fw-bold">개인 프로젝트</h2>
-        <p class="mt-3 mb-4" style="color:black;">
-          학생의 활동 이력과 공백을 탐색하여 <br>
-          <strong>Computer Science, Medical, Economics</strong> 등의 다양한 희망 전공과 연계해 <br>
-          자신만의 스토리를 보다 풍부히 풀어낼 수 있는 맞춤 프로그램
-        </p>
-
-        <!-- Styled Button -->
-        <a href="#" class="custom-button-sm d-inline-flex align-items-center">
-          프리미엄 1:1 커스텀 프로젝트, 압도적인 퀄리티를 느껴보세요 ▶
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-</section>
-
-
-
-    <section id="result" class=" ection dark-background">
-
-      <!-- Section Title -->
-      <div class="container " data-aos="fade-up">
-         <div class="container " data-aos="fade-up">
-        <div class="section-title">
-        <h2>Achievements</h2>
-                <div><span class="description-title">확실한 결과물로 결과까지 로그엔코딩</span></div>
-
-      </div>
-      <h3 class="text-center mt-4 mb-5">로그엔코딩 대학교 합격 리스트</h3>
-
-                <img src="assets/img/result.png" alt="Image 2" class="img-fluid rounded shadow capimg d-block mx-auto">
-
-
-</div>
-
-
-    </section>
-
-    <section id="personal-project" class="section py-5">
-  <div class="container text-center">
-          <div class="container section-title2" data-aos="fade-up">
-        <h2>Projects</h2>
-        <div><span><span class="description-title">Personal Project</span></div>
-      </div>
-    <!-- Title -->
-    <p class="mt-3 mb-5" style="color:black;">
-      <strong>실용적 활용</strong><br>
-      <strong>압도적인 퀄리티</strong><br>
-      <strong>효과적인 입시 연계</strong>
-    </p>
-
-    <!-- Two-Column Layout -->
-    <div class="row align-items-center justify-content-center mt-4">
-      <div class="col-6 col-md-6">
-        <img class="img-fluid" src="assets/img/content1.jpg"> 
-      </div>
-      <div class="col-6 col-md-6 text-start">
-        <h4 class="fw-bold text-md-center" style="color:black;">개인 프로젝트 목표</h4>
-        <p class=" text-md-center mt-md-5" style="color:black;">
-          학생의 희망 전공 분야와 <br>
-          활동 이력 등을 토대로 <br>
-          유니크하고 차별화된 스토리 완성
-        </p>
-      </div>
-    </div>
-
-
-<section id="personal-project-cards" class="section py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-            <div class="col-md-6 mb-4">
-        <div class="border rounded p-4 text-center bg-light">
-          <i class="bi bi-journal-richtext text-primary" style="font-size: 2.5rem;"></i>
-          <h4 class="fw-bold mt-2">강점 극대화, 약점 보완</h4>
-          <p class="mt-2" style="color:black;">
-            <strong>#Resume</strong> 검토와 미팅을 통해
-            학생의 정확한 특징 파악
-            <br>
-            <strong>#강점</strong>은 극대화하고, <strong>약점</strong>은 보완할 수 있는 아이디어 기획
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="border rounded p-4 text-center bg-light">
-          <i class="bi bi-journal-richtext text-primary" style="font-size: 2.5rem;"></i>
-          <h4 class="fw-bold mt-2">스토리 텔링</h4>
-          <p class="mt-2" style="color:black;">
-            <strong>#학생의 활동 이력</strong>을 철저히 분석<br>
-            <strong>#희망 전공, 관심 분야, 활동 이력</strong>간의 연결고리 모색
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-6 mb-4">
-        <div class="border rounded p-4 text-center bg-light">
-          <i class="bi  bi-arrow-through-heart text-primary" style="font-size: 2.5rem;"></i>
-          <h4 class="fw-bold mt-2">학교 및 사회 기여</h4>
-          <p class="mt-2" style="color:black;">
-            <strong>#관심사와 코딩이 결합된 결과물</strong>로 학교 및 사회에 기여<br>
-            <strong>#도입을 위한 일련 과정</strong> 모두 개인 프로젝트 팀에서 서포트
-          </p>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-6 mb-4">
-        <div class="border rounded p-4 text-center bg-light">
-          <i class="bi bi-people text-primary" style="font-size: 2.5rem;"></i>
-          <h4 class="fw-bold mt-2">협업 및 네트워킹</h4>
-          <p class="mt-2" style="color:black;">
-            <strong>#프로젝트 기반</strong> 협업 경험<br>
-            <strong>#다양한 네트워킹 기회</strong>를 통해 실질적인 피드백 제공
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-  </div>
-</section>
-
-
-<section id="contact" class="section light-background">
-  <div class="container">
-      <div class="container section-title2" data-aos="fade-up">
-        <h2>Contact</h2>
-        <div><span><span class="description-title">오시는 길</span></div>
-      </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12">
-            <iframe  class="d-block mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1305611293283!2d127.03322361526259!3d37.52841947980509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3866d9664bb%3A0x90a9663ae03e690b!2s17%20Eonju-ro%20174-gil%2C%20Gangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678455598812!5m2!1sen!2skr"               frameborder="0"
-              style="border: 0; width: 80%; height: 384px"
-              allowfullscreen></iframe>
-
-          </div>
-        </div>
-
-<div class="container mt-5">
-  <div class="row">
-    <!-- Left Side: Contact Info -->
-    <div class="col-md-6">
-      <div class="card contact-card text-start mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="100">
-        <div class="card-body">
-          <h5 class="fw-bold">서울시 강남구 압구정로 208, 본경빌딩 3층</h5>
-          <div class="yellow-line"></div> <!-- Yellow Line -->
-          <div class="d-flex flex-column mt-3">
-            <p><strong class="text-dark">대표번호</strong> <span class="text-muted ms-2">02-6954-1601</span></p>
-            <p><strong class="text-dark">운영시간</strong></p>
-            <p class="text-muted">월-금 / am 09:00 ~ pm 19:00</p>
-            <p class="text-muted">주말 / am 09:00 ~ pm 18:00</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Side: Public Transport -->
-    <div class="col-md-6">
-      <div class="card transport-card text-start text-white mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="200">
-        <div class="card-body">
-          <h5 class="fw-bold" style="color:white;">대중교통 이용시</h5>
-          <div class="yellow-line"></div> <!-- Yellow Line -->
-          <p class="mt-3"><strong>지하철</strong> <span class="ms-2" style="color:#c8c8c8 !important"> 3호선 압구정역(현대백화점) 2번 출구</span></p>
-          <p><strong>버스</strong></p>
-          <p  style="color:#c8c8c8 !important">[간선버스] 143, 147, 148, 240, 301, 362, 463, 472</p>
-          <p style="color:#c8c8c8 !important">[지선버스] 3011, 4211, 4318</p>
-          <p style="color:#c8c8c8 !important">[공항버스] 6006</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  </div>
-</section>
-
-
-<!-- Floating Buttons -->
-<div class="floating-buttons">
-    <button class="floating-btn" onclick="alert('Button 1 clicked!')">
-        <i class="bi bi-house-door"></i>
-    </button>
-    <button class="floating-btn" onclick="alert('Button 2 clicked!')">
-        <i class="bi bi-info-circle"></i>
-    </button>
-    <button class="floating-btn" onclick="alert('Button 3 clicked!')">
-        <i class="bi bi-chat-dots"></i>
-    </button>
-    <button id="scroll-top" class="floating-btn">
-        <i class="bi bi-arrow-up-short"></i>
-    </button>
-</div>
-
-
-
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-
-    <div class="container copyright text-center">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">로그엔코딩</strong> <span>All Rights Reserved</span></p>
-    </div>
-
-  </footer>
-
-  <!-- Scroll Top -->
-  <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-<!-- Bootstrap Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- PHP Email Form Validation (Replace with CDN if available) -->
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- AOS (Animate On Scroll) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-<!-- GLightbox -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-            var thumbnailSwiper = new Swiper('.thumbnail-swiper', {
-                slidesPerView: 3,
-                spaceBetween: 10,
-                freeMode: true,
-                watchSlidesProgress: true,
-            });
-
-            var mainSwiper = new Swiper('.main-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                thumbs: {
-                    swiper: thumbnailSwiper
-                }
-            });
-        });
-
-
-</script>
-
-
-<!-- PureCounter -->
-<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.1.1/dist/purecounter_vanilla.js"></script>
-
-<!-- ImagesLoaded -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
-
-<!-- Isotope Layout -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
-
-<!-- Swiper.js -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var options = {
-      strings: ["Personalized coding education", "Tailored to your story"],
-      typeSpeed: 50, // Speed of typing
-      backSpeed: 30, // Speed of backspacing
-      backDelay: 1500, // Delay before backspacing
-      startDelay: 500, // Delay before typing starts
-      loop: true // Keep looping
-    };
-
-    new Typed("#hero-typed", options);
-  });
-document.addEventListener("DOMContentLoaded", function () {
-  var bannerSwiper = new Swiper('.rolling-carousel', {
-    effect: 'fade', // Enables fade effect
-    fadeEffect: {
-      crossFade: true // Smooth fading transition
-    },
-    loop: true,
-    autoplay: {
-      delay: 6000, // Change every 4 seconds
-      disableOnInteraction: false // Keep autoplay running even after interaction
-    },
-    speed: 2500, // Transition speed for smooth fade effect
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-  document.querySelectorAll(".modern-card").forEach((card, index) => {
-    card.addEventListener("mouseenter", function () {
-      bannerSwiper.slideToLoop(index); // Move to corresponding banner
-      bannerSwiper.autoplay.stop(); // Stop autoplay while hovering
-    });
-
-    card.addEventListener("mouseleave", function () {
-      bannerSwiper.autoplay.start(); // Resume autoplay after hover
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const trackWrapper = document.querySelector(".track-wrapper");
-  if (trackWrapper) {
-    trackWrapper.scrollLeft = 30; // Small shift to indicate scrolling
-  }
-});
-
-
-
-</script>
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+            </section> -->
+         <section id="competition-track" class="section light-background">
+            <div class="container">
+            <div class="container ">
+               <div class="section-title2"  data-aos="fade-up">
+                  <!-- <h2>Courses</h2> -->
+                  <div><span class="description-title">Competition Tracks</span></div>
+               </div>
+               <div class="track-wrapper">
+                  <!-- Elementary School (ES) -->
+                  <div class="track-card" data-aos="fade-right">
+                     <h3>Elementary School</h3>
+                     <ul>
+                        <li>스크래치올림피아드</li>
+                        <li>VEX IQ</li>
+                        <li>IROC</li>
+                     </ul>
+                  </div>
+                  <!-- Middle School (MS) -->
+                  <div class="track-card" data-aos="fade-up">
+                     <h3>Middle School</h3>
+                     <ul>
+                        <li>ACSL</li>
+                        <li>USACO</li>
+                        <li>Technovation</li>
+                        <li>Stanford 주관 Logic Olympiad</li>
+                        <li><span class="highlight">Upenn</span> 와튼 DS</li>
+                        <li class="highlight-red">Technovation Girls</li>
+                     </ul>
+                  </div>
+                  <!-- High School (HS) -->
+                  <div class="track-card" data-aos="fade-left">
+                     <h3>High School</h3>
+                     <ul>
+                        <li>ACSL</li>
+                        <li>USACO</li>
+                        <li>Technovation</li>
+                        <li>VEX IQ/V5</li>
+                        <li>IROC</li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- Scroll Hint for Mobile -->
+               <div class="scroll-hint mt-4">← Swipe to see more →</div>
+            </div>
+         </section>
+         <section id="fundamental" class="section dark-background">
+            <div class="container">
+               <div class="section-title text-center" data-aos="fade-up">
+                  <!-- <h2>Courses</h2> -->
+                  <div><span class="description-title">Fundamental Tracks</span></div>
+               </div>
+               <div class="row mt-4">
+                  <div class="col-6">
+                     <div class="course-card2 mx-auto" data-aos="flip-up" data-aos-duration="800">
+                        <h3>ACSL</h3>
+                        <p><strong>▶ Python1 Python2</strong></p>
+                        <p>ACSL 준비하기 위한 테마</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="course-card2 mx-auto mt-0 mt-md-4" data-aos="flip-up" data-aos-duration="800">
+                        <h3>USACO</h3>
+                        <p><strong>▶ Python1 Python2</strong></p>
+                        <p>Programming & algorithms training</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="course-card2 mx-auto mt-4 mt-md-4" data-aos="flip-up" data-aos-duration="800">
+                        <h3>ACSL</h3>
+                        <p><strong>▶ Python1 Python2</strong></p>
+                        <p>ACSL 준비하기 위한 테마</p>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="course-card2 mx-auto mt-4 mt-md-4" data-aos="flip-up" data-aos-duration="800">
+                        <h3>ACSL</h3>
+                        <p><strong>▶ Python1 Python2</strong></p>
+                        <p>ACSL 준비하기 위한 테마</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="text-center mt-4" data-aos="fade-up">
+                  <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
+                  더 많은 테마 확인하기
+                  </button>
+               </div>
+               <div class="text-center mt-5" data-aos="fade-up">
+                  <button class="custom-button-sm" data-bs-toggle="modal" data-bs-target="#lognCodingModal">
+                  우리 아이 맞춤 트랙 진단 받기 <i class="bi bi-arrow-right"></i>
+                  </button>
+               </div>
+            </div>
+            <!-- Modal for User Input -->
+            <div class="modal fade" id="lognCodingModal" tabindex="-1" aria-labelledby="lognCodingModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content p-4 text-center" style="border-radius: 15px; background: white; max-width: 400px; margin: auto;">
+                     <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body text-start">
+                        <!-- 학년 (Grade) -->
+                        <div>
+                           <img src="assets/img/logo.png" alt="" style="max-width:160px;" class="img-fluid d-block mx-auto mb-4">
+                        </div>
+                        <label class="fw-bold" for="grade">학년</label>
+                        <input type="text" id="grade" class="form-control border-dark mb-3" placeholder="예: 중3">
+                        <!-- 학교 (School) -->
+                        <label class="fw-bold" for="school">학교</label>
+                        <input type="text" id="school" class="form-control border-dark mb-3" placeholder="학교 이름">
+                        <!-- 연락처 (Contact) -->
+                        <label class="fw-bold" for="contact">연락처</label>
+                        <input type="text"  class="form-control border-dark mb-3" placeholder="010-1234-5678">
+                        <!-- 관심 프로그램/대회 (Interest Program/Competition) -->
+                        <label class="fw-bold">관심 프로그램/대회</label>
+                        <div class="d-flex flex-column align-items-start ps-2">
+                           <div class="form-check">
+                              <input class="form-check-input border-dark" type="radio" name="interest" id="internationalComp" value="국제대회">
+                              <label class="form-check-label" for="internationalComp">국제대회</label>
+                           </div>
+                           <div class="form-check">
+                              <input class="form-check-input border-dark" type="radio" name="interest" id="python" value="Python">
+                              <label class="form-check-label" for="python">Python</label>
+                           </div>
+                           <div class="form-check">
+                              <input class="form-check-input border-dark" type="radio" name="interest" id="robotics" value="Robotics">
+                              <label class="form-check-label" for="robotics">Robotics</label>
+                           </div>
+                           <div class="form-check">
+                              <input class="form-check-input border-dark" type="radio" name="interest" id="makers" value="Makers">
+                              <label class="form-check-label" for="makers">Makers</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer border-0 d-flex justify-content-center">
+                        <button type="button" class="custom-button-sm" data-bs-dismiss="modal">닫기</button>
+                        <button type="button" class="custom-button-sm" onclick="submitForm()">제출</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="achievements" class="section dark-background text-center py-5">
+            <div class="container">
+               <!-- <h2 class="text-white fw-bold mb-5" data-aos="fade-down" data-aos-duration="1000">Our Achievements</h2> -->
+               <div class="section-title text-center" data-aos="fade-up">
+                  <!-- <h2>Courses</h2> -->
+                  <div><span class="description-title">Our Achievements</span></div>
+               </div>
+               <!-- Achievement Badges -->
+               <div id="achievements-box" class="d-flex flex-column align-items-center mt-4 px-3 mb-5">
+                  <div class="achievement-badge" data-aos="fade-right" data-aos-delay="200">2024 <span class="highlight-text">Technovation Girls</span> 한국 유일 본선 진출</div>
+                  <div class="achievement-badge" data-aos="fade-left" data-aos-delay="400">2024 ILO 한국 유일 Finalist</div>
+                  <div class="achievement-badge" data-aos="fade-right" data-aos-delay="600">2025 GENIUS Olympiad Korea 한국 1등</div>
+                  <div class="achievement-badge" data-aos="fade-left" data-aos-delay="800">2024 VEX National 우승</div>
+                  <div class="achievement-badge" data-aos="fade-right" data-aos-delay="1000">2024 VEX IQ Asia 대표 출전</div>
+                  <!-- More Info Button -->
+                  <div class="mt-4 btn-box mb-5" data-aos="fade-up" data-aos-delay="1200">
+                     <a href="#" class="custom-button-lg">
+                     <i class="bi bi-play-fill"></i> 자세히 확인하기
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="program" class=" section light-background">
+            <div class="container">
+               <!-- Section Title -->
+               <div class="container section-title2" data-aos="fade-up">
+                  <h2>Our Partners</h2>
+                  <div><span><span class="description-title">캡스톤 프로그램 파트너</span></div>
+               </div>
+               <!-- End Section Title -->
+               <h4 class="mt-2 text-center"  data-aos="fade-right">문과/ 이과/ 예체능 융합 EC 토탈 솔루션 프로그램</h4>
+               <p class="text-center mb-4"  data-aos="fade-right">*비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해 부탁드립니다. </p>
+               <div class="container mt-4">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 mb-3">
+                        <img src="newassets/assets/img/XR.png" alt="Image 1" class="img-fluid rounded shadow capimg d-block mx-auto"   data-aos="fade-right">
+                     </div>
+                     <div class="col-lg-6 col-md-6 mb-3">
+                        <img src="newassets/assets/img/XR.png" alt="Image 2" class="img-fluid rounded shadow capimg d-block mx-auto"   data-aos="fade-left">
+                     </div>
+                  </div>
+               </div>
+               <div class="text-center mt-3"   data-aos="fade-up">
+                  <a href="#more" class="custom-button  d-inline-flex align-items-center">
+                  <i class="bi bi-arrow-right-circle me-2"></i> More
+                  </a>
+               </div>
+            </div>
+         </section>
+         <!-- Mobile Program Section -->
+         <!-- <section id="mobile-program-2" class="mobile-program-section d-md-none">
+            <div class="container">
+                    <div class="container section-title2" data-aos="fade-up">
+                  <h2>Program</h2>
+                  <div><span><span class="description-title">로그앤 프로그램</span></div>
+                </div>
+            
+                <h5 class="text-center mb-5"  data-aos="fade-right" style="font-size:20px;">Stanford, CMU, Cornell등 아이비리그를 타겟으로 한 문과 / 이과 / 예체능 융합 EC 토탈 솔루션</h5>
+            
+            
+            <div class="row text-center justify-content-center">
+            <div class="col-4">
+              <div class="program-box" data-bs-toggle="modal" data-bs-target="#courseScheduleModal">
+                <div class="icon"><i class="bi bi-window"></i></div>
+                <h4 class="program-title">COURSE SCHEDULE</h4>
+              </div>
+            </div>
+            
+            <div class="col-4">
+              <div class="program-box" data-bs-toggle="modal" data-bs-target="#capstoneProjectModal">
+                <div class="icon"><i class="bi bi-cpu"></i></div>
+                <h4 class="program-title">CAPSTONE PROJECT</h4>
+              </div>
+            </div>
+            
+            <div class="col-4">
+              <div class="program-box" data-bs-toggle="modal" data-bs-target="#personalProjectModal">
+                <div class="icon"><i class="bi bi-puzzle"></i></div>
+                <h4 class="program-title">PERSONAL PROJECT</h4>
+              </div>
+            </div>
+            </div>
+            
+              <p class="note text-center mt-3">
+                *로그앤코딩 학생들은 다수 신분노출이 어려운 학생들이 많아,<br>
+                수업과정/ 실제 학생들을 촬영할 수 없는 점 양해 부탁드립니다.
+              </p>
+            </div>
+            
+            
+            <div class="modal fade" id="courseScheduleModal" tabindex="-1" aria-labelledby="courseScheduleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
+                
+                <div class="modal-header border-0 p-0">
+                  <button type="button" class="btn-close ms-auto p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body pt-0">
+                  <h2 class="fw-bold">수업</h2>
+                  <p class="mb-4" style="color:black;">
+                    코딩 전문가들과 함께하는 가장 효율적인 커리큘럼, python,<br>
+                    java, c++ 등 코딩 언어 수업을 포함하여 데이터 사이언스,<br>
+                    로보틱스, 웹개발, UI/UX 등 다양한 트랙의 프로그래밍 수업을 통한 실력 배양
+                  </p>
+            
+                  <a href="#" class="custom-button-sm d-inline-flex align-items-center">
+                    대회/ 프로젝트 확인
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+            
+            <div class="modal fade" id="capstoneProjectModal" tabindex="-1" aria-labelledby="capstoneProjectLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
+                <div class="modal-header border-0 p-0">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body">
+                  <h2 class="fw-bold">캡스톤 프로젝트</h2>
+                  <p class="mt-3 mb-4" style="color:black;">
+                    대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아<br>
+                    <strong>세계적인 기업, 명문 대학 연구기관, 글로벌 NGO</strong> 등에게 실질적인 솔루션을
+            제공할 수 있는 기회. <br>
+                  </p>
+            
+                  <a href="#" class="custom-button-sm d-inline-flex align-items-center">
+                    로그엔코딩만의 독보적인 커리어를 확인해보세요 ▶
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+            <div class="modal fade" id="personalProjectModal" tabindex="-1" aria-labelledby="personalProjectLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content text-center p-4" style="border-radius: 15px; background: white; max-width: 600px; margin: auto;">
+                <div class="modal-header border-0 p-0">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            
+                <div class="modal-body">
+                  <h2 class="fw-bold">개인 프로젝트</h2>
+                  <p class="mt-3 mb-4" style="color:black;">
+                    학생의 활동 이력과 공백을 탐색하여 <br>
+                    <strong>Computer Science, Medical, Economics</strong> 등의 다양한 희망 전공과 연계해 <br>
+                    자신만의 스토리를 보다 풍부히 풀어낼 수 있는 맞춤 프로그램
+                  </p>
+            
+                  <a href="#" class="custom-button-sm d-inline-flex align-items-center">
+                    프리미엄 1:1 커스텀 프로젝트, 압도적인 퀄리티를 느껴보세요 ▶
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+            
+            
+            </section> -->
+         <section id="result" class=" ection dark-background">
+            <!-- Section Title -->
+            <div class="container " data-aos="fade-up">
+            <div class="container " data-aos="fade-up">
+               <div class="section-title">
+                  <!-- <h2>Achievements</h2> -->
+                  <div><span class="description-title">확실한 결과물로 결과까지 로그엔코딩</span></div>
+               </div>
+               <h3 class="text-center mt-4 mb-5">로그엔코딩 대학교 합격 리스트</h3>
+               <img src="assets/img/result.png" alt="Image 2" class="img-fluid rounded shadow capimg d-block mx-auto">
+            </div>
+         </section>
+         <section id="personal-project" class="section py-5">
+            <div class="container text-center">
+               <div class="container section-title2" data-aos="fade-up">
+                  <h2>Projects</h2>
+                  <div><span><span class="description-title">Personal Project</span></div>
+               </div>
+               <!-- Title -->
+               <p class="mt-3 mb-5" style="color:black;">
+                  <strong>실용적 활용</strong><br>
+                  <strong>압도적인 퀄리티</strong><br>
+                  <strong>효과적인 입시 연계</strong>
+               </p>
+               <!-- Two-Column Layout -->
+               <div class="row align-items-center justify-content-center mt-4">
+                  <div class="col-6 col-md-6">
+                     <img class="img-fluid" src="assets/img/content1.jpg"> 
+                  </div>
+                  <div class="col-6 col-md-6 text-start">
+                     <h4 class="fw-bold text-md-center" style="color:black;">개인 프로젝트 목표</h4>
+                     <p class=" text-md-center mt-md-5" style="color:black;">
+                        학생의 희망 전공 분야와 <br>
+                        활동 이력 등을 토대로 <br>
+                        유니크하고 차별화된 스토리 완성
+                     </p>
+                  </div>
+               </div>
+               <section id="personal-project-cards" class="section py-5">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-md-6 mb-4">
+                           <div class="border rounded p-4 text-center bg-light">
+                              <i class="bi bi-journal-richtext text-primary" style="font-size: 2.5rem;"></i>
+                              <h4 class="fw-bold mt-2">강점 극대화, 약점 보완</h4>
+                              <p class="mt-2" style="color:black;">
+                                 <strong>#Resume</strong> 검토와 미팅을 통해
+                                 학생의 정확한 특징 파악
+                                 <br>
+                                 <strong>#강점</strong>은 극대화하고, <strong>약점</strong>은 보완할 수 있는 아이디어 기획
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                           <div class="border rounded p-4 text-center bg-light">
+                              <i class="bi bi-journal-richtext text-primary" style="font-size: 2.5rem;"></i>
+                              <h4 class="fw-bold mt-2">스토리 텔링</h4>
+                              <p class="mt-2" style="color:black;">
+                                 <strong>#학생의 활동 이력</strong>을 철저히 분석<br>
+                                 <strong>#희망 전공, 관심 분야, 활동 이력</strong>간의 연결고리 모색
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                           <div class="border rounded p-4 text-center bg-light">
+                              <i class="bi  bi-arrow-through-heart text-primary" style="font-size: 2.5rem;"></i>
+                              <h4 class="fw-bold mt-2">학교 및 사회 기여</h4>
+                              <p class="mt-2" style="color:black;">
+                                 <strong>#관심사와 코딩이 결합된 결과물</strong>로 학교 및 사회에 기여<br>
+                                 <strong>#도입을 위한 일련 과정</strong> 모두 개인 프로젝트 팀에서 서포트
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                           <div class="border rounded p-4 text-center bg-light">
+                              <i class="bi bi-people text-primary" style="font-size: 2.5rem;"></i>
+                              <h4 class="fw-bold mt-2">협업 및 네트워킹</h4>
+                              <p class="mt-2" style="color:black;">
+                                 <strong>#프로젝트 기반</strong> 협업 경험<br>
+                                 <strong>#다양한 네트워킹 기회</strong>를 통해 실질적인 피드백 제공
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         <section id="contact" class="section light-background">
+            <div class="container">
+               <div class="container section-title2" data-aos="fade-up">
+                  <h2>Contact</h2>
+                  <div><span><span class="description-title">오시는 길</span></div>
+               </div>
+               <div class="row" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-12">
+                     <iframe  class="d-block mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1305611293283!2d127.03322361526259!3d37.52841947980509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3866d9664bb%3A0x90a9663ae03e690b!2s17%20Eonju-ro%20174-gil%2C%20Gangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678455598812!5m2!1sen!2skr"               frameborder="0"
+                        style="border: 0; width: 80%; height: 384px"
+                        allowfullscreen></iframe>
+                  </div>
+               </div>
+               <div class="container mt-5">
+                  <div class="row">
+                     <!-- Left Side: Contact Info -->
+                     <div class="col-md-6">
+                        <div class="card contact-card text-start mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="100">
+                           <div class="card-body">
+                              <h5 class="fw-bold">서울시 강남구 압구정로 208, 본경빌딩 3층</h5>
+                              <div class="yellow-line"></div>
+                              <!-- Yellow Line -->
+                              <div class="d-flex flex-column mt-3">
+                                 <p><strong class="text-dark">대표번호</strong> <span class="text-muted ms-2">02-6954-1601</span></p>
+                                 <p><strong class="text-dark">운영시간</strong></p>
+                                 <p class="text-muted">월-금 / am 09:00 ~ pm 19:00</p>
+                                 <p class="text-muted">주말 / am 09:00 ~ pm 18:00</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Right Side: Public Transport -->
+                     <div class="col-md-6">
+                        <div class="card transport-card text-start text-white mt-4 mt-md-0" data-aos="flip-up" data-aos-delay="200">
+                           <div class="card-body">
+                              <h5 class="fw-bold" style="color:white;">대중교통 이용시</h5>
+                              <div class="yellow-line"></div>
+                              <!-- Yellow Line -->
+                              <p class="mt-3"><strong>지하철</strong> <span class="ms-2" style="color:#c8c8c8 !important"> 3호선 압구정역(현대백화점) 2번 출구</span></p>
+                              <p><strong>버스</strong></p>
+                              <p  style="color:#c8c8c8 !important">[간선버스] 143, 147, 148, 240, 301, 362, 463, 472</p>
+                              <p style="color:#c8c8c8 !important">[지선버스] 3011, 4211, 4318</p>
+                              <p style="color:#c8c8c8 !important">[공항버스] 6006</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- Floating Buttons -->
+         <div class="floating-buttons">
+            <button class="floating-btn" onclick="alert('Button 1 clicked!')">
+            <i class="bi bi-house-door"></i>
+            </button>
+            <button class="floating-btn" onclick="alert('Button 2 clicked!')">
+            <i class="bi bi-info-circle"></i>
+            </button>
+            <button class="floating-btn" onclick="alert('Button 3 clicked!')">
+            <i class="bi bi-chat-dots"></i>
+            </button>
+            <button id="scroll-top" class="floating-btn">
+            <i class="bi bi-arrow-up-short"></i>
+            </button>
+         </div>
+      </main>
+      <footer id="footer" class="footer dark-background">
+         <div class="container copyright text-center">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">로그엔코딩</strong> <span>All Rights Reserved</span></p>
+         </div>
+      </footer>
+      <!-- Scroll Top -->
+      <!-- <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+      <!-- Preloader -->
+      <div id="preloader"></div>
+      <!-- Bootstrap Bundle -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- PHP Email Form Validation (Replace with CDN if available) -->
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <!-- AOS (Animate On Scroll) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <!-- GLightbox -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+                 var thumbnailSwiper = new Swiper('.thumbnail-swiper', {
+                     slidesPerView: 3,
+                     spaceBetween: 10,
+                     freeMode: true,
+                     watchSlidesProgress: true,
+                 });
+         
+                 var mainSwiper = new Swiper('.main-swiper', {
+                     slidesPerView: 1,
+                     spaceBetween: 10,
+                     loop: true,
+                     navigation: {
+                         nextEl: '.swiper-button-next',
+                         prevEl: '.swiper-button-prev',
+                     },
+                     thumbs: {
+                         swiper: thumbnailSwiper
+                     }
+                 });
+             });
+         
+         
+      </script>
+      <!-- PureCounter -->
+      <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.1.1/dist/purecounter_vanilla.js"></script>
+      <!-- ImagesLoaded -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+      <!-- Isotope Layout -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/isotope-layout/3.0.6/isotope.pkgd.min.js"></script>
+      <!-- Swiper.js -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+           var options = {
+             strings: ["Personalized coding education", "Tailored to your story"],
+             typeSpeed: 50, // Speed of typing
+             backSpeed: 30, // Speed of backspacing
+             backDelay: 1500, // Delay before backspacing
+             startDelay: 500, // Delay before typing starts
+             loop: true // Keep looping
+           };
+         
+           new Typed("#hero-typed", options);
+         });
+         document.addEventListener("DOMContentLoaded", function () {
+         var bannerSwiper = new Swiper('.rolling-carousel', {
+           effect: 'fade', // Enables fade effect
+           fadeEffect: {
+             crossFade: true // Smooth fading transition
+           },
+           loop: true,
+           autoplay: {
+             delay: 6000, // Change every 4 seconds
+             disableOnInteraction: false // Keep autoplay running even after interaction
+           },
+           speed: 2500, // Transition speed for smooth fade effect
+           pagination: {
+             el: ".swiper-pagination",
+             clickable: true
+           }
+         });
+         document.querySelectorAll(".modern-card").forEach((card, index) => {
+           card.addEventListener("mouseenter", function () {
+             bannerSwiper.slideToLoop(index); // Move to corresponding banner
+             bannerSwiper.autoplay.stop(); // Stop autoplay while hovering
+           });
+         
+           card.addEventListener("mouseleave", function () {
+             bannerSwiper.autoplay.start(); // Resume autoplay after hover
+           });
+         });
+         });
+         
+         document.addEventListener("DOMContentLoaded", function() {
+         const trackWrapper = document.querySelector(".track-wrapper");
+         if (trackWrapper) {
+           trackWrapper.scrollLeft = 30; // Small shift to indicate scrolling
+         }
+         });
+         
+         
+         
+      </script>
+      <!-- Main JS File -->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
