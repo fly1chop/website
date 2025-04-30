@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LognCoding</title>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header
+      class="absolute w-full z-20 top-0 start-0 pt-4 pb-28 bg-linear-to-b from-black/90 to-transparent">
+      <nav class="max-w-screen-xl px-4 lg:px-12 mx-auto flex items-center justify-between">
+        <a href="/" class="w-16">
+          <img src="assets/img/logo_en.png" alt="" />
+        </a>
+        <ul class="flex items-center space-x-8">
+          <li class="inline-flex items-center gap-1">
+            <a href="/about" class="text-white hover:text-zinc-400 hover-transition">About</a>
+            <button
+              id="aboutDropdownBtn"
+              data-dropdown-toggle="about-dropdown"
+              data-dropdown-offset-skidding="-10"
+              class="inline-flex items-center justify-center size-5 text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+
+            <!-- about dropdown -->
+            <div
+              id="about-dropdown"
+              class="z-20 hidden bg-white rounded-sm shadow-sm overflow-hidden">
+              <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
+                <li><a href="/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a></li>
+                <li>
+                  <a href="/about/team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
+                </li>
+                <li>
+                  <a href="/about/news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="inline-flex items-center gap-1">
+            <a href="/courses/fundamental" class="text-white hover:text-zinc-400 hover-transition">
+              Courses
+            </a>
+            <button
+              data-dropdown-toggle="courses-dropdown"
+              data-dropdown-offset-skidding="10"
+              class="inline-flex items-center justify-center size-5 text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+
+            <!-- courses dropdown -->
+            <div
+              id="courses-dropdown"
+              class="z-20 hidden bg-white rounded-sm shadow-sm overflow-hidden">
+              <ul class="text-zinc-500">
+                <li>
+                  <a href="/courses/fundamental" class="block px-4 py-2 hover:bg-zinc-100">
+                    Fundamental Track
+                  </a>
+                </li>
+                <li>
+                  <a href="/courses/competition" class="block px-4 py-2 hover:bg-zinc-100">
+                    Competition Track
+                  </a>
+                </li>
+                <li>
+                  <a href="/courses/project" class="block px-4 py-2 hover:bg-zinc-100">
+                    Project Track
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/capstone" class="text-white hover:text-zinc-400 hover-transition">Capstone</a>
+          </li>
+          <li>
+            <a href="/personal-project" class="text-white hover:text-zinc-400 hover-transition">
+              Personal Project
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="btn">
+          <span>Blog</span>
+          <span class="heroicons--arrow-long-right"></span>
+        </a>
+      </nav>
+    </header>
+
+    <main class="relative">
+      <!-- Hero Section -->
+      <div class="inset-x-0 h-screen">
+        <img
+          src="assets/img/hero.jpg"
+          alt="Hero Image"
+          class="size-full object-cover object-center" />
+      </div>
+
+      <!-- Featured Media Section -->
+      <section class="overflow-x-hidden relative my-12 md:my-28 flex flex-col gap-14 items-center">
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Section_Title']">
+          SECTION TITLE
+        </h2>
+        <div class="max-w-screen-2xl px-4 lg:px-12 mx-auto my-14 flex flex-col gap-6 items-center">
+          <div
+            id="media-carousel"
+            data-carousel="static"
+            class="relative w-full before:absolute before:block before:top-1/2 before:left-1/2 before:-translate-1/2 before:bg-neutral-200 before:w-[120%] before:h-[145%]">
+            <!-- Carousel container -->
+            <div class="relative h-56 rounded-lg md:h-96 aspect-video">
+              <div
+                class="hidden duration-700 ease-in-out h-full overflow-hidden px-8"
+                data-carousel-item>
+                <img src="assets/img/media-0.jpg" alt="..." class="size-full object-cover" />
+                <div
+                  class="absolute bottom-0 w-[calc(100%-64px)] py-4 px-6 flex flex-col gap-3 bg-zinc-800 z-10 text-white">
+                  <p>#InternationalLogicOlympiad</p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                    placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque deserunt
+                    repellendus. In corporis vitae delectus voluptatum, corrupti facilis tenetur
+                    iusto!
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full overflow-hidden px-8"
+                data-carousel-item>
+                <img src="assets/img/media-2.jpg" alt="..." class="size-full object-cover" />
+                <div
+                  class="absolute bottom-0 w-[calc(100%-64px)] py-4 px-6 flex flex-col gap-3 bg-zinc-800 z-10 text-white">
+                  <p>#InternationalLogicOlympiad</p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                    placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque deserunt
+                    repellendus. In corporis vitae delectus voluptatum, corrupti facilis tenetur
+                    iusto!
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full overflow-hidden px-8"
+                data-carousel-item>
+                <img src="assets/img/media-0.jpg" alt="..." class="size-full object-cover" />
+                <div
+                  class="absolute bottom-0 w-[calc(100%-64px)] py-4 px-6 flex flex-col gap-3 bg-zinc-800 z-10 text-white">
+                  <p>#InternationalLogicOlympiad</p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                    placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque deserunt
+                    repellendus. In corporis vitae delectus voluptatum, corrupti facilis tenetur
+                    iusto!
+                  </p>
+                </div>
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full overflow-hidden px-8"
+                data-carousel-item>
+                <img src="assets/img/media-2.jpg" alt="..." class="size-full object-cover" />
+                <div
+                  class="absolute bottom-0 w-[calc(100%-64px)] py-4 px-6 flex flex-col gap-3 bg-zinc-800 z-10 text-white">
+                  <p>#InternationalLogicOlympiad</p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                    placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque deserunt
+                    repellendus. In corporis vitae delectus voluptatum, corrupti facilis tenetur
+                    iusto!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Slider controls -->
+            <button
+              type="button"
+              class="absolute top-0 -start-24 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+              data-carousel-prev>
+              <span
+                class="absolute top-0 -end-6 -z-10 block h-full aspect-[14.5/9] bg-[#4D4D4D]/40"></span>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-flamingo-500 group-hover:bg-flamingo-400 group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 -end-24 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+              data-carousel-next>
+              <span
+                class="absolute top-0 -start-6 -z-10 block h-full aspect-[14.5/9] bg-[#4D4D4D]/40"></span>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-flamingo-500 group-hover:bg-flamingo-400 group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+          <a href="#" class="btn white z-20">
+            <span>유튜브 채널 바로가기</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Our Achievements Section -->
+      <section class="relative my-12 md:my-28 flex flex-col gap-14 items-center">
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Our_Achievements']">
+          OUR ACHIEVEMENTS
+        </h2>
+        <div class="max-w-screen-lg w-full px-4 lg:px-12 mx-auto">
+          <div class="grid grid-cols-2">
+            <div class="bg-zinc-800 p-8 text-white flex flex-col gap-6">
+              <h3 class="text-4xl font-bold">2025</h3>
+              <p class="flex flex-col gap-1">
+                <span>2025 VEX Robotics World Championship</span>
+                <span class="text-zinc-400">국내 최초 초등부 & 중등부 & 고등부 동시 진출</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2025 GENIUS Olympiad Robotics 분야</span>
+                <span class="text-zinc-400">한국 1등 & 결선 진출</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2025 VEX Code VR Virtual Skills Challenge</span>
+                <span class="text-zinc-400">한국 1등 World Championship 진출</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2025 VEX Game Design Challenge</span>
+                <span class="text-zinc-400">한국 유일 World Top 5 선정</span>
+              </p>
+            </div>
+            <img
+              src="assets/img/achievement-1.jpg"
+              alt="achievement-1"
+              class="object-cover size-full" />
+            <img
+              src="assets/img/achievement-1.jpg"
+              alt="achievement-1"
+              class="object-cover size-full" />
+            <div class="bg-neutral-200 p-8 text-gray-950 flex flex-col gap-6">
+              <h3 class="text-4xl font-bold">2024</h3>
+              <p class="flex flex-col gap-1">
+                <span>2024 Technovation Girls</span>
+                <span class="text-zinc-600">한국 유일 본선 진출</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2024 ILO</span>
+                <span class="text-zinc-600">한국 유일 Finalist Team 배출</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2024 VEX ​V5 National Championship</span>
+                <span class="text-zinc-600">우승</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2024 VEX IQ</span>
+                <span class="text-zinc-600">Asia 대표 출전</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="relative py-12 md:py-28 flex flex-col gap-14 items-center">
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Courses']">
+          COURSES
+        </h2>
+      </section>
+
+      <!-- Team Section -->
+      <section class="overflow-x-hidden relative my-12 md:my-28 flex flex-col gap-14 items-center">
+        <div class="absolute -z-10 bottom-0 w-full h-[70%] bg-zinc-800"></div>
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Meet_the_Team']">
+          MEET THE TEAM
+        </h2>
+        <div class="max-w-screen-xl w-full px-4 lg:px-12 mx-auto">
+          <div class="flex justify-between gap-x-24 pb-10">
+            <div class="flex flex-col gap-6 flex-1/2 mt-24">
+              <p class="text-3xl font-medium leading-10 text-white">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, recusandae
+                mollitia. Blanditiis corrupti similique optio voluptate nobis dignissimos deleniti
+                soluta ipsam beatae
+              </p>
+              <a href="/about/team" class="btn white self-start">
+                <span>Team 더 보기</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
+            </div>
+            <div class="relative w-full flex-1/2 ml-64" data-carousel="static">
+              <!-- Carousel container -->
+              <div class="relative h-[336px]">
+                <div class="hidden w-64 duration-700 ease-linear" data-carousel-item>
+                  <div class="w-56 shadow-lg">
+                    <img
+                      src="assets/img/team.jpg"
+                      alt="team profile"
+                      class="w-full aspect-square" />
+                    <div class="p-4 flex flex-col gap-2 text-sm bg-zinc-50">
+                      <p class="font-medium text-base">Ellie</p>
+                      <p>알고리즘, 블록채인, 풀스택 개발</p>
+                      <p>UC Berkeley</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden w-64 duration-700 ease-linear" data-carousel-item>
+                  <div class="w-56 shadow-lg">
+                    <img
+                      src="assets/img/team.jpg"
+                      alt="team profile"
+                      class="w-full aspect-square" />
+                    <div class="p-4 flex flex-col gap-2 text-sm bg-zinc-50">
+                      <p class="font-medium text-base">Jane</p>
+                      <p>알고리즘, 블록채인, 풀스택 개발</p>
+                      <p>UC Berkeley</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden w-64 duration-700 ease-linear" data-carousel-item>
+                  <div class="w-56 shadow-lg">
+                    <img
+                      src="assets/img/team.jpg"
+                      alt="team profile"
+                      class="w-full aspect-square" />
+                    <div class="p-4 flex flex-col gap-2 text-sm bg-zinc-50">
+                      <p class="font-medium text-base">Adam</p>
+                      <p>알고리즘, 블록채인, 풀스택 개발</p>
+                      <p>UC Berkeley</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden w-64 duration-700 ease-linear" data-carousel-item>
+                  <div class="w-56 shadow-lg">
+                    <img
+                      src="assets/img/team.jpg"
+                      alt="team profile"
+                      class="w-full aspect-square" />
+                    <div class="p-4 flex flex-col gap-2 text-sm bg-zinc-50">
+                      <p class="font-medium text-base">Rachel</p>
+                      <p>알고리즘, 블록채인, 풀스택 개발</p>
+                      <p>UC Berkeley</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden w-64 duration-700 ease-linear" data-carousel-item>
+                  <div class="w-56 shadow-lg">
+                    <img
+                      src="assets/img/team.jpg"
+                      alt="team profile"
+                      class="w-full aspect-square" />
+                    <div class="p-4 flex flex-col gap-2 text-sm bg-zinc-50">
+                      <p class="font-medium text-base">Ella</p>
+                      <p>알고리즘, 블록채인, 풀스택 개발</p>
+                      <p>UC Berkeley</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slider controls -->
+              <button
+                type="button"
+                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full cursor-pointer group focus:outline-none"
+                data-carousel-next>
+                <span
+                  class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-flamingo-500 group-hover:bg-flamingo-400 group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                  <span class="heroicons--chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credentials Section -->
+      <section class="relative my-12 md:my-28 flex flex-col gap-14 items-center">
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['결과로_입증하는_로그엔코딩']">
+          결과로 입증하는 로그엔코딩
+        </h2>
+        <div class="relative w-full px-4 lg:px-12">
+          <div
+            class="absolute -z-10 left-0 top-1/2 -translate-y-1/2 w-full h-[80%] bg-flamingo-500"></div>
+          <div
+            class="max-w-screen-xl w-full mx-auto shadow-xl bg-white p-6 flex flex-col items-center gap-12">
+            <div class="h-64"></div>
+            <a href="#" class="btn white">
+              <span>프리미엄 1:1 커스텀 프로젝트 확인하기</span>
+              <span class="heroicons--arrow-long-right"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 오시는 길 Section -->
+      <section class="relative my-12 md:my-28 flex flex-col gap-14 items-center">
+        <h2
+          class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['오시는_길']">
+          오시는 길
+        </h2>
+        <div class="relative w-full px-4 lg:px-12">
+          <div class="max-w-screen-xl w-full mx-auto shadow-xl bg-white flex">
+            <div class="px-10 py-8 basis-4/7">
+              <p class="text-2xl font-medium">서울특별시 강남구 언주로174길 17 서우빌딩 3층</p>
+              <hr class="my-6 w-32 h-1 text-flamingo-500" />
+              <div class="grid grid-cols-[auto_1fr] gap-x-8 gap-y-4">
+                <p class="font-medium">대표변호</p>
+                <p class="text-zinc-600">+82 2-540-1628</p>
+                <p class="font-medium">이메일</p>
+                <p class="text-zinc-600">info@logncoding.com</p>
+                <p class="font-medium">운영시간</p>
+                <p class="flex flex-col gap-1 text-zinc-600">
+                  <span>월-금 / 9:00 AM ~ 7:00 PM</span>
+                  <span>주말 / 9:00 AM ~ 6:00 PM</span>
+                </p>
+              </div>
+            </div>
+            <iframe
+              class="w-full basis-3/7"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1305611293283!2d127.03322361526259!3d37.52841947980509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3866d9664bb%3A0x90a9663ae03e690b!2s17%20Eonju-ro%20174-gil%2C%20Gangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678455598812!5m2!1sen!2skr"
+              frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="relative w-full px-4 lg:px-12 py-12 text-white"
+      style="
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url(assets/img/hero.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      ">
+      <div class="max-w-screen-xl w-full mx-auto space-y-4">
+        <div class="flex justify-between">
+          <div class="flex flex-col gap-6">
+            <p class="flex flex-col gap-2">
+              <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
+              <span>대표번호: +82-2-540-1628</span>
+              <span>학원 등록번호: 제14243호</span>
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                target="_blank"
+                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                <img
+                  src="assets/img/kakao.png"
+                  alt="kakao channel"
+                  class="object-cover size-full" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                <img
+                  src="assets/img/instagram.png"
+                  alt="Instagram"
+                  class="object-cover size-full" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                <img src="assets/img/youtube.png" alt="YouTube" class="object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                <img
+                  src="assets/img/naver-blog.png"
+                  alt="Naver Blog"
+                  class="object-cover size-full" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <img
+              src="assets/img/logo_en.png"
+              alt="LognCoding Logo"
+              class="w-32 h-auto object-cover" />
+          </div>
+        </div>
+        <p class="text-right font-light text-zinc-400">
+          Copyright 2023-2025 LognCoding. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

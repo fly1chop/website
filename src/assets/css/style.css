@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+@plugin "@iconify/tailwind4" {
+  prefix: 'iconify';
+  prefixes: heroicons;
+  scale: 1.5;
+}
+@source "../../../node_modules/flowbite";
+
+@theme {
+  --color-flamingo-50: #fef4ee;
+  --color-flamingo-100: #fce7d8;
+  --color-flamingo-200: #f7cbb1;
+  --color-flamingo-300: #f2a67f;
+  --color-flamingo-400: #ec774b;
+  --color-flamingo-500: #e75224;
+  --color-flamingo-600: #d93c1d;
+  --color-flamingo-700: #b42c1a;
+  --color-flamingo-800: #8f251d;
+  --color-flamingo-900: #74211a;
+  --color-flamingo-950: #3e0e0c;
+}
+
+@layer base {
+  html {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  body {
+    color: var(--color-zinc-950);
+    background-color: var(--color-zinc-100);
+  }
+}
+
+@layer components {
+  .btn {
+    background-color: var(--color-flamingo-500);
+    border-radius: var(--radius-4xl);
+    color: var(--color-zinc-950);
+    font-weight: var(--font-weight-bold);
+    padding: --spacing(1.5) --spacing(4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: --spacing(1);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    @apply transition duration-300 ease-in-out;
+  }
+  .btn:hover {
+    background-color: var(--color-flamingo-400);
+    color: var(--color-zinc-800);
+  }
+  .btn.white {
+    color: var(--color-white);
+  }
+}
+
+@utility hover-transition {
+  @apply transition duration-300 ease-in-out;
+}
+
+[class*='heroicons--']:not([class*='iconify-color']) {
+  @apply iconify;
+}
