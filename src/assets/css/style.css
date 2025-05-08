@@ -8,6 +8,8 @@
 }
 @source "../../../node_modules/flowbite";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-flamingo-50: #fef4ee;
   --color-flamingo-100: #fce7d8;
@@ -20,6 +22,9 @@
   --color-flamingo-800: #8f251d;
   --color-flamingo-900: #74211a;
   --color-flamingo-950: #3e0e0c;
+
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xs: 20rem;
 }
 
 @layer base {
@@ -30,6 +35,7 @@
   body {
     color: var(--color-zinc-950);
     background-color: var(--color-zinc-100);
+    font-weight: var(--font-weight-light);
   }
 }
 
@@ -54,6 +60,10 @@
   }
   .btn.white {
     color: var(--color-white);
+  }
+  .btn.large {
+    font-size: var(--text-2xl);
+    padding: --spacing(2) --spacing(6);
   }
 }
 

@@ -17,14 +17,14 @@
   </head>
   <body>
     <header
-      class="absolute w-full z-20 top-0 start-0 pt-4 pb-28 bg-linear-to-b from-black/90 to-transparent">
-      <nav class="max-w-screen-xl px-4 lg:px-12 mx-auto flex items-center justify-between">
+      class="absolute w-full z-20 top-0 start-0 pb-28 bg-linear-to-b from-black/90 to-transparent">
+      <nav class="max-w-screen-xl px-4 pt-4 lg:px-12 mx-auto flex items-center justify-between">
         <a href="/" class="w-16">
-          <img src="assets/img/logo_en.png" alt="" />
+          <img class="logo" src="assets/img/logo_en.png" alt="" />
         </a>
-        <ul class="flex items-center space-x-8">
+        <ul class="items-center space-x-8 hidden md:flex">
           <li class="inline-flex items-center gap-1">
-            <a href="/about" class="text-white hover:text-zinc-400 hover-transition">About</a>
+            <a href="/pages/about" class="text-white hover:text-zinc-400 hover-transition">About</a>
             <button
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
@@ -38,18 +38,22 @@
               id="about-dropdown"
               class="z-20 hidden bg-white rounded-sm shadow-sm overflow-hidden">
               <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
-                <li><a href="/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a></li>
                 <li>
-                  <a href="/about/team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
+                  <a href="/pages/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
                 </li>
                 <li>
-                  <a href="/about/news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
+                  <a href="/pages/about#team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
+                </li>
+                <li>
+                  <a href="/pages/about#news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a href="/courses/fundamental" class="text-white hover:text-zinc-400 hover-transition">
+            <a
+              href="/pages/courses/fundamental"
+              class="text-white hover:text-zinc-400 hover-transition">
               Courses
             </a>
             <button
@@ -91,11 +95,126 @@
             </a>
           </li>
         </ul>
-        <a href="#" class="btn">
+        <a href="#" class="btn hidden md:flex">
           <span>Blog</span>
           <span class="heroicons--arrow-long-right"></span>
         </a>
+        <!-- mobile navbar -->
+        <button
+          id="mobile-navbar-dropdown-button"
+          aria-expanded="false"
+          type="button"
+          class="inline-flex items-center justify-center text-xl text-white md:hidden cursor-pointer">
+          <span class="sr-only">Open main menu</span>
+          <span class="heroicons--bars-3"></span>
+        </button>
       </nav>
+      <div
+        id="mobile-navbar-dropdown"
+        class="z-20 bg-white rounded-b-sm shadow-lg overflow-hidden hidden md:hidden w-full absolute top-0 pt-2 divide-y divide-neutral-200">
+        <ul class="flex flex-col text-lg text-zinc-500">
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-about-button"
+              data-accordion-target="#accordion-about"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal cursor-pointer">
+              <span>About</span>
+              <span
+                data-accordion-icon
+                class="rotate-180 heroicons--chevron-up-20-solid text-zinc-400"></span>
+            </button>
+            <div
+              id="accordion-about"
+              class="hidden border-b border-neutral-200"
+              aria-labelledby="accordion-about-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="/pages/about"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/about#team"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/about#news"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    News
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-courses-button"
+              data-accordion-target="#accordion-courses"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal cursor-pointer">
+              <span>Courses</span>
+              <span
+                data-accordion-icon
+                class="rotate-180 heroicons--chevron-up-20-solid text-zinc-400"></span>
+            </button>
+            <div
+              id="accordion-courses"
+              class="hidden border-b border-neutral-200"
+              aria-labelledby="accordion-courses-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="/pages/courses#fundamental"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Fundamental Track
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/courses#competition"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Competition Track
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/courses#project"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Project Track
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/pages/capstone" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              Capstone
+            </a>
+          </li>
+          <li>
+            <a
+              href="/pages/personal-project"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              Personal Project
+            </a>
+          </li>
+        </ul>
+        <div class="flex px-4 py-3">
+          <a href="#" class="btn justify-between text-lg w-full sm:w-auto">
+            <span>Blog</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
+      </div>
     </header>
 
     <main class="relative">
