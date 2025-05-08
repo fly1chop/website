@@ -219,14 +219,7 @@
 
     <main class="relative min-h-[calc(100vh-288px)]">
       <div
-        class="h-52 w-full flex items-end"
-        style="
-          background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
-            url('data-url:/src/assets/img/hero.jpg');
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-        ">
+        class="h-52 w-full flex items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
         <div class="bg-neutral-300 w-full">
           <ul
             data-tabs-toggle="#tab-content--container"
@@ -283,13 +276,7 @@
             </div>
           </div>
           <div
-            class="py-10 sm:pb-0 sm:pt-96 mb-24 sm:mb-36"
-            style="
-              background-image: url('data-url:/src/assets/img/media-0.jpg');
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-            ">
+            class="py-10 sm:pb-0 sm:pt-96 mb-24 sm:mb-36 bg-[url('../../assets/img/media-0.jpg')] bg-cover bg-center bg-no-repeat">
             <div class="relative max-w-screen-xl mx-auto px-4 lg:px-12">
               <div class="sm:absolute -bottom-12 bg-white shadow-lg px-8 py-6 max-w-xl">
                 <p class="leading-8">
@@ -386,151 +373,157 @@
               <span class="text-flamingo-500">퀄리티</span>
               , 직접 경험해보세요!
             </p>
-            <div class="flex w-full justify-center -space-x-28 mt-10 md:mt-24 md:mb-16" style="
-            background-image: url('data-url:/src/assets/img/venn_diagram.png'); background-size:
-            contain; background-position: center; background-repeat: no-repeat;" ">
-            <div class="rounded-full flex-1/3 aspect-square">
-              <div
-                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col gap-4 text-xs sm:text-sm xl:text-base lg:gap-8 items-start justify-start text-left max-w-[200px] sm:max-w-2xs xl:max-w-sm break-keep">
-                <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">퀄리티의 차이</p>
-                <p class="text-white">한번에 끝내는 독보적인 퀄리티</p>
-                <p class="text-white">
-                  결과물 완성으로 끝나는게 아닌 프로그램 후에도 사용할 수 있는 앱 등 확연히 느껴지는
-                  차이
-                </p>
+            <div
+              class="flex w-full justify-center -space-x-28 mt-10 md:mt-24 md:mb-16 bg-[url('../../assets/img/venn_diagram.png')] bg-contain bg-center bg-no-repeat">
+              <div class="rounded-full flex-1/3 aspect-square">
+                <div
+                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col gap-4 text-xs md:text-sm xl:text-base lg:gap-8 items-start justify-start text-left max-w-[200px] md:max-w-2xs xl:max-w-sm break-keep">
+                  <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">
+                    퀄리티의 차이
+                  </p>
+                  <p class="text-white">한번에 끝내는 독보적인 퀄리티</p>
+                  <p class="text-white">
+                    결과물 완성으로 끝나는게 아닌 프로그램 후에도 사용할 수 있는 앱 등 확연히
+                    느껴지는 차이
+                  </p>
+                </div>
+              </div>
+              <div class="flex-1/3 rounded-full aspect-square">
+                <div
+                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col text-xs md:text-sm xl:text-base gap-4 lg:gap-8 items-center justify-start text-center mx-auto max-w-[180px] md:max-w-3xs xl:max-w-xs">
+                  <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">EC 로드맵</p>
+                  <p class="text-white">
+                    우리 아이에게 맞는 커리큘럼으로 A부터 Z까지 커스텀해서 만들어주는 로드맵
+                  </p>
+                </div>
+              </div>
+              <div class="flex-1/3 rounded-full aspect-square">
+                <div
+                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col gap-4 text-xs md:text-sm xl:text-base lg:gap-8 items-end justify-start text-right max-w-[200px] md:max-w-2xs xl:max-w-sm ml-auto break-keep">
+                  <p class="text-base sm:text-xl lg:text-2xl font-medium">아이비리그 메이커</p>
+                  <p class="">
+                    실제 학생들의 합격으로 입증합니다. 광고/마케팅 없이도 입소문으로 이어지는 1%
+                    아이비리그 메이커
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="flex-1/3 rounded-full aspect-square">
-              <div
-                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col text-xs sm:text-sm xl:text-base gap-4 lg:gap-8 items-center justify-start text-center mx-auto max-w-[180px] sm:max-w-3xs xl:max-w-xs">
-                <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">EC 로드맵</p>
-                <p class="text-white">
-                  우리 아이에게 맞는 커리큘럼으로 A부터 Z까지 커스텀해서 만들어주는 로드맵
-                </p>
-              </div>
-            </div>
-            <div class="flex-1/3 rounded-full aspect-square">
-              <div
-                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col gap-4 text-xs sm:text-sm xl:text-base lg:gap-8 items-end justify-start text-right max-w-[200px] sm:max-w-2xs xl:max-w-sm ml-auto break-keep">
-                <p class="text-base sm:text-xl lg:text-2xl font-medium">아이비리그 메이커</p>
-                <p class="">
-                  실제 학생들의 합격으로 입증합니다. 광고/마케팅 없이도 입소문으로 이어지는 1%
-                  아이비리그 메이커
-                </p>
-              </div>
-            </div>
+
+            <svg viewBox="0 0 100 100" class="size-28 md:size-48">
+              <!-- Bottom layer (darkest) -->
+              <path
+                d="M10 50 L50 80 L90 50"
+                stroke="#9797a0"
+                stroke-width="10"
+                fill="none"
+                stroke-linecap="square"
+                stroke-linejoin="round" />
+              <!-- Middle layer -->
+              <path
+                d="M20 38 L50 60 L80 38"
+                stroke="#cfcfd4"
+                stroke-width="10"
+                fill="none"
+                stroke-linecap="square"
+                stroke-linejoin="round" />
+              <!-- Top layer (lightest) -->
+              <path
+                d="M30 25 L50 40 L70 25"
+                stroke="#e6e6e9"
+                stroke-width="10"
+                fill="none"
+                stroke-linecap="square"
+                stroke-linejoin="round" />
+            </svg>
+            <a href="#" class="btn white sm:large">
+              <span>우리 아이 EC맵 진단해보기</span>
+              <span class="heroicons--arrow-long-right"></span>
+            </a>
           </div>
-          <svg viewBox="0 0 100 100" class="size-28 md:size-48">
-            <!-- Bottom layer (darkest) -->
-            <path
-              d="M10 50 L50 80 L90 50"
-              stroke="#9797a0"
-              stroke-width="10"
-              fill="none"
-              stroke-linecap="square"
-              stroke-linejoin="round" />
-            <!-- Middle layer -->
-            <path
-              d="M20 38 L50 60 L80 38"
-              stroke="#cfcfd4"
-              stroke-width="10"
-              fill="none"
-              stroke-linecap="square"
-              stroke-linejoin="round" />
-            <!-- Top layer (lightest) -->
-            <path
-              d="M30 25 L50 40 L70 25"
-              stroke="#e6e6e9"
-              stroke-width="10"
-              fill="none"
-              stroke-linecap="square"
-              stroke-linejoin="round" />
-          </svg>
-          <a href="#" class="btn white sm:large">
-            <span>우리 아이 EC맵 진단해보기</span>
-            <span class="heroicons--arrow-long-right"></span>
-          </a>
-        </div>
-        <div class="my-24 mx-auto max-w-screen-xl flex flex-col px-4 lg:px-12 items-center">
-          <h2
-            class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Fields']">
-            FIELDS
-          </h2>
-          <div class="w-full flex flex-col lg:flex-row gap-14 mt-14">
-            <div class="flex flex-col gap-10 basis-2/5 items-center">
-              <p
-                class="text-2xl sm:text-3xl font-medium sm:leading-10 text-center lg:text-left sm:max-w-3xl">
-                Lorem ipsum dolor sit amet. Rem rerum amet sed quia quia et omnis tempora et velit
-                vitae a corporis velit qui corporis maxime ad aliquam autem.
-              </p>
-              <a href="/pages/courses" class="btn white sm:self-center lg:self-start">
-                <span>Courses 보러가기</span>
-                <span class="heroicons--arrow-long-right"></span>
-              </a>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6 flex-1">
-              <!-- 1st row -->
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
-                <span class="heroicons--chart-bar-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Data Science
+          <div class="my-24 mx-auto max-w-screen-xl flex flex-col px-4 lg:px-12 items-center">
+            <h2
+              class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Fields']">
+              FIELDS
+            </h2>
+            <div class="w-full flex flex-col lg:flex-row gap-14 mt-14">
+              <div class="flex flex-col gap-10 basis-2/5 items-center">
+                <p
+                  class="text-2xl sm:text-3xl font-medium sm:leading-10 text-center lg:text-left sm:max-w-3xl">
+                  Lorem ipsum dolor sit amet. Rem rerum amet sed quia quia et omnis tempora et velit
+                  vitae a corporis velit qui corporis maxime ad aliquam autem.
                 </p>
+                <a href="/pages/courses" class="btn white sm:self-center lg:self-start">
+                  <span>Courses 보러가기</span>
+                  <span class="heroicons--arrow-long-right"></span>
+                </a>
               </div>
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                <span
-                  class="heroicons--code-bracket-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Web Development
-                </p>
-              </div>
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                <span class="heroicons--cpu-chip-20-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  AI & Machine Learning
-                </p>
-              </div>
-              <!-- 2nd row -->
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                <span class="heroicons--lock-closed-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Cybersecurity
-                </p>
-              </div>
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                <span
-                  class="heroicons--circle-stack-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Database Management
-                </p>
-              </div>
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-zinc-800 text-white">
-                <span
-                  class="iconify-[ic--baseline-phone-iphone] text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Mobile Development
-                </p>
-              </div>
-              <!-- 3rd row -->
-              <div
-                class="lg:col-start-2 aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                <span class="iconify-[mdi--palette] text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  UI/UX Design
-                </p>
-              </div>
-              <div
-                class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
-                <span
-                  class="heroicons--presentation-chart-line-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
-                  Business Analytics
-                </p>
+              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6 flex-1">
+                <!-- 1st row -->
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
+                  <span
+                    class="heroicons--chart-bar-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Data Science
+                  </p>
+                </div>
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  <span
+                    class="heroicons--code-bracket-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Web Development
+                  </p>
+                </div>
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  <span
+                    class="heroicons--cpu-chip-20-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    AI & Machine Learning
+                  </p>
+                </div>
+                <!-- 2nd row -->
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  <span
+                    class="heroicons--lock-closed-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Cybersecurity
+                  </p>
+                </div>
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  <span
+                    class="heroicons--circle-stack-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Database Management
+                  </p>
+                </div>
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-zinc-800 text-white">
+                  <span
+                    class="iconify-[ic--baseline-phone-iphone] text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Mobile Development
+                  </p>
+                </div>
+                <!-- 3rd row -->
+                <div
+                  class="lg:col-start-2 aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  <span class="iconify-[mdi--palette] text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    UI/UX Design
+                  </p>
+                </div>
+                <div
+                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
+                  <span
+                    class="heroicons--presentation-chart-line-solid text-5xl xs:text-8xl md:text-6xl"></span>
+                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    Business Analytics
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -562,16 +555,15 @@
       </section>
     </main>
     <footer
-      class="relative w-full px-4 lg:px-12 py-12 text-white"
-      style="
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-          url('data-url:/src/assets/img/hero.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      ">
-      <div class="max-w-screen-xl w-full mx-auto space-y-4">
-        <div class="flex justify-between">
+      class="relative w-full px-4 lg:px-12 py-12 text-xs sm:text-base text-white bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
+      <div class="max-w-screen-xl w-full mx-auto space-y-12 sm:space-y-4">
+        <div class="flex flex-col sm:flex-row-reverse justify-between gap-y-12">
+          <div>
+            <img
+              src="../../assets/img/logo_en.png"
+              alt="LognCoding Logo"
+              class="w-32 h-auto object-cover" />
+          </div>
           <div class="flex flex-col gap-6">
             <p class="flex flex-col gap-2">
               <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
@@ -614,14 +606,8 @@
               </a>
             </div>
           </div>
-          <div>
-            <img
-              src="../../assets/img/logo_en.png"
-              alt="LognCoding Logo"
-              class="w-32 h-auto object-cover" />
-          </div>
         </div>
-        <p class="text-right font-light text-zinc-400">
+        <p class="text-center sm:text-right font-light text-zinc-400">
           Copyright 2023-2025 LognCoding. All Rights Reserved
         </p>
       </div>
