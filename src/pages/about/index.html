@@ -266,23 +266,24 @@
         <div id="about" role="tabpanel" aria-labelledby="about-tab" class="hidden">
           <div
             class="flex flex-col gap-14 items-center mb-12 max-w-screen-xl mx-auto px-4 lg:px-12 mt-12 md:mt-28">
-            <div class="flex w-full justify-between gap-x-24">
+            <div
+              class="flex flex-col sm:flex-row w-full items-center justify-between gap-y-6 gap-x-12 lg:gap-x-24">
               <p
-                class="text-2xl sm:text-3xl lg:text-4xl font-semibold max-w-sm md:max-w-3xl leading-relaxed">
+                class="text-2xl sm:text-3xl lg:text-4xl font-semibold sm:max-w-sm md:max-w-3xl max-md:text-center leading-relaxed">
                 독보적인 퀄리티와 커리큘럼으로 보장된 실력 향상과 ​상위 엘리트들을 위한 프리미엄
                 클래스​
               </p>
               <img
                 src="../../assets/img/logo.png"
                 alt="LognCoding Logo"
-                class="min-w-xs max-w-sm h-auto object-contain"
+                class="max-w-3xs sm:min-w-xs sm:max-w-sm h-auto object-contain"
                 loading="lazy"
                 width="500"
                 height="500" />
             </div>
           </div>
           <div
-            class="pt-96 mb-36"
+            class="py-10 sm:pb-0 sm:pt-96 mb-24 sm:mb-36"
             style="
               background-image: url('data-url:/src/assets/img/media-0.jpg');
               background-size: cover;
@@ -290,7 +291,7 @@
               background-repeat: no-repeat;
             ">
             <div class="relative max-w-screen-xl mx-auto px-4 lg:px-12">
-              <div class="absolute -bottom-12 bg-white shadow-lg px-8 py-6 max-w-xl">
+              <div class="sm:absolute -bottom-12 bg-white shadow-lg px-8 py-6 max-w-xl">
                 <p class="leading-8">
                   로그엔코딩은 Harvard, Yale, Princeton 등 명문대 및 NASA,구글, 마이크로 소프트와
                   같은 다양한 선도 기업에서의 경험을 가진 팀원들과 함께 학생들에게 최적의 교육
@@ -303,7 +304,7 @@
           </div>
           <div class="bg-zinc-800">
             <div class="mx-auto max-w-screen-xl flex flex-col gap-24 py-24 px-4 lg:px-12">
-              <div class="flex gap-12">
+              <div class="flex flex-col sm:flex-row gap-12">
                 <div class="flex flex-col gap-8 flex-1/2">
                   <hr class="w-32 h-1 text-flamingo-500" />
                   <p class="text-white leading-8">
@@ -326,7 +327,7 @@
                     잡고 있습니다.
                   </p>
                 </div>
-                <div class="md:pl-32 flex flex-col gap-2 flex-1/2">
+                <div class="md:pl-18 lg:pl-32 flex flex-col gap-2 flex-1/2">
                   <img
                     src="../../assets/img/team.jpg"
                     alt="jy"
@@ -339,19 +340,7 @@
                   <p class="text-white">Carnegie Mellon University</p>
                 </div>
               </div>
-              <div class="flex gap-12">
-                <div class="md:pr-32 flex flex-col gap-2 flex-1/2">
-                  <img
-                    src="../../assets/img/team.jpg"
-                    alt="jy"
-                    class="object-cover aspect-square mb-5" />
-                  <p class="text-white">
-                    <span class="font-medium pr-3">박제영</span>
-                    로그엔코딩 총괄 원장
-                  </p>
-                  <p class="text-white">알고리즘, 풀스택 개발, UI/UX</p>
-                  <p class="text-white">Carnegie Mellon University</p>
-                </div>
+              <div class="flex flex-col sm:flex-row gap-12">
                 <div class="flex flex-col gap-8 flex-1/2">
                   <hr class="w-32 h-1 text-flamingo-500" />
                   <p class="text-white leading-8">
@@ -373,23 +362,37 @@
                     실제 명문대 학생들을 대거 배출시키며 미래의 혁신가들을 키워내는 기관으로 자리
                     잡고 있습니다.
                   </p>
+                </div>
+                <div class="sm:order-first md:pr-18 lg:pr-32 flex flex-col gap-2 flex-1/2">
+                  <img
+                    src="../../assets/img/team.jpg"
+                    alt="jy"
+                    class="object-cover aspect-square mb-5" />
+                  <p class="text-white">
+                    <span class="font-medium pr-3">박제영</span>
+                    로그엔코딩 총괄 원장
+                  </p>
+                  <p class="text-white">알고리즘, 풀스택 개발, UI/UX</p>
+                  <p class="text-white">Carnegie Mellon University</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="my-24 mx-auto max-w-screen-xl flex flex-col py-24 px-4 lg:px-12 items-center">
-            <p class="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-relaxed">
+          <div
+            class="md:my-24 mx-auto max-w-screen-xl flex flex-col py-24 px-4 lg:px-12 items-center">
+            <p
+              class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold leading-relaxed sm:px-12">
               로그엔코딩만의 독보적인
               <span class="text-flamingo-500">퀄리티</span>
               , 직접 경험해보세요!
             </p>
-            <div class="flex w-full justify-center -space-x-28 mt-24 mb-16" style="
+            <div class="flex w-full justify-center -space-x-28 mt-10 md:mt-24 md:mb-16" style="
             background-image: url('data-url:/src/assets/img/venn_diagram.png'); background-size:
             contain; background-position: center; background-repeat: no-repeat;" ">
             <div class="rounded-full flex-1/3 aspect-square">
               <div
-                class="size-full p-12 pt-28 xl:pt-36 flex flex-col gap-4 text-sm xl:text-base lg:gap-8 items-start justify-start text-left max-w-2xs xl:max-w-sm break-keep">
-                <p class="text-white text-xl lg:text-2xl font-medium">퀄리티의 차이</p>
+                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col gap-4 text-xs sm:text-sm xl:text-base lg:gap-8 items-start justify-start text-left max-w-[200px] sm:max-w-2xs xl:max-w-sm break-keep">
+                <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">퀄리티의 차이</p>
                 <p class="text-white">한번에 끝내는 독보적인 퀄리티</p>
                 <p class="text-white">
                   결과물 완성으로 끝나는게 아닌 프로그램 후에도 사용할 수 있는 앱 등 확연히 느껴지는
@@ -399,8 +402,8 @@
             </div>
             <div class="flex-1/3 rounded-full aspect-square">
               <div
-                class="size-full p-12 pt-28 xl:pt-36 flex flex-col text-sm xl:text-base gap-4 lg:gap-8 items-center justify-start text-center mx-auto max-w-3xs xl:max-w-xs">
-                <p class="text-white text-xl lg:text-2xl font-medium">EC 로드맵</p>
+                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col text-xs sm:text-sm xl:text-base gap-4 lg:gap-8 items-center justify-start text-center mx-auto max-w-[180px] sm:max-w-3xs xl:max-w-xs">
+                <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">EC 로드맵</p>
                 <p class="text-white">
                   우리 아이에게 맞는 커리큘럼으로 A부터 Z까지 커스텀해서 만들어주는 로드맵
                 </p>
@@ -408,8 +411,8 @@
             </div>
             <div class="flex-1/3 rounded-full aspect-square">
               <div
-                class="size-full p-12 pt-28 xl:pt-36 flex flex-col gap-4 text-sm xl:text-base lg:gap-8 items-end justify-start text-right max-w-2xs xl:max-w-sm ml-auto break-keep">
-                <p class="text-xl lg:text-2xl font-medium">아이비리그 메이커</p>
+                class="size-full p-9 pt-14 sm:p-12 sm:pt-28 xl:pt-36 flex flex-col gap-4 text-xs sm:text-sm xl:text-base lg:gap-8 items-end justify-start text-right max-w-[200px] sm:max-w-2xs xl:max-w-sm ml-auto break-keep">
+                <p class="text-base sm:text-xl lg:text-2xl font-medium">아이비리그 메이커</p>
                 <p class="">
                   실제 학생들의 합격으로 입증합니다. 광고/마케팅 없이도 입소문으로 이어지는 1%
                   아이비리그 메이커
@@ -443,7 +446,7 @@
               stroke-linecap="square"
               stroke-linejoin="round" />
           </svg>
-          <a href="#" class="btn white large">
+          <a href="#" class="btn white sm:large">
             <span>우리 아이 EC맵 진단해보기</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
