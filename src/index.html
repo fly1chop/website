@@ -87,10 +87,14 @@
             </div>
           </li>
           <li>
-            <a href="/capstone" class="hover-transition text-white hover:text-zinc-400">Capstone</a>
+            <a href="/pages/capstone" class="hover-transition text-white hover:text-zinc-400">
+              Capstone
+            </a>
           </li>
           <li>
-            <a href="/personal-project" class="hover-transition text-white hover:text-zinc-400">
+            <a
+              href="/pages/personal-project"
+              class="hover-transition text-white hover:text-zinc-400">
               Personal Project
             </a>
           </li>
@@ -229,8 +233,8 @@
       <!-- Featured Media Section -->
       <section class="relative my-24 flex flex-col items-center gap-10 overflow-x-hidden md:gap-14">
         <h2
-          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Section_Title'] md:text-5xl">
-          SECTION TITLE
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Featured_Media'] md:text-5xl">
+          FEATURED MEDIA
         </h2>
         <div
           class="mx-auto flex w-full max-w-screen-2xl flex-col items-center gap-6 overflow-hidden bg-neutral-200 px-4 py-14 md:w-auto md:overflow-visible md:bg-transparent lg:px-12">
@@ -242,7 +246,7 @@
             <div
               class="relative h-[480px] w-full overflow-hidden sm:aspect-video sm:h-96 md:overflow-visible">
               <div
-                class="hidden h-full overflow-hidden duration-700 ease-in-out md:px-8"
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
                 data-carousel-item>
                 <div class="flex flex-col">
                   <img
@@ -262,7 +266,7 @@
                 </div>
               </div>
               <div
-                class="hidden h-full overflow-hidden duration-700 ease-in-out md:px-8"
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
                 data-carousel-item>
                 <div class="flex flex-col">
                   <img
@@ -282,7 +286,7 @@
                 </div>
               </div>
               <div
-                class="hidden h-full overflow-hidden duration-700 ease-in-out md:px-8"
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
                 data-carousel-item>
                 <div class="flex flex-col">
                   <img
@@ -302,7 +306,7 @@
                 </div>
               </div>
               <div
-                class="hidden h-full overflow-hidden duration-700 ease-in-out md:px-8"
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
                 data-carousel-item>
                 <div class="flex flex-col">
                   <img
@@ -328,7 +332,7 @@
               class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-start-24"
               data-carousel-prev>
               <span
-                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-[#4D4D4D]/40 md:block"></span>
+                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
               <span
                 class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
                 <span class="heroicons--chevron-left"></span>
@@ -340,7 +344,7 @@
               class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-end-24"
               data-carousel-next>
               <span
-                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-[#4D4D4D]/40 md:block"></span>
+                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
               <span
                 class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
                 <span class="heroicons--chevron-right"></span>
@@ -427,9 +431,10 @@
           class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Meet_the_Team'] md:text-5xl">
           MEET THE TEAM
         </h2>
-        <div class="relative mx-auto w-full max-w-screen-xl px-4 lg:px-12">
+        <div class="relative mx-auto w-full px-4 lg:px-12">
           <div class="absolute bottom-0 left-0 -z-10 h-full w-full bg-zinc-800 md:h-[90%]"></div>
-          <div class="flex flex-col justify-between gap-12 pb-10 md:flex-row lg:gap-x-24">
+          <div
+            class="mx-auto flex max-w-screen-xl flex-col justify-between gap-12 pb-10 md:flex-row lg:gap-x-24">
             <div class="mt-10 flex flex-col gap-6 md:mt-24">
               <p class="text-2xl leading-10 font-medium text-white md:text-3xl">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, recusandae
@@ -446,7 +451,7 @@
               data-carousel="static">
               <!-- Carousel container -->
               <div class="relative h-[336px]">
-                <div class="hidden w-64 duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
                   <div class="w-56 shadow-lg">
                     <img
                       src="assets/img/team.jpg"
@@ -459,7 +464,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hidden w-64 duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
                   <div class="w-56 shadow-lg">
                     <img
                       src="assets/img/team.jpg"
@@ -472,7 +477,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hidden w-64 duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
                   <div class="w-56 shadow-lg">
                     <img
                       src="assets/img/team.jpg"
@@ -485,7 +490,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hidden w-64 duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
                   <div class="w-56 shadow-lg">
                     <img
                       src="assets/img/team.jpg"
@@ -498,7 +503,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="hidden w-64 duration-700 ease-in-out" data-carousel-item>
+                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
                   <div class="w-56 shadow-lg">
                     <img
                       src="assets/img/team.jpg"
