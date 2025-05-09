@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,26 +17,26 @@
   </head>
   <body>
     <header
-      class="absolute w-full z-20 top-0 start-0 pb-28 bg-linear-to-b from-black/90 to-transparent">
-      <nav class="max-w-screen-xl px-4 pt-4 lg:px-12 mx-auto flex items-center justify-between">
+      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
+      <nav class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
         <a href="/" class="w-16">
           <img class="logo" src="../../assets/img/logo_en.png" alt="" />
         </a>
-        <ul class="items-center space-x-8 hidden md:flex">
+        <ul class="hidden items-center space-x-8 md:flex">
           <li class="inline-flex items-center gap-1">
-            <a href="/pages/about" class="text-white hover:text-zinc-400 hover-transition">About</a>
+            <a href="/pages/about" class="hover-transition text-white hover:text-zinc-400">About</a>
             <button
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
               data-dropdown-offset-skidding="-10"
-              class="inline-flex items-center justify-center size-5 text-zinc-400">
+              class="inline-flex size-5 items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
             </button>
 
             <!-- about dropdown -->
             <div
               id="about-dropdown"
-              class="z-20 hidden bg-white rounded-sm shadow-sm overflow-hidden">
+              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
                 <li>
                   <a href="/pages/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
@@ -53,20 +53,20 @@
           <li class="inline-flex items-center gap-1">
             <a
               href="/pages/courses/fundamental"
-              class="text-white hover:text-zinc-400 hover-transition">
+              class="hover-transition text-white hover:text-zinc-400">
               Courses
             </a>
             <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
-              class="inline-flex items-center justify-center size-5 text-zinc-400">
+              class="inline-flex size-5 items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
             </button>
 
             <!-- courses dropdown -->
             <div
               id="courses-dropdown"
-              class="z-20 hidden bg-white rounded-sm shadow-sm overflow-hidden">
+              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
                   <a href="/courses/fundamental" class="block px-4 py-2 hover:bg-zinc-100">
@@ -87,10 +87,10 @@
             </div>
           </li>
           <li>
-            <a href="/capstone" class="text-white hover:text-zinc-400 hover-transition">Capstone</a>
+            <a href="/capstone" class="hover-transition text-white hover:text-zinc-400">Capstone</a>
           </li>
           <li>
-            <a href="/personal-project" class="text-white hover:text-zinc-400 hover-transition">
+            <a href="/personal-project" class="hover-transition text-white hover:text-zinc-400">
               Personal Project
             </a>
           </li>
@@ -104,14 +104,14 @@
           id="mobile-navbar-dropdown-button"
           aria-expanded="false"
           type="button"
-          class="inline-flex items-center justify-center text-xl text-white md:hidden cursor-pointer">
+          class="inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
           <span class="sr-only">Open main menu</span>
           <span class="heroicons--bars-3"></span>
         </button>
       </nav>
       <div
         id="mobile-navbar-dropdown"
-        class="z-20 bg-white rounded-b-sm shadow-lg overflow-hidden hidden md:hidden w-full absolute top-0 pt-2 divide-y divide-neutral-200">
+        class="absolute top-0 z-20 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
         <ul class="flex flex-col text-lg text-zinc-500">
           <li data-accordion="collapse">
             <button
@@ -119,11 +119,11 @@
               id="accordion-about-button"
               data-accordion-target="#accordion-about"
               data-active-classes="bg-zinc-100"
-              class="flex w-full items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal cursor-pointer">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
               <span>About</span>
               <span
                 data-accordion-icon
-                class="rotate-180 heroicons--chevron-up-20-solid text-zinc-400"></span>
+                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
             </button>
             <div
               id="accordion-about"
@@ -160,11 +160,11 @@
               id="accordion-courses-button"
               data-accordion-target="#accordion-courses"
               data-active-classes="bg-zinc-100"
-              class="flex w-full items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal cursor-pointer">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
               <span>Courses</span>
               <span
                 data-accordion-icon
-                class="rotate-180 heroicons--chevron-up-20-solid text-zinc-400"></span>
+                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
             </button>
             <div
               id="accordion-courses"
@@ -209,7 +209,7 @@
           </li>
         </ul>
         <div class="flex px-4 py-3">
-          <a href="#" class="btn justify-between text-lg w-full sm:w-auto">
+          <a href="#" class="btn w-full justify-between text-lg sm:w-auto">
             <span>Blog</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
@@ -219,16 +219,16 @@
 
     <main class="relative min-h-[calc(100vh-288px)]">
       <div
-        class="h-52 w-full flex items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
-        <div class="bg-neutral-300 w-full">
+        class="flex h-52 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
+        <div class="w-full bg-neutral-300">
           <ul
             data-tabs-toggle="#tab-content--container"
-            class="flex max-w-screen-xl mx-auto gap-6 px-4 lg:px-12 mt-auto h-full"
+            class="mx-auto mt-auto flex h-full max-w-screen-xl gap-6 px-4 lg:px-12"
             data-tabs-active-classes="border-flamingo-500"
             data-tabs-inactive-classes="border-transparent hover:border-flamingo-400 hover:text-zinc-500 transition"
             role="tablist">
             <button
-              class="py-4 px-2 border-b-2 font-normal cursor-pointer"
+              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
               data-tabs-target="#about"
               type="button"
               role="tab"
@@ -236,7 +236,7 @@
               About Us
             </button>
             <button
-              class="py-4 px-2 border-b-2 font-normal cursor-pointer"
+              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
               data-tabs-target="#team"
               type="button"
               role="tab"
@@ -244,7 +244,7 @@
               Team
             </button>
             <button
-              class="py-4 px-2 border-b-2 font-normal cursor-pointer"
+              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
               data-tabs-target="#news"
               type="button"
               role="tab"
@@ -258,27 +258,27 @@
         <!-- tab - about -->
         <div id="about" role="tabpanel" aria-labelledby="about-tab" class="hidden">
           <div
-            class="flex flex-col gap-14 items-center mb-12 max-w-screen-xl mx-auto px-4 lg:px-12 mt-12 md:mt-28">
+            class="mx-auto mt-12 mb-12 flex max-w-screen-xl flex-col items-center gap-14 px-4 md:mt-28 lg:px-12">
             <div
-              class="flex flex-col sm:flex-row w-full items-center justify-between gap-y-6 gap-x-12 lg:gap-x-24">
+              class="flex w-full flex-col items-center justify-between gap-x-12 gap-y-6 sm:flex-row lg:gap-x-24">
               <p
-                class="text-2xl sm:text-3xl lg:text-4xl font-semibold sm:max-w-sm md:max-w-3xl max-md:text-center leading-relaxed">
+                class="text-2xl leading-relaxed font-semibold max-md:text-center sm:max-w-sm sm:text-3xl md:max-w-3xl lg:text-4xl">
                 독보적인 퀄리티와 커리큘럼으로 보장된 실력 향상과 ​상위 엘리트들을 위한 프리미엄
                 클래스​
               </p>
               <img
                 src="../../assets/img/logo.png"
                 alt="LognCoding Logo"
-                class="max-w-3xs sm:min-w-xs sm:max-w-sm h-auto object-contain"
+                class="h-auto max-w-3xs object-contain sm:max-w-sm sm:min-w-xs"
                 loading="lazy"
                 width="500"
                 height="500" />
             </div>
           </div>
           <div
-            class="py-10 sm:pb-0 sm:pt-96 mb-24 sm:mb-36 bg-[url('../../assets/img/media-0.jpg')] bg-cover bg-center bg-no-repeat">
-            <div class="relative max-w-screen-xl mx-auto px-4 lg:px-12">
-              <div class="sm:absolute -bottom-12 bg-white shadow-lg px-8 py-6 max-w-xl">
+            class="mb-24 bg-[url('../../assets/img/media-0.jpg')] bg-cover bg-center bg-no-repeat py-10 sm:mb-36 sm:pt-96 sm:pb-0">
+            <div class="relative mx-auto max-w-screen-xl px-4 lg:px-12">
+              <div class="-bottom-12 max-w-xl bg-white px-8 py-6 shadow-lg sm:absolute">
                 <p class="leading-8">
                   로그엔코딩은 Harvard, Yale, Princeton 등 명문대 및 NASA,구글, 마이크로 소프트와
                   같은 다양한 선도 기업에서의 경험을 가진 팀원들과 함께 학생들에게 최적의 교육
@@ -290,73 +290,73 @@
             </div>
           </div>
           <div class="bg-zinc-800">
-            <div class="mx-auto max-w-screen-xl flex flex-col gap-24 py-24 px-4 lg:px-12">
-              <div class="flex flex-col sm:flex-row gap-12">
-                <div class="flex flex-col gap-8 flex-1/2">
-                  <hr class="w-32 h-1 text-flamingo-500" />
-                  <p class="text-white leading-8">
+            <div class="mx-auto flex max-w-screen-xl flex-col gap-24 px-4 py-24 lg:px-12">
+              <div class="flex flex-col gap-12 sm:flex-row">
+                <div class="flex flex-1/2 flex-col gap-8">
+                  <hr class="text-flamingo-500 h-1 w-32" />
+                  <p class="leading-8 text-white">
                     제가 생각하는 교육은 단순한 지식 전달이 아니라, 학생들에게 "세계적으로 변화시킬
                     수 있는 문제 해결 능력"을 심어주는 과정입니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     ​로그엔코딩의 교육철학은 크게 세가지입니다.​ "최고의 인재는 최고의 환경에서
                     자란다"​ 로그엔코딩은 단순한 학원이 아닙니다. 세계적인 수준의 커리큘럼과 강사진,
                     최신 기술을 반영한 교육 환경을 제공합니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     코딩 교육의 가치는 결국 국제 무대에서의 성과와 대학 입시 결과로 증명됩니다.
                     우리는 매년 주요 대회 및 명문대 입시에서 최고의 성과를 냅니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     로그엔코딩은 학생들에게 단순한 프로그래밍이 아닌 세계를 바꿀 수 있는 기술적
                     사고력과 창의력을 가르칩니다.​ 이러한 이념을 바탕으로, 우리는 단순한 학원이 아닌
                     실제 명문대 학생들을 대거 배출시키며 미래의 혁신가들을 키워내는 기관으로 자리
                     잡고 있습니다.
                   </p>
                 </div>
-                <div class="md:pl-18 lg:pl-32 flex flex-col gap-2 flex-1/2">
+                <div class="flex flex-1/2 flex-col gap-2 md:pl-18 lg:pl-32">
                   <img
                     src="../../assets/img/team.jpg"
                     alt="jy"
-                    class="object-cover aspect-square mb-5" />
+                    class="mb-5 aspect-square object-cover" />
                   <p class="text-white">
-                    <span class="font-medium pr-3">박제영</span>
+                    <span class="pr-3 font-medium">박제영</span>
                     로그엔코딩 총괄 원장
                   </p>
                   <p class="text-white">알고리즘, 풀스택 개발, UI/UX</p>
                   <p class="text-white">Carnegie Mellon University</p>
                 </div>
               </div>
-              <div class="flex flex-col sm:flex-row gap-12">
-                <div class="flex flex-col gap-8 flex-1/2">
-                  <hr class="w-32 h-1 text-flamingo-500" />
-                  <p class="text-white leading-8">
+              <div class="flex flex-col gap-12 sm:flex-row">
+                <div class="flex flex-1/2 flex-col gap-8">
+                  <hr class="text-flamingo-500 h-1 w-32" />
+                  <p class="leading-8 text-white">
                     제가 생각하는 교육은 단순한 지식 전달이 아니라, 학생들에게 "세계적으로 변화시킬
                     수 있는 문제 해결 능력"을 심어주는 과정입니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     ​로그엔코딩의 교육철학은 크게 세가지입니다.​ "최고의 인재는 최고의 환경에서
                     자란다"​ 로그엔코딩은 단순한 학원이 아닙니다. 세계적인 수준의 커리큘럼과 강사진,
                     최신 기술을 반영한 교육 환경을 제공합니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     코딩 교육의 가치는 결국 국제 무대에서의 성과와 대학 입시 결과로 증명됩니다.
                     우리는 매년 주요 대회 및 명문대 입시에서 최고의 성과를 냅니다.
                   </p>
-                  <p class="text-white leading-8">
+                  <p class="leading-8 text-white">
                     로그엔코딩은 학생들에게 단순한 프로그래밍이 아닌 세계를 바꿀 수 있는 기술적
                     사고력과 창의력을 가르칩니다.​ 이러한 이념을 바탕으로, 우리는 단순한 학원이 아닌
                     실제 명문대 학생들을 대거 배출시키며 미래의 혁신가들을 키워내는 기관으로 자리
                     잡고 있습니다.
                   </p>
                 </div>
-                <div class="sm:order-first md:pr-18 lg:pr-32 flex flex-col gap-2 flex-1/2">
+                <div class="flex flex-1/2 flex-col gap-2 sm:order-first md:pr-18 lg:pr-32">
                   <img
                     src="../../assets/img/team.jpg"
                     alt="jy"
-                    class="object-cover aspect-square mb-5" />
+                    class="mb-5 aspect-square object-cover" />
                   <p class="text-white">
-                    <span class="font-medium pr-3">박제영</span>
+                    <span class="pr-3 font-medium">박제영</span>
                     로그엔코딩 총괄 원장
                   </p>
                   <p class="text-white">알고리즘, 풀스택 개발, UI/UX</p>
@@ -366,19 +366,19 @@
             </div>
           </div>
           <div
-            class="md:my-24 mx-auto max-w-screen-xl flex flex-col py-24 px-4 lg:px-12 items-center">
+            class="mx-auto flex max-w-screen-xl flex-col items-center px-4 py-24 md:my-24 lg:px-12">
             <p
-              class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold leading-relaxed sm:px-12">
+              class="text-center text-2xl leading-relaxed font-semibold sm:px-12 sm:text-3xl lg:text-4xl">
               로그엔코딩만의 독보적인
               <span class="text-flamingo-500">퀄리티</span>
               , 직접 경험해보세요!
             </p>
             <div
-              class="flex w-full justify-center -space-x-28 mt-10 md:mt-24 md:mb-16 bg-[url('../../assets/img/venn_diagram.png')] bg-contain bg-center bg-no-repeat">
-              <div class="rounded-full flex-1/3 aspect-square">
+              class="mt-10 flex w-full justify-center -space-x-28 bg-[url('../../assets/img/venn_diagram.png')] bg-contain bg-center bg-no-repeat md:mt-24 md:mb-16">
+              <div class="aspect-square flex-1/3 rounded-full">
                 <div
-                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col gap-4 text-xs md:text-sm xl:text-base lg:gap-8 items-start justify-start text-left max-w-[200px] md:max-w-2xs xl:max-w-sm break-keep">
-                  <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">
+                  class="flex size-full max-w-[200px] flex-col items-start justify-start gap-4 p-9 pt-14 text-left text-xs break-keep sm:pt-18 md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
+                  <p class="text-base font-medium text-white sm:text-xl lg:text-2xl">
                     퀄리티의 차이
                   </p>
                   <p class="text-white">한번에 끝내는 독보적인 퀄리티</p>
@@ -388,19 +388,19 @@
                   </p>
                 </div>
               </div>
-              <div class="flex-1/3 rounded-full aspect-square">
+              <div class="aspect-square flex-1/3 rounded-full">
                 <div
-                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col text-xs md:text-sm xl:text-base gap-4 lg:gap-8 items-center justify-start text-center mx-auto max-w-[180px] md:max-w-3xs xl:max-w-xs">
-                  <p class="text-white text-base sm:text-xl lg:text-2xl font-medium">EC 로드맵</p>
+                  class="mx-auto flex size-full max-w-[180px] flex-col items-center justify-start gap-4 p-9 pt-14 text-center text-xs sm:pt-18 md:max-w-3xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-xs xl:pt-36 xl:text-base">
+                  <p class="text-base font-medium text-white sm:text-xl lg:text-2xl">EC 로드맵</p>
                   <p class="text-white">
                     우리 아이에게 맞는 커리큘럼으로 A부터 Z까지 커스텀해서 만들어주는 로드맵
                   </p>
                 </div>
               </div>
-              <div class="flex-1/3 rounded-full aspect-square">
+              <div class="aspect-square flex-1/3 rounded-full">
                 <div
-                  class="size-full p-9 pt-14 sm:pt-18 md:p-12 md:pt-28 xl:pt-36 flex flex-col gap-4 text-xs md:text-sm xl:text-base lg:gap-8 items-end justify-start text-right max-w-[200px] md:max-w-2xs xl:max-w-sm ml-auto break-keep">
-                  <p class="text-base sm:text-xl lg:text-2xl font-medium">아이비리그 메이커</p>
+                  class="ml-auto flex size-full max-w-[200px] flex-col items-end justify-start gap-4 p-9 pt-14 text-right text-xs break-keep sm:pt-18 md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
+                  <p class="text-base font-medium sm:text-xl lg:text-2xl">아이비리그 메이커</p>
                   <p class="">
                     실제 학생들의 합격으로 입증합니다. 광고/마케팅 없이도 입소문으로 이어지는 1%
                     아이비리그 메이커
@@ -440,15 +440,15 @@
               <span class="heroicons--arrow-long-right"></span>
             </a>
           </div>
-          <div class="my-24 mx-auto max-w-screen-xl flex flex-col px-4 lg:px-12 items-center">
+          <div class="mx-auto my-24 flex max-w-screen-xl flex-col items-center px-4 lg:px-12">
             <h2
-              class="inline-block relative text-center font-black pb-6 text-zinc-950/5 text-4xl md:text-5xl border-b border-flamingo-500 after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-3 after:text-2xl after:text-zinc-950 after:inline after:font-semibold after:content-['Fields']">
+              class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:text-zinc-950 after:content-['Fields'] md:text-5xl">
               FIELDS
             </h2>
-            <div class="w-full flex flex-col lg:flex-row gap-14 mt-14">
-              <div class="flex flex-col gap-10 basis-2/5 items-center">
+            <div class="mt-14 flex w-full flex-col gap-14 lg:flex-row">
+              <div class="flex basis-2/5 flex-col items-center gap-10">
                 <p
-                  class="text-2xl sm:text-3xl font-medium sm:leading-10 text-center lg:text-left sm:max-w-3xl">
+                  class="text-center text-2xl font-medium sm:max-w-3xl sm:text-3xl sm:leading-10 lg:text-left">
                   Lorem ipsum dolor sit amet. Rem rerum amet sed quia quia et omnis tempora et velit
                   vitae a corporis velit qui corporis maxime ad aliquam autem.
                 </p>
@@ -457,70 +457,70 @@
                   <span class="heroicons--arrow-long-right"></span>
                 </a>
               </div>
-              <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6 flex-1">
+              <div class="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-3">
                 <!-- 1st row -->
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
+                  class="bg-flamingo-500 flex aspect-square flex-col items-center justify-center p-2 text-white md:gap-2">
                   <span
-                    class="heroicons--chart-bar-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--chart-bar-16-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Data Science
                   </p>
                 </div>
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  class="flex aspect-square flex-col items-center justify-center bg-neutral-200 p-2 md:gap-2">
                   <span
-                    class="heroicons--code-bracket-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--code-bracket-16-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Web Development
                   </p>
                 </div>
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  class="flex aspect-square flex-col items-center justify-center bg-neutral-200 p-2 md:gap-2">
                   <span
-                    class="heroicons--cpu-chip-20-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--cpu-chip-20-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     AI & Machine Learning
                   </p>
                 </div>
                 <!-- 2nd row -->
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  class="flex aspect-square flex-col items-center justify-center bg-neutral-200 p-2 md:gap-2">
                   <span
-                    class="heroicons--lock-closed-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--lock-closed-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Cybersecurity
                   </p>
                 </div>
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
+                  class="flex aspect-square flex-col items-center justify-center bg-neutral-200 p-2 md:gap-2">
                   <span
-                    class="heroicons--circle-stack-16-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--circle-stack-16-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Database Management
                   </p>
                 </div>
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-zinc-800 text-white">
+                  class="flex aspect-square flex-col items-center justify-center bg-zinc-800 p-2 text-white md:gap-2">
                   <span
-                    class="iconify-[ic--baseline-phone-iphone] text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="iconify-[ic--baseline-phone-iphone] xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Mobile Development
                   </p>
                 </div>
                 <!-- 3rd row -->
                 <div
-                  class="lg:col-start-2 aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-neutral-200">
-                  <span class="iconify-[mdi--palette] text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                  class="flex aspect-square flex-col items-center justify-center bg-neutral-200 p-2 md:gap-2 lg:col-start-2">
+                  <span class="iconify-[mdi--palette] xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     UI/UX Design
                   </p>
                 </div>
                 <div
-                  class="aspect-square p-2 flex flex-col md:gap-2 items-center justify-center bg-flamingo-500 text-white">
+                  class="bg-flamingo-500 flex aspect-square flex-col items-center justify-center p-2 text-white md:gap-2">
                   <span
-                    class="heroicons--presentation-chart-line-solid text-5xl xs:text-8xl md:text-6xl"></span>
-                  <p class="text-center leading-tight max-w-2/3 font-medium xs:max-md:text-xl">
+                    class="heroicons--presentation-chart-line-solid xs:text-8xl text-5xl md:text-6xl"></span>
+                  <p class="xs:max-md:text-xl max-w-2/3 text-center leading-tight font-medium">
                     Business Analytics
                   </p>
                 </div>
@@ -530,8 +530,8 @@
         </div>
 
         <!-- tab - team -->
-        <div id="team" role="tabpanel" aria-labelledby="team-tab" class="hidden my-12 md:my-28">
-          <div class="flex flex-col gap-14 items-center">
+        <div id="team" role="tabpanel" aria-labelledby="team-tab" class="my-12 hidden md:my-28">
+          <div class="flex flex-col items-center gap-14">
             <div class="flex justify-between gap-12">
               <p class="text-2xl font-semibold">
                 독보적인 퀄리티와 커리큘럼으로 보장된 실력 향상과 ​상위 엘리트들을 위한 프리미엄
@@ -542,8 +542,8 @@
         </div>
 
         <!-- tab - news -->
-        <div id="news" role="tabpanel" aria-labelledby="news-tab" class="hidden my-12 md:my-28">
-          <div class="flex flex-col gap-14 items-center">
+        <div id="news" role="tabpanel" aria-labelledby="news-tab" class="my-12 hidden md:my-28">
+          <div class="flex flex-col items-center gap-14">
             <div class="flex justify-between gap-12">
               <p class="text-2xl font-semibold">
                 독보적인 퀄리티와 커리큘럼으로 보장된 실력 향상과 ​상위 엘리트들을 위한 프리미엄
@@ -555,14 +555,14 @@
       </section>
     </main>
     <footer
-      class="relative w-full px-4 lg:px-12 py-12 text-xs sm:text-base text-white bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
-      <div class="max-w-screen-xl w-full mx-auto space-y-12 sm:space-y-4">
-        <div class="flex flex-col sm:flex-row-reverse justify-between gap-y-12">
+      class="relative w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat px-4 py-12 text-xs text-white sm:text-base lg:px-12">
+      <div class="mx-auto w-full max-w-screen-xl space-y-12 sm:space-y-4">
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row-reverse">
           <div>
             <img
               src="../../assets/img/logo_en.png"
               alt="LognCoding Logo"
-              class="w-32 h-auto object-cover" />
+              class="h-auto w-32 object-cover" />
           </div>
           <div class="flex flex-col gap-6">
             <p class="flex flex-col gap-2">
@@ -574,40 +574,40 @@
               <a
                 href="#"
                 target="_blank"
-                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/kakao.png"
                   alt="kakao channel"
-                  class="object-cover size-full" />
+                  class="size-full object-cover" />
               </a>
               <a
                 href="#"
                 target="_blank"
-                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/instagram.png"
                   alt="Instagram"
-                  class="object-cover size-full" />
+                  class="size-full object-cover" />
               </a>
               <a
                 href="#"
                 target="_blank"
-                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
                 <img src="../../assets/img/youtube.png" alt="YouTube" class="object-cover" />
               </a>
               <a
                 href="#"
                 target="_blank"
-                class="rounded-lg overflow-hidden flex items-center justify-between size-10">
+                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/naver-blog.png"
                   alt="Naver Blog"
-                  class="object-cover size-full" />
+                  class="size-full object-cover" />
               </a>
             </div>
           </div>
         </div>
-        <p class="text-center sm:text-right font-light text-zinc-400">
+        <p class="text-center font-light text-zinc-400 sm:text-right">
           Copyright 2023-2025 LognCoding. All Rights Reserved
         </p>
       </div>
