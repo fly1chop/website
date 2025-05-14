@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | LognCoding</title>
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <header
+      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
+      <nav class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
+        <a href="/" class="w-16">
+          <img class="logo" src="../../assets/img/logo_en.png" alt="" />
+        </a>
+        <ul class="hidden items-center space-x-8 md:flex">
+          <li class="inline-flex items-center gap-1">
+            <a href="/pages/about" class="hover-transition text-white hover:text-zinc-400">About</a>
+            <button
+              id="aboutDropdownBtn"
+              data-dropdown-toggle="about-dropdown"
+              data-dropdown-offset-skidding="-10"
+              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+
+            <!-- about dropdown -->
+            <div
+              id="about-dropdown"
+              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
+                <li>
+                  <a href="/pages/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
+                </li>
+                <li>
+                  <a href="/pages/about#team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
+                </li>
+                <li>
+                  <a href="/pages/about#news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="inline-flex items-center gap-1">
+            <a
+              href="/pages/courses/fundamental"
+              class="hover-transition text-white hover:text-zinc-400">
+              Courses
+            </a>
+            <button
+              data-dropdown-toggle="courses-dropdown"
+              data-dropdown-offset-skidding="10"
+              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+
+            <!-- courses dropdown -->
+            <div
+              id="courses-dropdown"
+              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              <ul class="text-zinc-500">
+                <li>
+                  <a href="/courses/fundamental" class="block px-4 py-2 hover:bg-zinc-100">
+                    Fundamental Track
+                  </a>
+                </li>
+                <li>
+                  <a href="/courses/competition" class="block px-4 py-2 hover:bg-zinc-100">
+                    Competition Track
+                  </a>
+                </li>
+                <li>
+                  <a href="/courses/project" class="block px-4 py-2 hover:bg-zinc-100">
+                    Project Track
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/pages/capstone" class="hover-transition text-white hover:text-zinc-400">
+              Capstone
+            </a>
+          </li>
+          <li>
+            <a
+              href="/pages/personal-project"
+              class="hover-transition text-white hover:text-zinc-400">
+              Personal Project
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="link--blog btn hidden md:flex">
+          <span>Blog</span>
+          <span class="heroicons--arrow-long-right"></span>
+        </a>
+        <!-- mobile navbar -->
+        <button
+          id="mobile-navbar-dropdown-button"
+          aria-expanded="false"
+          type="button"
+          class="inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
+          <span class="sr-only">Open main menu</span>
+          <span class="heroicons--bars-3"></span>
+        </button>
+      </nav>
+      <div
+        id="mobile-navbar-dropdown"
+        class="absolute top-0 z-20 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
+        <ul class="flex flex-col text-lg text-zinc-500">
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-about-button"
+              data-accordion-target="#accordion-about"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              <span>About</span>
+              <span
+                data-accordion-icon
+                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
+            </button>
+            <div
+              id="accordion-about"
+              class="hidden border-b border-neutral-200"
+              aria-labelledby="accordion-about-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="/pages/about"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/about#team"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/about#news"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    News
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-courses-button"
+              data-accordion-target="#accordion-courses"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              <span>Courses</span>
+              <span
+                data-accordion-icon
+                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
+            </button>
+            <div
+              id="accordion-courses"
+              class="hidden border-b border-neutral-200"
+              aria-labelledby="accordion-courses-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="/pages/courses#fundamental"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Fundamental Track
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/courses#competition"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Competition Track
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/pages/courses#project"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    Project Track
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/pages/capstone" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              Capstone
+            </a>
+          </li>
+          <li>
+            <a
+              href="/pages/personal-project"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              Personal Project
+            </a>
+          </li>
+        </ul>
+        <div class="flex px-4 py-3">
+          <a href="#" class="link--blog btn w-full justify-between text-lg sm:w-auto">
+            <span>Blog</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="relative min-h-[calc(100vh-288px)]">
+      <div
+        class="h-52 w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
+      <div class="mx-auto mt-12 max-w-screen-xl px-4 md:mt-28 lg:px-12">
+        <div class="flex flex-col gap-x-5 gap-y-5 sm:flex-row sm:justify-between">
+          <div>
+            <h2 class="text-3xl font-bold whitespace-nowrap sm:text-4xl lg:text-5xl">
+              Capstone Project
+            </h2>
+            <hr class="text-flamingo-500 my-3 h-1 w-32 sm:my-6" />
+            <p>문과 / 이과 / 예체능 융합 EC 토탈 솔루션 프로그램</p>
+          </div>
+          <p class="max-w-md text-xs break-keep sm:text-right sm:text-sm">
+            *비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해부탁드립니다. 캡스톤
+            프로그램 중 일부
+          </p>
+        </div>
+      </div>
+      <div class="relative mx-auto mt-12 mb-28 size-full max-w-screen-xl px-4 md:mt-28 lg:px-12">
+        <div class="relative mx-auto w-full bg-neutral-200 px-20 py-12">
+          <div data-carousel="static" class="relative mx-auto aspect-video h-56 sm:h-96">
+            <!--  carousel container -->
+            <div class="mx-auto h-full">
+              <div
+                data-carousel-item
+                class="mx-8 hidden h-full overflow-hidden duration-300 ease-in-out">
+                <div
+                  class="card absolute top-0 left-0 size-full duration-300 ease-in-out transform-3d">
+                  <div class="absolute size-full backface-hidden">
+                    <img
+                      src="../../assets/img/media-2.jpg"
+                      alt="capstone project 1"
+                      class="size-full object-cover" />
+                    <div
+                      class="absolute bottom-0 z-10 flex w-full flex-col bg-zinc-800 px-6 py-4 text-sm text-white md:text-base">
+                      <h3 class="text-lg font-semibold">Project Title 1</h3>
+                      <p class="mt-2 mb-6">Description of the project goes here.</p>
+                      <button class="do-toggle-flip btn self-end">See Details</button>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute flex size-full rotate-y-180 flex-col gap-2 bg-zinc-50 px-6 py-4 backface-hidden">
+                    <button
+                      class="do-toggle-flip text-flamingo-500 hover-transition hover:text-flamingo-300 absolute top-4 right-4 flex cursor-pointer items-center justify-center gap-1 text-xs font-medium">
+                      <span class="heroicons--arrow-long-left"></span>
+                      <span>Go Back</span>
+                    </button>
+                    <h3 class="text-2xl font-semibold">Project Title 1</h3>
+                    <p>Client GIST VR (under CMU HCI Institute)</p>
+                    <p class="mt-2 text-sm text-zinc-600">Duration 2023 Winter - 2024 Spring</p>
+                    <div class="flex gap-2">
+                      <span
+                        class="rounded-full bg-neutral-400 px-4 py-2 text-xs font-medium text-white uppercase">
+                        application closed
+                      </span>
+                      <span
+                        class="bg-flamingo-500 rounded-full px-4 py-2 text-xs font-medium text-white uppercase">
+                        completed
+                      </span>
+                    </div>
+                    <p class="mt-4">
+                      가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서
+                      가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer
+                      Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여
+                      학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여
+                      사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할
+                      수 있는 방법들을 개발하고 연구합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- carousel controls -->
+            <button
+              type="button"
+              class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-start-24"
+              data-carousel-prev>
+              <span
+                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+              <span
+                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-end-24"
+              data-carousel-next>
+              <span
+                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+              <span
+                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="relative w-full bg-zinc-950 bg-cover bg-center bg-no-repeat px-6 py-8 text-xs text-white sm:text-base lg:px-12">
+      <div class="mx-auto w-full max-w-screen-xl space-y-4">
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row-reverse">
+          <div>
+            <img
+              src="../../assets/img/logo_en.png"
+              alt="LognCoding Logo"
+              class="h-auto w-16 object-cover sm:w-24" />
+          </div>
+          <p class="flex flex-col gap-2 text-sm">
+            <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
+            <span>대표번호: +82-2-540-1628</span>
+            <span>학원 등록번호: 제14243호</span>
+          </p>
+        </div>
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row">
+          <div class="flex flex-col gap-6">
+            <div class="flex gap-4">
+              <a
+                href="#"
+                target="_blank"
+                class="link--kakao flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="../../assets/img/kakao.png"
+                  alt="kakao channel"
+                  class="size-full object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--instagram flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="../../assets/img/instagram.png"
+                  alt="Instagram"
+                  class="size-full object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--youtube flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img src="../../assets/img/youtube.png" alt="YouTube" class="object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--blog flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="../../assets/img/naver-blog.png"
+                  alt="Naver Blog"
+                  class="size-full object-cover" />
+              </a>
+            </div>
+          </div>
+          <p class="text-xs font-light text-zinc-500">
+            Copyright 2023-2025 LognCoding. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../../assets/js/main.js"></script>
+  </body>
+</html>

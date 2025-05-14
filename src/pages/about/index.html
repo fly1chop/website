@@ -87,15 +87,19 @@
             </div>
           </li>
           <li>
-            <a href="/capstone" class="hover-transition text-white hover:text-zinc-400">Capstone</a>
+            <a href="/pages/capstone" class="hover-transition text-white hover:text-zinc-400">
+              Capstone
+            </a>
           </li>
           <li>
-            <a href="/personal-project" class="hover-transition text-white hover:text-zinc-400">
+            <a
+              href="/pages/personal-project"
+              class="hover-transition text-white hover:text-zinc-400">
               Personal Project
             </a>
           </li>
         </ul>
-        <a href="#" class="btn hidden md:flex">
+        <a href="#" class="link--blog btn hidden md:flex">
           <span>Blog</span>
           <span class="heroicons--arrow-long-right"></span>
         </a>
@@ -209,7 +213,7 @@
           </li>
         </ul>
         <div class="flex px-4 py-3">
-          <a href="#" class="btn w-full justify-between text-lg sm:w-auto">
+          <a href="#" class="link--blog btn w-full justify-between text-lg sm:w-auto">
             <span>Blog</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
@@ -222,6 +226,7 @@
         class="flex h-52 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
         <div class="w-full bg-neutral-300">
           <ul
+            id="tab-menu--about"
             data-tabs-toggle="#tab-content--container"
             class="mx-auto mt-auto flex h-full max-w-screen-xl gap-6 px-4 lg:px-12"
             data-tabs-active-classes="border-flamingo-500"
@@ -812,26 +817,28 @@
       </section>
     </main>
     <footer
-      class="relative w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat px-4 py-12 text-xs text-white sm:text-base lg:px-12">
-      <div class="mx-auto w-full max-w-screen-xl space-y-12 sm:space-y-4">
+      class="relative w-full bg-zinc-950 bg-cover bg-center bg-no-repeat px-6 py-8 text-xs text-white sm:text-base lg:px-12">
+      <div class="mx-auto w-full max-w-screen-xl space-y-4">
         <div class="flex flex-col justify-between gap-y-12 sm:flex-row-reverse">
           <div>
             <img
               src="../../assets/img/logo_en.png"
               alt="LognCoding Logo"
-              class="h-auto w-32 object-cover" />
+              class="h-auto w-16 object-cover sm:w-24" />
           </div>
+          <p class="flex flex-col gap-2 text-sm">
+            <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
+            <span>대표번호: +82-2-540-1628</span>
+            <span>학원 등록번호: 제14243호</span>
+          </p>
+        </div>
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row">
           <div class="flex flex-col gap-6">
-            <p class="flex flex-col gap-2">
-              <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
-              <span>대표번호: +82-2-540-1628</span>
-              <span>학원 등록번호: 제14243호</span>
-            </p>
             <div class="flex gap-4">
               <a
                 href="#"
                 target="_blank"
-                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
+                class="link--kakao flex size-8 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/kakao.png"
                   alt="kakao channel"
@@ -840,7 +847,7 @@
               <a
                 href="#"
                 target="_blank"
-                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
+                class="link--instagram flex size-8 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/instagram.png"
                   alt="Instagram"
@@ -849,13 +856,13 @@
               <a
                 href="#"
                 target="_blank"
-                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
+                class="link--youtube flex size-8 items-center justify-between overflow-hidden rounded-lg">
                 <img src="../../assets/img/youtube.png" alt="YouTube" class="object-cover" />
               </a>
               <a
                 href="#"
                 target="_blank"
-                class="flex size-10 items-center justify-between overflow-hidden rounded-lg">
+                class="link--blog flex size-8 items-center justify-between overflow-hidden rounded-lg">
                 <img
                   src="../../assets/img/naver-blog.png"
                   alt="Naver Blog"
@@ -863,10 +870,10 @@
               </a>
             </div>
           </div>
+          <p class="text-xs font-light text-zinc-500">
+            Copyright 2023-2025 LognCoding. All Rights Reserved
+          </p>
         </div>
-        <p class="text-center font-light text-zinc-400 sm:text-right">
-          Copyright 2023-2025 LognCoding. All Rights Reserved
-        </p>
       </div>
     </footer>
     <script type="module" src="../../assets/js/main.js"></script>

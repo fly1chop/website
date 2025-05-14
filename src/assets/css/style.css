@@ -74,3 +74,8 @@
 [class*='heroicons--']:not([class*='iconify-color']) {
   @apply iconify;
 }
+
+.toggle-flip {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
