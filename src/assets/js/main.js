@@ -1,6 +1,8 @@
 import 'flowbite';
 import { Dropdown } from 'flowbite';
-import { INSTRUCTORS, LINKS, MENTORS } from '../lib/constants';
+import { LINKS } from '../lib/constants';
+import team from '../lib/team.json';
+import news from '../lib/news.json';
 
 window.addEventListener('load', () => {
   showCurrentTab();
@@ -29,6 +31,12 @@ const showCurrentTab = () => {
   const aboutTabs = FlowbiteInstances.getInstance('Tabs', 'tab-menu--about');
   if (!aboutTabs) return;
   const currentTab = window.location.hash;
+  aboutTabs.updateOnShow(() => {
+    window.scrollTo({
+      top: document.querySelector('#tab-content--container').offsetTop - 59 - (59 + 48),
+      behavior: 'smooth',
+    });
+  });
   if (aboutTabs && currentTab) aboutTabs.show(currentTab);
 };
 
@@ -50,10 +58,12 @@ Object.entries(LINKS).forEach(([name, url]) => {
 //////////////////////////////////////
 //////////////////////////////////////
 //// About Page
-const $mentorsGridContainer = document.getElementById('mentors-grid');
-const $instructorsGridContainer = document.getElementById('instructors-grid');
+const $mentorsList = document.getElementById('mentors-list');
+const $instructorsList = document.getElementById('instructors-list');
+const $newsList = document.getElementById('news-list');
 
-const instructorsHtml = INSTRUCTORS.filter((item) => !item.isMain)
+const instructorsHtml = team.instructors
+  .filter((item) => !item.isMain)
   .map(
     (item) => `
   <div class="bg-zinc-50 shadow-lg overflow-hidden rounded-xs">
@@ -70,10 +80,11 @@ const instructorsHtml = INSTRUCTORS.filter((item) => !item.isMain)
 `
   )
   .join('');
-$instructorsGridContainer.innerHTML = instructorsHtml;
+$instructorsList.innerHTML = instructorsHtml;
 
-const mentorsHtml = MENTORS.map(
-  (item) => `
+const mentorsHtml = team.mentors
+  .map(
+    (item) => `
   <div class="bg-zinc-50 shadow-lg overflow-hidden rounded-xs">
     <img
       src="${new URL('../img/team.jpg', import.meta.url)}"
@@ -87,5 +98,42 @@ const mentorsHtml = MENTORS.map(
     </div>
   </div>
 `
-).join('');
-$mentorsGridContainer.innerHTML = mentorsHtml;
+  )
+  .join('');
+$mentorsList.innerHTML = mentorsHtml;
+
+const newsHtml = news
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .map(
+    (item) => `
+  <tr
+    data-href=${item.href}
+    class="hover-transition cursor-pointer border-b border-neutral-300/60 even:bg-zinc-50 odd:bg-white hover:bg-neutral-200/20">
+    <td class="px-4 py-3 text-sm text-nowrap">${item.date}</td>
+    <th scope="row" class="px-4 py-3 font-medium truncate">
+      ${item.title}
+    </th>
+    <td class="flex justify-end gap-2 px-4 py-3">
+      ${item.tags
+        .map(
+          (tag) => `
+        <span
+          class="break-keep rounded-full bg-neutral-200/70 px-4 py-2 text-xs font-medium uppercase outline outline-neutral-300/80">
+          ${tag}
+        </span>
+        `
+        )
+        .join('')}
+    </td>
+  </tr>
+`
+  )
+  .join('');
+$newsList.innerHTML = newsHtml;
+$newsList.addEventListener('click', (event) => {
+  const $tr = event.target.closest('tr[data-href]');
+  if ($tr) {
+    const url = $tr.getAttribute('data-href');
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+});

@@ -223,41 +223,40 @@
 
     <main class="relative min-h-[calc(100vh-188px)]">
       <div
-        class="flex h-52 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat">
-        <div class="w-full bg-neutral-300">
-          <ul
-            id="tab-menu--about"
-            data-tabs-toggle="#tab-content--container"
-            class="mx-auto mt-auto flex h-full max-w-screen-xl gap-6 px-4 lg:px-12"
-            data-tabs-active-classes="border-flamingo-500"
-            data-tabs-inactive-classes="border-transparent hover:border-flamingo-400 hover:text-zinc-500 transition"
-            role="tablist">
-            <button
-              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
-              data-tabs-target="#about"
-              type="button"
-              role="tab"
-              aria-controls="about">
-              About Us
-            </button>
-            <button
-              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
-              data-tabs-target="#team"
-              type="button"
-              role="tab"
-              aria-controls="team">
-              Team
-            </button>
-            <button
-              class="cursor-pointer border-b-2 px-2 py-4 font-normal"
-              data-tabs-target="#news"
-              type="button"
-              role="tab"
-              aria-controls="news">
-              News
-            </button>
-          </ul>
-        </div>
+        class="flex h-40 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
+      <div class="border-in sticky top-0 z-50 w-full border-b border-neutral-300/60 bg-white">
+        <ul
+          id="tab-menu--about"
+          data-tabs-toggle="#tab-content--container"
+          class="mx-auto mt-auto flex h-full max-w-screen-xl gap-6 px-4 lg:px-12"
+          data-tabs-active-classes="border-flamingo-500"
+          data-tabs-inactive-classes="border-transparent hover:border-flamingo-400 hover:text-zinc-500 transition"
+          role="tablist">
+          <button
+            class="cursor-pointer border-b-2 px-2 py-4 font-normal"
+            data-tabs-target="#about"
+            type="button"
+            role="tab"
+            aria-controls="about">
+            About Us
+          </button>
+          <button
+            class="cursor-pointer border-b-2 px-2 py-4 font-normal"
+            data-tabs-target="#team"
+            type="button"
+            role="tab"
+            aria-controls="team">
+            Team
+          </button>
+          <button
+            class="cursor-pointer border-b-2 px-2 py-4 font-normal"
+            data-tabs-target="#news"
+            type="button"
+            role="tab"
+            aria-controls="news">
+            News
+          </button>
+        </ul>
       </div>
       <section id="tab-content--container" class="">
         <!-- tab - about -->
@@ -575,7 +574,7 @@
               </div>
             </div>
             <div
-              id="instructors-grid"
+              id="instructors-list"
               class="2xs:grid-cols-2 grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:gap-12">
               <!-- insert INSTRUCTORS -->
             </div>
@@ -587,7 +586,7 @@
               MENTORS
             </h2>
             <div
-              id="mentors-grid"
+              id="mentors-list"
               class="2xs:grid-cols-2 grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:gap-12">
               <!-- insert MENTORS -->
             </div>
@@ -597,15 +596,27 @@
         <!-- tab - news -->
         <div id="news" role="tabpanel" aria-labelledby="news-tab" class="hidden">
           <div
-            class="mx-auto mt-12 mb-12 flex max-w-screen-xl flex-col items-center gap-14 px-4 md:mt-28 lg:px-12"></div>
-          <!-- <div class="flex flex-col items-center gap-14">
-            <div class="flex justify-between gap-12">
-              <p class="text-2xl font-semibold">
-                독보적인 퀄리티와 커리큘럼으로 보장된 실력 향상과 ​상위 엘리트들을 위한 프리미엄
-                클래스​
-              </p>
+            class="mx-auto mt-12 mb-28 flex max-w-screen-xl flex-col items-center gap-14 px-4 md:mt-28 lg:px-12">
+            <div class="relative w-full overflow-x-auto">
+              <table
+                class="w-full border-collapse overflow-hidden rounded-xs text-left rtl:text-right">
+                <thead class="bg-zinc-50 text-sm text-zinc-600">
+                  <tr>
+                    <th scope="col" class="border border-neutral-300/60 px-4 py-3">Date</th>
+                    <th scope="col" class="border border-r-0 border-neutral-300/60 px-4 py-3">
+                      Title
+                    </th>
+                    <th scope="col" class="border border-l-0 border-neutral-300/60 px-4 py-3">
+                      <span class="sr-only">tags</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="news-list" class="border border-neutral-300/60">
+                  <!-- insert NEWS -->
+                </tbody>
+              </table>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
     </main>
