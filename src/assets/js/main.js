@@ -10,6 +10,10 @@ window.addEventListener('load', () => {
   showCurrentTab();
 });
 
+document.getElementById('goToTopBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 ///////////////////
 //// Dropdown
 const $mobileNavbarDropdown = document.querySelector('#mobile-navbar-dropdown');
