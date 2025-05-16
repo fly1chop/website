@@ -29,14 +29,14 @@
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
               data-dropdown-offset-skidding="-10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="inline-flex size-5 cursor-pointer items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
             </button>
 
             <!-- about dropdown -->
             <div
               id="about-dropdown"
-              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              class="z-50 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
                 <li>
                   <a href="/pages/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
@@ -51,22 +51,20 @@
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a
-              href="/pages/courses/fundamental"
-              class="hover-transition text-white hover:text-zinc-400">
+            <a href="/pages/courses" class="hover-transition text-white hover:text-zinc-400">
               Courses
             </a>
-            <button
+            <!-- <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="inline-flex size-5 cursor-pointer items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
+            </button> -->
 
             <!-- courses dropdown -->
             <div
               id="courses-dropdown"
-              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              class="z-50 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
                   <a href="/courses/fundamental" class="block px-4 py-2 hover:bg-zinc-100">
@@ -115,7 +113,7 @@
       </nav>
       <div
         id="mobile-navbar-dropdown"
-        class="absolute top-0 z-20 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
+        class="absolute top-0 z-50 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
         <ul class="flex flex-col text-lg text-zinc-500">
           <li data-accordion="collapse">
             <button
@@ -221,10 +219,12 @@
       </div>
     </header>
 
+    <!-- floating buttons -->
+
     <main class="relative min-h-[calc(100vh-188px)]">
       <div
         class="flex h-40 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
-      <div class="border-in sticky top-0 z-50 w-full border-b border-neutral-300/60 bg-white">
+      <div class="border-in sticky top-0 z-20 w-full border-b border-neutral-300/60 bg-white">
         <ul
           id="tab-menu--about"
           data-tabs-toggle="#tab-content--container"

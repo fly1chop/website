@@ -29,7 +29,7 @@
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
               data-dropdown-offset-skidding="-10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="inline-flex size-5 cursor-pointer items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
             </button>
 
@@ -51,17 +51,15 @@
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a
-              href="/pages/courses/fundamental"
-              class="hover-transition text-white hover:text-zinc-400">
+            <a href="/pages/courses" class="hover-transition text-white hover:text-zinc-400">
               Courses
             </a>
-            <button
+            <!-- <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
+            </button> -->
 
             <!-- courses dropdown -->
             <div
@@ -221,7 +219,7 @@
       </div>
     </header>
 
-    <main class="relative">
+    <main class="relative overflow-x-clip">
       <!-- Hero Section -->
       <div class="inset-x-0 h-screen">
         <img

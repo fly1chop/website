@@ -29,7 +29,7 @@
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
               data-dropdown-offset-skidding="-10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="inline-flex size-5 cursor-pointer items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
             </button>
 
@@ -51,17 +51,15 @@
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a
-              href="/pages/courses/fundamental"
-              class="hover-transition text-white hover:text-zinc-400">
+            <a href="/pages/courses" class="hover-transition text-white hover:text-zinc-400">
               Courses
             </a>
-            <button
+            <!-- <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
-              class="inline-flex size-5 items-center justify-center text-zinc-400">
+              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
               <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
+            </button> -->
 
             <!-- courses dropdown -->
             <div
@@ -221,7 +219,7 @@
       </div>
     </header>
 
-    <main class="relative min-h-[calc(100vh-188px)]">
+    <main class="relative min-h-[calc(100vh-188px)] overflow-x-clip">
       <div
         class="h-52 w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
       <div class="mx-auto mt-12 max-w-screen-xl px-4 md:mt-28 lg:px-12">
@@ -239,38 +237,38 @@
           </p>
         </div>
       </div>
-      <div class="relative mx-auto mt-12 mb-28 size-full max-w-screen-xl px-4 md:mt-28 lg:px-12">
-        <div class="relative mx-auto w-full bg-neutral-200 px-20 py-12">
-          <div data-carousel="static" class="relative mx-auto aspect-video h-56 sm:h-96">
+      <div
+        class="relative mx-auto mt-12 mb-28 flex size-full max-w-screen-xl flex-col items-center gap-12 px-4 md:mt-20 md:gap-14 lg:px-12">
+        <!-- <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Ongoing_Projects'] md:text-5xl">
+          ONGOING PROJECTS
+        </h2> -->
+        <p class="max-w-2xl text-center text-lg leading-relaxed font-medium break-keep">
+          로그엔코딩은 대학 수준의 캡스톤 프로그램을 도입하여 고등학생들에게 데이터 사이언스, 머신
+          러닝, 로보틱스, 웹/앱 개발, 비즈니스 등 다양한 분야에서 전문가들의 지도를 받아 세계적인
+          기업들에게 실질적인 솔루션을 제공할 수 있는 기회를 제공합니다.
+        </p>
+        <div id="capstone-ongoing-list" class="relative mx-auto flex w-full"></div>
+      </div>
+
+      <div
+        class="relative mx-auto mt-12 mb-28 flex size-full max-w-screen-xl flex-col items-center gap-12 px-4 md:mt-28 md:gap-14 lg:px-12">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Completed_Projects'] md:text-5xl">
+          COMPLETED PROJECTS
+        </h2>
+        <div class="relative mx-auto w-full lg:bg-neutral-200 lg:px-20 lg:py-12 shadow-sm">
+          <div data-carousel="static" class="relative mx-auto aspect-video overflow-hidden lg:overflow-visible lg:w-auto w-full">
             <!--  carousel container -->
-            <div class="mx-auto h-full">
+            <div id="capstone-completed-list" class="mx-auto h-full">
               <div
                 data-carousel-item
-                class="mx-8 hidden h-full overflow-hidden duration-300 ease-in-out">
-                <div
-                  class="card absolute top-0 left-0 size-full duration-300 ease-in-out transform-3d">
-                  <div class="absolute size-full backface-hidden">
-                    <img
-                      src="../../assets/img/media-2.jpg"
-                      alt="capstone project 1"
-                      class="size-full object-cover" />
-                    <div
-                      class="absolute bottom-0 z-10 flex w-full flex-col bg-zinc-800 px-6 py-4 text-sm text-white md:text-base">
-                      <h3 class="text-lg font-semibold">Project Title 1</h3>
-                      <p class="mt-2 mb-6">Description of the project goes here.</p>
-                      <button class="do-toggle-flip btn self-end">See Details</button>
-                    </div>
-                  </div>
-                  <div
-                    class="absolute flex size-full rotate-y-180 flex-col gap-2 bg-zinc-50 px-6 py-4 backface-hidden">
-                    <button
-                      class="do-toggle-flip text-flamingo-500 hover-transition hover:text-flamingo-300 absolute top-4 right-4 flex cursor-pointer items-center justify-center gap-1 text-xs font-medium">
-                      <span class="heroicons--arrow-long-left"></span>
-                      <span>Go Back</span>
-                    </button>
-                    <h3 class="text-2xl font-semibold">Project Title 1</h3>
-                    <p>Client GIST VR (under CMU HCI Institute)</p>
-                    <p class="mt-2 text-sm text-zinc-600">Duration 2023 Winter - 2024 Spring</p>
+                class="lg:mx-8 hidden h-full overflow-hidden duration-300 ease-in-out shadow-sm rounded-xs">
+                <div class="bg-zinc-50 flex h-full">
+                  <div class="flex flex-col gap-2 p-8 flex-2/3">
+                    <h3 class="text-3xl font-semibold">Project Title 1</h3>
+                    <p class="font-medium">Client: GIST VR (under CMU HCI Institute)</p>
+                    <p class="mt-4 text-sm italic text-zinc-600">Duration 2023 Winter - 2024 Spring</p>
                     <div class="flex gap-2">
                       <span
                         class="rounded-full bg-neutral-400 px-4 py-2 text-xs font-medium text-white uppercase">
@@ -281,7 +279,7 @@
                         completed
                       </span>
                     </div>
-                    <p class="mt-4">
+                    <p class="mt-4 leading-relaxed">
                       가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서
                       가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer
                       Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여
@@ -290,16 +288,23 @@
                       수 있는 방법들을 개발하고 연구합니다.
                     </p>
                   </div>
+                  <div class="flex-1/3">
+                    <img 
+                      src="../../assets/img/media-2.jpg"
+                      alt="capstone project 1"
+                      class="h-full object-cover flex-1/3" />
+
+                  </div>
                 </div>
               </div>
             </div>
             <!-- carousel controls -->
             <button
               type="button"
-              class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-start-24"
+              class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none lg:-start-24"
               data-carousel-prev>
               <span
-                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 lg:block"></span>
               <span
                 class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
                 <span class="heroicons--chevron-left"></span>
@@ -308,10 +313,10 @@
             </button>
             <button
               type="button"
-              class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-end-24"
+              class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none lg:-end-24"
               data-carousel-next>
               <span
-                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 lg:block"></span>
               <span
                 class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
                 <span class="heroicons--chevron-right"></span>

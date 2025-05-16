@@ -1,0 +1,119 @@
+[
+  {
+    "category": "ONGOING",
+    "name": "Project GPT+",
+    "client": "Malabuyoc Central Elementary School (Project Advisor: Dr. Thomas W. Miller)",
+    "deliverables": null,
+    "duration": "2025 Spring",
+    "description": "Project GPT+는 생성형 AI를 활용하여 복잡한 학습 주제를 초등학생들이 쉽고 흥미롭게 배울 수 있도록 돕는 웹 기반 교육 프로젝트입니다. 이 플랫폼은 GPT 모델을 정교하게 튜닝하여, 학생들이 입력한 질문이나 주제에 맞춰 개인화된 상호적인 동화책을 생성하며, 추상적인 개념들을 친근하고 구체적인 이야기로 변환하고 퀴즈도 함께 제공합니다. GPT+는 교육 자원이 부족한 지역사회의 학습 격차를 해소하고, 포용적이고 역동적인 교육의 새로운 모델을 제시합니다.",
+    "image": "gpt.png"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project XR",
+    "client": "GIST VR (CMU HCI Institute)",
+    "deliverables": null,
+    "duration": "2023 Winter - 2024 Spring",
+    "description": "가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서 가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여 학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여 사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할 수 있는 방법들을 개발하고 연구합니다.",
+    "image": "xr.png"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "The Metaverse Project",
+    "client": "UPPURPLE",
+    "deliverables": null,
+    "duration": "2023 Summer - Fall",
+    "description": "메타버스는 4차 산업 시대에 가장 대두되는 분야 중 하나이며 다양한 분야의 기업들이 투자와 개발을 진행하고 있습니다. 정부 지원 사업으로 진행되는 이번 메타버스 프로젝트를 통해 코딩의 최신 트렌드를 학습하고 이를 바탕으로 4차 산업시대의 주역이 될 수 있는 기회가 되기를 바랍니다.",
+    "image": "meta_1.jpg"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project MU",
+    "client": "식민지역사박물관, 용산 전쟁기념관",
+    "deliverables": null,
+    "duration": "2023 Summer - Fall",
+    "description": "식민지 역사 박물관은 일제 강점기 시대에 행해진 일제의 만행과, 친일파들의 좌상, 투쟁에 역사에 관한 전시를 진행하고 있습니다. 전시에 관련된 국내외 홍보와 일본의 군함도 유네스코 등재와 관련하여 전쟁기념관 열리는 기획 전시에 인턴으로 참여하며, 박물관 전용 모바일 앱을 개발합니다.",
+    "image": "mu_1.png"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project CUBS",
+    "client": "myKstar (In collaboration with Columbia University 292 Consulting Team)",
+    "deliverables": {
+      "name": "The Project CUBS Overview",
+      "url": "https://projectcubsoverview.netlify.app/"
+    },
+    "duration": "2023 Spring",
+    "description": "본 프로젝트는 MyKstar를 위한 창의적인 언어 학습 플랫폼 개발을 목표로 합니다. 개발 과정에서 학생들은 컬럼비아 대학교 대학원의 292 컨설팅 팀 멘토들과 협업하여 다양한 언어 학습 플랫폼을 분석하고, 사용자 편의를 위한 기능과 디자인, 엔터테인먼트 요소 등을 접목하여 효과적인 언어 학습을 도울 수 있도록 합니다. 또한, 완성된 플랫폼의 다양한 마케팅 전략을 계획 및 적용하여 투자 유치를 위한 사업 계획을 수립합니다.",
+    "image": "cubs4.png"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project Eco8",
+    "client": "제주특별자치도지속가능발전협의회",
+    "deliverables": {
+      "name": "The Project Eco8 Overview",
+      "url": "https://eco8overview.netlify.app/"
+    },
+    "duration": "2023 Spring",
+    "description": "Project Eco8은 제주특별자치도지속가능발전협의회의 제주 바람 지도를 디지털화하여 지도의 보급률을 높이고, 데이터 사이언스를 활용한 맞춤 데이터 제공으로 친환경 업체의 참여도를 제고할 수 있습니다. 프로젝트에 참여하는 학생들은 코딩을 통해 제주도의 환경 개선에 실질적인 도움을 줄 수 있으며, 앱의 영어 버전 제작으로 제주도를 방문하는 외국인에게도 친환경 활동을 독려할 수 있습니다.",
+    "image": "eco8-2.jpg"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "The NFT Project",
+    "client": "사단법인 나비야사랑해",
+    "deliverables": {
+      "name": "The NFT Project Overview",
+      "url": "https://www.givingcatsnft.com/"
+    },
+    "duration": "2022 Summer",
+    "description": "NFT 프로젝트는 학생들이 직접 디자인한 5000개의 NFT 아트 자산을 실제 OpenSea 마켓에 등록하고, 설문조사를 기반으로 한 마케팅 활동과 홍보, 판매 활동까지 진행하였습니다. 블록체인, 웹 개발, 디자인, 경영 분야에 관심이 있는 학생들이 NFT 자산의 민팅을 통해 블록체인의 생태계와 NFT 시장에 대한 지식을 습득하였으며, 판매 수익 전액을 유기묘 보호소에 기부할 수 있었습니다.",
+    "image": "nft.webp"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project Planet Plus",
+    "client": "대한적십자사, 사단법인 더프라미스(국제개발구호단체)",
+    "deliverables": {
+      "name": "The Project Planet Plus Overview",
+      "url": "https://planet-plus.netlify.app/"
+    },
+    "duration": "2022 Summer",
+    "description": "대한적십자사와 더프라미스사가 재난 대응 교육을 목적으로 개발한 보드게임을 디지털화하였습니다. 세계 권역별로 빈도수가 높은 재난에 맞춤 교육을 할 수 있도록 게임 내 재난 카드를 다양하게 제작하였으며, 학생들이 개발한 디지털 버전의 보드게임은 UN 주최로 개최된 APMCDRR 2022에서 대한적십자사에 의해 발표되었습니다. 현재 디지털화된 보드게임은 APAC 지역의 다양한 국가를 비롯하여 전 세계 어린이들이 사용할 수 있도록 제공되고 있습니다.",
+    "image": "2.06.jpg"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project ZETA",
+    "client": "Hygiene Heroes at UC Berkeley",
+    "deliverables": {
+      "name": "The Project ZETA Overview",
+      "url": "https://hygieneheroes-zeta.netlify.app/"
+    },
+    "duration": "2022 Spring",
+    "description": "UC 버클리에 위치한 Hygiene Heroes 연구소는 HAAS 경영 대학원의 교수님을 주축으로 개발도상국에서 발생하는 질병들을 예방하기 위한 활동을 합니다. 세균성 질병 및 수인성 질병을 감소시키기 위해 손 씻기 활동을 장려할 수 있는 디지털 교육 자료 제작과 올바른 손 씻기 활동을 도와주는 디스펜서 개발, 마스크 디텍터 프로그램을 제작하여 전달하였으며, 백신 접종을 저해하는 요인 분석 및 경구용 수액의 효율적인 배급 방향 등을 연구하여 Hygiene Heroes의 프로그램들을 개선하는데 공헌하였습니다.",
+    "image": "zeta3.png"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "Project 3Sigma",
+    "client": "The Primate Portal at Carnegie Mellon University",
+    "deliverables": {
+      "name": "The Project 3Sigma Overview",
+      "url": "https://www.theprimateportal.org/resources"
+    },
+    "duration": "2021 Fall",
+    "description": "카네기 멜론 대학교와 로체스터 공대의 합작 연구소인 The Primate Portal에서 활용될 수 있는 소프트웨어 및 하드웨어 등을 개발하였습니다. 인지심리학을 기반으로 한 논문 작성과 유인원과 5-6세 아동들의 인지 능력을 비교할 수 있는 게임 제작, 얼굴 인식 모듈, 보상을 위한 로보틱스 기기, 웹페이지용 아트 워크 제작 등으로 연구 활동에 기여하였으며 연구의 효율성 역시 증진시킬 수 있었습니다.",
+    "image": "3sigma1.gif"
+  },
+  {
+    "category": "COMPLETED",
+    "name": "The Capstone Project",
+    "client": "㈜제일기획(삼성그룹 계열 종합 광고대행사)",
+    "deliverables": null,
+    "duration": "2021",
+    "description": "삼성의 자회사이자 대한민국 최대 규모의 광고 대행사인 삼성 제일기획과 협력하여 기업 내부에서 활용될 플랫폼의 베타 버전을 개발하였습니다. 이 플랫폼은 분산된 데이터를 중앙 집중화하여 업무 효율성을 높이고 의사소통을 용이하게 하는 것을 목적으로 하였습니다.",
+    "image": "char.png"
+  }
+]
