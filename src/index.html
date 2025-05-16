@@ -221,11 +221,21 @@
 
     <main class="relative overflow-x-clip">
       <!-- Hero Section -->
-      <div class="inset-x-0 h-screen">
-        <img
-          src="assets/img/hero.jpg"
-          alt="Hero Image"
-          class="size-full object-cover object-center" />
+      <div class="inset-x-0 h-screen relative">
+        <div class="size-full">
+          <video
+            id="hero"
+            src="assets/img/logn2.mov"
+            class="size-full object-cover"
+            autoplay
+            muted
+            loop
+          />
+        </div>
+        <button data-video-target="hero" class="do-toggle-play absolute left-6 bottom-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 shadow-lg backdrop-blur-sm text-zinc-800 hover:bg-flamingo-500 hover:text-white cursor-pointer transition">
+          <span class="sr-only">play/pause video</span>
+          <span class="text-xl heroicons--play-pause"></span>
+        </button>
       </div>
 
       <!-- Featured Media Section -->

@@ -63,6 +63,37 @@ Object.entries(LINKS).forEach(([name, url]) => {
 
 //////////////////////////////////////
 //////////////////////////////////////
+//// Home Page
+document.querySelectorAll('.do-toggle-play').forEach((btn) => {
+  const target = btn.getAttribute('data-video-target');
+  if (!target) {
+    console.error('No data-video-target attribute');
+    return;
+  }
+
+  const $video = document.getElementById(target);
+  if (!$video) {
+    console.error(`No video element found with id="${target}"`);
+    return;
+  }
+  if ($video.tagName !== 'VIDEO') {
+    console.error('Element is not HTMLVideoElement');
+    return;
+  }
+
+  btn.addEventListener('click', () => {
+    if ($video.paused) {
+      $video.play();
+    } else {
+      $video.pause();
+    }
+  })
+})
+
+
+
+//////////////////////////////////////
+//////////////////////////////////////
 //// About Page
 const $mentorsList = document.getElementById('mentors-list');
 const $instructorsList = document.getElementById('instructors-list');
