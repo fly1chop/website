@@ -2,22 +2,29 @@
 const fs = require('fs');
 const path = require('path');
 
+const teamDir = path.resolve(__dirname, '../src/assets/img/team');
 const capstoneDir = path.resolve(__dirname, '../src/assets/img/capstone');
-const outFile    = path.resolve(__dirname, '../src/assets/js/imageMap.js');
+const outFile = path.resolve(__dirname, '../src/assets/js/imageMap.js');
 
-const files = fs.readdirSync(capstoneDir)
-  .filter(f => /\.(png|jpe?g|webp|gif)$/.test(f));
+const teamFiles = fs.readdirSync(teamDir).filter((f) => /\.(png|jpe?g|webp)$/.test(f));
 
-const entries = files.map((f, i) =>
-  `  '${f}': new URL('../img/capstone/${f}', import.meta.url),`
-).join('\n');
+const capstoneFiles = fs.readdirSync(capstoneDir).filter((f) => /\.(png|jpe?g|webp|gif)$/.test(f));
+
+const teamEntries = teamFiles
+  .map((f) => `  '${f}': new URL('../img/team/${f}', import.meta.url),`)
+  .join('\n');
+
+const capstoneEntries = capstoneFiles
+  .map((f) => `  '${f}': new URL('../img/capstone/${f}', import.meta.url),`)
+  .join('\n');
 
 const content = `
 
 export const imageMap = {
-${entries}
+${teamEntries}
+${capstoneEntries}
 };
 `.trim();
 
 fs.writeFileSync(outFile, content);
-console.log('✅ imageMap.js generated with', files.length, 'entries');
+console.log('✅ imageMap.js generated with', teamFiles.length + capstoneFiles.length, 'entries');

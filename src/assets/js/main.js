@@ -4,7 +4,7 @@ import { LINKS } from '../lib/constants';
 import team from '../lib/team.json';
 import news from '../lib/news.json';
 import capstone from '../lib/capstone.json';
-import {imageMap} from './imageMap';
+import { imageMap } from './imageMap';
 
 window.addEventListener('load', () => {
   showCurrentTab();
@@ -87,10 +87,8 @@ document.querySelectorAll('.do-toggle-play').forEach((btn) => {
     } else {
       $video.pause();
     }
-  })
-})
-
-
+  });
+});
 
 //////////////////////////////////////
 //////////////////////////////////////
@@ -105,9 +103,9 @@ const instructorsHtml = team.instructors
     (item) => `
   <div class="bg-zinc-50 shadow-lg overflow-hidden rounded-xs">
     <img
-      src="${new URL('../img/team.jpg', import.meta.url)}"
+      src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
       alt="${item.name}"
-      class="aspect-square w-full" />
+      class="aspect-square w-full object-cover object-top" />
     <div class="flex flex-col gap-2 p-4 text-sm">
       <p class="text-base font-medium">${item.name}</p>
       <p>${item.field.join()}</p>
@@ -188,7 +186,7 @@ const $capstoneCompletedList = document.getElementById('capstone-completed-list'
 const ongoingHtml = capstone
   .filter((p) => p.category === 'ONGOING')
   .map((p) => {
-  return `
+    return `
   <div
     class="flex flex-col justify-between gap-x-2 rounded-xs bg-white shadow-sm md:flex-row">
     <div class="flex flex-1 flex-col gap-2 p-8">
@@ -207,7 +205,7 @@ const ongoingHtml = capstone
       <img
         src="${imageMap[p.image]}"
         alt="${p.name}"
-        class="h-full object-cover" />
+        class="h-full object-cover object-left" />
     </div>
   </div>
 `;
@@ -215,9 +213,10 @@ const ongoingHtml = capstone
   .join('');
 $capstoneOngoingList.innerHTML = ongoingHtml;
 
-const completedHtml = capstone.filter(p => p.category === 'COMPLETED')
-.map(p => {
-  return `
+const completedHtml = capstone
+  .filter((p) => p.category === 'COMPLETED')
+  .map((p) => {
+    return `
     <div
       data-carousel-item
       class="lg:px-8 hidden h-full overflow-hidden duration-300 ease-in-out">
@@ -225,11 +224,15 @@ const completedHtml = capstone.filter(p => p.category === 'COMPLETED')
         <div class="flex flex-col gap-2 p-8 flex-2/3">
           <h3 class="text-3xl font-semibold">${p.name}</h3>
           <p class="font-medium">Client: ${p.client}</p>
-          ${p.deliverables ? `
+          ${
+            p.deliverables
+              ? `
             <div>
             <a href="${p.deliverables.url}" target="_blank" class="hover-transition border-zinc-800 text-flamingo-500 hover:text-flamingo-400 text-sm font-medium border-b">${p.deliverables.name}</a>
             </div>
-            ` : ''}
+            `
+              : ''
+          }
           <p class="mt-4 text-sm italic text-zinc-600">Duration: ${p.duration}</p>
           <div class="flex gap-2">
             <span
@@ -254,6 +257,7 @@ const completedHtml = capstone.filter(p => p.category === 'COMPLETED')
         </div>
       </div>
     </div>
-  `
-}).join('');
+  `;
+  })
+  .join('');
 $capstoneCompletedList.innerHTML = completedHtml;

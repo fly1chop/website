@@ -57,6 +57,13 @@
   .btn:hover {
     background-color: var(--color-flamingo-400);
     color: var(--color-zinc-800);
+    @apply shadow-lg;
+  }
+  .btn span[class*='heroicons--'] {
+    @apply transition duration-300 ease-in-out;
+  }
+  .btn:hover span[class*='heroicons--'] {
+    @apply translate-x-1;
   }
   .btn.white {
     color: var(--color-white);

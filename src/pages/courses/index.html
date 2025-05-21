@@ -89,13 +89,13 @@
               Capstone
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a
               href="/pages/personal-project"
               class="hover-transition text-white hover:text-zinc-400">
               Personal Project
             </a>
-          </li>
+          </li> -->
         </ul>
         <a href="#" class="link--blog btn hidden md:flex">
           <span>Blog</span>
@@ -225,9 +225,7 @@
       <div class="mx-auto mt-12 max-w-screen-xl px-4 md:mt-28 lg:px-12">
         <div class="flex flex-col gap-x-5 gap-y-5 sm:flex-row sm:justify-between">
           <div>
-            <h2 class="text-3xl font-bold whitespace-nowrap sm:text-4xl lg:text-5xl">
-              Courses
-            </h2>
+            <h2 class="text-3xl font-bold whitespace-nowrap sm:text-4xl lg:text-5xl">Courses</h2>
             <hr class="text-flamingo-500 my-3 h-1 w-32 sm:my-6" />
             <!-- <p>문과 / 이과 / 예체능 융합 EC 토탈 솔루션 프로그램</p> -->
           </div>
@@ -241,205 +239,429 @@
         </div>
         <div class="relative mx-auto w-full">
           <div class="border-b border-neutral-300/60">
-            <ul class="flex flex-wrap -mb-px font-medium text-center" data-tabs-active-classes="text-flamingo-500 bg-flamingo-100/70" data-tabs-inactive-classes="text-zinc-500 hover:text-zinc-600 transition hover:border-neutral-300 hover:bg-zinc-200/50 border-transparent" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 cursor-pointer border-b rounded-t-xs" id="robotics-tab" data-tabs-target="#robotics" type="button" role="tab" aria-controls="robotics" aria-selected="false">로보틱스 과정</button>
-                </li>
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 cursor-pointer border-b rounded-t-xs" id="competition-tab" data-tabs-target="#competition" type="button" role="tab" aria-controls="competition" aria-selected="false">대회준비반</button>
-                </li>
-                <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 cursor-pointer border-b rounded-t-xs" id="coding-3-tab" data-tabs-target="#coding-3" type="button" role="tab" aria-controls="coding-3" aria-selected="false">코딩 개념 (3주 과정)</button>
-                </li>
-                <li role="presentation">
-                    <button class="inline-block p-4 cursor-pointer border-b rounded-t-xs" id="coding-4-tab" data-tabs-target="#coding-4" type="button" role="tab" aria-controls="coding-4" aria-selected="false">코딩 개념 (4주 과정)</button>
-                </li>
-                <li role="presentation">
-                    <button class="inline-block p-4 cursor-pointer border-b rounded-t-xs" id="coding-1-tab" data-tabs-target="#coding-1" type="button" role="tab" aria-controls="coding-1" aria-selected="false">코딩 개념 (주 1회)</button>
-                </li>
+            <ul
+              class="-mb-px flex flex-wrap text-center font-medium"
+              data-tabs-active-classes="text-flamingo-500 bg-flamingo-100/70"
+              data-tabs-inactive-classes="text-zinc-500 hover:text-zinc-600 transition hover:border-neutral-300 hover:bg-zinc-200/50 border-transparent"
+              id="default-tab"
+              data-tabs-toggle="#default-tab-content"
+              role="tablist">
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-4"
+                  id="robotics-tab"
+                  data-tabs-target="#robotics"
+                  type="button"
+                  role="tab"
+                  aria-controls="robotics"
+                  aria-selected="false">
+                  로보틱스 과정
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-4"
+                  id="competition-tab"
+                  data-tabs-target="#competition"
+                  type="button"
+                  role="tab"
+                  aria-controls="competition"
+                  aria-selected="false">
+                  대회준비반
+                </button>
+              </li>
+              <li class="me-2" role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-4"
+                  id="coding-3-tab"
+                  data-tabs-target="#coding-3"
+                  type="button"
+                  role="tab"
+                  aria-controls="coding-3"
+                  aria-selected="false">
+                  코딩 개념 (3주 과정)
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-4"
+                  id="coding-4-tab"
+                  data-tabs-target="#coding-4"
+                  type="button"
+                  role="tab"
+                  aria-controls="coding-4"
+                  aria-selected="false">
+                  코딩 개념 (4주 과정)
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-4"
+                  id="coding-1-tab"
+                  data-tabs-target="#coding-1"
+                  type="button"
+                  role="tab"
+                  aria-controls="coding-1"
+                  aria-selected="false">
+                  코딩 개념 (주 1회)
+                </button>
+              </li>
             </ul>
-        </div>
-        <div id="default-tab-content"">
+          </div>
+          <div id="default-tab-content">
             <!-- 로보틱스 과정 -->
-            <div class="hidden rounded-xs mt-6 space-y-6 overflow-hidden w-full" id="robotics" role="tabpanel" aria-labelledby="robotics-tab">
+            <div
+              class="mt-6 hidden w-full space-y-6 overflow-hidden rounded-xs"
+              id="robotics"
+              role="tabpanel"
+              aria-labelledby="robotics-tab">
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject (2주 과정)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        Subject (2주 과정)
+                      </th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간 (주 4회)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        수업시간 (주 4회)
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Vex IQ</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G1 - G9</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월~목 오전 10~12, 오후 2~4</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Vex IQ
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G1 - G9</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월~목 오전 10~12, 오후 2~4
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Vex V5</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G7 - G11</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월~목 오후 2~4, 저녁 7~9</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Vex V5
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G7 - G11</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월~목 오후 2~4, 저녁 7~9
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Makers</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">ALL G</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월~목 오전 10~12, 저녁 7~9</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Makers
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">ALL G</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월~목 오전 10~12, 저녁 7~9
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject (4주 과정)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        Subject (4주 과정)
+                      </th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간 (주 2회)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        수업시간 (주 2회)
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Vex IQ</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G1 - G9</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수, 화/목 <br/>오전 10~12, 오후 2~4</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Vex IQ
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G1 - G9</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수, 화/목
+                        <br />
+                        오전 10~12, 오후 2~4
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Vex V5</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G7 - G11</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수, 화/목<br/>오후 2~4, 저녁 7~9</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Vex V5
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G7 - G11</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수, 화/목
+                        <br />
+                        오후 2~4, 저녁 7~9
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Vex IQ / Vex V5</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G1~G9 (IQ)<br/>
-                        G7~G11 (V5)</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">토/일 저녁 6~8</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Vex IQ / Vex V5
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        G1~G9 (IQ)
+                        <br />
+                        G7~G11 (V5)
+                      </td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        토/일 저녁 6~8
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th rowspan="2" scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Makers</th>
-                      <td rowspan="2" class="px-6 py-5 text-nowrap border border-neutral-300/60">ALL G</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수, 화/목<br/>
-                        오전 10~12 / 저녁 7~9</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        rowspan="2"
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Makers
+                      </th>
+                      <td rowspan="2" class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        ALL G
+                      </td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수, 화/목
+                        <br />
+                        오전 10~12 / 저녁 7~9
+                      </td>
                     </tr>
                     <tr class="bg-zinc-50">
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">토/일 오전 10~12</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        토/일 오전 10~12
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-                <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+              <div class="overflow-x-auto">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject (6주 과정)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        Subject (6주 과정)
+                      </th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간 (주 1회)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        수업시간 (주 1회)
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">CAD / 3D 디자인</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">ALL G</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">금요일<br/>
-                        오전 10~1, 오후 4~7</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        CAD / 3D 디자인
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">ALL G</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        금요일
+                        <br />
+                        오전 10~1, 오후 4~7
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-
             <!-- 대회준비반 tab -->
-            <div class="hidden rounded-xs mt-6 space-y-6" id="competition" role="tabpanel" aria-labelledby="competition-tab">
+            <div
+              class="mt-6 hidden space-y-6 rounded-xs"
+              id="competition"
+              role="tabpanel"
+              aria-labelledby="competition-tab">
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject</th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간 (주 2회)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        수업시간 (주 2회)
+                      </th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">스크래치 올림피아드</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G1 ~ G4</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 오후 4~6</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        스크래치 올림피아드
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G1 ~ G4</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 오후 4~6
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">ACSL Elementary</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G4 ~ G6</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수 오후 4~6</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        ACSL Elementary
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G4 ~ G6</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수 오후 4~6
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">ACSL Jr.</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G6 ~ G8</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 오후 4~6<br/>토/일 오후 3~5</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        ACSL Jr.
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G6 ~ G8</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 오후 4~6
+                        <br />
+                        토/일 오후 3~5
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">ACSL Inter / Sr.</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G9 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 저녁 7~9<br/>토/일 오후 10~12</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        ACSL Inter / Sr.
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G9 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 저녁 7~9
+                        <br />
+                        토/일 오후 10~12
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">ILO (International Logic Olympiad)</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G8 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수 저녁 7~9<br/>토/일 오후 1~3<br/>토 오후 4~7 (주 1회)</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        ILO (International Logic Olympiad)
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G8 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수 저녁 7~9
+                        <br />
+                        토/일 오후 1~3
+                        <br />
+                        토 오후 4~7 (주 1회)
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">USACO</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">레벨테스트 필요</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수 저녁 7~9<br/>토/일 오전 10~12</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        USACO
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        레벨테스트 필요
+                      </td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수 저녁 7~9
+                        <br />
+                        토/일 오전 10~12
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
                         <p>유펜 와튼(Wharton) Data Science</p>
                         <p>Technovation Girls (테크노베이션)</p>
                         <p>KSEF / ISEF</p>
                       </th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60"></td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60 text-red-600">*개별상담<br/>이 외 대회는 학원으로 문의 바랍니다.</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap"></td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap text-red-600">
+                        *개별상담
+                        <br />
+                        이 외 대회는 학원으로 문의 바랍니다.
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-
             <!-- 코딩 개념 (3주)) -->
-            <div class="hidden rounded-xs mt-6 space-y-6" id="coding-3" role="tabpanel" aria-labelledby="coding-3-tab">
+            <div
+              class="mt-6 hidden space-y-6 rounded-xs"
+              id="coding-3"
+              role="tabpanel"
+              aria-labelledby="coding-3-tab">
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject (3주 과정)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        Subject (3주 과정)
+                      </th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간</th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">파이썬 A1</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G5 ~ G12</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수/금 오전 10~12<br/>월/수 저녁 7~10<br/>토/일 오후 1~4</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        파이썬 A1
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G5 ~ G12</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수/금 오전 10~12
+                        <br />
+                        월/수 저녁 7~10
+                        <br />
+                        토/일 오후 1~4
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">AP CS A</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G9 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 저녁 7~10<br/>토/일 오후 4~7</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        AP CS A
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G9 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 저녁 7~10
+                        <br />
+                        토/일 오후 4~7
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Java</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G7 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 저녁 7~10<br/>토/일 오후 4~7</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Java
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G7 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 저녁 7~10
+                        <br />
+                        토/일 오후 4~7
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">(AI입문) Data Science</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G9 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">토/일 오전 10~1</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        (AI입문) Data Science
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G9 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        토/일 오전 10~1
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -447,41 +669,77 @@
             </div>
 
             <!-- 코딩 개념 (4주)) -->
-            <div class="hidden rounded-xs mt-6 space-y-6" id="coding-4" role="tabpanel" aria-labelledby="coding-4-tab">
+            <div
+              class="mt-6 hidden space-y-6 rounded-xs"
+              id="coding-4"
+              role="tabpanel"
+              aria-labelledby="coding-4-tab">
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
-                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject (4주 과정)</th>
+                      <th scope="col" class="border border-neutral-300/60 px-6 py-5">
+                        Subject (4주 과정)
+                      </th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Grade</th>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">수업시간</th>
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">파이썬 Jr.</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G4 ~ G6</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 오후 4~6</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        파이썬 Jr.
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G4 ~ G6</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 오후 4~6
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">파이썬 A1</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G5 ~ G12</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수 오후 4~6, 토/일 오후 4~6</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        파이썬 A1
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G5 ~ G12</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수 오후 4~6, 토/일 오후 4~6
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">MIT 앱 인벤터 (게임 개발)</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G4 ~ G6</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">오후 2~4 / 저녁 7~9</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        MIT 앱 인벤터 (게임 개발)
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G4 ~ G6</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        오후 2~4 / 저녁 7~9
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">(AI입문) Data Science</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G9 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">화/목 저녁 7~9, 토/일 오후 4~6</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        (AI입문) Data Science
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G9 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        화/목 저녁 7~9, 토/일 오후 4~6
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">C++</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G7 ~</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">월/수 저녁 7~9, 토/일 오전 10~12</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        C++
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G7 ~</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        월/수 저녁 7~9, 토/일 오전 10~12
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -489,9 +747,13 @@
             </div>
 
             <!-- 코딩 개념 (주1회)) -->
-            <div class="hidden rounded-xs mt-6 space-y-6" id="coding-1" role="tabpanel" aria-labelledby="coding-1-tab">
+            <div
+              class="mt-6 hidden space-y-6 rounded-xs"
+              id="coding-1"
+              role="tabpanel"
+              aria-labelledby="coding-1-tab">
               <div class="overflow-x-auto">
-                <table class="border-collapse bg-zinc-50 rounded-xs text-center w-full text-lg">
+                <table class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
                     <tr>
                       <th scope="col" class="border border-neutral-300/60 px-6 py-5">Subject</th>
@@ -500,58 +762,67 @@
                     </tr>
                   </thead>
                   <tbody class="border border-neutral-300/60">
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">개인 포트폴리오 웹개발</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G5 ~ G11	</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">토/오전 11~1 (8주 과정)</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        개인 포트폴리오 웹개발
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G5 ~ G11</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        토/오전 11~1 (8주 과정)
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">프롬프트 엔지니어링<br/>(GPT 활용)</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G5 ~ G11</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">일/오전 11~1 (6주 과정)</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        프롬프트 엔지니어링
+                        <br />
+                        (GPT 활용)
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G5 ~ G11</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        일/오전 11~1 (6주 과정)
+                      </td>
                     </tr>
-                    <tr class="even:bg-zinc-50 odd:bg-white">
-                      <th scope="row" class="px-6 py-5 font-medium text-nowrap border border-neutral-300/60">Unity 게임 개발</th>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">G6 ~ G9</td>
-                      <td class="px-6 py-5 text-nowrap border border-neutral-300/60">토/오후 1~4 (8주 과정)</td>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-6 py-5 font-medium text-nowrap">
+                        Unity 게임 개발
+                      </th>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">G6 ~ G9</td>
+                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap">
+                        토/오후 1~4 (8주 과정)
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- floating buttons group -->
-    <div class="fixed bottom-6 right-6 flex flex-col items-end space-y-2 group z-50">
+    <div class="group fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-2">
       <!-- extra buttons: social + phone -->
       <div
-        class="flex flex-col items-end space-y-2
-              opacity-100 md:opacity-0
-              pointer-events-auto md:pointer-events-none
-              md:group-hover:opacity-100 md:group-hover:pointer-events-auto
-              transition-opacity duration-200">
+        class="pointer-events-auto flex flex-col items-end space-y-2 opacity-100 transition-opacity duration-200 md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100">
         <!-- social channel -->
         <a
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          class="link--kakao inline-flex h-12 w-12 overflow-hidden items-center justify-center
-                rounded-full shadow-lg transition">
-          <img 
-            src="../../assets/img/kakao.png"
-            class="size-full object-cover"
-          />
+          class="link--kakao inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full shadow-lg transition">
+          <img src="../../assets/img/kakao.png" class="size-full object-cover" />
         </a>
         <!-- phone call -->
         <a
           href="tel:+821012345678"
-          class="inline-flex h-12 w-12 items-center justify-center
-                rounded-full bg-white shadow-lg text-zinc-950
-                hover:bg-flamingo-500 hover:text-white
-                transition">
+          class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
           <span class="heroicons--phone"></span>
         </a>
       </div>
@@ -559,14 +830,10 @@
       <!-- go-to-top -->
       <button
         id="goToTopBtn"
-        class="inline-flex h-12 w-12 items-center justify-center
-              rounded-full bg-white shadow-lg text-zinc-950
-              hover:bg-flamingo-500 hover:text-white
-              transition">
+        class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
         <span class="heroicons--arrow-long-up"></span>
       </button>
     </div>
-
 
     <footer
       class="relative w-full bg-zinc-950 bg-cover bg-center bg-no-repeat px-6 py-8 text-xs text-white sm:text-base lg:px-12">
@@ -578,11 +845,16 @@
               alt="LognCoding Logo"
               class="h-auto w-16 object-cover sm:w-24" />
           </div>
-          <p class="flex flex-col gap-2 text-sm">
-            <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
-            <span>대표번호: +82-2-540-1628</span>
-            <span>학원 등록번호: 제14243호</span>
-          </p>
+          <div class="flex flex-col gap-2 text-sm">
+            <a
+              href="https://drive.google.com/file/d/14K3wzsrLeD9JiPlnt8zwVPoF1eewNLvI/view"
+              target="_blank">
+              교습비 링크연결
+            </a>
+            <p>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</p>
+            <p>대표번호: +82-2-540-1628</p>
+            <p>학원 등록번호: 제14243호</p>
+          </div>
         </div>
         <div class="flex flex-col justify-between gap-y-12 sm:flex-row">
           <div class="flex flex-col gap-6">
