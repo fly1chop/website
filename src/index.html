@@ -221,20 +221,21 @@
 
     <main class="relative overflow-x-clip">
       <!-- Hero Section -->
-      <div class="inset-x-0 h-screen relative">
+      <div class="relative inset-x-0 h-screen">
         <div class="size-full">
           <video
             id="hero"
-            src="assets/img/logn2.mov"
+            src="assets/img/logn1.mp4"
             class="size-full object-cover"
             autoplay
             muted
-            loop
-          />
+            loop />
         </div>
-        <button data-video-target="hero" class="do-toggle-play absolute left-6 bottom-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 shadow-lg backdrop-blur-sm text-zinc-800 hover:bg-flamingo-500 hover:text-white cursor-pointer transition">
+        <button
+          data-video-target="hero"
+          class="do-toggle-play hover:bg-flamingo-500 absolute bottom-6 left-6 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white/20 text-zinc-800 shadow-lg backdrop-blur-sm transition hover:text-white">
           <span class="sr-only">play/pause video</span>
-          <span class="text-xl heroicons--play-pause"></span>
+          <span class="heroicons--play-pause text-xl"></span>
         </button>
       </div>
 
@@ -666,33 +667,22 @@
     </div>
 
     <!-- floating buttons group -->
-    <div class="fixed bottom-6 right-6 flex flex-col items-end space-y-2 group z-50">
+    <div class="group fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-2">
       <!-- extra buttons: social + phone -->
       <div
-        class="flex flex-col items-end space-y-2
-              opacity-100 md:opacity-0
-              pointer-events-auto md:pointer-events-none
-              md:group-hover:opacity-100 md:group-hover:pointer-events-auto
-              transition-opacity duration-200">
+        class="pointer-events-auto flex flex-col items-end space-y-2 opacity-100 transition-opacity duration-200 md:pointer-events-none md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:opacity-100">
         <!-- social channel -->
         <a
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          class="link--kakao inline-flex h-12 w-12 overflow-hidden items-center justify-center
-                rounded-full shadow-lg transition">
-          <img 
-            src="assets/img/kakao.png"
-            class="size-full object-cover"
-          />
+          class="link--kakao inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full shadow-lg transition">
+          <img src="assets/img/kakao.png" class="size-full object-cover" />
         </a>
         <!-- phone call -->
         <a
           href="tel:+821012345678"
-          class="inline-flex h-12 w-12 items-center justify-center
-                rounded-full bg-white shadow-lg text-zinc-950
-                hover:bg-flamingo-500 hover:text-white
-                transition">
+          class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
           <span class="heroicons--phone"></span>
         </a>
       </div>
@@ -700,10 +690,7 @@
       <!-- go-to-top -->
       <button
         id="goToTopBtn"
-        class="inline-flex h-12 w-12 items-center justify-center
-              rounded-full bg-white shadow-lg text-zinc-950
-              hover:bg-flamingo-500 hover:text-white
-              transition">
+        class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
         <span class="heroicons--arrow-long-up"></span>
       </button>
     </div>
