@@ -215,7 +215,7 @@ const ongoingHtml = capstone
       <img
         src="${imageMap[p.image]}"
         alt="${p.name}"
-        class="h-full object-cover object-left" />
+        class="h-auto sm:h-full object-cover object-left" />
     </div>
   </div>
 `;
@@ -262,7 +262,7 @@ const completedHtml = capstone
           <img 
             src="${imageMap[p.image]}"
             alt="${p.name}"
-            class="h-full object-cover flex-1/3" />
+            class="h-auto sm:h-full object-cover" />
 
         </div>
       </div>
