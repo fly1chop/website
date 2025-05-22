@@ -17,8 +17,10 @@
   </head>
   <body>
     <header
-      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
-      <nav class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
+      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-0 sm:pb-28">
+      <nav
+        id="header-nav"
+        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
         <a href="/" class="w-16">
           <img class="logo" src="../../assets/img/logo_en.png" alt="" />
         </a>
@@ -121,7 +123,7 @@
               id="accordion-about-button"
               data-accordion-target="#accordion-about"
               data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               <span>About</span>
               <span
                 data-accordion-icon
@@ -135,21 +137,21 @@
                 <li>
                   <a
                     href="/pages/about"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     About Us
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#team"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Team
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#news"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     News
                   </a>
                 </li>
@@ -157,7 +159,9 @@
             </div>
           </li>
           <li>
-            <a href="/pages/courses" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/courses"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Courses
             </a>
           </li>
@@ -167,7 +171,7 @@
               id="accordion-courses-button"
               data-accordion-target="#accordion-courses"
               data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               <span>Courses</span>
               <span
                 data-accordion-icon
@@ -181,21 +185,21 @@
                 <li>
                   <a
                     href="/pages/courses#fundamental"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Fundamental Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#competition"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Competition Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#project"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Project Track
                   </a>
                 </li>
@@ -203,14 +207,16 @@
             </div>
           </li> -->
           <li>
-            <a href="/pages/capstone" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/capstone"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Capstone
             </a>
           </li>
           <!-- <li>
             <a
               href="/pages/personal-project"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Personal Project
             </a>
           </li> -->
@@ -228,7 +234,7 @@
 
     <main class="relative min-h-[calc(100vh-188px)]">
       <div
-        class="flex h-40 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
+        class="flex h-16 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat sm:h-40"></div>
       <div class="border-in sticky top-0 z-10 w-full border-b border-neutral-300/60 bg-white">
         <ul
           id="tab-menu--about"
@@ -339,19 +345,17 @@
           <div
             class="mx-auto flex max-w-screen-xl flex-col items-center px-4 py-24 md:my-24 lg:px-12">
             <p
-              class="text-center text-2xl leading-relaxed font-semibold sm:px-12 sm:text-3xl lg:text-4xl">
+              class="text-center text-2xl leading-relaxed font-semibold break-keep sm:px-12 sm:text-3xl lg:text-4xl">
               로그엔코딩만의 독보적인
               <span class="text-flamingo-500">퀄리티</span>
               , 직접 경험해보세요!
             </p>
             <div
-              class="mt-10 flex w-full justify-center -space-x-28 bg-[url('../../assets/img/venn_diagram.png')] bg-contain bg-center bg-no-repeat md:mt-24 md:mb-16">
-              <div class="aspect-square flex-1/3 rounded-full">
+              class="mt-10 flex w-full flex-col items-center justify-center bg-[url('../../assets/img/venn_diagram-vertical.png')] bg-[100%_auto] bg-top bg-no-repeat max-sm:-space-y-[24%] sm:flex-row sm:-space-x-28 sm:bg-[url('../../assets/img/venn_diagram.png')] sm:bg-contain sm:bg-center md:mt-24 md:mb-16">
+              <div class="aspect-square w-full rounded-full sm:flex-1/3">
                 <div
-                  class="flex size-full max-w-[200px] flex-col items-start justify-start gap-4 p-9 pt-14 text-left text-xs break-keep sm:pt-18 md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
-                  <p class="text-base font-medium text-white sm:text-xl lg:text-2xl">
-                    퀄리티의 차이
-                  </p>
+                  class="flex size-full flex-col items-center justify-center gap-4 p-9 text-center break-keep max-sm:pb-18 sm:items-start sm:justify-start sm:pt-18 sm:text-left sm:text-xs md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
+                  <p class="text-2xl font-medium text-white sm:max-lg:text-xl">퀄리티의 차이</p>
                   <p class="text-white">한번에 끝내는 독보적인 퀄리티</p>
                   <p class="text-white">
                     결과물 완성으로 끝나는게 아닌 프로그램 후에도 사용할 수 있는 앱 등 확연히
@@ -359,19 +363,19 @@
                   </p>
                 </div>
               </div>
-              <div class="aspect-square flex-1/3 rounded-full">
+              <div class="aspect-square w-full rounded-full sm:flex-1/3">
                 <div
-                  class="mx-auto flex size-full max-w-[180px] flex-col items-center justify-start gap-4 p-9 pt-14 text-center text-xs sm:pt-18 md:max-w-3xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-xs xl:pt-36 xl:text-base">
-                  <p class="text-base font-medium text-white sm:text-xl lg:text-2xl">EC 로드맵</p>
+                  class="mx-auto flex size-full flex-col items-center justify-center gap-4 p-9 text-center sm:max-w-[180px] sm:justify-start sm:pt-18 sm:text-xs md:max-w-3xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-xs xl:pt-36 xl:text-base">
+                  <p class="text-2xl font-medium text-white sm:max-lg:text-xl">EC 로드맵</p>
                   <p class="text-white">
                     우리 아이에게 맞는 커리큘럼으로 A부터 Z까지 커스텀해서 만들어주는 로드맵
                   </p>
                 </div>
               </div>
-              <div class="aspect-square flex-1/3 rounded-full">
+              <div class="aspect-square w-full rounded-full sm:flex-1/3">
                 <div
-                  class="ml-auto flex size-full max-w-[200px] flex-col items-end justify-start gap-4 p-9 pt-14 text-right text-xs break-keep sm:pt-18 md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
-                  <p class="text-base font-medium sm:text-xl lg:text-2xl">아이비리그 메이커</p>
+                  class="ml-auto flex size-full flex-col items-center justify-center gap-4 p-9 text-center break-keep sm:max-w-[200px] sm:items-end sm:justify-start sm:pt-18 sm:text-right sm:text-xs md:max-w-2xs md:p-12 md:pt-28 md:text-sm lg:gap-8 xl:max-w-sm xl:pt-36 xl:text-base">
+                  <p class="text-2xl font-medium sm:max-lg:text-xl">아이비리그 메이커</p>
                   <p class="">
                     실제 학생들의 합격으로 입증합니다. 광고/마케팅 없이도 입소문으로 이어지는 1%
                     아이비리그 메이커
@@ -602,17 +606,23 @@
         <!-- tab - news -->
         <div id="news" role="tabpanel" aria-labelledby="news-tab" class="hidden">
           <div
-            class="mx-auto mt-12 mb-28 flex max-w-screen-xl flex-col items-center gap-14 px-4 md:mt-28 lg:px-12">
-            <div class="relative w-full overflow-x-auto">
+            class="mx-auto mt-12 mb-28 flex max-w-screen-xl flex-col items-center px-4 md:mt-28 lg:px-12">
+            <h2
+              class="border-flamingo-500 relative mb-14 inline-block border-b pb-6 text-center text-4xl font-black text-nowrap text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:text-zinc-950 after:content-['로그엔코딩_소식'] md:text-5xl">
+              로그엔코딩 소식
+            </h2>
+            <div class="relative w-full overflow-x-hidden sm:overflow-x-auto">
               <table
                 class="w-full border-collapse overflow-hidden rounded-xs text-left rtl:text-right">
                 <thead class="bg-zinc-50 text-sm text-zinc-600">
                   <tr>
                     <th scope="col" class="border border-neutral-300/60 px-4 py-3">Date</th>
-                    <th scope="col" class="border border-r-0 border-neutral-300/60 px-4 py-3">
+                    <th scope="col" class="border border-neutral-300/60 px-4 py-3 sm:border-r-0">
                       Title
                     </th>
-                    <th scope="col" class="border border-l-0 border-neutral-300/60 px-4 py-3">
+                    <th
+                      scope="col"
+                      class="hidden border border-l-0 border-neutral-300/60 px-4 py-3 sm:table-cell">
                       <span class="sr-only">tags</span>
                     </th>
                   </tr>
@@ -643,7 +653,7 @@
         <!-- phone call -->
         <a
           href="tel:+821012345678"
-          class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+          class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
           <span class="heroicons--phone"></span>
         </a>
       </div>
@@ -651,7 +661,7 @@
       <!-- go-to-top -->
       <button
         id="goToTopBtn"
-        class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+        class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
         <span class="heroicons--arrow-long-up"></span>
       </button>
     </div>

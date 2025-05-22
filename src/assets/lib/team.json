@@ -26,7 +26,7 @@
       "name": "Ellie",
       "school": "UC Berkeley",
       "field": ["플스택 개발", "알고리즘", "블록체인"],
-      "image": "",
+      "image": "suhjin.jpg",
       "isShowcase": true
     },
     {
@@ -169,7 +169,7 @@
     },
     {
       "name": "Hayes",
-      "school": "Universit of Waterloo",
+      "school": "University of Waterloo",
       "employment": "Salesforce, TD Bank",
       "field": ["UI/UX", "디자인"],
       "image": ""

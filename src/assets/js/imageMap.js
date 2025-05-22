@@ -1,7 +1,11 @@
 export const imageMap = {
+  'byun-og.jpg': new URL('../img/team/byun-og.jpg', import.meta.url),
   'byun.jpg': new URL('../img/team/byun.jpg', import.meta.url),
+  'jy-og.jpg': new URL('../img/team/jy-og.jpg', import.meta.url),
   'jy.jpg': new URL('../img/team/jy.jpg', import.meta.url),
+  'kijun-og.jpg': new URL('../img/team/kijun-og.jpg', import.meta.url),
   'kijun.jpg': new URL('../img/team/kijun.jpg', import.meta.url),
+  'suhjin.jpg': new URL('../img/team/suhjin.jpg', import.meta.url),
   '2.06.jpg': new URL('../img/capstone/2.06.jpg', import.meta.url),
   '3sigma1.gif': new URL('../img/capstone/3sigma1.gif', import.meta.url),
   'char.png': new URL('../img/capstone/char.png', import.meta.url),

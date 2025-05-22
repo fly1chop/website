@@ -17,8 +17,10 @@
   </head>
   <body>
     <header
-      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
-      <nav class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
+      class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent sm:pb-28">
+      <nav
+        id="header-nav"
+        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
         <a href="/" class="w-16">
           <img class="logo" src="../../assets/img/logo_en.png" alt="" />
         </a>
@@ -135,21 +137,21 @@
                 <li>
                   <a
                     href="/pages/about"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     About Us
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#team"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Team
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#news"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     News
                   </a>
                 </li>
@@ -157,7 +159,9 @@
             </div>
           </li>
           <li>
-            <a href="/pages/courses" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/courses"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Courses
             </a>
           </li>
@@ -167,7 +171,7 @@
               id="accordion-courses-button"
               data-accordion-target="#accordion-courses"
               data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               <span>Courses</span>
               <span
                 data-accordion-icon
@@ -181,21 +185,21 @@
                 <li>
                   <a
                     href="/pages/courses#fundamental"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Fundamental Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#competition"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Competition Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#project"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Project Track
                   </a>
                 </li>
@@ -203,7 +207,9 @@
             </div>
           </li> -->
           <li>
-            <a href="/pages/capstone" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/capstone"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Capstone
             </a>
           </li>
@@ -226,7 +232,7 @@
 
     <main class="relative min-h-[calc(100vh-188px)] overflow-x-clip">
       <div
-        class="h-52 w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat"></div>
+        class="h-16 w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat sm:h-52"></div>
       <div class="mx-auto mt-12 max-w-screen-xl px-4 md:mt-28 lg:px-12">
         <div class="flex flex-col gap-x-5 gap-y-5 sm:flex-row sm:justify-between">
           <div>
@@ -253,7 +259,9 @@
           러닝, 로보틱스, 웹/앱 개발, 비즈니스 등 다양한 분야에서 전문가들의 지도를 받아 세계적인
           기업들에게 실질적인 솔루션을 제공할 수 있는 기회를 제공합니다.
         </p>
-        <div id="capstone-ongoing-list" class="relative mx-auto flex w-full"></div>
+        <div id="capstone-ongoing-list" class="relative mx-auto flex w-full">
+          <!-- insert CAPSTONE ONGOING PROJECTS -->
+        </div>
       </div>
 
       <div
@@ -268,65 +276,29 @@
             class="relative mx-auto aspect-video w-full overflow-hidden lg:w-auto lg:overflow-visible">
             <!--  carousel container -->
             <div id="capstone-completed-list" class="mx-auto h-full">
-              <div
-                data-carousel-item
-                class="hidden h-full overflow-hidden rounded-xs shadow-sm duration-300 ease-in-out lg:mx-8">
-                <div class="flex h-full bg-zinc-50">
-                  <div class="flex flex-2/3 flex-col gap-2 p-8">
-                    <h3 class="text-3xl font-semibold">Project Title 1</h3>
-                    <p class="font-medium">Client: GIST VR (under CMU HCI Institute)</p>
-                    <p class="mt-4 text-sm text-zinc-600 italic">
-                      Duration 2023 Winter - 2024 Spring
-                    </p>
-                    <div class="flex gap-2">
-                      <span
-                        class="rounded-full bg-neutral-400 px-4 py-2 text-xs font-medium text-white uppercase">
-                        application closed
-                      </span>
-                      <span
-                        class="bg-flamingo-500 rounded-full px-4 py-2 text-xs font-medium text-white uppercase">
-                        completed
-                      </span>
-                    </div>
-                    <p class="mt-4 leading-relaxed">
-                      가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서
-                      가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer
-                      Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여
-                      학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여
-                      사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할
-                      수 있는 방법들을 개발하고 연구합니다.
-                    </p>
-                  </div>
-                  <div class="flex-1/3">
-                    <img
-                      src="../../assets/img/media-2.jpg"
-                      alt="capstone project 1"
-                      class="h-full flex-1/3 object-cover" />
-                  </div>
-                </div>
-              </div>
+              <!-- insert CAPSTONE COMPLETED PROJECTS -->
             </div>
             <!-- carousel controls -->
             <button
               type="button"
-              class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none lg:-start-24"
+              class="group absolute start-1 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none sm:start-4 lg:-start-24"
               data-carousel-prev>
               <span
                 class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 lg:block"></span>
               <span
-                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                class="sm:bg-flamingo-500 sm:max-lg:bg-flamingo-500/50 group-active:bg-flamingo-400 group-hover:bg-flamingo-400 max-sm:group-focus:bg-flamingo-500/50 inline-flex size-8 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none sm:size-10">
                 <span class="heroicons--chevron-left"></span>
                 <span class="sr-only">Previous</span>
               </span>
             </button>
             <button
               type="button"
-              class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none lg:-end-24"
+              class="group absolute end-1 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none sm:end-4 lg:-end-24"
               data-carousel-next>
               <span
                 class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 lg:block"></span>
               <span
-                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                class="sm:bg-flamingo-500 sm:max-lg:bg-flamingo-500/50 group-active:bg-flamingo-400 group-hover:bg-flamingo-400 max-sm:group-focus:bg-flamingo-500/50 inline-flex size-8 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none sm:size-10">
                 <span class="heroicons--chevron-right"></span>
                 <span class="sr-only">Next</span>
               </span>
@@ -352,7 +324,7 @@
         <!-- phone call -->
         <a
           href="tel:+821012345678"
-          class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+          class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
           <span class="heroicons--phone"></span>
         </a>
       </div>
@@ -360,7 +332,7 @@
       <!-- go-to-top -->
       <button
         id="goToTopBtn"
-        class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+        class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
         <span class="heroicons--arrow-long-up"></span>
       </button>
     </div>

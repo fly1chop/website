@@ -10,15 +10,15 @@ window.addEventListener('load', () => {
   showCurrentTab();
 });
 
-document.getElementById('goToTopBtn').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+window.addEventListener('hashchange', () => {
+  showCurrentTab();
 });
 
 ///////////////////
 //// Dropdown
 const $mobileNavbarDropdown = document.querySelector('#mobile-navbar-dropdown');
 const $mobileNavbarDropdownButton = document.querySelector('#mobile-navbar-dropdown-button');
-const $nav = document.querySelector('nav');
+const $nav = document.querySelector('nav#header-nav');
 new Dropdown($mobileNavbarDropdown, $mobileNavbarDropdownButton, {
   offsetDistance: 0,
   onShow: () => {
@@ -46,6 +46,16 @@ const showCurrentTab = () => {
   if (aboutTabs && currentTab) aboutTabs.show(currentTab);
 };
 
+//////////////////////////////////////
+//////////////////////////////////////
+//// Initialize global components
+document.getElementById('goToTopBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+//////////////////////////////////////
+//////////////////////////////////////
+//// Initialize utilities
 document.querySelectorAll('.do-toggle-flip').forEach((btn) => {
   btn.addEventListener('click', () => {
     const card = btn.closest('.card');
@@ -142,11 +152,11 @@ const newsHtml = news
   <tr
     data-href=${item.href}
     class="hover-transition cursor-pointer border-b border-neutral-300/60 even:bg-zinc-50 odd:bg-white hover:bg-neutral-200/20">
-    <td class="px-4 py-3 text-sm text-nowrap">${item.date}</td>
-    <th scope="row" class="px-4 py-3 font-medium truncate">
+    <td class="px-4 py-3 text-xs sm:text-sm text-nowrap w-24 sm:w-[100px]">${item.date}</td>
+    <th scope="row" class="px-4 py-3 font-medium truncate max-w-[10rem] text-sm sm:text-base sm:max-w-none">
       ${item.title}
     </th>
-    <td class="flex justify-end gap-2 px-4 py-3">
+    <td class="hidden sm:flex justify-end gap-2 px-4 py-3">
       ${item.tags
         .map(
           (tag) => `

@@ -18,7 +18,9 @@
   <body>
     <header
       class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
-      <nav class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
+      <nav
+        id="header-nav"
+        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
         <a href="/" class="w-16">
           <img class="logo" src="assets/img/logo_en.png" alt="" />
         </a>
@@ -135,21 +137,21 @@
                 <li>
                   <a
                     href="/pages/about"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     About Us
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#team"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Team
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/about#news"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     News
                   </a>
                 </li>
@@ -157,7 +159,9 @@
             </div>
           </li>
           <li>
-            <a href="/pages/courses" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/courses"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Courses
             </a>
           </li>
@@ -167,7 +171,7 @@
               id="accordion-courses-button"
               data-accordion-target="#accordion-courses"
               data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               <span>Courses</span>
               <span
                 data-accordion-icon
@@ -181,21 +185,21 @@
                 <li>
                   <a
                     href="/pages/courses#fundamental"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Fundamental Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#competition"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Competition Track
                   </a>
                 </li>
                 <li>
                   <a
                     href="/pages/courses#project"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal">
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Project Track
                   </a>
                 </li>
@@ -203,14 +207,16 @@
             </div>
           </li> -->
           <li>
-            <a href="/pages/capstone" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+            <a
+              href="/pages/capstone"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Capstone
             </a>
           </li>
           <!-- <li>
             <a
               href="/pages/personal-project"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal">
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Personal Project
             </a>
           </li> -->
@@ -230,11 +236,15 @@
         <div class="size-full">
           <video
             id="hero"
-            src="assets/img/logn1.mp4"
             class="size-full object-cover"
             autoplay
+            loop
             muted
-            loop />
+            playsinline
+            webkit-playsinline
+            preload="auto">
+            <source src="assets/img/logn1.mp4" type="video/mp4" />
+          </video>
         </div>
         <button
           data-video-target="hero"
@@ -503,121 +513,50 @@
                 <span class="heroicons--arrow-long-right"></span>
               </a>
             </div>
-            <div class="relative flex h-[336px] flex-1/2 gap-6">
+            <div class="relative flex max-h-[320px] flex-1/2 gap-3 sm:gap-6">
               <div class="w-56 overflow-hidden rounded-xs bg-zinc-50 shadow-lg">
-                <img
-                  src="assets/img/team/jy.jpg"
-                  alt="jy"
-                  class="aspect-square w-full object-cover object-top" />
-                <div class="flex flex-col gap-2 p-4 text-base">
-                  <p class="text-xl font-medium">JY</p>
+                <picture>
+                  <source media="(max-width: 640px)" srcset="assets/img/team/jy.jpg" />
+                  <source media="(min-width: 641px)" srcset="assets/img/team/jy-og.jpg" />
+                  <img
+                    src="assets/img/team/jy-og.jpg"
+                    alt="jy"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">JY</p>
                   <p>대표원장</p>
                 </div>
               </div>
               <div class="w-56 overflow-hidden rounded-xs bg-zinc-50 shadow-lg">
-                <img
-                  src="assets/img/team/byun.jpg"
-                  alt="jy"
-                  class="aspect-square w-full object-cover object-top" />
-                <div class="flex flex-col gap-2 p-4 text-base">
-                  <p class="text-xl font-medium">Byun</p>
-                  <p>원장</p>
+                <picture>
+                  <source media="(max-width: 640px)" srcset="assets/img/team/byun.jpg" />
+                  <source media="(min-width: 641px)" srcset="assets/img/team/byun-og.jpg" />
+                  <img
+                    src="assets/img/team/byun-og.jpg"
+                    alt="byun"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">Byun</p>
+                  <p>원장, 대표강사</p>
                 </div>
               </div>
               <div class="w-56 overflow-hidden rounded-xs bg-zinc-50 shadow-lg">
-                <img
-                  src="assets/img/team/kijun.jpg"
-                  alt="jy"
-                  class="aspect-square w-full object-cover object-top" />
-                <div class="flex flex-col gap-2 p-4 text-base">
-                  <p class="text-xl font-medium">Kijun</p>
+                <picture>
+                  <source media="(max-width: 640px)" srcset="assets/img/team/kijun.jpg" />
+                  <source media="(min-width: 641px)" srcset="assets/img/team/kijun-og.jpg" />
+                  <img
+                    src="assets/img/team/kijun-og.jpg"
+                    alt="kijun"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">Kijun</p>
                   <p>대표강사</p>
                 </div>
               </div>
             </div>
-            <!-- <div
-              class="relative w-full flex-1/2 sm:max-md:self-start md:ml-64"
-              data-carousel="static">
-
-              <div class="relative h-[336px]">
-                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
-                  <div class="w-56 overflow-hidden rounded-xs shadow-lg">
-                    <img
-                      src="assets/img/team.jpg"
-                      alt="team profile"
-                      class="aspect-square w-full" />
-                    <div class="flex flex-col gap-2 bg-zinc-50 p-4 text-sm">
-                      <p class="text-base font-medium">Kijun</p>
-                      <p class="truncate">알고리즘, 데이터 사이언스</p>
-                      <p class="truncate">HKUST (홍콩 과기대)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
-                  <div class="w-56 overflow-hidden rounded-xs shadow-lg">
-                    <img
-                      src="assets/img/team.jpg"
-                      alt="team profile"
-                      class="aspect-square w-full" />
-                    <div class="flex flex-col gap-2 bg-zinc-50 p-4 text-sm">
-                      <p class="text-base font-medium">Scott</p>
-                      <p class="truncate">웹 개발, 데이터 사이언스, 알고리즘</p>
-                      <p class="truncate">University of Rochester, 연세대학교 석사(CS)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
-                  <div class="w-56 overflow-hidden rounded-xs shadow-lg">
-                    <img
-                      src="assets/img/team.jpg"
-                      alt="team profile"
-                      class="aspect-square w-full" />
-                    <div class="flex flex-col gap-2 bg-zinc-50 p-4 text-sm">
-                      <p class="text-base font-medium">Ellie</p>
-                      <p class="truncate">알고리즘, 블록채인, 풀스택 개발</p>
-                      <p class="truncate">UC Berkeley</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
-                  <div class="w-56 overflow-hidden rounded-xs shadow-lg">
-                    <img
-                      src="assets/img/team.jpg"
-                      alt="team profile"
-                      class="aspect-square w-full" />
-                    <div class="flex flex-col gap-2 bg-zinc-50 p-4 text-sm">
-                      <p class="text-base font-medium">Leanna</p>
-                      <p class="truncate">데이터 사이언스, 머신 러닝</p>
-                      <p class="truncate">Cornell University</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="hidden w-64 duration-300 ease-in-out" data-carousel-item>
-                  <div class="w-56 overflow-hidden rounded-xs shadow-lg">
-                    <img
-                      src="assets/img/team.jpg"
-                      alt="team profile"
-                      class="aspect-square w-full" />
-                    <div class="flex flex-col gap-2 bg-zinc-50 p-4 text-sm">
-                      <p class="text-base font-medium">JY</p>
-                      <p class="truncate">알고리즘, 풀스택 개발, UI/UX</p>
-                      <p class="truncate">Carnegie Mellon University</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <button
-                type="button"
-                class="group absolute end-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none sm:max-md:start-[calc(16rem)]"
-                data-carousel-next>
-                <span
-                  class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
-                  <span class="heroicons--chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </span>
-              </button>
-            </div> -->
           </div>
         </div>
       </section>
@@ -723,7 +662,7 @@
         <!-- phone call -->
         <a
           href="tel:+821012345678"
-          class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+          class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
           <span class="heroicons--phone"></span>
         </a>
       </div>
@@ -731,7 +670,7 @@
       <!-- go-to-top -->
       <button
         id="goToTopBtn"
-        class="hover:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+        class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
         <span class="heroicons--arrow-long-up"></span>
       </button>
     </div>
