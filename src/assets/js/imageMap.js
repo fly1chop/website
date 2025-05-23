@@ -29,9 +29,12 @@ export const imageMap = {
   'cubs4.png': new URL('../img/capstone/cubs4.png', import.meta.url),
   'eco8-2.jpg': new URL('../img/capstone/eco8-2.jpg', import.meta.url),
   'gpt.jpg': new URL('../img/capstone/gpt.jpg', import.meta.url),
+  'meta2.png': new URL('../img/capstone/meta2.png', import.meta.url),
   'meta_1.jpg': new URL('../img/capstone/meta_1.jpg', import.meta.url),
   'mu_1.png': new URL('../img/capstone/mu_1.png', import.meta.url),
+  'mu_2.png': new URL('../img/capstone/mu_2.png', import.meta.url),
   'nft.webp': new URL('../img/capstone/nft.webp', import.meta.url),
+  'nft3.png': new URL('../img/capstone/nft3.png', import.meta.url),
   'xr.png': new URL('../img/capstone/xr.png', import.meta.url),
   'zeta3.png': new URL('../img/capstone/zeta3.png', import.meta.url),
 };
