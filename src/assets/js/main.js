@@ -1,7 +1,7 @@
 import 'flowbite';
 import { Dropdown } from 'flowbite';
 import { LINKS } from '../lib/constants';
-import team from '../lib/team.json';
+import team from '../lib/team2.json';
 import news from '../lib/news.json';
 import capstone from '../lib/capstone.json';
 import { imageMap } from './imageMap';
@@ -103,11 +103,16 @@ document.querySelectorAll('.do-toggle-play').forEach((btn) => {
 //////////////////////////////////////
 //////////////////////////////////////
 //// About Page
-const $mentorsList = document.getElementById('mentors-list');
 const $instructorsList = document.getElementById('instructors-list');
+const $mentorsList = document.getElementById('mentors-list');
+const $staffList = document.getElementById('staff-list');
 const $newsList = document.getElementById('news-list');
 
-const instructorsHtml = team.instructors
+const instructors = team.filter((item) => item.category === 'instructor');
+const mentors = team.filter((item) => item.category === 'mentor');
+const staff = team.filter((item) => item.category === 'staff');
+
+const instructorsHtml = instructors
   .filter((item) => !item.isMain)
   .map(
     (item) => `
@@ -126,12 +131,12 @@ const instructorsHtml = team.instructors
   )
   .join('');
 
-const mentorsHtml = team.mentors
+const mentorsHtml = mentors
   .map(
     (item) => `
   <div class="bg-zinc-50 shadow-lg overflow-hidden rounded-xs">
     <img
-      src="${new URL('../img/team.jpg', import.meta.url)}"
+      src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
       alt="${item.name}"
       class="aspect-square w-full" />
     <div class="flex flex-col gap-2 p-4 text-sm">
@@ -139,6 +144,23 @@ const mentorsHtml = team.mentors
       <p>${item.field.join()}</p>
       <p class="font-medium">${item.employment}</p>
       <p>${item.school}</p>
+    </div>
+  </div>
+`
+  )
+  .join('');
+
+const staffHtml = staff
+  .map(
+    (item) => `
+  <div class="bg-zinc-50 shadow-lg overflow-hidden rounded-xs">
+    <img
+      src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
+      alt="${item.name}"
+      class="aspect-square w-full" />
+    <div class="flex flex-col gap-2 p-4 text-sm">
+      <p class="text-base font-medium">${item.name}</p>
+      <p>${item.position}</p>
     </div>
   </div>
 `
@@ -173,9 +195,17 @@ const newsHtml = news
   )
   .join('');
 
-if ($instructorsList && $mentorsList && $newsList) {
+if ($instructorsList) {
   $instructorsList.innerHTML = instructorsHtml;
+}
+if ($mentorsList) {
   $mentorsList.innerHTML = mentorsHtml;
+}
+if ($staffList) {
+  $staffList.innerHTML = staffHtml;
+}
+
+if ($newsList) {
   $newsList.innerHTML = newsHtml;
 
   $newsList.addEventListener('click', (event) => {
@@ -221,7 +251,10 @@ const ongoingHtml = capstone
 `;
   })
   .join('');
-$capstoneOngoingList.innerHTML = ongoingHtml;
+
+if ($capstoneOngoingList) {
+  $capstoneOngoingList.innerHTML = ongoingHtml;
+}
 
 const completedHtml = capstone
   .filter((p) => p.category === 'COMPLETED')
@@ -270,4 +303,7 @@ const completedHtml = capstone
   `;
   })
   .join('');
-$capstoneCompletedList.innerHTML = completedHtml;
+
+if ($capstoneCompletedList) {
+  $capstoneCompletedList.innerHTML = completedHtml;
+}
