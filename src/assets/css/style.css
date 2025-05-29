@@ -104,9 +104,11 @@
 }
 
 .carousel-primary img {
-  height: 100%;
-  aspect-ratio: 16/9;
+  flex: 1;
+  /* height: 100%; */
+  /* aspect-ratio: 16/9; */
   overflow: hidden;
+  object-position: center;
   margin-left: 20px;
   object-fit: cover;
   background-color: #fff;
@@ -143,6 +145,9 @@
   -moz-animation-play-state: paused;
 }
 
+.fade-in {
+  opacity: 1;
+}
 @keyframes scroll-horizontal {
   0% {
     left: 100%;

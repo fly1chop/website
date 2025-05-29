@@ -105,18 +105,21 @@
         </a>
         <!-- mobile navbar -->
         <button
-          id="mobile-navbar-dropdown-button"
-          aria-expanded="false"
+          id="mobile-nav-drawer-button"
+          aria-controls="mobile-nav-drawer"
           type="button"
-          class="inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
+          class="z-50 inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
           <span class="sr-only">Open main menu</span>
           <span class="heroicons--bars-3"></span>
         </button>
       </nav>
       <div
-        id="mobile-navbar-dropdown"
-        class="absolute top-0 z-50 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
-        <ul class="flex flex-col text-lg text-zinc-500">
+        id="mobile-nav-drawer"
+        aria-labelledby="drawer-label"
+        tabindex="-1"
+        class="fixed top-0 right-0 z-40 h-screen w-[80%] translate-x-full divide-y divide-neutral-200 overflow-y-auto rounded-b-sm bg-white pt-2 shadow-lg transition-transform md:hidden">
+        <span id="drawer-label" class="sr-only">mobile navigation menu</span>
+        <ul class="mt-12 flex flex-col text-lg text-zinc-500">
           <li data-accordion="collapse">
             <button
               type="button"
@@ -234,7 +237,7 @@
 
     <main class="relative min-h-[calc(100vh-188px)]">
       <div
-        class="flex h-16 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/hero.jpg)] bg-cover bg-center bg-no-repeat sm:h-40"></div>
+        class="flex h-16 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/splash-2.png)] bg-cover bg-center bg-no-repeat sm:h-40"></div>
       <div class="border-in sticky top-0 z-10 w-full border-b border-neutral-300/60 bg-white">
         <ul
           id="tab-menu--about"

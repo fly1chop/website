@@ -26,6 +26,7 @@
     "@parcel/transformer-inline-string": "^2.15.0",
     "autoprefixer": "^10.4.21",
     "parcel": "^2.15.0",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",

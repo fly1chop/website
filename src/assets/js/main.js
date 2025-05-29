@@ -1,5 +1,5 @@
 import 'flowbite';
-import { Dropdown } from 'flowbite';
+import { Drawer } from 'flowbite';
 import { LINKS } from '../lib/constants';
 import team from '../lib/team2.json';
 import news from '../lib/news.json';
@@ -15,20 +15,25 @@ window.addEventListener('hashchange', () => {
 });
 
 ///////////////////
-//// Dropdown
-const $mobileNavbarDropdown = document.querySelector('#mobile-navbar-dropdown');
-const $mobileNavbarDropdownButton = document.querySelector('#mobile-navbar-dropdown-button');
+//// Drawer
+const $mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+const $mobileNavDrawerButton = document.getElementById('mobile-nav-drawer-button');
 const $nav = document.querySelector('nav#header-nav');
-new Dropdown($mobileNavbarDropdown, $mobileNavbarDropdownButton, {
-  offsetDistance: 0,
+const options = {
+  placement: 'right',
+  backdrop: true,
+  bodyScrolling: false,
+  backdropClasses: 'bg-black/50 fixed inset-0 z-10',
   onShow: () => {
-    $nav.classList.add('max-md:bg-white', 'max-md:[&_img.logo]:invert');
-    $mobileNavbarDropdownButton.classList.remove('text-white');
+    $mobileNavDrawerButton.classList.remove('text-white');
   },
   onHide: () => {
-    $nav.classList.remove('max-md:bg-white', 'max-md:[&_img.logo]:invert');
-    $mobileNavbarDropdownButton.classList.add('text-white');
+    $mobileNavDrawerButton.classList.add('text-white');
   },
+};
+const drawer = new Drawer($mobileNavDrawer, options);
+$mobileNavDrawerButton.addEventListener('click', () => {
+  drawer.toggle();
 });
 
 ///////////////////
@@ -120,10 +125,11 @@ const instructorsHtml = instructors
     <img
       src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
       alt="${item.name}"
+      draggable="false"
       class="aspect-square w-full object-cover object-top" />
     <div class="flex flex-col gap-2 p-4 text-sm">
       <p class="text-base font-medium">${item.name}</p>
-      <p>${item.field.join()}</p>
+      <p>${item.field.join(', ')}</p>
       <p>${item.school}</p>
     </div>
   </div>
@@ -138,6 +144,7 @@ const mentorsHtml = mentors
     <img
       src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
       alt="${item.name}"
+      draggable="false"
       class="aspect-square w-full" />
     <div class="flex flex-col gap-2 p-4 text-sm">
       <p class="text-base font-medium">${item.name}</p>
@@ -157,6 +164,7 @@ const staffHtml = staff
     <img
       src="${imageMap[item.image] || new URL('../img/team.jpg', import.meta.url)}"
       alt="${item.name}"
+      draggable="false"
       class="aspect-square w-full" />
     <div class="flex flex-col gap-2 p-4 text-sm">
       <p class="text-base font-medium">${item.name}</p>
@@ -245,6 +253,7 @@ const ongoingHtml = capstone
       <img
         src="${imageMap[p.image]}"
         alt="${p.name}"
+        draggable="false"
         class="h-auto sm:h-full object-cover object-left" />
     </div>
   </div>

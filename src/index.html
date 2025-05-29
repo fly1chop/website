@@ -20,8 +20,8 @@
       class="absolute start-0 top-0 z-20 w-full bg-linear-to-b from-black/90 to-transparent pb-28">
       <nav
         id="header-nav"
-        class="mx-auto flex max-w-screen-xl items-center justify-between px-4 pt-4 lg:px-12">
-        <a href="/" class="w-16">
+        class="mx-auto flex max-w-screen-xl items-center justify-end px-4 pt-4 md:justify-between lg:px-12">
+        <a href="/" class="hidden w-16 md:block">
           <img class="logo" src="assets/img/logo_en.png" alt="" />
         </a>
         <ul class="hidden items-center space-x-8 md:flex">
@@ -105,18 +105,21 @@
         </a>
         <!-- mobile navbar -->
         <button
-          id="mobile-navbar-dropdown-button"
-          aria-expanded="false"
+          id="mobile-nav-drawer-button"
+          aria-controls="mobile-nav-drawer"
           type="button"
-          class="inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
+          class="z-50 inline-flex cursor-pointer items-center justify-center text-xl text-white md:hidden">
           <span class="sr-only">Open main menu</span>
           <span class="heroicons--bars-3"></span>
         </button>
       </nav>
       <div
-        id="mobile-navbar-dropdown"
-        class="absolute top-0 z-20 hidden w-full divide-y divide-neutral-200 overflow-hidden rounded-b-sm bg-white pt-2 shadow-lg md:hidden">
-        <ul class="flex flex-col text-lg text-zinc-500">
+        id="mobile-nav-drawer"
+        aria-labelledby="drawer-label"
+        tabindex="-1"
+        class="fixed top-0 right-0 z-40 h-screen w-[80%] translate-x-full divide-y divide-neutral-200 overflow-y-auto rounded-b-sm bg-white pt-2 shadow-lg transition-transform md:hidden">
+        <span id="drawer-label" class="sr-only">mobile navigation menu</span>
+        <ul class="mt-12 flex flex-col text-lg text-zinc-500">
           <li data-accordion="collapse">
             <button
               type="button"
@@ -235,15 +238,17 @@
       <div class="relative inset-x-0 h-screen">
         <div class="size-full">
           <video
+            poster="assets/img/logn_hero.png"
             id="hero"
             class="size-full object-cover"
             autoplay
-            loop
             muted
             playsinline
             webkit-playsinline
             preload="auto">
-            <source src="assets/img/logn1.mp4" type="video/mp4" />
+            <!-- <source src="assets/img/logn_hero.mp4" type="video/mp4" />
+             <source media="(max-width: 640px)" srcset="assets/img/logn_hero.mp4" type="video/mp4" />
+                  <source media="(min-width: 641px)" srcset="assets/img/logn_hero.mp4" type="video/mp4" /> -->
           </video>
         </div>
         <button
@@ -394,51 +399,58 @@
             <div class="flex flex-col gap-6 bg-zinc-800 p-8 text-white">
               <h3 class="text-4xl font-bold">Coding & AI</h3>
               <p class="flex flex-col gap-1">
-                <span>ACSL(American Computer Science League) 한국</span>
-                <span class="text-zinc-400">공식 교육처 단독 선정</span>
+                <span>ACSL(American Computer Science League)</span>
+                <span class="text-zinc-400">2025 ACSL 전원 Finalist 진출</span>
+                <span class="text-zinc-400">한국 공식 교육처 단독 선정</span>
               </p>
               <p class="flex flex-col gap-1">
-                <span>2024 Technovation Girls</span>
-                <span class="text-zinc-400">한국 유일 본선 진출</span>
+                <span>Technovation Girls</span>
+                <span class="text-zinc-400">2024 한국 유일 본선 진출</span>
               </p>
               <p class="flex flex-col gap-1">
-                <span>2024 ILO</span>
-                <span class="text-zinc-400">한국 유일 Finalist Team 배출</span>
-              </p>
-              <p class="flex flex-col gap-1">
-                <span>2024 VEX V5 National Championship</span>
-                <span class="text-zinc-400">우승</span>
-              </p>
-              <p class="flex flex-col gap-1">
-                <span>2024 VEX IQ</span>
-                <span class="text-zinc-400">Asia 대표 출전</span>
+                <span>ILO(International Logic Olympiad)</span>
+                <span class="text-zinc-400">2025 Finalist 한국 & 미국 팀 배출</span>
+                <span class="text-zinc-400">2025 Gold 26명 수상 / Silver 4명 수상</span>
+                <span class="text-zinc-400">2024 한국 유일 Finalist 팀 배출</span>
               </p>
             </div>
             <img
-              src="assets/img/achievement-1.jpg"
-              alt="achievement-1"
+              src="assets/img/coding.jpg"
+              alt="coding & ai"
+              draggable="false"
               class="hidden aspect-square size-full object-cover md:block" />
             <img
-              src="assets/img/achievement-2.jpg"
-              alt="achievement-1"
+              src="assets/img/robotics.jpg"
+              alt="engineering & robotics"
+              draggable="false"
               class="hidden aspect-square size-full object-cover md:block" />
             <div class="flex flex-col gap-6 bg-neutral-200 p-8 text-gray-950">
               <h3 class="text-4xl font-bold">Engineering</h3>
               <p class="flex flex-col gap-1">
                 <span>2025 VEX Robotics World Championship</span>
-                <span class="text-zinc-600">국내 최초 초등부 & 중등부 & 고등부 동시 진출</span>
+                <span class="text-zinc-500">국내 최초 초등부 & 중등부 & 고등부 동시 진출</span>
+                <span class="text-zinc-500">Online Challenge 수상</span>
+                <span class="text-zinc-500">Judges Award 수상</span>
               </p>
               <p class="flex flex-col gap-1">
                 <span>2025 GENIUS Olympiad Robotics 분야</span>
-                <span class="text-zinc-600">한국 1등 & 결선 진출</span>
+                <span class="text-zinc-500">한국 1등 & 결선 진출</span>
               </p>
               <p class="flex flex-col gap-1">
                 <span>2025 VEX Code VR Virtual Skills Challenge</span>
-                <span class="text-zinc-600">한국 1등 World Championship 진출</span>
+                <span class="text-zinc-500">한국 1등 World Championship 진출</span>
               </p>
               <p class="flex flex-col gap-1">
                 <span>2025 VEX Game Design Challenge</span>
-                <span class="text-zinc-600">한국 유일 World Top 5 선정</span>
+                <span class="text-zinc-500">한국 유일 World Top 5 선정</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2024 VEX V5 National Championship</span>
+                <span class="text-zinc-500">우승</span>
+              </p>
+              <p class="flex flex-col gap-1">
+                <span>2024 VEX IQ</span>
+                <span class="text-zinc-500">Asia 대표 출전</span>
               </p>
             </div>
           </div>
@@ -459,7 +471,7 @@
           <div
             class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-zinc-800 px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--academic-cap-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Fundamental Track</p>
+            <p class="mb-4 text-2xl font-medium">Fundamental Class</p>
             <p class="break-keep">국제학교 특성화 맞춤 class</p>
             <p class="break-keep">
               실제 SFS, YISS, St. Paul 등 다수 국제 학교 출강 강사진 직접 수업​
@@ -469,7 +481,7 @@
           <div
             class="hover-transition bg-flamingo-500 flex flex-1 flex-col items-center gap-2 rounded-xs px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--trophy-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Competition Track</p>
+            <p class="mb-4 text-2xl font-medium">Competition Class</p>
             <p class="break-keep">코딩 국제 대회</p>
             <p class="break-keep">EC 필수 국제 대회​</p>
             <p class="break-keep">우리 아이 맞춤 대회 트랙 진단​</p>
@@ -477,7 +489,7 @@
           <div
             class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-neutral-300 px-6 py-6 text-center shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--light-bulb-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Project Track</p>
+            <p class="mb-4 text-2xl font-medium">Project Class</p>
             <p class="break-keep">보딩준비 개인 맞춤 프로젝트​</p>
             <p class="break-keep">희망 전공 / 개인 맞춤형 프로젝트</p>
             <p class="break-keep">커스텀 테마 프로젝트​</p>
@@ -496,6 +508,57 @@
         </a>
       </section>
 
+      <!-- Projects Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Projects'] md:text-5xl">
+          PROJECTS
+        </h2>
+        <div class="flex w-full max-w-screen-xl flex-col gap-6 px-4 md:flex-row lg:gap-12 lg:px-12">
+          <div class="hover-transition relative flex-1 rounded-xs shadow-lg hover:scale-105">
+            <!-- <span class="heroicons--user-solid text-6xl"></span> -->
+            <div class="absolute top-0 -z-10 size-full">
+              <img src="assets/img/pp-bg.jpg" class="size-full object-cover" />
+              <span class="absolute top-0 block size-full bg-white/40"></span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-6 px-6 py-6 text-center sm:px-8 md:py-12 lg:px-12 lg:py-20">
+              <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">Personal Project</p>
+              <p class="break-keep">
+                학생의 활동 이력과 공백을 탐색하여 Computer Science, Medical, Economics 등의 다양한
+                희망 전공과 연계해 자신만의 스토리를 보다 풍부히 풀어낼 수 있는 개인 맞춤 프로그램
+              </p>
+              <button
+                type="button"
+                data-modal-target="contactForm"
+                data-modal-show="contactForm"
+                class="btn white">
+                PP 프로그램 문의하기
+              </button>
+            </div>
+          </div>
+          <div class="hover-transition relative flex-1 rounded-xs shadow-lg hover:scale-105">
+            <!-- <span class="iconify-[game-icons--puzzle] text-6xl"></span> -->
+            <div class="absolute top-0 -z-10 size-full">
+              <img src="assets/img/cap-bg.jpg" class="size-full object-cover" />
+              <span class="absolute top-0 block size-full bg-white/90"></span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-6 px-6 py-6 text-center sm:px-8 md:py-12 lg:px-12 lg:py-20">
+              <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">Capstone Projects</p>
+              <p class="break-keep">
+                대학 수준의 캡스톤 프로그램을 통해 다양한 분야에서 전문가들의 지도를 받아​ 세계적인
+                기업, 명문 대학 연구기관, 글로벌 NGO 등에게 실질적인 솔루션을 제공할 수 있는 기회.
+              </p>
+              <a href="/pages/capstone" class="btn white !bg-zinc-800">
+                <span>프로젝트 보러가기</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Team Section -->
       <section class="relative my-12 flex flex-col items-center gap-14 md:my-28">
         <h2
@@ -503,10 +566,10 @@
           MEET THE TEAM
         </h2>
         <div class="relative mx-auto w-full px-4 lg:px-12">
-          <div class="absolute bottom-0 left-0 -z-10 h-full w-full bg-zinc-800 md:h-[90%]"></div>
+          <div class="absolute bottom-0 left-0 -z-10 h-full w-full bg-zinc-800 lg:h-[90%]"></div>
           <div
-            class="mx-auto flex max-w-screen-xl flex-col justify-between gap-12 pb-10 lg:gap-x-18 xl:flex-row">
-            <div class="mt-10 flex flex-col gap-6 md:mt-24">
+            class="relative mx-auto flex w-full max-w-screen-xl flex-col justify-between gap-12 pb-10 lg:gap-x-18 xl:flex-row">
+            <div class="mt-10 flex flex-col gap-6 md:w-3/5 lg:mt-24">
               <p class="text-2xl leading-10 font-medium text-white">
                 로그엔코딩은 Harvard, CMU, Princeton 등 명문대와 NASA, Google, Microsoft 등 글로벌
                 선도 기업 출신 전문가들과 협력하여, 학생의 활동 이력과 공백을 분석하고 Computer
@@ -518,7 +581,7 @@
                 <span class="heroicons--arrow-long-right"></span>
               </a>
             </div>
-            <div class="relative flex max-h-[320px] flex-1/2 gap-3 sm:gap-6">
+            <div class="flex max-h-[320px] gap-3 sm:gap-6 md:absolute md:ml-[65%] md:max-lg:mt-10">
               <div
                 class="hover-transition w-56 overflow-hidden rounded-xs bg-zinc-50 shadow-lg hover:scale-105">
                 <picture>
@@ -667,10 +730,6 @@
                 alt="bcc"
                 class="h-36 object-cover object-center" />
             </div>
-            <a href="#" class="btn white break-keep">
-              <span>프리미엄 1:1 커스텀 프로젝트 확인하기</span>
-              <span class="heroicons--arrow-long-right"></span>
-            </a>
           </div>
         </div>
       </section>
@@ -679,20 +738,18 @@
       <section class="relative my-12 flex flex-col items-center gap-14 md:my-28">
         <h2
           class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['로그엔코딩과_함계한_파트너'] md:text-5xl">
-          로그엔코딩과 함계한 파트너
+          로그엔코딩과 함계한 기관
         </h2>
-        <div class="infinite-carousel-container h-56">
+        <div class="infinite-carousel-container h-56 xl:h-64">
           <div class="carousel-primary">
             <img alt="partner" src="assets/img/capstone/2.06.jpg" />
             <img alt="partner" src="assets/img/capstone/char.png" />
-            <img alt="partner" src="assets/img/capstone/cubs4.png" />
-            <img alt="partner" src="assets/img/capstone/eco8-2.jpg" />
+            <img alt="partner" src="assets/img/capstone/cmu-play.png" />
           </div>
           <div class="carousel-primary carousel-secondary">
+            <img alt="partner" src="assets/img/capstone/eco8-2.jpg" />
             <img alt="partner" src="assets/img/capstone/mu_2.png" />
             <img alt="partner" src="assets/img/capstone/nft3.png" />
-            <img alt="partner" src="assets/img/capstone/meta2.png" />
-            <img alt="partner" src="assets/img/capstone/cubs4.png" />
           </div>
         </div>
       </section>
@@ -704,24 +761,23 @@
           오시는 길
         </h2>
         <div class="relative w-full px-4 lg:px-12">
-          <div class="mx-auto flex w-full max-w-screen-xl flex-col bg-white shadow-xl sm:flex-row">
-            <div class="basis-4/7 px-6 py-8 sm:px-10">
+          <div class="mx-auto flex w-full max-w-screen-xl flex-col bg-white shadow-xl md:flex-row">
+            <div class="px-6 py-8 sm:px-10">
               <p class="font-medium sm:text-xl md:text-2xl">
                 서울특별시 강남구 언주로174길 17 서우빌딩 3층
               </p>
               <hr class="text-flamingo-500 my-6 h-1 w-32" />
-              <div class="xs:text-lg grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-sm sm:gap-x-8">
+              <div
+                class="xs:text-lg grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-sm sm:gap-x-8 lg:text-xl">
                 <p class="font-medium">대표변호</p>
                 <p class="text-zinc-600">+82 2-540-1628</p>
                 <p class="font-medium">이메일</p>
                 <p class="text-zinc-600">info@logncoding.com</p>
               </div>
             </div>
-            <iframe
-              class="w-full basis-3/7"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1305611293283!2d127.03322361526259!3d37.52841947980509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3866d9664bb%3A0x90a9663ae03e690b!2s17%20Eonju-ro%20174-gil%2C%20Gangnam-gu%2C%20Seoul!5e0!3m2!1sen!2skr!4v1678455598812!5m2!1sen!2skr"
-              frameborder="0"
-              allowfullscreen></iframe>
+            <div class="flex-5/7 p-4 pt-0 sm:p-6">
+              <img class="size-full object-cover" src="assets/img/map.png" />
+            </div>
           </div>
         </div>
       </section>
@@ -845,6 +901,34 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script type="module" src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const video = document.getElementById('hero');
+        const isMobile = window.innerWidth <= 640;
+        const source = isMobile
+          ? 'assets/video/logn_hero_mobile.m3u8'
+          : 'assets/video/logn_hero.m3u8';
+
+        if (Hls.isSupported()) {
+          const hls = new Hls();
+          hls.loadSource(source);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            video.play();
+          });
+
+          hls.on(Hls.Events.ERROR, function (event, data) {
+            console.error('HLS.js error:', data);
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = source;
+          video.addEventListener('loadedmetadata', function () {
+            video.play();
+          });
+        }
+      });
+    </script>
   </body>
 </html>

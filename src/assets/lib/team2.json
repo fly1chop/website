@@ -1,6 +1,14 @@
 [
   {
     "category": "instructor",
+    "name": "JY",
+    "school": "Carnegie Mellon University",
+    "position": "",
+    "field": ["알고리즘", "풀스택 개발", "UI/UX"],
+    "image": "jy.jpg"
+  },
+  {
+    "category": "instructor",
     "name": "Kijun",
     "school": "HKUST (홍콩 과기대)",
     "position": "",
@@ -9,12 +17,20 @@
     "isMain": true
   },
   {
-    "category": "instructor",
-    "name": "JY",
-    "school": "Carnegie Mellon University",
-    "position": "",
-    "field": ["알고리즘", "풀스택 개발", "UI/UX"],
-    "image": "jy.jpg"
+    "category": "staff",
+    "name": "Sarah",
+    "school": "",
+    "position": "Lead Project Manager",
+    "field": [],
+    "image": "sarah.jpg"
+  },
+  {
+    "category": "staff",
+    "name": "Anna",
+    "school": "",
+    "position": "Lead Marketer",
+    "field": [],
+    "image": "Anna.jpg"
   },
   {
     "category": "staff",
@@ -26,19 +42,19 @@
   },
   {
     "category": "staff",
-    "name": "Anna",
+    "name": "Yony",
     "school": "",
-    "position": "Lead Maketer",
+    "position": "Project Manager",
     "field": [],
-    "image": "Anna.jpg"
+    "image": "yony.jpeg"
   },
   {
     "category": "staff",
-    "name": "Jane",
+    "name": "Christine",
     "school": "",
-    "position": "Lead Developer",
+    "position": "Education Manager",
     "field": [],
-    "image": "Jane.jpg"
+    "image": "christine.jpg"
   },
   {
     "category": "staff",
@@ -47,6 +63,14 @@
     "position": "Education Manager",
     "field": [],
     "image": "Jinsu.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Scott",
+    "school": "University of Rochester, 연세대학교 석사(CS)",
+    "position": "",
+    "field": ["웹 개발", "데이터 사이언스", "알고리즘"],
+    "image": "scott.jpg"
   },
   {
     "category": "instructor",
@@ -127,5 +151,53 @@
     "position": "",
     "field": ["UI/UX", "로보틱스"],
     "image": "ina.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Jane",
+    "school": "McGill University",
+    "position": "Lead Developer",
+    "field": ["프론트엔드 개발", "웹/앱 개발"],
+    "image": "Jane.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Minhong",
+    "school": "건국대 기계설계학과 석사",
+    "position": "",
+    "field": ["임베디드 소프트웨어"],
+    "image": "minhong.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Kun",
+    "school": "서강대학교",
+    "position": "",
+    "field": ["Data Science", "AI/ML", "Programming"],
+    "image": "Kun.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Sehyoun",
+    "school": "Lehigh University",
+    "position": "",
+    "field": ["데이터 사이언스", "알고리즘", "백엔드 개발"],
+    "image": "sehyoun.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Kikang",
+    "school": "서울과학기술대학교",
+    "position": "",
+    "field": ["로보틱스"],
+    "image": "Kikang.jpg"
+  },
+  {
+    "category": "instructor",
+    "name": "Taegyun",
+    "school": "부산외국어대학교",
+    "position": "",
+    "field": ["임베디드 소프트웨어"],
+    "image": "Taegyun.jpg"
   }
 ]
