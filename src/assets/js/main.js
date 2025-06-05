@@ -265,8 +265,9 @@ if ($capstoneOngoingList) {
   $capstoneOngoingList.innerHTML = ongoingHtml;
 }
 
+const HIDDEN_PROJECTS = ['Project MU', 'Project CUBS'];
 const completedHtml = capstone
-  .filter((p) => p.category === 'COMPLETED')
+  .filter((p) => p.category === 'COMPLETED' && !HIDDEN_PROJECTS.includes(p.name))
   .map((p) => {
     return `
     <div
@@ -300,12 +301,11 @@ const completedHtml = capstone
             ${p.description}
           </p>
         </div>
-        <div class="flex-1/3">
+        <div class="flex-1/3 bg-white">
           <img 
             src="${imageMap[p.image]}"
             alt="${p.name}"
-            class="h-auto sm:h-full object-cover" />
-
+            class="h-auto sm:h-full ${p.isImageContain ? 'object-contain' : 'object-cover'}" />
         </div>
       </div>
     </div>
