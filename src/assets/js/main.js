@@ -5,6 +5,7 @@ import team from '../lib/team2.json';
 import news from '../lib/news.json';
 import capstone from '../lib/capstone.json';
 import { imageMap } from './imageMap';
+import Chart from 'chart.js/auto';
 
 window.addEventListener('load', () => {
   showCurrentTab();
@@ -75,6 +76,50 @@ Object.entries(LINKS).forEach(([name, url]) => {
     btn.setAttribute('target', '_blank');
   });
 });
+
+let chartInstance;
+const majorsChartContainer = document.getElementById('majors-chart-container');
+const majorsChart = document.getElementById('majors-chart');
+if (majorsChartContainer && majorsChart) {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !chartInstance) {
+          const data = {
+            labels: ['문과', '공,이과', '예술'],
+            datasets: [
+              {
+                data: [56, 41, 3],
+                backgroundColor: ['rgba(231, 82, 36, 1)', 'rgba(39, 39, 42, 1)'],
+              },
+            ],
+          };
+          chartInstance = new Chart(majorsChart, {
+            type: 'bar',
+            data,
+            options: {
+              scales: { x: { beginAtZero: true } },
+              indexAxis: 'y',
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+              animation: {
+                duration: 2000,
+              },
+            },
+          });
+
+          observer.observe(majorsChartContainer);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(majorsChartContainer);
+}
 
 //////////////////////////////////////
 //////////////////////////////////////
