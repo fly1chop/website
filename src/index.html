@@ -468,7 +468,7 @@
           <div
             class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-zinc-800 px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--academic-cap-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Fundamental Class</p>
+            <p class="mb-4 text-2xl font-medium">Fundamental</p>
             <p class="text-lg break-keep">국제학교 특성화 맞춤 class</p>
             <p class="text-lg break-keep max-sm:max-w-xs">
               실제 SFS, YISS, St. Paul 등 다수 국제 학교 출강 강사진 직접 수업​
@@ -480,7 +480,7 @@
           <div
             class="hover-transition bg-flamingo-500 flex flex-1 flex-col items-center gap-2 rounded-xs px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--trophy-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Competition Class</p>
+            <p class="mb-4 text-2xl font-medium">Competition</p>
             <p class="text-lg break-keep">코딩 국제 대회</p>
             <p class="text-lg break-keep">EC 필수 국제 대회​</p>
             <p class="text-lg break-keep">우리 아이 맞춤 대회 트랙 진단​</p>
@@ -488,23 +488,25 @@
           <div
             class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-neutral-300 px-6 py-6 text-center shadow-lg hover:scale-105 sm:px-8">
             <span class="heroicons--light-bulb-solid text-6xl"></span>
-            <p class="mb-4 text-2xl font-medium">Project Class</p>
+            <p class="mb-4 text-2xl font-medium">Project</p>
             <p class="text-lg break-keep">보딩준비 개인 맞춤 프로젝트​</p>
             <p class="text-lg break-keep">희망 전공 / 개인 맞춤형 프로젝트</p>
             <p class="text-lg break-keep">커스텀 테마 프로젝트​</p>
           </div>
         </div>
-        <button
-          type="button"
-          data-modal-target="contactForm"
-          data-modal-show="contactForm"
-          class="btn white large">
-          우리 아이 맞춤 트랙 진단 받기
-        </button>
-        <a href="/pages/courses" class="btn white large !bg-zinc-800">
-          <span>2025년 여름학기 스케줄</span>
-          <span class="heroicons--arrow-long-right"></span>
-        </a>
+        <div class="flex flex-col gap-6">
+          <button
+            type="button"
+            data-modal-target="contactForm"
+            data-modal-show="contactForm"
+            class="btn white large">
+            우리 아이 맞춤 트랙 진단 받기
+          </button>
+          <a href="/pages/courses" class="btn white large !bg-zinc-800">
+            <span>2025년 여름학기 스케줄</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
       </section>
 
       <!-- Projects Section -->
@@ -550,7 +552,7 @@
                 기업, 명문 대학 연구기관, 글로벌 NGO 등에게 실질적인 솔루션을 제공할 수 있는 기회.
               </p>
               <a href="/pages/capstone" class="btn white !bg-zinc-800">
-                <span>프로젝트 보러가기</span>
+                <span>Capstone 보러가기</span>
                 <span class="heroicons--arrow-long-right"></span>
               </a>
             </div>
@@ -567,18 +569,20 @@
         <div class="relative mx-auto w-full px-8 lg:px-12">
           <div class="absolute bottom-0 left-0 -z-10 h-full w-full bg-zinc-800 lg:h-[90%]"></div>
           <div
-            class="relative mx-auto flex w-full max-w-screen-xl flex-col justify-between gap-12 pb-10 lg:gap-x-14 xl:flex-row">
+            class="relative mx-auto flex w-full max-w-screen-xl flex-col justify-between gap-8 pb-10 lg:gap-x-14 xl:flex-row xl:gap-12">
             <div class="mt-10 flex flex-col gap-6 lg:mt-24">
-              <p class="text-2xl leading-10 font-medium text-white">
+              <p class="text-xl leading-8 text-white sm:text-2xl sm:leading-10 sm:font-medium">
                 로그엔코딩은 Harvard, CMU, Princeton 등 명문대와 NASA, Google, Microsoft 등 글로벌
                 선도 기업 출신 전문가들과 협력하여, 학생의 활동 이력과 공백을 분석하고 Computer
                 Science, Medical, Economics 등 다양한 전공과 연계된 맞춤형 수업과 프로그램을
                 제공합니다.
               </p>
-              <a href="/pages/about#team" class="btn white self-start">
-                <span>Team 더 보기</span>
-                <span class="heroicons--arrow-long-right"></span>
-              </a>
+              <div class="hidden xl:block">
+                <a href="/pages/about#team" class="btn white self-start">
+                  <span>Team 더 보기</span>
+                  <span class="heroicons--arrow-long-right"></span>
+                </a>
+              </div>
             </div>
             <div class="flex max-h-[300px] gap-3 sm:gap-6">
               <div
@@ -608,7 +612,7 @@
                 </picture>
                 <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
                   <p class="text-lg font-medium sm:text-xl">Byun</p>
-                  <p>원장, 대표강사</p>
+                  <p>원장</p>
                 </div>
               </div>
               <div
@@ -627,6 +631,12 @@
                 </div>
               </div>
             </div>
+            <div class="block xl:hidden">
+              <a href="/pages/about#team" class="btn white self-start">
+                <span>Team 더 보기</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -642,71 +652,88 @@
             class="bg-flamingo-500 absolute top-1/2 left-0 -z-10 h-[80%] w-full -translate-y-1/2"></div>
           <div
             class="mx-auto flex w-full max-w-screen-xl flex-col items-center bg-white p-6 shadow-xl">
-            <div class="flex flex-wrap justify-center gap-5 py-8 sm:gap-8 sm:px-8">
+            <div
+              class="grid auto-rows-[100px] grid-cols-4 items-center justify-items-center gap-x-2 py-8 sm:flex sm:flex-wrap sm:justify-center sm:gap-8 sm:px-8">
               <img
                 src="assets/img/schools/harvard.jpg"
                 alt="harvard"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/nyu.jpg"
                 alt="nyu"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/princeton.png"
                 alt="princeton"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/yale.jpg"
                 alt="yale"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/cornell.jpg"
                 alt="cornell"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/cambridge.jpg"
                 alt="cambridge"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/boston.jpg"
                 alt="boston"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/duke.jpg"
                 alt="duke"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/northwestern.jpg"
                 alt="northwestern"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/dartmouth.jpg"
                 alt="dartmouth"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/massachusetts.jpg"
                 alt="massachusetts"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/cmu.jpg"
                 alt="cmu"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/columbia.jpg"
                 alt="columbia"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/stanford.jpg"
                 alt="stanford"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/chicago.png"
                 alt="chicago"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
               <img
                 src="assets/img/schools/berkeley.jpg"
                 alt="berkeley"
-                class="h-16 object-cover object-center sm:h-20" />
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
             </div>
           </div>
         </div>
@@ -718,24 +745,33 @@
           로그엔코딩 강사 출강 학교
         </h2>
         <div class="w-full max-w-screen-lg">
-          <div class="flex flex-col gap-8 px-8 md:flex-row">
-            <div class="grid grid-cols-2 items-center justify-items-center gap-8 px-8 sm:px-0">
-              <img
-                src="assets/img/schools/sfs.png"
-                alt="sfs"
-                class="h-36 justify-self-end object-cover object-center" />
-              <img
-                src="assets/img/schools/saintpaul.png"
-                alt="saintpaul"
-                class="h-36 justify-self-start object-cover object-center" />
-              <img
-                src="assets/img/schools/yiss.jpg"
-                alt="yiss"
-                class="h-16 justify-self-end object-cover object-center" />
-              <img
-                src="assets/img/schools/bcc.png"
-                alt="bcc"
-                class="h-36 justify-self-start object-cover object-center" />
+          <div class="flex flex-col gap-8 px-8 lg:flex-row">
+            <div
+              class="flex items-center justify-items-center gap-2 sm:px-0 lg:grid lg:grid-cols-2">
+              <div class="">
+                <img
+                  src="assets/img/schools/sfs.png"
+                  alt="sfs"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="assets/img/schools/saintpaul.png"
+                  alt="saintpaul"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="assets/img/schools/yiss.jpg"
+                  alt="yiss"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="assets/img/schools/bcc.png"
+                  alt="bcc"
+                  class="object-cover object-center" />
+              </div>
             </div>
             <div class="flex flex-1 flex-col items-center justify-start gap-6">
               <p class="text-xl leading-8">
@@ -774,23 +810,24 @@
               </div>
               <hr class="h-1 w-full border-neutral-300/60 sm:hidden" />
               <div class="flex w-full flex-col sm:items-center lg:w-1/2">
-                <h3 class="mb-8 text-left text-2xl font-bold text-zinc-800 lg:self-start">
+                <h3 class="mb-8 text-left text-xl text-zinc-800 lg:self-start">
                   로그엔코딩 수강생들의 실제 다양한 전공​
                 </h3>
-                <div
-                  class="grid grid-cols-1 gap-3 sm:grid-cols-[repeat(2,_max-content)] lg:grid-cols-2">
-                  <p class="text-xl font-medium sm:text-lg">Computer Science</p>
-                  <p class="text-xl font-medium sm:text-lg">Applied Mathematics</p>
-                  <p class="text-xl font-medium sm:text-lg">Data Science / ML / AI</p>
-                  <p class="text-xl font-medium sm:text-lg">Mechanical / Electrical Engineering</p>
-                  <p class="text-xl font-medium sm:text-lg">Psychology</p>
-                  <p class="text-xl font-medium sm:text-lg">Environmental Science</p>
-                  <p class="text-xl font-medium sm:text-lg">Economics / Business</p>
-                  <p class="text-xl sm:text-lg">International Relations</p>
-                  <p class="text-xl sm:text-lg">Design / UXUI</p>
-                  <p class="text-xl sm:text-lg">Civil Engineering / Urban Planning</p>
-                  <p class="text-xl sm:text-lg">Media Studies / Communication</p>
-                </div>
+                <ul
+                  class="ml-6 grid list-outside list-decimal grid-cols-1 gap-x-10 gap-y-3 sm:ml-0 sm:grid-cols-[repeat(2,_max-content)] lg:grid-cols-2">
+                  <li class="text-xl font-medium sm:text-lg">Computer Science</li>
+                  <li class="text-xl font-medium sm:text-lg">Applied Mathematics</li>
+                  <li class="text-xl font-medium sm:text-lg">Data Science / ML / AI</li>
+                  <li class="text-xl font-medium sm:text-lg">
+                    Mechanical / Electrical Engineering
+                  </li>
+                  <li class="text-xl font-medium sm:text-lg">Psychology</li>
+                  <li class="text-xl font-medium sm:text-lg">Environmental Science</li>
+                  <li class="text-xl font-medium sm:text-lg">Economics / Business</li>
+                  <li class="text-xl sm:text-lg">International Relations</li>
+                  <li class="text-xl sm:text-lg">Civil Engineering / Urban Planning</li>
+                  <li class="text-xl sm:text-lg">Media Studies / Communication</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -800,8 +837,8 @@
       <!-- Partners Section -->
       <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
         <h2
-          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['로그엔코딩과_함계한_파트너'] md:text-5xl">
-          로그엔코딩과 함계한 기관
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['로그엔코딩과_함께한_파트너'] md:text-5xl">
+          로그엔코딩과 함께한 기관
         </h2>
         <div class="infinite-carousel-container h-36 sm:h-56 xl:h-64">
           <div class="carousel-primary">
@@ -974,34 +1011,7 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script type="module" src="assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const video = document.getElementById('hero');
-        const isMobile = window.innerWidth <= 640;
-        const source = isMobile
-          ? 'assets/video/logn_hero_mobile.m3u8'
-          : 'assets/video/logn_hero.m3u8';
-
-        if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource(source);
-          hls.attachMedia(video);
-          hls.on(Hls.Events.MANIFEST_PARSED, function () {
-            video.play();
-          });
-
-          hls.on(Hls.Events.ERROR, function (event, data) {
-            console.error('HLS.js error:', data);
-          });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = source;
-          video.addEventListener('loadedmetadata', function () {
-            video.play();
-          });
-        }
-      });
-    </script>
+    <script type="module" src="assets/js/home.js"></script>
   </body>
 </html>
