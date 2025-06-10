@@ -242,10 +242,10 @@
             <h2 class="text-3xl font-bold whitespace-nowrap sm:text-4xl lg:text-5xl">
               Capstone Project
             </h2>
-            <hr class="text-flamingo-500 my-3 h-1 w-32 sm:my-6" />
-            <p>문과 / 이과 / 예체능 융합 EC 토탈 솔루션 프로그램</p>
+            <hr class="text-flamingo-500 my-3 h-1 w-32 sm:mt-6 sm:mb-4" />
+            <p class="text-xl font-medium">문과 / 이과 / 예체능 융합 EC 토탈 솔루션 프로그램</p>
           </div>
-          <p class="max-w-md text-xs break-keep sm:text-right sm:text-sm">
+          <p class="hidden max-w-md text-xs break-keep sm:inline sm:text-right sm:text-sm">
             *비밀유지협약으로 인해 구체적인 내용은 공개할 수 없는 부분 양해부탁드립니다. 캡스톤
             프로그램 중 일부
           </p>
@@ -257,12 +257,16 @@
           class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Ongoing_Projects'] md:text-5xl">
           ONGOING PROJECTS
         </h2> -->
-        <p class="max-w-2xl text-center text-lg leading-relaxed font-medium break-keep">
+        <p class="max-w-2xl text-center text-lg leading-8 text-balance break-keep">
           로그엔코딩은 대학 수준의 캡스톤 프로그램을 도입하여 고등학생들에게 데이터 사이언스, 머신
           러닝, 로보틱스, 웹/앱 개발, 비즈니스 등 다양한 분야에서 전문가들의 지도를 받아 세계적인
           기업들에게 실질적인 솔루션을 제공할 수 있는 기회를 제공합니다.
         </p>
-        <div id="capstone-ongoing-list" class="relative mx-auto flex w-full">
+        <h2
+          class="border-flamingo-500 relative mt-12 inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Ongoing_Projects'] md:text-5xl">
+          ONGOING PROJECTS
+        </h2>
+        <div id="capstone-ongoing-list" class="relative mx-auto flex w-full flex-col gap-12">
           <!-- insert CAPSTONE ONGOING PROJECTS -->
         </div>
       </div>
@@ -273,12 +277,15 @@
           class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Completed_Projects'] md:text-5xl">
           COMPLETED PROJECTS
         </h2>
-        <div class="relative mx-auto w-full shadow-sm lg:bg-neutral-200 lg:px-20 lg:py-12">
+        <div class="relative mx-auto w-full sm:shadow-sm lg:bg-neutral-200 lg:px-20 lg:py-12">
+          <div
+            id="capstone-completed-list"
+            class="mx-auto flex h-full flex-col gap-12 sm:hidden"></div>
           <div
             data-carousel="static"
-            class="relative mx-auto aspect-video w-full overflow-hidden lg:w-auto lg:overflow-visible">
+            class="relative mx-auto hidden aspect-video w-full overflow-hidden sm:block lg:w-auto lg:overflow-visible">
             <!--  carousel container -->
-            <div id="capstone-completed-list" class="mx-auto h-full">
+            <div id="capstone-completed-carousel-list" class="mx-auto h-full">
               <!-- insert CAPSTONE COMPLETED PROJECTS -->
             </div>
             <!-- carousel controls -->
@@ -401,5 +408,6 @@
       </div>
     </footer>
     <script type="module" src="../../assets/js/main.js"></script>
+    <script type="module" src="../../assets/js/capstone.js"></script>
   </body>
 </html>
