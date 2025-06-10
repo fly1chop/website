@@ -30,7 +30,7 @@ const ongoingHtml = capstone
       ${
         p.link
           ? `
-        <div class="flex gap-2">
+        <div class="flex gap-2 flex-col sm:flex-row">
           <a href="${p.link}" class="btn white !bg-zinc-800">
             <span>프로젝트 상세보기</span>
             <span class="heroicons--arrow-long-right"></span>
