@@ -30,10 +30,17 @@
         </div>
       </div>
       <div
-        class="relative mx-auto mt-12 mb-28 flex size-full max-w-screen-xl flex-col items-center gap-12 px-4 md:mt-20 md:gap-14 lg:px-12">
-        <div class="text-center">
-          <h2 class="mb-3 text-2xl font-semibold sm:mb-6 sm:text-4xl">2025 대회 프로그램</h2>
-          <p class="text-lg font-medium text-zinc-500">수업 기간: 25.06.02 - 25.08.03</p>
+        class="relative mx-auto mt-12 mb-20 flex size-full max-w-screen-xl flex-col items-center gap-12 px-4 md:mt-20 md:gap-14 lg:px-12">
+        <div class="space-y-3 text-center sm:space-y-6">
+          <h2 class="text-2xl font-semibold sm:text-4xl">2025 대회 프로그램</h2>
+          <p class="pb-4 text-lg font-medium text-zinc-500">수업 기간: 25.06.02 - 25.08.03</p>
+          <button
+            class="btn white large"
+            type="button"
+            data-modal-target="contactForm"
+            data-modal-show="contactForm">
+            <span>대회 상담 문의하기</span>
+          </button>
         </div>
       </div>
       <div class="w-full">
@@ -46,6 +53,35 @@
         <img src="/src/assets/img/contests/7.png" class="w-full" />
       </div>
     </main>
+
+    <!-- modals -->
+    <!-- contact form -->
+    <div
+      id="contactForm"
+      data-modal-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 top-0 left-0 z-50 hidden max-h-full w-full items-center justify-center">
+      <div class="relative size-full max-h-full p-4 md:py-20">
+        <!-- modal content -->
+        <div
+          class="relative mx-auto h-full w-full max-w-2xl rounded-xs bg-[#f6f6f6] py-4 shadow-lg">
+          <button
+            data-modal-hide="contactForm"
+            class="bg-flamingo-500 hover-transition hover:bg-flamingo-400 hover:text-color-zinc-800 absolute top-4 right-3 inline-flex cursor-pointer rounded-full p-1 text-2xl shadow-sm hover:shadow-lg">
+            <span class="heroicons--x-mark"></span>
+          </button>
+          <iframe
+            class="size-full"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc4P7lvKAG0YUQibGYe7MJofxm9v7eWRGDgLkNM2ZDdEZ9wbQ/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
 
     <!-- floating buttons group -->
     <div class="group fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-2">
