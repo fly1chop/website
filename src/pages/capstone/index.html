@@ -102,6 +102,35 @@
       </div>
     </main>
 
+    <!-- modals -->
+    <!-- contact form -->
+    <div
+      id="contactForm"
+      data-modal-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 top-0 left-0 z-50 hidden max-h-full w-full items-center justify-center">
+      <div class="relative size-full max-h-full p-4 md:py-20">
+        <!-- modal content -->
+        <div
+          class="relative mx-auto h-full w-full max-w-2xl rounded-xs bg-[#f6f6f6] py-4 shadow-lg">
+          <button
+            data-modal-hide="contactForm"
+            class="bg-flamingo-500 hover-transition hover:bg-flamingo-400 hover:text-color-zinc-800 absolute top-4 right-3 inline-flex cursor-pointer rounded-full p-1 text-2xl shadow-sm hover:shadow-lg">
+            <span class="heroicons--x-mark"></span>
+          </button>
+          <iframe
+            class="size-full"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc4P7lvKAG0YUQibGYe7MJofxm9v7eWRGDgLkNM2ZDdEZ9wbQ/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+
     <!-- floating buttons group -->
     <div class="group fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-2">
       <!-- extra buttons: social + phone -->

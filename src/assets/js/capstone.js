@@ -35,9 +35,13 @@ const ongoingHtml = capstone
             <span>프로젝트 상세보기</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
-          <a class="btn white">
+          <button
+            type="button"
+            data-modal-target="contactForm"
+            data-modal-show="contactForm"
+            class="btn white">
             <span>Capstone 문의하기</span>
-          </a>
+          </button>
         </div>
         `
           : ''
