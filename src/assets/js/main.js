@@ -249,12 +249,6 @@ function initDrawer() {
     backdrop: true,
     bodyScrolling: false,
     backdropClasses: 'bg-black/50 fixed inset-0 z-10',
-    // onShow: () => {
-    //   $mobileNavDrawerButton.classList.remove('text-white');
-    // },
-    // onHide: () => {
-    //   $mobileNavDrawerButton.classList.add('text-white');
-    // },
   };
   const drawer = new Drawer($mobileNavDrawer, options);
   $mobileNavDrawerButton.addEventListener('click', () => drawer.toggle());
@@ -276,11 +270,19 @@ function initHeaderScroll() {
       return;
     }
 
+    // keep header if within 123px from top
+    if (currentScroll <= 123) {
+      $header.style.transform = 'translateY(0)';
+      lastScroll = currentScroll;
+      ticking = false;
+      return;
+    }
+
     if (currentScroll > lastScroll) {
-      // Scrolling down
+      // scrolling down
       $header.style.transform = 'translateY(-100%)';
     } else {
-      // Scrolling up
+      // scrolling up
       $header.style.transform = 'translateY(0)';
     }
 
