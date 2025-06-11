@@ -1,4 +1,5 @@
 import team from '../lib/team2.json';
+import news from '../lib/news.json';
 import { imageMap } from './imageMap';
 
 const $instructorsList = document.getElementById('instructors-list');
@@ -29,7 +30,10 @@ const instructorsHtml = instructors
 `
   )
   .join('');
-$instructorsList.innerHTML = instructorsHtml;
+
+if ($instructorsList) {
+  $instructorsList.innerHTML = instructorsHtml;
+}
 
 const mentorsHtml = mentors
   .map(
@@ -50,7 +54,9 @@ const mentorsHtml = mentors
 `
   )
   .join('');
-$mentorsList.innerHTML = mentorsHtml;
+if ($mentorsList) {
+  $mentorsList.innerHTML = mentorsHtml;
+}
 
 const staffHtml = staff
   .map(
@@ -69,7 +75,9 @@ const staffHtml = staff
 `
   )
   .join('');
-$staffList.innerHTML = staffHtml;
+if ($staffList) {
+  $staffList.innerHTML = staffHtml;
+}
 
 const newsHtml = news
   .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -98,11 +106,13 @@ const newsHtml = news
 `
   )
   .join('');
-$newsList.innerHTML = newsHtml;
-$newsList.addEventListener('click', (event) => {
-  const $tr = event.target.closest('tr[data-href]');
-  if ($tr) {
-    const url = $tr.getAttribute('data-href');
-    window.open(url, '_blank', 'noopener,noreferrer');
-  }
-});
+if ($newsList) {
+  $newsList.innerHTML = newsHtml;
+  $newsList.addEventListener('click', (event) => {
+    const $tr = event.target.closest('tr[data-href]');
+    if ($tr) {
+      const url = $tr.getAttribute('data-href');
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  });
+}
