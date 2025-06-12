@@ -5,7 +5,8 @@
     "school": "Carnegie Mellon University",
     "position": "",
     "field": ["알고리즘", "풀스택 개발", "UI/UX"],
-    "image": "jy.jpg"
+    "image": "jy.jpg",
+    "isMain": true
   },
   {
     "category": "instructor",

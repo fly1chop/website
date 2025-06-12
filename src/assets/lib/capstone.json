@@ -24,7 +24,7 @@
   {
     "category": "COMPLETED",
     "name": "Project GPT+",
-    "client": "Malabuyoc Central Elementary School (Project Advisor: Dr. Thomas W. Miller)",
+    "client": "Dr. Thomas W. Miller",
     "deliverables": null,
     "duration": "2025 Spring",
     "description": "Project GPT+는 생성형 AI를 활용하여 복잡한 학습 주제를 초등학생들이 쉽고 흥미롭게 배울 수 있도록 돕는 웹 기반 교육 프로젝트입니다. 이 플랫폼은 GPT 모델을 정교하게 튜닝하여, 학생들이 입력한 질문이나 주제에 맞춰 개인화된 상호적인 동화책을 생성하며, 추상적인 개념들을 친근하고 구체적인 이야기로 변환하고 퀴즈도 함께 제공합니다. GPT+는 교육 자원이 부족한 지역사회의 학습 격차를 해소하고, 포용적이고 역동적인 교육의 새로운 모델을 제시합니다.",
@@ -33,7 +33,7 @@
   {
     "category": "COMPLETED",
     "name": "Project XR",
-    "client": "GIST VR (CMU HCI Institute)",
+    "client": "CMU Center for Transformational Play",
     "deliverables": null,
     "duration": "2023 Winter - 2024 Spring",
     "description": "가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서 가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여 학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여 사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할 수 있는 방법들을 개발하고 연구합니다.",

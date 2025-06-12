@@ -15,10 +15,10 @@ const ongoingHtml = capstone
       <span class="text-5xl font-bold w-12 block text-center border-b pb-1.5 border-flamingo-500 text-zinc-300">${i + 1}</span>
       <div class="space-y-2">
         <p class="text-3xl font-semibold">${p.name}</p>
-        <p class="font-medium">Client: ${p.client}</p>
+        <p class="font-medium">Client | Partner: ${p.client}</p>
       </div>
       <div class="space-y-2">
-        <p class="text-zinc-600 italic">Duration: ${p.duration}</p>
+        <p class="text-zinc-600 italic">Term: ${p.duration}</p>
         <div class="flex gap-2">
           <span
             class="rounded-full bg-sky-500 px-4 py-2 text-xs font-medium text-white uppercase">
@@ -74,7 +74,7 @@ const completedCarouselHtml = filteredCapstones
       <div class="bg-zinc-50 flex md:flex-row flex-col h-full shadow-sm rounded-xs overflow-x-hidden overflow-y-auto">
         <div class="flex flex-col gap-2 p-8 flex-2/3">
           <h3 class="text-3xl font-semibold">${p.name}</h3>
-          <p class="font-medium">Client: ${p.client}</p>
+          <p class="font-medium">Client | Partner: ${p.client}</p>
           ${
             p.deliverables
               ? `
@@ -84,7 +84,7 @@ const completedCarouselHtml = filteredCapstones
             `
               : ''
           }
-          <p class="mt-4 text-sm italic text-zinc-600">Duration: ${p.duration}</p>
+          <p class="mt-4 text-sm italic text-zinc-600">Term: ${p.duration}</p>
           <p class="mt-4 leading-7 break-keep">
             ${p.description}
           </p>
@@ -108,7 +108,7 @@ const completedHtml = filteredCapstones
     <div class="bg-zinc-50 flex flex-col-reverse h-full shadow-sm rounded-xs overflow-x-hidden overflow-y-auto">
       <div class="flex flex-col gap-2 p-8 flex-2/3">
         <h3 class="text-3xl font-semibold">${p.name}</h3>
-        <p class="font-medium">Client: ${p.client}</p>
+        <p class="font-medium">Client | Partner: ${p.client}</p>
         ${
           p.deliverables
             ? `
@@ -118,7 +118,7 @@ const completedHtml = filteredCapstones
           `
             : ''
         }
-        <p class="mt-4 text-sm italic text-zinc-600">Duration: ${p.duration}</p>
+        <p class="mt-4 text-sm italic text-zinc-600">Term: ${p.duration}</p>
         <p class="mt-4 leading-7 break-keep">
           ${p.description}
         </p>
