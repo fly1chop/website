@@ -36,7 +36,7 @@ export const imageMap = {
   'cubs4.png': new URL('../img/capstone/cubs4.png', import.meta.url),
   'dokdo.png': new URL('../img/capstone/dokdo.png', import.meta.url),
   'eco8-2.jpg': new URL('../img/capstone/eco8-2.jpg', import.meta.url),
-  'gpt.jpg': new URL('../img/capstone/gpt.jpg', import.meta.url),
+  'gpt.png': new URL('../img/capstone/gpt.png', import.meta.url),
   'horizon.png': new URL('../img/capstone/horizon.png', import.meta.url),
   'meta2.png': new URL('../img/capstone/meta2.png', import.meta.url),
   'meta_1.jpg': new URL('../img/capstone/meta_1.jpg', import.meta.url),
