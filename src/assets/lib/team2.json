@@ -23,7 +23,7 @@
     "school": "",
     "position": "Lead Project Manager",
     "field": [],
-    "image": "sarah.jpg"
+    "image": "Sarah.jpg"
   },
   {
     "category": "staff",
@@ -39,7 +39,7 @@
     "school": "",
     "position": "Project Manager",
     "field": [],
-    "image": "suhjin.jpg"
+    "image": "Suhjin.jpg"
   },
   {
     "category": "staff",
@@ -47,7 +47,7 @@
     "school": "",
     "position": "Project Manager",
     "field": [],
-    "image": "yony.jpeg"
+    "image": "Yony.jpg"
   },
   {
     "category": "staff",
@@ -55,7 +55,7 @@
     "school": "",
     "position": "Education Manager",
     "field": [],
-    "image": "christine.jpg"
+    "image": "Christine.jpg"
   },
   {
     "category": "staff",
@@ -71,7 +71,7 @@
     "school": "University of Rochester, 연세대학교 석사(CS)",
     "position": "",
     "field": ["웹 개발", "데이터 사이언스", "알고리즘"],
-    "image": "scott.jpg"
+    "image": "Scott.jpg"
   },
   {
     "category": "instructor",
@@ -79,7 +79,7 @@
     "school": "Georgie Institute of Technology",
     "position": "",
     "field": ["알고리즘", "앱 개발"],
-    "image": "ted.jpg"
+    "image": "Ted.jpg"
   },
   {
     "category": "instructor",
@@ -87,7 +87,7 @@
     "school": "UC Berkeley",
     "position": "",
     "field": ["플스택 개발", "알고리즘", "블록체인"],
-    "image": "ellie.jpg"
+    "image": "Ellie.jpg"
   },
   {
     "category": "instructor",
@@ -95,7 +95,7 @@
     "school": "HKUST (홍콩과기대)",
     "position": "",
     "field": ["데이터 사이언스", "머신 러닝", "게임 개발"],
-    "image": "jingee.jpg"
+    "image": "Jingee.jpg"
   },
   {
     "category": "instructor",
@@ -111,7 +111,7 @@
     "school": "서울대학교",
     "position": "",
     "field": ["데이터 사이언스"],
-    "image": "aiden.jpg"
+    "image": "Aiden.jpg"
   },
   {
     "category": "instructor",
@@ -119,7 +119,7 @@
     "school": "Columbia University",
     "position": "",
     "field": ["머신러닝", "딥러닝", "AI"],
-    "image": "jason.jpg"
+    "image": "Jason.jpg"
   },
   {
     "category": "instructor",
@@ -127,7 +127,7 @@
     "school": "Georgia Institute of Technology",
     "position": "",
     "field": ["앱 개발", "알고리즘"],
-    "image": "kevin.jpg"
+    "image": "Kevin.jpg"
   },
   {
     "category": "instructor",
@@ -135,7 +135,7 @@
     "school": "New York University",
     "position": "",
     "field": ["풀스택 개발", "알고리즘"],
-    "image": "sunny.jpg"
+    "image": "Sunny.jpg"
   },
   {
     "category": "instructor",
@@ -143,7 +143,7 @@
     "school": "서울대학교",
     "position": "",
     "field": ["AI/ML", "알고리즘"],
-    "image": "alice.jpg"
+    "image": "Alice.jpg"
   },
   {
     "category": "instructor",
@@ -151,7 +151,7 @@
     "school": "서울대학교",
     "position": "",
     "field": ["UI/UX", "로보틱스"],
-    "image": "ina.jpg"
+    "image": "Ina.jpg"
   },
   {
     "category": "instructor",
@@ -167,7 +167,7 @@
     "school": "건국대 기계설계학과 석사",
     "position": "",
     "field": ["임베디드 소프트웨어"],
-    "image": "minhong.jpg"
+    "image": "Minhong.jpg"
   },
   {
     "category": "instructor",
@@ -183,7 +183,7 @@
     "school": "Lehigh University",
     "position": "",
     "field": ["데이터 사이언스", "알고리즘", "백엔드 개발"],
-    "image": "sehyoun.jpg"
+    "image": "Sehyun.jpg"
   },
   {
     "category": "instructor",
