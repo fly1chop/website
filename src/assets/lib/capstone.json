@@ -8,7 +8,7 @@
     "image": "horizon.png",
     "objectPosition": "left",
     "deliverables": null,
-    "link": "https://www.logncoding.com/horizon"
+    "link": "/capstone/horizon"
   },
   {
     "category": "ONGOING",
@@ -19,7 +19,7 @@
     "image": "dokdo.png",
     "objectPosition": "center",
     "deliverables": null,
-    "link": "https://www.logncoding.com/dokdo"
+    "link": "/capstone/dokdo"
   },
   {
     "category": "COMPLETED",
