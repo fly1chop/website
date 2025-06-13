@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LognCoding</title>
+    <!-- Favicons -->
+    <link href="/src/assets/img/favicon.png" rel="icon" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/src/assets/css/style.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <main class="relative overflow-x-clip">
+      <!-- Hero Section -->
+      <div
+        class="relative inset-x-0 h-screen bg-[url(../../assets/img/long_hero-vertical.png)] bg-cover bg-no-repeat sm:bg-[url(../../assets/img/logn_hero.png)]">
+        <div class="size-full">
+          <video
+            id="hero"
+            class="size-full object-cover"
+            autoplay
+            muted
+            playsinline
+            webkit-playsinline
+            preload="auto"></video>
+        </div>
+        <button
+          data-video-target="hero"
+          class="do-toggle-play hover:bg-flamingo-500 absolute bottom-6 left-6 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white/20 text-zinc-800 shadow-lg backdrop-blur-sm transition hover:text-white">
+          <span class="sr-only">play/pause video</span>
+          <span class="heroicons--play-pause text-xl"></span>
+        </button>
+      </div>
+
+      <!-- Featured Media Section -->
+      <!-- <section class="relative my-24 flex flex-col items-center gap-10 overflow-x-hidden md:gap-14">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Highlights'] md:text-5xl">
+          HIGHLIGHTS
+        </h2>
+        <div
+          class="mx-auto flex w-full max-w-screen-2xl flex-col items-center gap-6 overflow-hidden bg-neutral-200 px-4 py-14 md:w-auto md:overflow-visible md:bg-transparent lg:px-12">
+          <div
+            id="media-carousel"
+            data-carousel="static"
+            class="relative w-full before:absolute before:top-1/2 before:left-1/2 before:block before:h-[145%] before:w-[130%] before:-translate-1/2 before:bg-neutral-200">
+            
+            <div
+              class="relative h-[480px] w-full overflow-hidden sm:aspect-video sm:h-96 md:overflow-visible">
+              <div
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
+                data-carousel-item>
+                <div class="flex flex-col">
+                  <img
+                    src="assets/img/media-0.jpg"
+                    alt="..."
+                    class="aspect-video size-full object-cover" />
+                  <div
+                    class="bottom-0 z-10 flex w-full flex-col gap-3 bg-zinc-800 px-6 py-4 text-sm text-white sm:absolute md:w-[calc(100%-64px)] md:text-base">
+                    <p>#InternationalLogicOlympiad</p>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                      placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque
+                      deserunt repellendus. In corporis vitae delectus voluptatum, corrupti facilis
+                      tenetur iusto!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
+                data-carousel-item>
+                <div class="flex flex-col">
+                  <img
+                    src="assets/img/media-2.jpg"
+                    alt="..."
+                    class="aspect-video size-full object-cover" />
+                  <div
+                    class="bottom-0 z-10 flex w-full flex-col gap-3 bg-zinc-800 px-6 py-4 text-sm text-white sm:absolute md:w-[calc(100%-64px)] md:text-base">
+                    <p>#InternationalLogicOlympiad</p>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                      placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque
+                      deserunt repellendus. In corporis vitae delectus voluptatum, corrupti facilis
+                      tenetur iusto!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
+                data-carousel-item>
+                <div class="flex flex-col">
+                  <img
+                    src="assets/img/media-0.jpg"
+                    alt="..."
+                    class="aspect-video size-full object-cover" />
+                  <div
+                    class="bottom-0 z-10 flex w-full flex-col gap-3 bg-zinc-800 px-6 py-4 text-sm text-white sm:absolute md:w-[calc(100%-64px)] md:text-base">
+                    <p>#InternationalLogicOlympiad</p>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                      placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque
+                      deserunt repellendus. In corporis vitae delectus voluptatum, corrupti facilis
+                      tenetur iusto!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="hidden h-full overflow-hidden duration-300 ease-in-out md:px-8"
+                data-carousel-item>
+                <div class="flex flex-col">
+                  <img
+                    src="assets/img/media-2.jpg"
+                    alt="..."
+                    class="aspect-video size-full object-cover" />
+                  <div
+                    class="bottom-0 z-10 flex w-full flex-col gap-3 bg-zinc-800 px-6 py-4 text-sm text-white sm:absolute md:w-[calc(100%-64px)] md:text-base">
+                    <p>#InternationalLogicOlympiad</p>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, exercitationem
+                      placeat! Exercitationem tenetur quaerat soluta earum culpa quos cumque
+                      deserunt repellendus. In corporis vitae delectus voluptatum, corrupti facilis
+                      tenetur iusto!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button
+              type="button"
+              class="group absolute start-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-start-24"
+              data-carousel-prev>
+              <span
+                class="absolute -end-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+              <span
+                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="group absolute end-4 top-0 z-30 flex h-full cursor-pointer items-center justify-center focus:outline-none md:-end-24"
+              data-carousel-next>
+              <span
+                class="absolute -start-6 top-0 -z-10 hidden aspect-[14.5/9] h-full bg-zinc-900/90 md:block"></span>
+              <span
+                class="bg-flamingo-500 group-hover:bg-flamingo-400 inline-flex h-10 w-10 items-center justify-center rounded-full group-hover:text-zinc-800 group-focus:ring-1 group-focus:ring-zinc-950 group-focus:outline-none">
+                <span class="heroicons--chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+          <a href="#" class="link--youtube btn white z-20">
+            <span>유튜브 채널 바로가기</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
+      </section> -->
+
+      <!-- Our Achievements Section -->
+      <section class="relative my-12 flex flex-col items-center gap-14 md:my-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Our_Achievements'] md:text-5xl">
+          OUR ACHIEVEMENTS
+        </h2>
+        <div class="mx-auto w-full max-w-[1200px] px-4 lg:px-12">
+          <div class="grid grid-cols-1 overflow-hidden rounded-xs shadow-xl md:grid-cols-2">
+            <div class="flex flex-col gap-6 bg-zinc-800 p-8 text-white md:p-10">
+              <h3 class="mb-2 text-4xl font-bold sm:text-5xl">Coding & AI</h3>
+              <p class="text-base lg:text-lg xl:text-xl">ACSL 한국 공식 교육처 단독 선정</p>
+              <p class="text-base lg:text-lg xl:text-xl">2025 ACSL 전원 Finalist 진출</p>
+              <p class="text-base lg:text-lg xl:text-xl">
+                2025 ILO Finalist 3팀 배출 (국내 2팀, 미국 1팀)
+              </p>
+              <p class="text-base lg:text-lg xl:text-xl">
+                2025 ILO 개인 디비전 30명 수상 (Gold/Silver/Bronze)
+              </p>
+              <p class="text-base lg:text-lg xl:text-xl">
+                2025 Technovation Girls 2팀 한국 유일 본선 진출
+              </p>
+              <p class="text-base lg:text-lg xl:text-xl">
+                2024 Technovation Girls 한국 유일 본선 진출
+              </p>
+              <p class="text-base lg:text-lg xl:text-xl">2024 ILO 한국 유일 Finalist Team 배출</p>
+            </div>
+            <img
+              src="/src/assets/img/coding.jpg"
+              alt="coding & ai"
+              draggable="false"
+              class="hidden size-full object-cover md:block" />
+            <img
+              src="/src/assets/img/robotics.jpg"
+              alt="engineering & robotics"
+              draggable="false"
+              class="hidden size-full object-cover md:block" />
+            <div class="flex flex-col gap-6 bg-neutral-200 p-8 text-gray-950">
+              <h3 class="mb-2 text-4xl font-bold sm:text-5xl">Engineering</h3>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 VEX Robotics World Championship</span>
+                <span class="text-zinc-500">국내최초 초등부 & 중등부 & 고등부 동시 진출</span>
+              </p>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 VEX Robotics World Championship</span>
+                <span class="text-zinc-500">Online Challenge 수상</span>
+              </p>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 VEX Robotics World Championship</span>
+                <span class="text-zinc-500">Judges Award 수상</span>
+              </p>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 GENIUS Olympiad Robotics</span>
+                <span class="text-zinc-500">분야 한국 1등 & 결선 진출</span>
+              </p>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 VEX Code VR Virtual Skills Challenge</span>
+                <span class="text-zinc-500">한국 1등 World Championship 진출</span>
+              </p>
+              <p class="flex flex-col gap-1 text-base lg:text-lg xl:text-xl">
+                <span>2025 VEX Game Design Challenge</span>
+                <span class="text-zinc-500">한국 유일 World Top 5 선정</span>
+              </p>
+              <p class="text-base lg:text-lg xl:text-xl">2024 VEX V5 National Championship 우승</p>
+              <p class="text-base lg:text-lg xl:text-xl">2024 VEX IQ Asia 대표 출전</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Courses'] md:text-5xl">
+          COURSES
+        </h2>
+        <p
+          class="max-w-xl px-4 text-center text-lg font-medium break-keep sm:text-2xl sm:leading-10">
+          미국 보딩스쿨 및 아이비리그 포함 명문대 다수 합격생 배출 학생 개별 목표에 맞춘 맞춤형
+          로드맵 설계 및 관리
+        </p>
+        <div class="flex w-full max-w-screen-xl flex-col gap-6 px-4 md:flex-row lg:gap-12 lg:px-12">
+          <div
+            class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-zinc-800 px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
+            <span class="heroicons--academic-cap-solid text-6xl"></span>
+            <p class="mb-4 text-2xl font-medium">Fundamental</p>
+            <p class="text-lg break-keep">국제학교 특성화 맞춤 class</p>
+            <p class="text-lg break-keep max-sm:max-w-xs">
+              SFS, YISS, St. Paul 등 다수 국제 학교 출강 강사진 직접 수업​
+            </p>
+            <p class="text-lg break-keep max-sm:max-w-xs">
+              Carnegie Mellon 대학교 출신 대표​ CMU CS커리큘럼 기반 수업 진행
+            </p>
+          </div>
+          <div
+            class="hover-transition bg-flamingo-500 flex flex-1 flex-col items-center gap-2 rounded-xs px-6 py-6 text-center text-white shadow-lg hover:scale-105 sm:px-8">
+            <span class="heroicons--trophy-solid text-6xl"></span>
+            <p class="mb-4 text-2xl font-medium">Competition</p>
+            <p class="text-lg break-keep">코딩 국제 대회</p>
+            <p class="text-lg break-keep">EC 필수 국제 대회​</p>
+            <p class="text-lg break-keep">우리 아이 맞춤 대회 트랙 진단​</p>
+            <a class="btn mt-2 !bg-white" href="/courses/2025/competition">
+              <span>2025년 대회 트랙</span>
+              <span class="heroicons--arrow-long-right"></span>
+            </a>
+          </div>
+          <div
+            class="hover-transition flex flex-1 flex-col items-center gap-2 rounded-xs bg-neutral-300 px-6 py-6 text-center shadow-lg hover:scale-105 sm:px-8">
+            <span class="heroicons--light-bulb-solid text-6xl"></span>
+            <p class="mb-4 text-2xl font-medium">Project</p>
+            <p class="text-lg break-keep">보딩준비 개인 맞춤 프로젝트​</p>
+            <p class="text-lg break-keep">희망 전공 / 개인 맞춤형 프로젝트</p>
+            <p class="text-lg break-keep">커스텀 테마 프로젝트​</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <button
+            type="button"
+            data-modal-target="contactForm"
+            data-modal-show="contactForm"
+            class="btn white large">
+            우리 아이 맞춤 트랙 진단 받기
+          </button>
+          <a href="/courses/2025/summer" class="btn white large !bg-zinc-800">
+            <span>2025년 여름학기 스케줄</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Projects'] md:text-5xl">
+          PROJECTS
+        </h2>
+        <div class="flex w-full max-w-screen-xl flex-col gap-6 px-4 md:flex-row lg:gap-12 lg:px-12">
+          <div class="hover-transition relative flex-1 rounded-xs shadow-lg hover:scale-105">
+            <!-- <span class="heroicons--user-solid text-6xl"></span> -->
+            <div class="absolute top-0 -z-10 size-full">
+              <img src="/src/assets/img/pp-bg.jpg" class="size-full object-cover" />
+              <span class="absolute top-0 block size-full bg-white/40"></span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-6 px-6 py-6 text-center sm:px-8 md:py-12 lg:px-12 lg:py-20">
+              <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">Personal Projects</p>
+              <p class="text-xl leading-8 break-keep">
+                학생의 활동 이력과 공백을 탐색하여 STEM, Engineering, Social Sciences, Art & Design
+                등의 다양한 희망 전공과 연계해 자신만의 스토리를 보다 풍부히 풀어낼 수 있는 개인
+                맞춤 프로그램
+              </p>
+              <button
+                type="button"
+                data-modal-target="contactForm"
+                data-modal-show="contactForm"
+                class="btn white">
+                PP 프로그램 문의하기
+              </button>
+            </div>
+          </div>
+          <div class="hover-transition relative flex-1 rounded-xs shadow-lg hover:scale-105">
+            <!-- <span class="iconify-[game-icons--puzzle] text-6xl"></span> -->
+            <div class="absolute top-0 -z-10 size-full">
+              <img src="/src/assets/img/cap-bg1.png" class="size-full object-cover grayscale-50" />
+              <span class="absolute top-0 block size-full bg-white/90"></span>
+            </div>
+            <div
+              class="flex flex-col items-center gap-6 px-6 py-6 text-center sm:px-8 md:py-12 lg:px-12 lg:py-20">
+              <p class="text-2xl font-semibold sm:text-3xl md:text-4xl">Capstone Projects</p>
+              <p class="text-xl leading-8 break-keep">
+                미국 최상위 대학교 프로그램을 벤치마킹한 캡스톤 프로그램을 통해 다양한 분야에서
+                전문가들의 지도를 받아​ 세계적인 기업, 명문 대학 연구기관, 글로벌 NGO 등에게
+                실질적인 솔루션을 제공할 수 있는 기회
+              </p>
+              <a href="/capstone" class="btn white !bg-zinc-800">
+                <span>Capstone 프로그램</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="relative my-12 flex flex-col items-center gap-14 md:my-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['Meet_the_Team'] md:text-5xl">
+          MEET THE TEAM
+        </h2>
+        <div class="relative mx-auto w-full px-8 lg:px-12">
+          <div class="absolute bottom-0 left-0 -z-10 h-full w-full bg-zinc-800 lg:h-[90%]"></div>
+          <div
+            class="relative mx-auto flex w-full max-w-screen-xl flex-col justify-between gap-8 pb-10 lg:gap-x-14 xl:flex-row xl:gap-12">
+            <div class="mt-10 flex flex-col gap-6 lg:mt-24">
+              <p class="text-xl leading-8 text-white sm:text-2xl sm:leading-10 sm:font-medium">
+                로그엔코딩은 Stanford, CMU, UC Berkeley 등 명문대와 NASA, Google, Microsoft 등
+                글로벌 선도 기업 출신 전문가들과 협력하여, 학생의 활동 이력과 공백을 분석하고 STEM,
+                Engineering, Social Sciences, Art & Design 등 다양한 전공과 연계된 맞춤형 수업과
+                프로그램을 제공합니다.
+              </p>
+              <div class="hidden xl:block">
+                <a href="/about#team" class="btn white self-start">
+                  <span>Team 더 보기</span>
+                  <span class="heroicons--arrow-long-right"></span>
+                </a>
+              </div>
+            </div>
+            <div class="flex max-h-[300px] gap-3 sm:gap-6">
+              <div
+                class="hover-transition w-52 overflow-hidden rounded-xs bg-zinc-50 shadow-lg hover:scale-105">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="/src/assets/img/team/jy.jpg" />
+                  <source media="(min-width: 641px)" srcset="/src/assets/img/team/jy-og.jpg" />
+                  <img
+                    src="/src/assets/img/team/jy-og.jpg"
+                    alt="jy"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">JY</p>
+                  <p>대표원장</p>
+                </div>
+              </div>
+              <div
+                class="hover-transition w-52 overflow-hidden rounded-xs bg-zinc-50 shadow-lg hover:scale-105">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="/src/assets/img/team/byun.jpg" />
+                  <source media="(min-width: 641px)" srcset="/src/assets/img/team/byun-og.jpg" />
+                  <img
+                    src="/src/assets/img/team/byun-og.jpg"
+                    alt="byun"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">Byun</p>
+                  <p>원장</p>
+                </div>
+              </div>
+              <div
+                class="hover-transition w-52 overflow-hidden rounded-xs bg-zinc-50 shadow-lg hover:scale-105">
+                <picture>
+                  <source media="(max-width: 640px)" srcset="/src/assets/img/team/kijun.jpg" />
+                  <source media="(min-width: 641px)" srcset="/src/assets/img/team/kijun-og.jpg" />
+                  <img
+                    src="/src/assets/img/team/kijun-og.jpg"
+                    alt="kijun"
+                    class="aspect-square w-full object-cover object-top" />
+                </picture>
+                <div class="flex flex-col px-3 py-2 text-sm sm:gap-2 sm:p-4 sm:text-base">
+                  <p class="text-lg font-medium sm:text-xl">Kijun</p>
+                  <p>대표강사</p>
+                </div>
+              </div>
+            </div>
+            <div class="block xl:hidden">
+              <a href="/about#team" class="btn white self-start">
+                <span>Team 더 보기</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Credentials Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black break-keep text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['결과로_입증하는_로그엔코딩'] md:text-5xl">
+          결과로 입증하는 로그엔코딩
+        </h2>
+        <div class="relative w-full px-4 lg:px-12">
+          <div
+            class="bg-flamingo-500 absolute top-1/2 left-0 -z-10 h-[80%] w-full -translate-y-1/2"></div>
+          <div
+            class="mx-auto flex w-full max-w-screen-xl flex-col items-center bg-white p-6 shadow-xl">
+            <div
+              class="grid auto-rows-[100px] grid-cols-4 items-center justify-items-center gap-x-2 py-0 sm:flex sm:flex-wrap sm:justify-center sm:gap-8 sm:px-8 sm:py-8">
+              <img
+                src="/src/assets/img/schools/harvard.jpg"
+                alt="harvard"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/nyu.jpg"
+                alt="nyu"
+                draggable="false"
+                class="h-20 object-contain object-center sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/princeton.png"
+                alt="princeton"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/cornell.jpg"
+                alt="cornell"
+                draggable="false"
+                class="h-20 object-contain object-center sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/cambridge.jpg"
+                alt="cambridge"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/boston.jpg"
+                alt="boston"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/yale.jpg"
+                alt="yale"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/northwestern.jpg"
+                alt="northwestern"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/massachusetts.jpg"
+                alt="massachusetts"
+                draggable="false"
+                class="h-20 object-contain object-center sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/duke.jpg"
+                alt="duke"
+                draggable="false"
+                class="h-20 object-contain object-center sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/cmu.jpg"
+                alt="cmu"
+                draggable="false"
+                class="h-20 object-contain object-center sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/dartmouth.jpg"
+                alt="dartmouth"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/columbia.jpg"
+                alt="columbia"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/stanford.jpg"
+                alt="stanford"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/chicago.png"
+                alt="chicago"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+              <img
+                src="/src/assets/img/schools/berkeley.jpg"
+                alt="berkeley"
+                draggable="false"
+                class="object-contain object-center sm:h-20 sm:object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['로그엔코딩_강사_출강_학교'] md:text-5xl">
+          로그엔코딩 강사 출강 학교
+        </h2>
+        <div class="w-full max-w-screen-lg">
+          <div class="flex flex-col items-center gap-8 px-8 lg:flex-row">
+            <div
+              class="flex items-center justify-items-center gap-2 sm:px-0 lg:grid lg:grid-cols-2">
+              <div class="">
+                <img
+                  src="/src/assets/img/schools/sfs.png"
+                  alt="sfs"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="/src/assets/img/schools/saintpaul.png"
+                  alt="saintpaul"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="/src/assets/img/schools/yiss.jpg"
+                  alt="yiss"
+                  class="object-cover object-center" />
+              </div>
+              <div class="">
+                <img
+                  src="/src/assets/img/schools/bcc.png"
+                  alt="bcc"
+                  class="object-cover object-center" />
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col items-center justify-start gap-6">
+              <p class="text-xl leading-8">
+                로그엔코딩 소속 강사들은 2021년부터 서울 내 다양한 국제학교들을 출강하며 정규수업,
+                여름캠프, 방과 후 프로그램 등 다양한 프로그램에 강의를 하였습니다.
+              </p>
+              <p class="text-xl leading-8">
+                로그엔코딩은 Python 개념부터 AP Computer Science, Data Science, Robotics, Makers 및
+                VEX, 게임 개발 등 다양한 스펙트럼의 수업들을 진행하는 강사들을 보유하고 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative hidden py-12 md:py-28">
+        <div class="flex w-full flex-col items-center gap-14 bg-white px-8 py-12 shadow-xl">
+          <h2
+            class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['By_Majors'] md:text-5xl">
+            BY MAJORS
+          </h2>
+          <div class="flex w-full max-w-screen-xl flex-col items-center">
+            <p class="text-xl leading-8">
+              로그엔코딩은 학생이 STEM, Engineering, Social Sciences, Art & Design 등 다양한 분야로
+              진로를 확장할 수 있는 기회를 제공합니다. 단순한 기술 학습을 넘어서, 여러 학문과 창의적
+              영역에 응용 및 실용적 활용이 가능하도록 폭넓은 역량을 키울 수 있습니다.
+            </p>
+            <div class="mt-8 flex w-full flex-col items-start gap-12 lg:mt-12 lg:flex-row">
+              <div
+                id="majors-chart-container"
+                class="flex w-full flex-col items-center gap-y-4 md:items-start lg:w-1/2">
+                <canvas id="majors-chart"></canvas>
+                <p>*실제 로그엔코딩 수강생의 전공 분포도를 나타낸 그래프</p>
+              </div>
+              <hr class="h-1 w-full border-neutral-300/60 sm:hidden" />
+              <div class="flex w-full flex-col sm:items-center lg:w-1/2">
+                <h3 class="mb-8 text-left text-xl text-zinc-800 lg:self-start">
+                  로그엔코딩 수강생들의 실제 다양한 전공​
+                </h3>
+                <ul
+                  class="ml-6 grid list-outside list-decimal grid-cols-1 gap-x-10 gap-y-3 sm:grid-cols-[repeat(2,_max-content)] lg:grid-cols-2">
+                  <li class="text-xl font-medium sm:text-lg">Computer Science</li>
+                  <li class="text-xl font-medium sm:text-lg">Applied Mathematics</li>
+                  <li class="text-xl font-medium sm:text-lg">Data Science / ML / AI</li>
+                  <li class="text-xl font-medium sm:text-lg">
+                    Mechanical / Electrical Engineering
+                  </li>
+                  <li class="text-xl font-medium sm:text-lg">Psychology</li>
+                  <li class="text-xl font-medium sm:text-lg">Environmental Science</li>
+                  <li class="text-xl font-medium sm:text-lg">Economics / Business</li>
+                  <li class="text-xl sm:text-lg">International Relations</li>
+                  <li class="text-xl sm:text-lg">Civil Engineering / Urban Planning</li>
+                  <li class="text-xl sm:text-lg">Media Studies / Communication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['로그엔코딩과_함께한_파트너'] md:text-5xl">
+          로그엔코딩과 함께한 기관
+        </h2>
+        <div class="infinite-carousel-container h-36 sm:h-56 xl:h-64">
+          <div class="carousel-primary">
+            <img alt="partner" src="/src/assets/img/capstone/2.06.jpg" />
+            <img alt="partner" src="/src/assets/img/capstone/char.png" />
+            <img alt="partner" src="/src/assets/img/capstone/cmu-play.png" />
+          </div>
+          <div class="carousel-primary carousel-secondary">
+            <img alt="partner" src="/src/assets/img/capstone/eco8-2.jpg" />
+            <img alt="partner" src="/src/assets/img/capstone/mu_2.png" />
+            <img alt="partner" src="/src/assets/img/capstone/nft3.png" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 오시는 길 Section -->
+      <section class="relative flex flex-col items-center gap-14 py-12 md:py-28">
+        <h2
+          class="border-flamingo-500 relative inline-block border-b pb-6 text-center text-4xl font-black text-zinc-950/5 after:absolute after:bottom-3 after:left-1/2 after:inline after:-translate-x-1/2 after:text-2xl after:font-semibold after:whitespace-nowrap after:text-zinc-950 after:content-['오시는_길'] md:text-5xl">
+          오시는 길
+        </h2>
+        <div class="relative w-full px-4 lg:px-12">
+          <div class="mx-auto flex w-full max-w-screen-xl flex-col bg-white shadow-xl md:flex-row">
+            <div class="px-6 py-8 sm:px-10">
+              <p class="font-medium sm:text-xl md:text-2xl">
+                서울특별시 강남구 언주로174길 17 서우빌딩 3층
+              </p>
+              <hr class="text-flamingo-500 my-6 h-1 w-32" />
+              <div
+                class="xs:text-lg grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-sm sm:gap-x-8 lg:text-xl">
+                <p class="font-medium">대표변호</p>
+                <p class="text-zinc-600">+82 2-540-1628</p>
+                <p class="font-medium">이메일</p>
+                <p class="text-zinc-600">info@logncoding.com</p>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="https://naver.me/xHg7gSXb"
+                  target="_blank"
+                  class="xs:text-lg group hover-transition text-flamingo-500 inline-flex items-center gap-1 border-b text-sm font-medium hover:opacity-60 lg:text-xl">
+                  <span>네이버 지도 바로가기</span>
+                  <span
+                    class="heroicons--arrow-long-right hover-transition group-hover:translate-x-1"></span>
+                </a>
+              </div>
+            </div>
+            <div class="flex-5/7 p-4 pt-0 sm:p-6">
+              <img class="size-full object-cover" src="/src/assets/img/map.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- modals -->
+    <!-- contact form -->
+    <div
+      id="contactForm"
+      data-modal-backdrop="static"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 top-0 left-0 z-50 hidden max-h-full w-full items-center justify-center">
+      <div class="relative size-full max-h-full p-4 md:py-20">
+        <!-- modal content -->
+        <div
+          class="relative mx-auto h-full w-full max-w-2xl rounded-xs bg-[#f6f6f6] py-4 shadow-lg">
+          <button
+            data-modal-hide="contactForm"
+            class="bg-flamingo-500 hover-transition hover:bg-flamingo-400 hover:text-color-zinc-800 absolute top-4 right-3 inline-flex cursor-pointer rounded-full p-1 text-2xl shadow-sm hover:shadow-lg">
+            <span class="heroicons--x-mark"></span>
+          </button>
+          <iframe
+            class="size-full"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc4P7lvKAG0YUQibGYe7MJofxm9v7eWRGDgLkNM2ZDdEZ9wbQ/viewform?embedded=true"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- floating buttons group -->
+    <div class="group fixed right-6 bottom-6 z-50 flex flex-col items-end space-y-2">
+      <!-- extra buttons: social + phone -->
+      <div
+        class="pointer-events-auto flex flex-col items-end space-y-2 opacity-100 transition-opacity duration-200">
+        <!-- social channel -->
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link--kakao inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full shadow-lg transition">
+          <img src="/src/assets/img/kakao.png" class="size-full object-cover" />
+        </a>
+        <!-- phone call -->
+        <a
+          href="tel:+821012345678"
+          class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+          <span class="heroicons--phone"></span>
+        </a>
+      </div>
+
+      <!-- go-to-top -->
+      <button
+        id="goToTopBtn"
+        class="hover:bg-flamingo-500 active:bg-flamingo-500 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-zinc-950 shadow-lg transition hover:text-white">
+        <span class="heroicons--arrow-long-up"></span>
+      </button>
+    </div>
+
+    <footer
+      class="relative w-full bg-zinc-950 bg-cover bg-center bg-no-repeat px-6 py-8 text-xs text-white sm:text-base lg:px-12">
+      <div class="mx-auto w-full max-w-screen-xl space-y-4">
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row-reverse">
+          <div>
+            <img
+              src="/src/assets/img/logo_en.png"
+              alt="LognCoding Logo"
+              class="h-auto w-16 object-cover sm:w-24" />
+          </div>
+          <p class="flex flex-col gap-2 text-sm">
+            <span>주소: 서울특별시 강남구 언주로174길 17 서우빌딩 3층</span>
+            <span>대표번호: +82-2-540-1628</span>
+            <span>학원 등록번호: 제14243호</span>
+          </p>
+        </div>
+        <div class="flex flex-col justify-between gap-y-12 sm:flex-row">
+          <div class="flex flex-col gap-6">
+            <div class="flex gap-4">
+              <a
+                href="#"
+                target="_blank"
+                class="link--kakao flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="/src/assets/img/kakao.png"
+                  alt="kakao channel"
+                  class="size-full object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--instagram flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="/src/assets/img/instagram.png"
+                  alt="Instagram"
+                  class="size-full object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--youtube flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img src="/src/assets/img/youtube.png" alt="YouTube" class="object-cover" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                class="link--blog flex size-8 items-center justify-between overflow-hidden rounded-lg">
+                <img
+                  src="/src/assets/img/naver-blog.png"
+                  alt="Naver Blog"
+                  class="size-full object-cover" />
+              </a>
+            </div>
+          </div>
+          <p class="text-xs font-light text-zinc-500">
+            Copyright 2023-2025 LognCoding. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/assets/js/main.js"></script>
+    <script type="module" src="/src/assets/js/home.js"></script>
+  </body>
+</html>

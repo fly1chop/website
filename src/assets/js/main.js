@@ -32,11 +32,11 @@ function injectHeader() {
       <nav
         class="mx-auto flex max-w-screen-xl items-center justify-end px-4 pt-4 md:justify-between lg:px-12">
         <a href="/" class="hidden w-16 md:block">
-          <img class="logo" src="${new URL('../img/logo_en.png', import.meta.url)}" alt="" />
+          <img class="logo" src="${new URL('../img/logo_en_white.png', import.meta.url)}" alt="" />
         </a>
         <ul class="hidden items-center space-x-8 md:flex">
           <li class="inline-flex items-center gap-1">
-            <a href="/pages/about" class="hover-transition text-white hover:text-zinc-400">About</a>
+            <a href="/about" class="hover-transition text-white hover:text-zinc-400">About</a>
             <button
               id="aboutDropdownBtn"
               data-dropdown-toggle="about-dropdown"
@@ -49,19 +49,19 @@ function injectHeader() {
             <div id="about-dropdown" class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
                 <li>
-                  <a href="/pages/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
+                  <a href="/about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
                 </li>
                 <li>
-                  <a href="/pages/about#team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
+                  <a href="/about#team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
                 </li>
                 <li>
-                  <a href="/pages/about#news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
+                  <a href="/about#news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
                 </li>
               </ul>
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a href="/pages/courses/2025/summer" class="hover-transition text-white hover:text-zinc-400">Courses</a>
+            <a href="/courses/2025/summer" class="hover-transition text-white hover:text-zinc-400">Courses</a>
             <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
@@ -75,12 +75,12 @@ function injectHeader() {
               class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
-                  <a href="/pages/courses/2025/summer" class="block px-4 py-2 hover:bg-zinc-100">
+                  <a href="/courses/2025/summer" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 여름학기 정규반
                   </a>
                 </li>
                 <li>
-                  <a href="/pages/courses/2025/competition" class="block px-4 py-2 hover:bg-zinc-100">
+                  <a href="/courses/2025/competition" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 대회 프로그램
                   </a>
                 </li>
@@ -88,13 +88,13 @@ function injectHeader() {
             </div>
           </li>
           <li>
-            <a href="/pages/capstone" class="hover-transition text-white hover:text-zinc-400">
+            <a href="/capstone" class="hover-transition text-white hover:text-zinc-400">
               Capstone
             </a>
           </li>
           <!-- <li>
                 <a
-                  href="/pages/personal-project"
+                  href="/personal-project"
                   class="hover-transition text-white hover:text-zinc-400">
                   Personal Project
                 </a>
@@ -147,21 +147,21 @@ function injectHeader() {
               <ul class="flex flex-col text-base text-zinc-500">
                 <li>
                   <a
-                    href="/pages/about"
+                    href="/about"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     About Us
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/pages/about#team"
+                    href="/about#team"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     Team
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/pages/about#news"
+                    href="/about#news"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     News
                   </a>
@@ -171,7 +171,7 @@ function injectHeader() {
           </li>
           <!-- <li>
             <a
-              href="/pages/courses"
+              href="/courses"
               class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Courses
             </a>
@@ -195,14 +195,14 @@ function injectHeader() {
               <ul class="flex flex-col text-base text-zinc-500">
                 <li>
                   <a
-                    href="/pages/courses/2025/summer"
+                    href="/courses/2025/summer"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     2025 여름학기 정규반
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/pages/courses/2025/competition"
+                    href="/courses/2025/competition"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     2025 대회 프로그램
                   </a>
@@ -212,14 +212,14 @@ function injectHeader() {
           </li>
           <li>
             <a
-              href="/pages/capstone"
+              href="/capstone"
               class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Capstone
             </a>
           </li>
           <!-- <li>
                 <a
-                  href="/pages/personal-project"
+                  href="/personal-project"
                   class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                   Personal Project
                 </a>
