@@ -25,6 +25,8 @@
 
   --breakpoint-xs: 30rem;
   --breakpoint-2xs: 20rem;
+
+  --container-4xs: 14rem;
 }
 
 @layer base {
@@ -52,7 +54,13 @@
     gap: --spacing(1);
     cursor: pointer;
     box-shadow: var(--shadow-md);
+    text-align: center;
+    word-break: keep-all;
     @apply transition duration-300 ease-in-out;
+  }
+
+  .btn span:not([class*='heroicons--']) {
+    @apply max-w-4xs xs:max-w-none;
   }
   .btn:hover {
     @apply opacity-80 shadow-lg;
@@ -68,7 +76,7 @@
   }
   .btn.large {
     font-size: var(--text-2xl);
-    padding: --spacing(2.5) --spacing(10) --spacing(3.5);
+    padding: --spacing(2.5) --spacing(6) --spacing(3.5);
   }
 }
 
