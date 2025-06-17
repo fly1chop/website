@@ -19,6 +19,14 @@
   },
   {
     "category": "staff",
+    "name": "Ella",
+    "school": "",
+    "position": "Director",
+    "field": [],
+    "image": "Ella.jpg"
+  },
+  {
+    "category": "staff",
     "name": "Sarah",
     "school": "",
     "position": "Lead Project Manager",
