@@ -119,13 +119,13 @@ function injectHeader() {
               Capstone
             </a>
           </li>
-          <!-- <li>
-                <a
-                  href="/personal-project"
-                  class="hover-transition text-white hover:text-zinc-400">
-                  Personal Project
-                </a>
-              </li> -->
+          <li>
+            <a
+              href="${BASE_PATH}personal-project"
+              class="hover-transition text-white hover:text-zinc-400">
+              Personal Projects
+            </a>
+          </li>
         </ul>
         <a href="#" class="link--blog btn hidden md:flex">
           <span>Blog</span>
@@ -244,13 +244,13 @@ function injectHeader() {
               Capstone
             </a>
           </li>
-          <!-- <li>
-                <a
-                  href="${BASE_PATH}personal-project"
-                  class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                  Personal Project
-                </a>
-              </li> -->
+          <li>
+            <a
+              href="${BASE_PATH}personal-project"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+              Personal Project
+            </a>
+          </li>
         </ul>
         <div class="flex px-4 py-3">
           <a href="#" class="link--blog btn w-full justify-between text-lg sm:w-auto">
