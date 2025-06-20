@@ -88,7 +88,7 @@ function injectHeader() {
             </div>
           </li>
           <li class="inline-flex items-center gap-1">
-            <a href="${BASE_PATH}courses/2025/summer" class="hover-transition text-white hover:text-zinc-400">Courses</a>
+            <a href="${BASE_PATH}courses" class="hover-transition text-white hover:text-zinc-400">Courses</a>
             <button
               data-dropdown-toggle="courses-dropdown"
               data-dropdown-offset-skidding="10"
@@ -102,12 +102,12 @@ function injectHeader() {
               class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
-                  <a href="${BASE_PATH}courses/2025/summer" class="block px-4 py-2 hover:bg-zinc-100">
+                  <a href="${BASE_PATH}courses/summer" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 여름학기 정규반
                   </a>
                 </li>
                 <li>
-                  <a href="${BASE_PATH}courses/2025/competition" class="block px-4 py-2 hover:bg-zinc-100">
+                  <a href="${BASE_PATH}courses/competition" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 대회 프로그램
                   </a>
                 </li>
@@ -119,13 +119,13 @@ function injectHeader() {
               Capstone
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a
               href="${BASE_PATH}personal-project"
               class="hover-transition text-white hover:text-zinc-400">
               Personal Projects
             </a>
-          </li>
+          </li> -->
         </ul>
         <a href="#" class="link--blog btn hidden md:flex">
           <span>Blog</span>
@@ -222,14 +222,14 @@ function injectHeader() {
               <ul class="flex flex-col text-base text-zinc-500">
                 <li>
                   <a
-                    href="${BASE_PATH}courses/2025/summer"
+                    href="${BASE_PATH}courses/summer"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     2025 여름학기 정규반
                   </a>
                 </li>
                 <li>
                   <a
-                    href="${BASE_PATH}courses/2025/competition"
+                    href="${BASE_PATH}courses/competition"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
                     2025 대회 프로그램
                   </a>
@@ -244,13 +244,13 @@ function injectHeader() {
               Capstone
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a
               href="${BASE_PATH}personal-project"
               class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Personal Project
             </a>
-          </li>
+          </li> -->
         </ul>
         <div class="flex px-4 py-3">
           <a href="#" class="link--blog btn w-full justify-between text-lg sm:w-auto">

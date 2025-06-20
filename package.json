@@ -7,6 +7,8 @@
     "dev": "npm run generate:image-map && parcel",
     "prebuild": "shx rm -rf dist/*",
     "build": "npm run generate:image-map && parcel build",
+    "postbuild": "node scripts/generateRedirects.js",
+    "preview": "serve dist",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
