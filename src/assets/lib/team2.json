@@ -1,5 +1,158 @@
 [
   {
+    "category": "staff",
+    "name": "Ella",
+    "school": "",
+    "position": "Director",
+    "field": [],
+    "image": "Ella.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Sarah",
+    "school": "",
+    "position": "Lead Project Manager",
+    "field": [],
+    "image": "sarah.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Anna",
+    "school": "",
+    "position": "Lead Marketer",
+    "field": [],
+    "image": "Anna.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Suhjin",
+    "school": "",
+    "position": "Project Manager",
+    "field": [],
+    "image": "suhjin.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Yony",
+    "school": "",
+    "position": "Project Manager",
+    "field": [],
+    "image": "Yony.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Kelly",
+    "school": "",
+    "position": "Project Manager",
+    "field": [],
+    "image": "Kelly.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Christine",
+    "school": "",
+    "position": "Education Manager",
+    "field": [],
+    "image": "christine.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Rachel",
+    "school": "",
+    "position": "Education Manager",
+    "field": [],
+    "image": "Rachel.jpg",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Jinsu",
+    "school": "",
+    "position": "Education Manager",
+    "field": [],
+    "image": "Jinsu.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Aiden",
+    "school": "서울대학교",
+    "position": "",
+    "field": ["데이터 사이언스"],
+    "image": "aiden.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Alice",
+    "school": "서울대학교",
+    "position": "",
+    "field": ["AI/ML", "알고리즘"],
+    "image": "alice.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Blaire",
+    "school": "Georgie Institute of Technology",
+    "position": "",
+    "field": ["데이터 사이언스", "알고리즘", "UI/UX", "CAE"],
+    "image": "Blaire.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Ellie",
+    "school": "UC Berkeley",
+    "position": "",
+    "field": ["플스택 개발", "알고리즘", "블록체인"],
+    "image": "ellie.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Ina",
+    "school": "서울대학교",
+    "position": "",
+    "field": ["UI/UX", "로보틱스"],
+    "image": "ina.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Jane",
+    "school": "McGill University",
+    "position": "",
+    "field": ["프론트엔드 개발", "웹/앱 개발"],
+    "image": "Jane.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Jason",
+    "school": "Columbia University",
+    "position": "",
+    "field": ["머신러닝", "딥러닝", "AI"],
+    "image": "jason.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Jingee",
+    "school": "HKUST (홍콩과기대)",
+    "position": "",
+    "field": ["데이터 사이언스", "머신 러닝", "게임 개발"],
+    "image": "jingee.jpg",
+    "isMain": false
+  },
+  {
     "category": "instructor",
     "name": "JY",
     "school": "Carnegie Mellon University",
@@ -7,6 +160,15 @@
     "field": ["알고리즘", "풀스택 개발", "UI/UX"],
     "image": "jy.jpg",
     "isMain": true
+  },
+  {
+    "category": "instructor",
+    "name": "Kevin",
+    "school": "Georgia Institute of Technology",
+    "position": "",
+    "field": ["앱 개발", "알고리즘"],
+    "image": "kevin.jpg",
+    "isMain": false
   },
   {
     "category": "instructor",
@@ -18,164 +180,13 @@
     "isMain": true
   },
   {
-    "category": "staff",
-    "name": "Ella",
-    "school": "",
-    "position": "Director",
-    "field": [],
-    "image": "Ella.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Sarah",
-    "school": "",
-    "position": "Lead Project Manager",
-    "field": [],
-    "image": "Sarah.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Anna",
-    "school": "",
-    "position": "Lead Marketer",
-    "field": [],
-    "image": "Anna.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Suhjin",
-    "school": "",
-    "position": "Project Manager",
-    "field": [],
-    "image": "Suhjin.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Yony",
-    "school": "",
-    "position": "Project Manager",
-    "field": [],
-    "image": "Yony.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Christine",
-    "school": "",
-    "position": "Education Manager",
-    "field": [],
-    "image": "Christine.jpg"
-  },
-  {
-    "category": "staff",
-    "name": "Jinsu",
-    "school": "",
-    "position": "Education Manager",
-    "field": [],
-    "image": "Jinsu.jpg"
-  },
-  {
     "category": "instructor",
-    "name": "Scott",
-    "school": "University of Rochester, 연세대학교 석사(CS)",
+    "name": "Kikang",
+    "school": "서울과학기술대학교",
     "position": "",
-    "field": ["웹 개발", "데이터 사이언스", "알고리즘"],
-    "image": "Scott.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Ted",
-    "school": "Georgie Institute of Technology",
-    "position": "",
-    "field": ["알고리즘", "앱 개발"],
-    "image": "Ted.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Ellie",
-    "school": "UC Berkeley",
-    "position": "",
-    "field": ["플스택 개발", "알고리즘", "블록체인"],
-    "image": "Ellie.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Jingee",
-    "school": "HKUST (홍콩과기대)",
-    "position": "",
-    "field": ["데이터 사이언스", "머신 러닝", "게임 개발"],
-    "image": "Jingee.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Blaire",
-    "school": "Georgie Institute of Technology",
-    "position": "",
-    "field": ["데이터 사이언스", "알고리즘", "UI/UX", "CAE"],
-    "image": "Blaire.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Aiden",
-    "school": "서울대학교",
-    "position": "",
-    "field": ["데이터 사이언스"],
-    "image": "Aiden.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Jason",
-    "school": "Columbia University",
-    "position": "",
-    "field": ["머신러닝", "딥러닝", "AI"],
-    "image": "Jason.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Kevin",
-    "school": "Georgia Institute of Technology",
-    "position": "",
-    "field": ["앱 개발", "알고리즘"],
-    "image": "Kevin.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Sunny",
-    "school": "New York University",
-    "position": "",
-    "field": ["풀스택 개발", "알고리즘"],
-    "image": "Sunny.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Alice",
-    "school": "서울대학교",
-    "position": "",
-    "field": ["AI/ML", "알고리즘"],
-    "image": "Alice.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Ina",
-    "school": "서울대학교",
-    "position": "",
-    "field": ["UI/UX", "로보틱스"],
-    "image": "Ina.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Jane",
-    "school": "McGill University",
-    "position": "Lead Developer",
-    "field": ["프론트엔드 개발", "웹/앱 개발"],
-    "image": "Jane.jpg"
-  },
-  {
-    "category": "instructor",
-    "name": "Minhong",
-    "school": "건국대 기계설계학과 석사",
-    "position": "",
-    "field": ["임베디드 소프트웨어"],
-    "image": "Minhong.jpg"
+    "field": ["로보틱스"],
+    "image": "Kikang.jpg",
+    "isMain": false
   },
   {
     "category": "instructor",
@@ -183,7 +194,26 @@
     "school": "서강대학교",
     "position": "",
     "field": ["Data Science", "AI/ML", "Programming"],
-    "image": "Kun.jpg"
+    "image": "Kun.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Minhong",
+    "school": "건국대 기계설계학과 석사",
+    "position": "",
+    "field": ["임베디드 소프트웨어"],
+    "image": "minhong.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Scott",
+    "school": "University of Rochester, 연세대학교 석사(CS)",
+    "position": "",
+    "field": ["웹 개발", "데이터 사이언스", "알고리즘"],
+    "image": "scott.jpg",
+    "isMain": false
   },
   {
     "category": "instructor",
@@ -191,15 +221,17 @@
     "school": "Lehigh University",
     "position": "",
     "field": ["데이터 사이언스", "알고리즘", "백엔드 개발"],
-    "image": "Sehyun.jpg"
+    "image": "Sehyun.jpg",
+    "isMain": false
   },
   {
     "category": "instructor",
-    "name": "Kikang",
-    "school": "서울과학기술대학교",
+    "name": "Sunny",
+    "school": "New York University",
     "position": "",
-    "field": ["로보틱스"],
-    "image": "Kikang.jpg"
+    "field": ["풀스택 개발", "알고리즘"],
+    "image": "sunny.jpg",
+    "isMain": false
   },
   {
     "category": "instructor",
@@ -207,6 +239,16 @@
     "school": "부산외국어대학교",
     "position": "",
     "field": ["임베디드 소프트웨어"],
-    "image": "Taegyun.jpg"
+    "image": "Taegyun.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Ted",
+    "school": "Georgie Institute of Technology",
+    "position": "",
+    "field": ["알고리즘", "앱 개발"],
+    "image": "ted.jpg",
+    "isMain": false
   }
 ]
