@@ -125,8 +125,8 @@
 }
 
 .carousel-secondary {
-  animation: scroll-horizontal 40s linear infinite;
-  animation-delay: 20s;
+  animation: scroll-horizontal-secondary 40s linear infinite;
+  /* animation-delay: 40s; */
 }
 
 .infinite-carousel-container:hover > .carousel-primary:not(:hover) {
@@ -152,9 +152,18 @@
 }
 @keyframes scroll-horizontal {
   0% {
-    left: 100%;
+    left: 0%;
   }
   100% {
     left: -100%;
+  }
+}
+
+@keyframes scroll-horizontal-secondary {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
