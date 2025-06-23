@@ -121,7 +121,7 @@ function injectHeader() {
           </li>
           <!-- <li>
             <a
-              href="${BASE_PATH}personal-project"
+              href="${BASE_PATH}personalprojects"
               class="hover-transition text-white hover:text-zinc-400">
               Personal Projects
             </a>
@@ -246,7 +246,7 @@ function injectHeader() {
           </li>
           <!-- <li>
             <a
-              href="${BASE_PATH}personal-project"
+              href="${BASE_PATH}personalprojects"
               class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Personal Project
             </a>
