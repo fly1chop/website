@@ -19,21 +19,25 @@
     <div id="header-container"></div>
     <main class="relative min-h-[calc(100vh-188px)] overflow-x-clip">
       <div
-        class="h-16 w-full bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(/src/assets/img/splash-2.png)] bg-cover bg-center bg-no-repeat sm:h-52"></div>
-      <div class="mx-auto mt-12 max-w-screen-xl px-4 md:mt-28 lg:px-12">
-        <div class="flex flex-col gap-x-5 gap-y-5 sm:flex-row sm:justify-between">
-          <div>
-            <h2 class="text-3xl font-bold whitespace-nowrap sm:text-4xl lg:text-5xl">Courses</h2>
-            <hr class="text-flamingo-500 my-3 h-1 w-32 sm:my-6" />
-            <!-- <p>문과 / 이과 / 예체능 융합 EC 토탈 솔루션 프로그램</p> -->
-          </div>
-        </div>
+        class="flex h-16 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/splash-2.png)] bg-cover bg-center bg-no-repeat sm:h-40"></div>
+      <div class="border-in sticky top-0 z-10 w-full border-b border-neutral-300/60 bg-white">
+        <ul class="mx-auto mt-auto flex h-full max-w-screen-xl gap-6 px-4 lg:px-12">
+          <a
+            href="/courses/summer"
+            class="hover:border-flamingo-400 cursor-pointer border-b-2 border-transparent px-2 py-4 font-normal transition hover:text-zinc-500">
+            여름학기 정규반
+          </a>
+          <a
+            href="/courses/competition"
+            class="border-flamingo-500 cursor-pointer border-b-2 px-2 py-4 font-normal">
+            대회 프로그램
+          </a>
+        </ul>
       </div>
       <div
         class="relative mx-auto mt-12 mb-20 flex size-full max-w-screen-xl flex-col items-center gap-12 px-4 md:mt-20 md:gap-14 lg:px-12">
         <div class="space-y-3 text-center sm:space-y-6">
           <h2 class="text-2xl font-semibold sm:text-4xl">2025 대회 프로그램</h2>
-          <p class="pb-4 text-lg font-medium text-zinc-500">수업 기간: 25.06.02 - 25.08.03</p>
           <button
             class="btn white large"
             type="button"
@@ -44,13 +48,17 @@
         </div>
       </div>
       <div class="w-full">
-        <img src="/src/assets/img/contests/1.png" class="w-full" />
-        <img src="/src/assets/img/contests/2.png" class="w-full" />
-        <img src="/src/assets/img/contests/3.png" class="w-full" />
-        <img src="/src/assets/img/contests/4.png" class="w-full" />
-        <img src="/src/assets/img/contests/5.png" class="w-full" />
-        <img src="/src/assets/img/contests/6.png" class="w-full" />
-        <img src="/src/assets/img/contests/7.png" class="w-full" />
+        <div class="bg-black">
+          <img src="/src/assets/img/contests/1.png" class="mx-auto w-full max-w-screen-lg" />
+          <img src="/src/assets/img/contests/2.png" class="mx-auto w-full max-w-screen-lg" />
+          <img src="/src/assets/img/contests/3.png" class="mx-auto w-full max-w-screen-lg" />
+          <img src="/src/assets/img/contests/4.png" class="mx-auto w-full max-w-screen-lg" />
+        </div>
+        <div class="bg-[#323232]">
+          <img src="/src/assets/img/contests/5.png" class="mx-auto w-full max-w-screen-lg" />
+          <img src="/src/assets/img/contests/6.png" class="mx-auto w-full max-w-screen-lg" />
+          <img src="/src/assets/img/contests/7.png" class="mx-auto w-full max-w-screen-lg" />
+        </div>
       </div>
     </main>
 
