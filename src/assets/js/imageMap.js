@@ -17,6 +17,7 @@ export const imageMap = {
   'byun.jpg': new URL('../img/team/byun.jpg', import.meta.url),
   'christine.jpg': new URL('../img/team/christine.jpg', import.meta.url),
   'ellie.jpg': new URL('../img/team/ellie.jpg', import.meta.url),
+  'hyojung.jpg': new URL('../img/team/hyojung.jpg', import.meta.url),
   'ina.jpg': new URL('../img/team/ina.jpg', import.meta.url),
   'jason.jpg': new URL('../img/team/jason.jpg', import.meta.url),
   'jingee.jpg': new URL('../img/team/jingee.jpg', import.meta.url),
