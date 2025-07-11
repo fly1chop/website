@@ -8,7 +8,7 @@
     "prebuild": "shx rm -rf dist/*",
     "build": "npm run generate:image-map && parcel build",
     "postbuild": "node scripts/generateRedirects.js",
-    "preview": "serve dist",
+    "preview": "npx serve dist",
     "deploy": "echo 'www.logncoding.com' > dist/CNAME && echo '✅ CNAME file written to dist/CNAME' && push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
