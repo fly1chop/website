@@ -1,6 +1,6 @@
 import team from '../lib/team2.json';
-import news from '../lib/news.json';
 import { imageMap } from './imageMap';
+import { fetchNews } from './news';
 
 const $instructorsList = document.getElementById('instructors-list');
 const $mentorsList = document.getElementById('mentors-list');
@@ -79,40 +79,15 @@ if ($staffList) {
   $staffList.innerHTML = staffHtml;
 }
 
-const newsHtml = news
-  .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .map(
-    (item) => `
-  <tr
-    data-href=${item.href}
-    class="hover-transition cursor-pointer border-b border-neutral-300/60 even:bg-zinc-50 odd:bg-white hover:bg-neutral-200/20">
-    <td class="px-4 py-3 text-xs sm:text-sm text-nowrap w-24 sm:w-[100px]">${item.date}</td>
-    <th scope="row" class="px-4 py-3 font-medium truncate max-w-[10rem] text-sm sm:text-base sm:max-w-none">
-      ${item.title}
-    </th>
-    <td class="hidden sm:flex justify-end gap-2 px-4 py-3">
-      ${item.tags
-        .map(
-          (tag) => `
-        <span
-          class="break-keep rounded-full bg-neutral-200/70 px-4 py-2 text-xs font-medium uppercase outline outline-neutral-300/80">
-          ${tag}
-        </span>
-        `
-        )
-        .join('')}
-    </td>
-  </tr>
-`
-  )
-  .join('');
 if ($newsList) {
-  $newsList.innerHTML = newsHtml;
-  $newsList.addEventListener('click', (event) => {
-    const $tr = event.target.closest('tr[data-href]');
-    if ($tr) {
-      const url = $tr.getAttribute('data-href');
-      window.open(url, '_blank', 'noopener,noreferrer');
-    }
+  fetchNews().then((newsHtml) => {
+    $newsList.innerHTML = newsHtml;
+    $newsList.addEventListener('click', (event) => {
+      const $tr = event.target.closest('tr[data-href]');
+      if ($tr) {
+        const url = $tr.getAttribute('data-href');
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
+    });
   });
 }
