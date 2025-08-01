@@ -7,5 +7,5 @@ module.exports = {
   '/team': '/about#team',
   '/competition': '/courses/competition',
   '/contests': '/courses/competition',
-  '/courses': '/courses/summer',
+  '/courses': '/courses/fall',
 };

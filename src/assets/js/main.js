@@ -102,6 +102,11 @@ function injectHeader() {
               class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
+                  <a href="${BASE_PATH}courses/fall" class="block px-4 py-2 hover:bg-zinc-100">
+                    2025 가을학기 정규반
+                  </a>
+                </li>
+                <li>
                   <a href="${BASE_PATH}courses/summer" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 여름학기 정규반
                   </a>
