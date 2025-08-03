@@ -2,6 +2,24 @@ import 'flowbite';
 import { Drawer } from 'flowbite';
 import { LINKS } from '../lib/constants';
 
+(function loadGoogleAnalytics() {
+  const GA_MEASUREMENT_ID = 'G-C1E4J0JTPV';
+  const scriptTag = document.createElement('script');
+  scriptTag.async = true;
+  scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(scriptTag);
+
+  scriptTag.onload = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    window.gtag = gtag; // Make gtag globally accessible
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  };
+})();
+
 window.addEventListener('load', () => {
   showCurrentTab();
 });
