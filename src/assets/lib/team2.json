@@ -55,15 +55,6 @@
   },
   {
     "category": "staff",
-    "name": "Christine",
-    "school": "",
-    "position": "Education Manager",
-    "field": [],
-    "image": "christine.jpg",
-    "isMain": false
-  },
-  {
-    "category": "staff",
     "name": "Rachel",
     "school": "",
     "position": "Education Manager",
@@ -78,15 +69,6 @@
     "position": "Education Manager",
     "field": [],
     "image": "Jinsu.jpg",
-    "isMain": false
-  },
-  {
-    "category": "staff",
-    "name": "Sienna",
-    "school": "",
-    "position": "Education Manager",
-    "field": [],
-    "image": "hyojung.jpg",
     "isMain": false
   },
   {
