@@ -21,6 +21,12 @@ if (!track) {
     // Resolve the thumbnail URL from your imageMap
     const imageURL = imageMap[item.image];
     const thumbnail = imageURL?.href ?? String(imageURL ?? '');
+    const hashtags = item.description
+      ? item.description
+          .split(' ')
+          .map((tag) => `<span class="mr-1.5">${tag}</span>`)
+          .join(' ')
+      : '';
 
     slide.innerHTML = `
         <div class="relative flex h-full flex-col duration-300 group-hover:shadow-xl bg-zinc-800 js-yt" data-video-id="${item.videoId}">
@@ -34,7 +40,7 @@ if (!track) {
 
           <!-- Caption -->
           <div class="bottom-0 z-10 flex w-full flex-col gap-3 px-6 py-4 text-sm text-white sm:absolute md:text-base">
-            <p>${item.description}</p>
+            <p>${hashtags}</p>
           </div>
         </div>
       `;
@@ -55,10 +61,10 @@ if (!track) {
     if (root.querySelector('iframe')) return;
 
     const id = root.dataset.videoId;
-    const caption = root.querySelector('div.bottom-0');
+    // const caption = root.querySelector('div.bottom-0');
 
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=0`;
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1`;
     iframe.title = 'YouTube video';
     iframe.allow =
       'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
@@ -68,7 +74,7 @@ if (!track) {
     // Swap image → iframe, keep caption under it
     root.innerHTML = '';
     root.appendChild(iframe);
-    if (caption) root.appendChild(caption);
+    // if (caption) root.appendChild(caption);
   });
 }
 
