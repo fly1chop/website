@@ -5,7 +5,7 @@ module.exports = {
   '/horizon': '/capstone/horizon',
   '/gpt': '/capstone/gpt',
   '/team': '/about#team',
-  '/competition': '/courses/competition',
-  '/contests': '/courses/competition',
+  '/competitions': '/competitions/jr',
+  '/contests': '/courses/competitions-jr',
   '/courses': '/courses/fall',
 };

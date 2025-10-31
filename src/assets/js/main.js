@@ -130,8 +130,40 @@ function injectHeader() {
                   </a>
                 </li>
                 <li>
-                  <a href="${BASE_PATH}courses/competition" class="block px-4 py-2 hover:bg-zinc-100">
-                    2025 대회 프로그램
+                  <a href="${BASE_PATH}courses/competitions-jr" class="block px-4 py-2 hover:bg-zinc-100">
+                    초등부 대회
+                  </a>
+                </li>
+                <li>
+                  <a href="${BASE_PATH}courses/competitions-sr" class="block px-4 py-2 hover:bg-zinc-100">
+                    중·고등부 대회
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="inline-flex items-center gap-1">
+            <a href="${BASE_PATH}competitions" class="hover-transition text-white hover:text-zinc-400">Competitions</a>
+            <button
+              data-dropdown-toggle="competitions-dropdown"
+              data-dropdown-offset-skidding="-60"
+              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+
+            <!-- competitions dropdown -->
+            <div
+              id="competitions-dropdown"
+              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              <ul class="text-zinc-500">
+                <li>
+                  <a href="${BASE_PATH}competitions/jr" class="block px-4 py-2 hover:bg-zinc-100">
+                    초등부 대회
+                  </a>
+                </li>
+                <li>
+                  <a href="${BASE_PATH}competitions/sr" class="block px-4 py-2 hover:bg-zinc-100">
+                    중·고등부 대회
                   </a>
                 </li>
               </ul>
@@ -252,9 +284,50 @@ function injectHeader() {
                 </li>
                 <li>
                   <a
-                    href="${BASE_PATH}courses/competition"
+                    href="${BASE_PATH}courses/competitions-jr"
                     class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    2025 대회 프로그램
+                    초등부 대회
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${BASE_PATH}courses/competitions-sr"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+                    중·고등부 대회
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-competitions-button"
+              data-accordion-target="#accordion-competitions"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+              <span>Competitions</span>
+              <span
+                data-accordion-icon
+                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
+            </button>
+            <div
+              id="accordion-competitions"
+              class="hidden border-b border-neutral-200"
+              aria-labelledby="accordion-competitions-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="${BASE_PATH}competitions/jr"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+                    초등부 대회
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="${BASE_PATH}competitions/sr"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+                    중·고등부 대회
                   </a>
                 </li>
               </ul>
