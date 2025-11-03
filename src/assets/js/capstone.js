@@ -20,10 +20,18 @@ const ongoingHtml = capstone
       <div class="space-y-2">
         <p class="text-zinc-600 italic">Term: ${p.duration}</p>
         <div class="flex gap-2">
-          <span
-            class="rounded-full bg-sky-500 px-4 py-2 text-xs font-medium text-white uppercase">
-            application open
-          </span>
+          ${
+            p.isApplicationOpen
+              ? `<span class="rounded-full bg-sky-500 px-4 py-2 text-xs font-medium text-white uppercase">
+                application open
+              </span>
+            `
+              : `
+              <span class="rounded-full bg-zinc-200 px-4 py-2 text-xs font-medium text-zinc-400 uppercase">
+                application closed
+              </span>
+            `
+          }
         </div>
       </div>
       <p class="leading-7 break-keep">${p.description}</p>

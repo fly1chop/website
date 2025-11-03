@@ -2,6 +2,7 @@
   {
     "category": "ONGOING",
     "name": "Project Horizon",
+    "isApplicationOpen": false,
     "duration": "2025 Summer",
     "client": "Bill & Melinda Gates Foundation",
     "description": "Project Horizon은 AI가 미래 사회에 미치는 영향, 우리의 현재 선택이 미래에 어떤 결과로 연결되는지 시뮬레이션을 통해 교육하는 플랫폼입니다. 빌게이츠 재단 등 비영리 단체 도입을 목표로 하며 정책 결정, 윤리적 판단, 사회적 갈등 해결 역량을 다루는 AI 융합형 프로젝트 입니다.",
