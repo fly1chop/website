@@ -54,6 +54,15 @@
     "isMain": false
   },
   {
+    "category": "staff",
+    "name": "Duke",
+    "school": "",
+    "position": "Education Manager",
+    "field": [],
+    "image": "Duke.jpg",
+    "isMain": false
+  },
+  {
     "category": "instructor",
     "name": "Aiden",
     "school": "서울대학교",

@@ -1,6 +1,7 @@
 export const imageMap = {
   'Anna.jpg': new URL('../img/team/Anna.jpg', import.meta.url),
   'Blaire.jpg': new URL('../img/team/Blaire.jpg', import.meta.url),
+  'Duke.jpg': new URL('../img/team/Duke.jpg', import.meta.url),
   'Ella.jpg': new URL('../img/team/Ella.jpg', import.meta.url),
   'Jane.jpg': new URL('../img/team/Jane.jpg', import.meta.url),
   'Kelly.jpg': new URL('../img/team/Kelly.jpg', import.meta.url),
