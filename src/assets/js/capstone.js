@@ -34,7 +34,7 @@ const ongoingHtml = capstone
           }
         </div>
       </div>
-      <p class="leading-7 break-keep">${p.description}</p>
+      <p class="leading-7 break-keep whitespace-pre-line">${p.description}</p>
       ${
         p.link
           ? `
