@@ -48,6 +48,7 @@ export const imageMap = {
   'mu_2.png': new URL('../img/capstone/mu_2.png', import.meta.url),
   'nft.webp': new URL('../img/capstone/nft.webp', import.meta.url),
   'nft3.png': new URL('../img/capstone/nft3.png', import.meta.url),
+  'unison.jpg': new URL('../img/capstone/unison.jpg', import.meta.url),
   'xr.png': new URL('../img/capstone/xr.png', import.meta.url),
   'zeta3.png': new URL('../img/capstone/zeta3.png', import.meta.url),
   'cherry.jpg': new URL('../img/youtube/cherry.jpg', import.meta.url),
