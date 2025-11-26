@@ -10,4 +10,5 @@ module.exports = {
   '/contests': '/courses/competitions-sr',
   '/courses': '/courses/winterbreak',
   '/winterbreak': '/courses/winterbreak',
+  '/bridgelab': '/sprint/bridgelab',
 };
