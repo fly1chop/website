@@ -52,6 +52,7 @@ export const imageMap = {
   'unison.jpg': new URL('../img/capstone/unison.jpg', import.meta.url),
   'xr.png': new URL('../img/capstone/xr.png', import.meta.url),
   'zeta3.png': new URL('../img/capstone/zeta3.png', import.meta.url),
+  'bridgelab.png': new URL('../img/sprint/bridgelab.png', import.meta.url),
   'cherry.jpg': new URL('../img/youtube/cherry.jpg', import.meta.url),
   'chris.jpg': new URL('../img/youtube/chris.jpg', import.meta.url),
   'mangotango.png': new URL('../img/youtube/mangotango.png', import.meta.url),

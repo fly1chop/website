@@ -1,0 +1,13 @@
+[
+  {
+    "category": "ONGOING",
+    "name": "Bridge Lab",
+    "isApplicationOpen": true,
+    "duration": "2025 DEC ~ 2026 FEB",
+    "client": "Lê Quý Đôn High School",
+    "description": "Bridge Lab 프로그램은 학생들이 4-DOF 로봇팔 키트를 조립, 제작하고, 이를 STEM 교육 기회가 부족한 동남아 저소득 지역 학생들에게 전달하는 것을 목표로 합니다. 프로그램의 핵심은 단순한 로봇의 제작과 전달을 넘어, 학생들이 키트의 조립 과정과 작동 원리를 베트남 호치민시 Lê Quý Đôn High School 학생들에게 교육하며, 기술을 활용한 의미 있는 국제 봉사 활동을 실천하는 데에 있습니다.",
+    "image": "bridgelab.png",
+    "objectPosition": "left",
+    "deliverables": null
+  }
+]

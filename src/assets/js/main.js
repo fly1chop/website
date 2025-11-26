@@ -75,7 +75,7 @@ function injectHeader() {
       id="header-nav"
       class="transition-transform duration-300 fixed sm:absolute start-0 top-0 z-20 w-full sm:bg-linear-to-b from-black/90 to-transparent sm:pb-28">
       <nav
-        class="mx-auto flex max-w-screen-xl items-center justify-end px-4 pt-4 md:justify-between lg:px-12">
+        class="mx-auto flex max-w-7xl items-center justify-end px-4 pt-4 md:justify-between lg:px-12">
         <a href="${BASE_PATH}" class="hidden w-16 md:block">
           <img class="logo" src="${new URL('../img/logo_en_white.png', import.meta.url)}" alt="" />
         </a>
@@ -172,6 +172,11 @@ function injectHeader() {
           <li>
             <a href="${BASE_PATH}capstone" class="hover-transition text-white hover:text-zinc-400">
               Capstone
+            </a>
+          </li>
+          <li>
+            <a href="${BASE_PATH}sprint" class="hover-transition text-white hover:text-zinc-400">
+              Sprint
             </a>
           </li>
           <li>
@@ -345,6 +350,13 @@ function injectHeader() {
               href="${BASE_PATH}capstone"
               class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
               Capstone
+            </a>
+          </li>
+          <li>
+            <a
+              href="${BASE_PATH}sprint"
+              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+              Sprint
             </a>
           </li>
           <li>
