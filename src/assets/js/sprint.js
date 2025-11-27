@@ -13,7 +13,7 @@ const ongoingHtml = sprint
       <span class="text-5xl font-bold w-12 block text-center border-b pb-1.5 border-flamingo-500 text-zinc-300">${i + 1}</span>
       <div class="space-y-2">
         <p class="text-3xl font-semibold">${p.name}</p>
-        <p class="font-medium">Client | Partner: ${p.client}</p>
+        ${p.client && `<p class="font-medium">Client | Partner: ${p.client}</p>`}
       </div>
       <div class="space-y-2">
         <p class="text-zinc-600 italic">Term: ${p.duration}</p>
@@ -33,25 +33,26 @@ const ongoingHtml = sprint
         </div>
       </div>
       <p class="leading-7 break-keep whitespace-pre-line">${p.description}</p>
-      ${
-        p.link
-          ? `
-        <div class="flex gap-2 flex-col sm:flex-row">
-          <a href="${p.link}" class="btn white !bg-zinc-800">
-            <span>프로젝트 상세보기</span>
+      <div class="flex gap-2 flex-col sm:flex-row">
+          ${
+            p.link &&
+            `
+            <a href="${p.link}" class="btn white !bg-zinc-800">
+            <span>자세히 보기</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
-          <button
-            type="button"
-            data-modal-target="contactForm"
-            data-modal-show="contactForm"
-            class="btn white">
-            <span>스프린트 문의하기</span>
-          </button>
-        </div>
-        `
-          : ''
-      }
+            `
+          }
+            ${
+              p.form &&
+              `
+              <a href="${p.form}" class="btn white">
+            <span>Apply Now</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+              `
+            }
+      </div>
     </div>
     <div class="flex-1">
       <img
