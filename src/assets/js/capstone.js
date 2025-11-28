@@ -35,25 +35,28 @@ const ongoingHtml = capstone
         </div>
       </div>
       <p class="leading-7 break-keep whitespace-pre-line">${p.description}</p>
-      ${
-        p.link
-          ? `
-        <div class="flex gap-2 flex-col sm:flex-row">
-          <a href="${p.link}" class="btn white !bg-zinc-800">
+      <div class="flex gap-2 flex-col sm:flex-row">
+          ${
+            p.link
+              ? `
+            <a href="${p.link}" class="btn white !bg-zinc-800">
             <span>프로젝트 상세보기</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
-          <button
-            type="button"
-            data-modal-target="contactForm"
-            data-modal-show="contactForm"
-            class="btn white">
-            <span>Capstone 문의하기</span>
-          </button>
-        </div>
-        `
-          : ''
-      }
+            `
+              : ''
+          }
+            ${
+              p.form
+                ? `
+              <a href="${p.form}" target="_blank" class="btn white">
+            <span>Apply Now</span>
+            <span class="heroicons--arrow-long-right"></span>
+          </a>
+              `
+                : ''
+            }
+      </div>
     </div>
     <div class="flex-1">
       <img

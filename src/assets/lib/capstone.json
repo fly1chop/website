@@ -1,14 +1,15 @@
 [
   {
     "category": "ONGOING",
-    "name": "Project UNISON",
+    "name": "UNISON Program",
     "isApplicationOpen": true,
     "duration": "2025 Winter ~ 2026 Spring",
     "client": "SDGIH (SDG Innovation Hub)",
-    "description": "Project UNISON은 전 세계 학생들이 SDG를 기반으로 학습·평가할 수 있는 국제 학업 인증 체계를 구축하기 위해, 학생들이 직접 SDGIH가 활용할 연구자료·SDG 특화 AI 모델·온라인 학습 플랫폼을 개발하여 향후 공식 교육·평가 운영의 기반을 마련하는 프로젝트입니다.",
-    "image": "unison.jpg",
+    "description": "UNISON Program은 전 세계 학생들이 SDG를 기반으로 학습·평가할 수 있는 국제 학업 인증 체계를 구축하기 위해, 학생들이 직접 SDGIH가 활용할 연구자료·SDG 특화 AI 모델·온라인 학습 플랫폼을 개발하여 향후 공식 교육·평가 운영의 기반을 마련하는 프로젝트입니다.",
+    "image": "unison.png",
     "objectPosition": "left",
-    "deliverables": null
+    "deliverables": null,
+    "form": "https://forms.gle/L4KMVFpAh8VMvT6ZA"
   },
   {
     "category": "ONGOING",
