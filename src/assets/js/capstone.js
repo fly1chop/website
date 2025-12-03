@@ -40,19 +40,32 @@ const ongoingHtml = capstone
             p.link
               ? `
             <a href="${p.link}" class="btn white !bg-zinc-800">
-            <span>프로젝트 상세보기</span>
+            <span>자세히 보기</span>
             <span class="heroicons--arrow-long-right"></span>
           </a>
             `
+              : ''
+          }
+          ${
+            p.isContact
+              ? `
+              <button
+                type="button"
+                data-modal-target="contactForm"
+                data-modal-show="contactForm"
+                class="btn white !bg-zinc-800">
+                <span>프로그램 상담</span>
+              </button>
+              `
               : ''
           }
             ${
               p.form
                 ? `
               <a href="${p.form}" target="_blank" class="btn white">
-            <span>Apply Now</span>
-            <span class="heroicons--arrow-long-right"></span>
-          </a>
+                <span>Apply Now</span>
+                <span class="heroicons--arrow-long-right"></span>
+              </a>
               `
                 : ''
             }

@@ -44,16 +44,29 @@ const ongoingHtml = sprint
             `
               : ''
           }
-            ${
-              p.form
-                ? `
-              <a href="${p.form}" target="_blank" class="btn white">
-            <span>Apply Now</span>
-            <span class="heroicons--arrow-long-right"></span>
-          </a>
+          ${
+            p.isContact
+              ? `
+              <button
+                type="button"
+                data-modal-target="contactForm"
+                data-modal-show="contactForm"
+                class="btn white !bg-zinc-800">
+                <span>프로그램 상담</span>
+              </button>
               `
-                : ''
-            }
+              : ''
+          }
+          ${
+            p.form
+              ? `
+            <a href="${p.form}" target="_blank" class="btn white">
+              <span>Apply Now</span>
+              <span class="heroicons--arrow-long-right"></span>
+            </a>
+            `
+              : ''
+          }
       </div>
     </div>
     <div class="flex-1">

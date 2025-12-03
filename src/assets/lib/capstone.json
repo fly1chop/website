@@ -9,7 +9,8 @@
     "image": "unison.png",
     "objectPosition": "left",
     "deliverables": null,
-    "form": "https://forms.gle/L4KMVFpAh8VMvT6ZA"
+    "form": "https://forms.gle/L4KMVFpAh8VMvT6ZA",
+    "isContact": true
   },
   {
     "category": "ONGOING",
@@ -21,7 +22,8 @@
     "image": "revision.png",
     "objectPosition": "left",
     "deliverables": null,
-    "form": "https://forms.gle/nn57FPQfQX5cg2SE6"
+    "form": "https://forms.gle/nn57FPQfQX5cg2SE6",
+    "link": "/capstone/revision"
   },
   {
     "category": "ARCHIVED",
