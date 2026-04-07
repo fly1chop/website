@@ -14,15 +14,14 @@
   {
     "category": "ONGOING",
     "name": "Project Re:vision",
-    "isApplicationOpen": true,
+    "isApplicationOpen": false,
     "duration": "2025 Winter - 2026 Spring",
     "client": "우리들의 눈",
     "description": "이 프로젝트는 시각장애인과 비장애인의 감각 경험을 재해석하고 ‘본다는 것’의 의미를 확장하는 감각 융합 전시 프로그램입니다. 시각 정보를 시각 조건에 따른 재해석 작품, 감각 인터랙션 기술, 감각 전환 알고리즘 등을 직접 설계하며 ‘본다는 것’의 의미를 다시 정의하는 다층적 실험을 '우리들의 눈’과 함께 수행합니다.",
     "image": "revision.png",
     "objectPosition": "left",
     "deliverables": null,
-    "form": "https://forms.gle/nn57FPQfQX5cg2SE6",
-    "link": "/capstone/revision"
+    "form": "https://forms.gle/nn57FPQfQX5cg2SE6"
   },
   {
     "category": "ARCHIVED",
