@@ -2,15 +2,14 @@
   {
     "category": "ONGOING",
     "name": "UNISON Program",
-    "isApplicationOpen": true,
+    "isApplicationOpen": false,
     "duration": "2025 Winter ~ 2026 Spring",
     "client": "SDGIH (SDG Innovation Hub)",
     "description": "UNISON Program은 지속가능한발전(SDG)학습에 기반한 국제 학업 인증 플랫폼을 개발합니다. AI 트레이닝을 통해 개발된 학습 플랫폼은 전 세계 학생들을 대상으로 한 SDG 국제 학업 인증 체계에 활용되며, UN의 SDGIH에 도입되어 활용될 예정입니다. 해당 프로그램은 Columbia University의 Mark Santolucito 교수 (Computer Science · 교육 기술 분야 전문가)가 참여하여, AI 모델 설계 및 교육 플랫폼 구축 과정 전반에 대해 전문 멘토링과 기술 자문을 제공합니다.",
     "image": "unison.png",
     "objectPosition": "left",
     "deliverables": null,
-    "form": "https://forms.gle/L4KMVFpAh8VMvT6ZA",
-    "link": "/capstone/unison"
+    "form": "https://forms.gle/L4KMVFpAh8VMvT6ZA"
   },
   {
     "category": "ONGOING",
@@ -52,7 +51,10 @@
     "category": "COMPLETED",
     "name": "Project GPT+",
     "client": "Dr. Thomas W. Miller",
-    "deliverables": null,
+    "deliverables": {
+      "name": "Project GPT+ Overview",
+      "url": "https://gptdemo-hgnv.onrender.com/"
+    },
     "duration": "2025 Spring",
     "description": "Project GPT+는 생성형 AI를 활용하여 복잡한 학습 주제를 초등학생들이 쉽고 흥미롭게 배울 수 있도록 돕는 웹 기반 교육 프로젝트입니다. 이 플랫폼은 GPT 모델을 정교하게 튜닝하여, 학생들이 입력한 질문이나 주제에 맞춰 개인화된 상호적인 동화책을 생성하며, 추상적인 개념들을 친근하고 구체적인 이야기로 변환하고 퀴즈도 함께 제공합니다. GPT+는 교육 자원이 부족한 지역사회의 학습 격차를 해소하고, 포용적이고 역동적인 교육의 새로운 모델을 제시합니다.",
     "image": "gpt.png"
@@ -61,7 +63,10 @@
     "category": "COMPLETED",
     "name": "Project XR",
     "client": "CMU Center for Transformational Play",
-    "deliverables": null,
+    "deliverables": {
+      "name": "Project XR Overview",
+      "url": "https://xroverview.netlify.app/"
+    },
     "duration": "2023 Winter - 2024 Spring",
     "description": "가상 현실(VR) 기술을 포함한 XR 산업은 현재 Computer Science Departments에서 가장 각광받고 있는 분야 중 하나입니다. 카네기멜론 대학교 Human-Computer Interaction (HCI) Institute 산하에서 진행 중인 GIST VR 프로젝트를 통하여 학생들은 상호작용이 가능한 맞춤형 가상 현실(VR) 기술과 AI Agent를 개발하여 사용자가 가지고 있는 부정적인 생각, 감정, 행동 등을 긍정적인 방향으로 전환할 수 있는 방법들을 개발하고 연구합니다.",
     "image": "xr.png"
@@ -113,10 +118,7 @@
     "category": "COMPLETED",
     "name": "The NFT Project",
     "client": "사단법인 나비야사랑해",
-    "deliverables": {
-      "name": "The NFT Project Overview",
-      "url": "https://www.givingcatsnft.com/"
-    },
+    "deliverables": null,
     "duration": "2022 Summer",
     "description": "NFT 프로젝트는 학생들이 직접 디자인한 5000개의 NFT 아트 자산을 실제 OpenSea 마켓에 등록하고, 설문조사를 기반으로 한 마케팅 활동과 홍보, 판매 활동까지 진행하였습니다. 블록체인, 웹 개발, 디자인, 경영 분야에 관심이 있는 학생들이 NFT 자산의 민팅을 통해 블록체인의 생태계와 NFT 시장에 대한 지식을 습득하였으며, 판매 수익 전액을 유기묘 보호소에 기부할 수 있었습니다.",
     "image": "nft.webp"

@@ -60,7 +60,7 @@ const ongoingHtml = capstone
               : ''
           }
             ${
-              p.form
+              p.isApplicationOpen && p.form
                 ? `
               <a href="${p.form}" target="_blank" class="btn white">
                 <span>Apply Now</span>
