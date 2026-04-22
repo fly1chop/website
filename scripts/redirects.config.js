@@ -3,7 +3,7 @@ module.exports = {
   '/landmine': '/capstone/landmine',
   '/projectUnison': '/capstone/unison',
   '/projectrevision': '/capstone/revision',
-  '/horizon': '/capstone/horizon',
+  // '/horizon': '/capstone/horizon',
   '/gpt': '/capstone/gpt',
   '/team': '/about#team',
   '/competitions': '/competitions/sr',
