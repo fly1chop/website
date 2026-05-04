@@ -19,24 +19,6 @@
   },
   {
     "category": "staff",
-    "name": "Anna",
-    "school": "",
-    "position": "Head of Outreach",
-    "field": [],
-    "image": "Anna.jpg",
-    "isMain": false
-  },
-  {
-    "category": "staff",
-    "name": "Suhjin",
-    "school": "",
-    "position": "Project Manager",
-    "field": [],
-    "image": "suhjin.jpg",
-    "isMain": false
-  },
-  {
-    "category": "staff",
     "name": "Yony",
     "school": "",
     "position": "Project Manager",
@@ -105,15 +87,6 @@
     "position": "",
     "field": ["UI/UX", "로보틱스"],
     "image": "ina.jpg",
-    "isMain": false
-  },
-  {
-    "category": "instructor",
-    "name": "Jane",
-    "school": "McGill University",
-    "position": "",
-    "field": ["프론트엔드 개발", "웹/앱 개발"],
-    "image": "Jane.jpg",
     "isMain": false
   },
   {
