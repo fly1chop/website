@@ -120,6 +120,11 @@ function injectHeader() {
               class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
               <ul class="text-zinc-500">
                 <li>
+                  <a href="${BASE_PATH}courses/summer" class="block px-4 py-2 hover:bg-zinc-100">
+                    2026 여름 특강
+                  </a>
+                </li>
+                <li>
                   <a href="${BASE_PATH}courses/winterbreak" class="block px-4 py-2 hover:bg-zinc-100">
                     2025 겨울방학 특강
                   </a>
@@ -280,6 +285,13 @@ function injectHeader() {
               class="hidden border-b border-neutral-200"
               aria-labelledby="accordion-courses-button">
               <ul class="flex flex-col text-base text-zinc-500">
+                <li>
+                  <a
+                    href="${BASE_PATH}courses/summer"
+                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+                    2026 여름 특강
+                  </a>
+                </li>
                 <li>
                   <a
                     href="${BASE_PATH}courses/winterbreak"

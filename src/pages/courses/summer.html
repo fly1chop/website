@@ -20,38 +20,16 @@
     <main class="relative min-h-[calc(100vh-188px)] overflow-x-clip">
       <div
         class="flex h-16 w-full items-end bg-[linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(../../assets/img/splash-2.png)] bg-cover bg-center bg-no-repeat sm:h-40"></div>
-      <div class="border-in sticky top-0 z-10 w-full border-b border-neutral-300/60 bg-white">
-        <ul
-          class="mx-auto mt-auto flex h-full max-w-7xl gap-6 overflow-x-auto px-4 text-sm sm:text-base lg:px-12">
-          <a
-            href="/courses/fall"
-            class="hover:border-flamingo-400 cursor-pointer border-b-2 border-transparent px-2 py-3 font-normal text-nowrap transition hover:text-zinc-500 sm:py-4">
-            가을학기 정규반
-          </a>
-          <a
-            href="/courses/summer"
-            class="border-flamingo-500 cursor-pointer border-b-2 px-2 py-3 font-normal text-nowrap sm:py-4">
-            여름학기 정규반
-          </a>
-          <a
-            href="/courses/competitions-jr"
-            class="hover:border-flamingo-400 cursor-pointer border-b-2 border-transparent px-2 py-3 font-normal text-nowrap transition hover:text-zinc-500 sm:py-4">
-            초등부 대회
-          </a>
-          <a
-            href="/courses/competitions-sr"
-            class="hover:border-flamingo-400 cursor-pointer border-b-2 border-transparent px-2 py-3 font-normal text-nowrap transition hover:text-zinc-500 sm:py-4">
-            중·고등부 대회
-          </a>
-        </ul>
+      <div id="courses-sub-menu" class="border-in sticky top-0 z-10 w-full border-b border-neutral-300/60 bg-white">
+        <!-- insert courses sub-menus -->
       </div>
       <div
         class="relative mx-auto mt-12 mb-28 flex size-full max-w-7xl flex-col items-center gap-12 px-4 md:mt-20 md:gap-14 lg:px-12">
         <div class="space-y-3 text-center sm:space-y-6">
-          <h2 class="text-2xl font-semibold sm:text-4xl">2025 여름학기 정규반</h2>
-          <p class="pb-4 text-xl font-medium text-zinc-500">수업 기간: 25.06.02 - 25.08.03</p>
+          <h2 class="text-2xl font-semibold sm:text-4xl">2026 여름방학 특강</h2>
+          <p class="pb-4 text-xl font-medium text-zinc-500">수업 기간: 26.06.01 - 26.08.30</p>
           <a
-            href="/src/assets/pdf/2025-summer-schedule.pdf"
+            href="/src/assets/pdf/2026-summer-schedule.pdf"
             target="_blank"
             class="btn white large">
             <span>시간표 다운로드</span>
@@ -94,18 +72,6 @@
               <li class="me-2" role="presentation">
                 <button
                   class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
-                  id="coding-3-tab"
-                  data-tabs-target="#coding-3"
-                  type="button"
-                  role="tab"
-                  aria-controls="coding-3"
-                  aria-selected="false">
-                  코딩 개념 (3주 과정)
-                </button>
-              </li>
-              <li role="presentation">
-                <button
-                  class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
                   id="coding-4-tab"
                   data-tabs-target="#coding-4"
                   type="button"
@@ -118,13 +84,25 @@
               <li role="presentation">
                 <button
                   class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
-                  id="coding-1-tab"
-                  data-tabs-target="#coding-1"
+                  id="ai-tab"
+                  data-tabs-target="#ai"
                   type="button"
                   role="tab"
-                  aria-controls="coding-1"
+                  aria-controls="ai"
                   aria-selected="false">
-                  코딩 개념 (주 1회)
+                  AI 활용반
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
+                  id="coding-2-tab"
+                  data-tabs-target="#coding-2"
+                  type="button"
+                  role="tab"
+                  aria-controls="coding-2"
+                  aria-selected="false">
+                  코딩 단기 집중반 (2주)
                 </button>
               </li>
             </ul>
@@ -137,6 +115,7 @@
               role="tabpanel"
               aria-labelledby="robotics-tab">
               <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">6월 1일 ~ 매주 개강 (추가반 오픈 가능)</h3>
                 <table
                   class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
@@ -163,7 +142,22 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        Vex IQ
+                        Makers
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        All G
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                       월-목, 1-3pm or 5-7pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        VEX IQ
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
@@ -171,7 +165,7 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월~목 오전 10~12, 오후 2~4
+                        월-목, 10-12pm(오전) or 1-3pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -186,29 +180,31 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월~목 오후 2~4, 저녁 7~9
+                        월-목, 10-12pm(오전) or 3-5pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        Makers
+                        아두이노(Arduino) 프로젝트
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        ALL G
+                        G5 - G11
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월~목 오전 10~12, 저녁 7~9
+                        월-목, 1-3pm or 5-7pm
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <p class="py-3">*Arduino: 작은 컴퓨터로 전자 부품을 제어하고 간단한 기기를 만들 수 있는 소형 마이크로컨트롤러 보드</p>
               </div>
 
               <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">6월 1일 ~ 매주 개강 (추가반 오픈 가능)</h3>
                 <table
                   class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
@@ -243,9 +239,7 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수, 화/목
-                        <br />
-                        오전 10~12, 오후 2~4
+                        월-목, 10-12pm(오전) or 1-3pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -260,9 +254,7 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수, 화/목
-                        <br />
-                        오후 2~4, 저녁 7~9
+                        월-목, 10-12pm(오전) or 3-5pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -273,13 +265,11 @@
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G1~G9 (IQ)
-                        <br />
-                        G7~G11 (V5)
+                        All G
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        토/일 저녁 6~8
+                        토,일 5-7pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -296,58 +286,7 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수, 화/목
-                        <br />
-                        오전 10~12 / 저녁 7~9
-                      </td>
-                    </tr>
-                    <tr class="bg-zinc-50">
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        토/일 오전 10~12
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="overflow-x-auto">
-                <table
-                  class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
-                  <thead class="bg-zinc-800 text-zinc-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Subject (6주 과정)
-                      </th>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Grade
-                      </th>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        수업시간 (주 1회)
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="border border-neutral-300/60">
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        CAD / 3D 디자인
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        ALL G
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        금요일
-                        <br />
-                        오전 10~1, 오후 4~7
+                        월-목, 1-3pm or 5-7pm
                       </td>
                     </tr>
                   </tbody>
@@ -369,7 +308,97 @@
                       <th
                         scope="col"
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Subject
+                        대회명
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Grade
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        대회 타임라인
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="border border-neutral-300/60">
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        MAKE X [아시아권 최대 규모 로봇 대회]
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G1 ~ G6
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        26년 9월 ~ 11월
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        VEX IQ | VEX V5 [벡스]
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G5 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        26년 11월 ~ 3월
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        창의 발명 대회 [매일 경제 주관 로봇 공모전]
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        All G
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        26년 12월 ~ 27년 1월
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        USSEO [US Science Engineering Olympiad]
+                        <br/>
+                        <p class="font-light">*뉴욕대학교 공과 대학 주관 로봇 공모전, AI 융합 로봇 대회</p>
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        All G
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        27년 1-4월
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="py-3">*대회 준비반은 별도 상담이 필요합니다. (02-540-1628)</p>
+              </div>
+              <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium"><span class="pr-3">코딩 | 로직 대회 준비반</span> 6월 13일, 6월 20일 개강</h3>
+                <table
+                  class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
+                  <thead class="bg-zinc-800 text-zinc-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Subject (4주 과정)
                       </th>
                       <th
                         scope="col"
@@ -392,11 +421,11 @@
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G1 ~ G4
+                        G2 ~ G4
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 오후 4~6
+                        화, 목 1-3pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -407,18 +436,18 @@
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G4 ~ G6
+                        G5 ~ G6
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수 오후 4~6
+                        월, 수 3-5pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        ACSL Jr.
+                        ACSL Junior
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
@@ -426,9 +455,9 @@
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 오후 4~6
-                        <br />
-                        토/일 오후 3~5
+                        화, 목 3-5pm
+                        <br/>
+                        토, 일 3-5pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -439,32 +468,51 @@
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G9 ~
+                        G9 ~ G11
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 저녁 7~9
-                        <br />
-                        토/일 오후 10~12
+                        화, 목 7-9pm
+                        <br/>
+                        토, 일 10-12pm(오전)
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        ILO (International Logic Olympiad)
+                        ILO Jr.
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G8 ~
+                        G6 ~ G8
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수 저녁 7~9
-                        <br />
-                        토/일 오후 1~3
-                        <br />
-                        토 오후 4~7 (주 1회)
+                        월, 수 3-5pm
+                        <br/>
+                        토, 일 5-7pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        ILO Sr.
+                        <br/>
+                        <p class="font-light">International Logic Olympiad <br/> <span class="text-flamingo-400">스탠퍼드 대학교 주관</span></p>
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G9 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        월, 수 7-9pm
+                        <br/>
+                        토, 일 1-3pm
+                        <br/>
+                        토 4-7pm (주 1회)
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
@@ -475,135 +523,34 @@
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        레벨테스트 필요
+                        G8 ~ G11
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수 저녁 7~9
-                        <br />
-                        토/일 오전 10~12
+                        월, 수 7-9pm
+                        <br/>
+                        토, 일 1-3pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        <p>유펜 와튼(Wharton) Data Science</p>
-                        <p>Technovation Girls (테크노베이션)</p>
-                        <p>KSEF / ISEF</p>
+                        유펜 와튼(Wharton) Data Science
+                        <br/>
+                        Technovation Girls (테크노베이션)
+                        <br/>
+                        KSEF / ISEF
                       </th>
                       <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5"></td>
-                      <td class="border border-neutral-300/60 px-6 py-5 text-nowrap text-red-600">
-                        *개별상담
-                        <br />
-                        이 외 대회는 학원으로 문의 바랍니다.
+                        colspan="2"
+                        class="border border-neutral-300/60 text-flamingo-400 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        개별 상담 필요
                       </td>
                     </tr>
                   </tbody>
                 </table>
-              </div>
-            </div>
-
-            <!-- 코딩 개념 (3주)) -->
-            <div
-              class="mt-6 hidden space-y-6 rounded-xs"
-              id="coding-3"
-              role="tabpanel"
-              aria-labelledby="coding-3-tab">
-              <div class="overflow-x-auto">
-                <table
-                  class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
-                  <thead class="bg-zinc-800 text-zinc-50">
-                    <tr>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Subject (3주 과정)
-                      </th>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Grade
-                      </th>
-                      <th
-                        scope="col"
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        수업시간
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="border border-neutral-300/60">
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        파이썬 A1
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G5 ~ G12
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수/금 오전 10~12
-                        <br />
-                        월/수 저녁 7~10
-                        <br />
-                        토/일 오후 1~4
-                      </td>
-                    </tr>
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        AP CS A
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G9 ~
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 저녁 7~10
-                        <br />
-                        토/일 오후 4~7
-                      </td>
-                    </tr>
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        Java
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G7 ~
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 저녁 7~10
-                        <br />
-                        토/일 오후 4~7
-                      </td>
-                    </tr>
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        (AI입문) Data Science
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G9 ~
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        토/일 오전 10~1
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <p class="py-3">*대회 준비반은 특강 기간 개념 학습 후 문제 풀이반으로 연결됩니다.</p>
               </div>
             </div>
 
@@ -614,6 +561,184 @@
               role="tabpanel"
               aria-labelledby="coding-4-tab">
               <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">6월 13일, 6월 20일 개강</h3>
+                <table
+                  class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
+                  <thead class="bg-zinc-800 text-zinc-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Subject (4주 과정)
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Grade
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        수업시간 (주 2회)
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="border border-neutral-300/60">
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Python Jr.
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G6 ~ G8
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 10-12pm(오전)
+                        <br />
+                        월, 수 3-5pm
+                        <br />
+                        토, 일 1-3pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Python Sr.
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G8 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 7-9pm
+                        <br />
+                        토, 일 10-12pm(오전)
+                        <br />
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Python 대학 진학반
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G12 ~ 대1
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 3-5pm
+                        <br />
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        AP CSA
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G9 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 7-9pm
+                        <br/>
+                        토, 일 1-3pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        [AI입문] Data Science
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G9 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        월, 수 7-9pm
+                        <br/>
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        자료구조 [C++]
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G6 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        월, 수 5-7pm
+                        <br/>
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Java
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G6 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 7-9pm
+                        <br/>
+                        토, 일 1-3pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Unity [게임개발]
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G6 ~ G11
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 5-7pm
+                        <br/>
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="py-3">* 코딩 개념반은 문법 학습 후 응용/활용반, 문제풀이 수업으로 연결됩니다. (추가 4주 진행)</p>
+                <p class="">** 각 반은 학년을 고려하여 구성됩니다.</p>
+              </div>
+            </div>
+
+            <!-- AI 활용 -->
+            <div
+              class="mt-6 hidden space-y-6 rounded-xs"
+              id="ai"
+              role="tabpanel"
+              aria-labelledby="ai-tab">
+              <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">6월 15일 개강, 추가반 오픈 예정</h3>
                 <table
                   class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
@@ -640,89 +765,65 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        파이썬 Jr.
+                        포트폴리오 웹개발 (4주)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G4 ~ G6
+                        G7 ~ G10
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 오후 4~6
+                        화, 목 5-7pm
+                        <br/>
+                        토, 일 10-12pm(오전)
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        파이썬 A1
+                        게임 개발 (8주)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G5 ~ G12
+                        G7 ~ G10
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수 오후 4~6, 토/일 오후 4~6
+                        화, 목 1-3pm
+                        <br/>
+                        토, 일 3-5pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        MIT 앱 인벤터 (게임 개발)
+                        앱개발 (8주~10주)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G4 ~ G6
+                        G8 ~ G11
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        오후 2~4 / 저녁 7~9
-                      </td>
-                    </tr>
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        (AI입문) Data Science
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G9 ~
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        화/목 저녁 7~9, 토/일 오후 4~6
-                      </td>
-                    </tr>
-                    <tr class="odd:bg-white even:bg-zinc-50">
-                      <th
-                        scope="row"
-                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        C++
-                      </th>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G7 ~
-                      </td>
-                      <td
-                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        월/수 저녁 7~9, 토/일 오전 10~12
+                        토, 일 3-5pm
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <p class="py-3">* AI 활용반은 코딩 학습 경혐이 필요합니다.</p>
               </div>
             </div>
 
             <!-- 코딩 개념 (주1회)) -->
             <div
               class="mt-6 hidden space-y-6 rounded-xs"
-              id="coding-1"
+              id="coding-2"
               role="tabpanel"
-              aria-labelledby="coding-1-tab">
+              aria-labelledby="coding-2-tab">
               <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">6월 15일 개강, 추가반 오픈 예정</h3>
                 <table
                   class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
@@ -749,51 +850,54 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        개인 포트폴리오 웹개발
+                        Python Jr. | Sr.
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G5 ~ G11
+                        G6 ~ G12
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        토/오전 11~1 (8주 과정)
+                        월-목 10-12pm(오전)
+                        <br/>
+                        월-목 7-9pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        프롬프트 엔지니어링
-                        <br />
-                        (GPT 활용)
+                        AP CSA
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G5 ~ G11
+                        G9 ~ G11
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        일/오전 11~1 (6주 과정)
+                        월-목 10-12pm(오전)
+                        <br/>
+                        월-목 7-9pm
                       </td>
                     </tr>
                     <tr class="odd:bg-white even:bg-zinc-50">
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        Unity 게임 개발
+                        자료구조 [C++]
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        G6 ~ G9
+                        G6 ~ G12
                       </td>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        토/오후 1~4 (8주 과정)
+                        월-목 1-3pm
                       </td>
                     </tr>
                   </tbody>
                 </table>
+                <p class="py-3">* 각 반은 학년을 고려하여 구성됩니다.</p>
               </div>
             </div>
           </div>
