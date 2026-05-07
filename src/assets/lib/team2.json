@@ -28,6 +28,24 @@
   },
   {
     "category": "staff",
+    "name": "Elena",
+    "school": "",
+    "position": "Project Manager",
+    "field": [],
+    "image": "elena.png",
+    "isMain": false
+  },
+  {
+    "category": "staff",
+    "name": "Young Joong",
+    "school": "",
+    "position": "Project Manager",
+    "field": [],
+    "image": "youngjoong.png",
+    "isMain": false
+  },
+  {
+    "category": "staff",
     "name": "Rachel",
     "school": "",
     "position": "Education Manager",
@@ -69,6 +87,15 @@
     "position": "",
     "field": ["데이터 사이언스", "알고리즘", "UI/UX", "CAE"],
     "image": "Blaire.jpg",
+    "isMain": false
+  },
+  {
+    "category": "instructor",
+    "name": "Dongmin",
+    "school": "연세대학교",
+    "position": "",
+    "field": ["로보틱스"],
+    "image": "dongmin.png",
     "isMain": false
   },
   {
