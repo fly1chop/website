@@ -17,6 +17,11 @@
         <div class="mx-auto relative w-full">
           <div class="border-b border-neutral-300/60">
             <ul class="-mb-px flex font-medium overflow-x-auto text-center" data-tabs-active-classes="text-flamingo-500 bg-flamingo-100/70" data-tabs-inactive-classes="text-zinc-500 hover:text-zinc-600 transition hover:border-neutral-300 hover:bg-zinc-200/50 border-transparent" id=default-tab data-tabs-toggle=#default-tab-content role=tablist>
+              <li role=presentation>
+                <button class="border-b cursor-pointer inline-block p-2 rounded-t-xs sm:p-4 sm:text-base text-nowrap text-xs" id=ai-tab data-tabs-target=#ai type=button role=tab aria-controls=ai aria-selected=false>
+                  AI 활용반
+                </button>
+              </li>
               <li class=me-2 role=presentation>
                 <button class="border-b cursor-pointer inline-block p-2 rounded-t-xs sm:p-4 sm:text-base text-nowrap text-xs" id=robotics-tab data-tabs-target=#robotics type=button role=tab aria-controls=robotics aria-selected=false>
                   로보틱스 과정
@@ -30,11 +35,6 @@
               <li class=me-2 role=presentation>
                 <button class="border-b cursor-pointer inline-block p-2 rounded-t-xs sm:p-4 sm:text-base text-nowrap text-xs" id=coding-4-tab data-tabs-target=#coding-4 type=button role=tab aria-controls=coding-4 aria-selected=false>
                   코딩 개념 (4주 과정)
-                </button>
-              </li>
-              <li role=presentation>
-                <button class="border-b cursor-pointer inline-block p-2 rounded-t-xs sm:p-4 sm:text-base text-nowrap text-xs" id=ai-tab data-tabs-target=#ai type=button role=tab aria-controls=ai aria-selected=false>
-                  AI 활용반
                 </button>
               </li>
               <li role=presentation>
@@ -358,14 +358,25 @@
                     <tr class="even:bg-zinc-50 odd:bg-white">
                       <th scope=row class="border border-neutral-300/60 font-medium px-4 py-3 sm:px-6 sm:py-5 text-nowrap">
                         유펜 와튼(Wharton) Data Science
-                        <br>
-                        Technovation Girls (테크노베이션)
-                        <br>
-                        KSEF / ISEF
                       </th>
-                      <td colspan=2 class="border border-neutral-300/60 px-4 py-3 sm:px-6 sm:py-5 text-flamingo-400 text-nowrap">
+                      <td colspan=2 rowspan=5 class="border border-neutral-300/60 px-4 py-3 sm:px-6 sm:py-5 text-flamingo-400 text-nowrap">
                         개별 상담 필요
                       </td>
+                    </tr>
+                    <tr class="even:bg-zinc-50 odd:bg-white">
+                      <th scope=row class="border border-neutral-300/60 font-medium px-4 py-3 sm:px-6 sm:py-5 text-nowrap">
+                        Technovation Girls (테크노베이션)
+                      </th>
+                    </tr>
+                    <tr class="even:bg-zinc-50 odd:bg-white">
+                      <th scope=row class="border border-neutral-300/60 font-medium px-4 py-3 sm:px-6 sm:py-5 text-nowrap">
+                        KSEF / ISEF
+                      </th>
+                    </tr>
+                    <tr class="even:bg-zinc-50 odd:bg-white">
+                      <th scope=row class="border border-neutral-300/60 font-medium px-4 py-3 sm:px-6 sm:py-5 text-nowrap">
+                        코드페어
+                      </th>
                     </tr>
                   </tbody>
                 </table>
