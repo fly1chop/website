@@ -45,6 +45,18 @@
               id="default-tab"
               data-tabs-toggle="#default-tab-content"
               role="tablist">
+              <li role="presentation">
+                <button
+                  class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
+                  id="ai-tab"
+                  data-tabs-target="#ai"
+                  type="button"
+                  role="tab"
+                  aria-controls="ai"
+                  aria-selected="false">
+                  AI 활용반
+                </button>
+              </li>
               <li class="me-2" role="presentation">
                 <button
                   class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
@@ -79,18 +91,6 @@
                   aria-controls="coding-4"
                   aria-selected="false">
                   코딩 개념 (4주 과정)
-                </button>
-              </li>
-              <li role="presentation">
-                <button
-                  class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
-                  id="ai-tab"
-                  data-tabs-target="#ai"
-                  type="button"
-                  role="tab"
-                  aria-controls="ai"
-                  aria-selected="false">
-                  AI 활용반
                 </button>
               </li>
               <li role="presentation">
@@ -537,16 +537,34 @@
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
                         유펜 와튼(Wharton) Data Science
-                        <br/>
-                        Technovation Girls (테크노베이션)
-                        <br/>
-                        KSEF / ISEF
                       </th>
                       <td
                         colspan="2"
+                        rowspan="5"
                         class="border border-neutral-300/60 text-flamingo-400 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
                         개별 상담 필요
                       </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        Technovation Girls (테크노베이션)
+                      </th>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        KSEF / ISEF
+                      </th>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        코드페어
+                      </th>
                     </tr>
                   </tbody>
                 </table>

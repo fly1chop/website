@@ -7,7 +7,7 @@ module.exports = {
   '/team': '/about#team',
   '/competitions': '/competitions/sr',
   '/contests': '/courses/competitions-sr',
-  '/courses': '/courses/winterbreak',
+  '/courses': '/courses/summer',
   '/winterbreak': '/courses/winterbreak',
   '/summer': '/courses/summer',
   '/bridgelab': '/sprint/bridgelab',
