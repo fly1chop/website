@@ -47,14 +47,15 @@
               role="tablist">
               <li role="presentation">
                 <button
-                  class="inline-block cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
+                  class="inline-flex items-center gap-x-1 cursor-pointer rounded-t-xs border-b p-2 text-xs text-nowrap sm:p-4 sm:text-base"
                   id="ai-tab"
                   data-tabs-target="#ai"
                   type="button"
                   role="tab"
                   aria-controls="ai"
                   aria-selected="false">
-                  AI 활용반
+                  <span class="heroicons--star-solid text-xs"></span>
+                  AI Track
                 </button>
               </li>
               <li class="me-2" role="presentation">
@@ -756,7 +757,7 @@
               role="tabpanel"
               aria-labelledby="ai-tab">
               <div class="overflow-x-auto">
-                <h3 class="py-3 text-lg font-medium">6월 15일 개강, 추가반 오픈 예정</h3>
+                <h3 class="py-3 text-lg font-medium">AI 입문반</h3>
                 <table
                   class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
                   <thead class="bg-zinc-800 text-zinc-50">
@@ -764,7 +765,82 @@
                       <th
                         scope="col"
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
-                        Subject (4주 과정)
+                        Subject (4주 + 4주)
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Grade
+                      </th>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        수업시간
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="border border-neutral-300/60">
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="flex flex-col items-center border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        <div>
+                          초등부 AI Play Lab (Scratch)
+                          <ul class="list-disc text-left ml-6">
+                            <li>AI 웃음 참기 챌린지</li>
+                            <li>AI 댄스 배틀</li>
+                            <li>AI 도둑 잡기 미션</li>
+                          </ul>
+                        </div>
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G4 ~ G6
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        월, 수 5-7pm
+                        <br/>
+                        토, 일 1-3pm
+                      </td>
+                    </tr>
+                    <tr class="odd:bg-white even:bg-zinc-50">
+                      <th
+                        scope="row"
+                        class="flex flex-col items-center border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
+                        <div>
+                          중등부 AI Studio (Pygame)
+                        <ul class="list-disc text-left ml-6">
+                          <li>AI 게임 개발</li>
+                          <li>AI 음성 인식 컨트롤러</li>
+                          <li>AI 페이스 메이커</li>
+                        </ul>
+                        </div>
+                      </th>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        G6 ~ G8
+                      </td>
+                      <td
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        화, 목 5-7pm
+                        <br/>
+                        토, 일 3-5pm
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="overflow-x-auto">
+                <h3 class="py-3 text-lg font-medium">AI 활용반</h3>
+                <table
+                  class="w-full border-collapse rounded-xs bg-zinc-50 text-center text-sm sm:text-lg">
+                  <thead class="bg-zinc-800 text-zinc-50">
+                    <tr>
+                      <th
+                        scope="col"
+                        class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
+                        Subject (4주 + 4주)
                       </th>
                       <th
                         scope="col"
@@ -783,7 +859,7 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        포트폴리오 웹개발 (4주)
+                        포트폴리오 웹개발 (Claude)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
@@ -800,7 +876,7 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        게임 개발 (8주)
+                        게임 개발 (Claude)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
@@ -817,7 +893,7 @@
                       <th
                         scope="row"
                         class="border border-neutral-300/60 px-4 py-3 font-medium text-nowrap sm:px-6 sm:py-5">
-                        앱개발 (8주~10주)
+                        앱개발 (Claude)
                       </th>
                       <td
                         class="border border-neutral-300/60 px-4 py-3 text-nowrap sm:px-6 sm:py-5">
