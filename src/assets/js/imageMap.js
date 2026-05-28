@@ -38,6 +38,7 @@ export const imageMap = {
   'youngjoong.png': new URL('../img/team/youngjoong.png', import.meta.url),
   '2.06.jpg': new URL('../img/capstone/2.06.jpg', import.meta.url),
   '3sigma1.gif': new URL('../img/capstone/3sigma1.gif', import.meta.url),
+  'aura.png': new URL('../img/capstone/aura.png', import.meta.url),
   'char.png': new URL('../img/capstone/char.png', import.meta.url),
   'cmu-play.png': new URL('../img/capstone/cmu-play.png', import.meta.url),
   'cubs4.png': new URL('../img/capstone/cubs4.png', import.meta.url),
