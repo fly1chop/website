@@ -11,5 +11,7 @@ module.exports = {
   '/winterbreak': '/courses/winterbreak',
   '/summer': '/courses/summer',
   '/bridgelab': '/sprint/bridgelab',
-  '/unison': '/capstone/unison',
+  '/aura': '/capstone/aura',
+  '/resq': '/capstone/resq',
+  '/bridgemun': '/capstone/bridgemun',
 };

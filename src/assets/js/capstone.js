@@ -1,4 +1,4 @@
-import capstone from '../lib/capstone.json';
+import capstone from '../lib/capstone-copy.json';
 import { imageMap } from './imageMap';
 
 const $capstoneOngoingList = document.getElementById('capstone-ongoing-list');
