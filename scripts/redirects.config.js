@@ -14,4 +14,7 @@ module.exports = {
   '/aura': '/capstone/aura',
   '/resq': '/capstone/resq',
   '/bridgemun': '/capstone/bridgemun',
+  '/aura_en': '/capstone/aura_en',
+  '/resq_en': '/capstone/resq_en',
+  '/bridgemun_en': '/capstone/bridgemun_en',
 };
