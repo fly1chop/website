@@ -1,6 +1,7 @@
 import 'flowbite';
 import { Drawer } from 'flowbite';
 import { LINKS } from '../lib/constants';
+import navJson from '../lib/nav.json';
 
 (function loadGoogleAnalytics() {
   const GA_MEASUREMENT_ID = 'G-C1E4J0JTPV';
@@ -63,11 +64,64 @@ async function initHeader() {
   initHeaderScroll();
 }
 
+function buildDesktopNavItem(item) {
+  if (!item.children) {
+    return `
+          <li>
+            <a href="${item.href}" class="hover-transition text-white hover:text-zinc-400">${item.name}</a>
+          </li>`;
+  }
+  const slug = item.name.toLowerCase().replace(/\s+/g, '-');
+  const skidding = item.dropdownSkidding ?? 0;
+  return `
+          <li class="inline-flex items-center gap-1">
+            <a href="${item.children[0].href}" class="hover-transition text-white hover:text-zinc-400">${item.name}</a>
+            <button
+              data-dropdown-toggle="${slug}-dropdown"
+              data-dropdown-offset-skidding="${skidding}"
+              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
+              <span class="heroicons--chevron-down-20-solid"></span>
+            </button>
+            <div id="${slug}-dropdown" class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
+              <ul class="text-zinc-500">
+                ${item.children.map((child) => `
+                <li><a href="${child.href}" class="block px-4 py-2 hover:bg-zinc-100">${child.name}</a></li>`).join('')}
+              </ul>
+            </div>
+          </li>`;
+}
+
+function buildMobileNavItem(item) {
+  if (!item.children) {
+    return `
+          <li>
+            <a href="${item.href}" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">${item.name}</a>
+          </li>`;
+  }
+  const slug = item.name.toLowerCase().replace(/\s+/g, '-');
+  return `
+          <li data-accordion="collapse">
+            <button
+              type="button"
+              id="accordion-${slug}-button"
+              data-accordion-target="#accordion-${slug}"
+              data-active-classes="bg-zinc-100"
+              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
+              <span>${item.name}</span>
+              <span data-accordion-icon class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
+            </button>
+            <div id="accordion-${slug}" class="hidden border-b border-neutral-200" aria-labelledby="accordion-${slug}-button">
+              <ul class="flex flex-col text-base text-zinc-500">
+                ${item.children.map((child) => `
+                <li><a href="${child.href}" class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">${child.name}</a></li>`).join('')}
+              </ul>
+            </div>
+          </li>`;
+}
+
 function injectHeader() {
   const $headerContainer = document.getElementById('header-container');
   if (!$headerContainer) return;
-
-  const BASE_PATH = '/';
 
   try {
     const html = `
@@ -76,121 +130,11 @@ function injectHeader() {
       class="transition-transform duration-300 fixed sm:absolute start-0 top-0 z-20 w-full sm:bg-linear-to-b from-black/90 to-transparent sm:pb-28">
       <nav
         class="mx-auto flex max-w-7xl items-center justify-end px-4 pt-4 md:justify-between lg:px-12">
-        <a href="${BASE_PATH}" class="hidden w-16 md:block">
+        <a href="/" class="hidden w-16 md:block">
           <img class="logo" src="${new URL('../img/logo_en_white.png', import.meta.url)}" alt="" />
         </a>
         <ul class="hidden items-center space-x-8 md:flex">
-          <li class="inline-flex items-center gap-1">
-            <a href="${BASE_PATH}about" class="hover-transition text-white hover:text-zinc-400">About</a>
-            <button
-              id="aboutDropdownBtn"
-              data-dropdown-toggle="about-dropdown"
-              data-dropdown-offset-skidding="-10"
-              class="inline-flex size-5 cursor-pointer items-center justify-center text-zinc-400">
-              <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
-
-            <!-- about dropdown -->
-            <div id="about-dropdown" class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
-              <ul class="text-zinc-500" aria-labelledby="aboutDropdownBtn">
-                <li>
-                  <a href="${BASE_PATH}about" class="block px-4 py-2 hover:bg-zinc-100">About Us</a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}about#team" class="block px-4 py-2 hover:bg-zinc-100">Team</a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}about#news" class="block px-4 py-2 hover:bg-zinc-100">News</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="inline-flex items-center gap-1">
-            <a href="${BASE_PATH}courses" class="hover-transition text-white hover:text-zinc-400">Courses</a>
-            <button
-              data-dropdown-toggle="courses-dropdown"
-              data-dropdown-offset-skidding="10"
-              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
-              <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
-
-            <!-- courses dropdown -->
-            <div
-              id="courses-dropdown"
-              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
-              <ul class="text-zinc-500">
-                <li>
-                  <a href="${BASE_PATH}courses/summer" class="block px-4 py-2 hover:bg-zinc-100">
-                    2026 여름 특강
-                  </a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}courses/winterbreak" class="block px-4 py-2 hover:bg-zinc-100">
-                    2025 겨울방학 특강
-                  </a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}courses/fall" class="block px-4 py-2 hover:bg-zinc-100">
-                    2025 가을학기 정규반
-                  </a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}courses/competitions-jr" class="block px-4 py-2 hover:bg-zinc-100">
-                    초등부 대회
-                  </a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}courses/competitions-sr" class="block px-4 py-2 hover:bg-zinc-100">
-                    중·고등부 대회
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="inline-flex items-center gap-1">
-            <a href="${BASE_PATH}competitions" class="hover-transition text-white hover:text-zinc-400">Competitions</a>
-            <button
-              data-dropdown-toggle="competitions-dropdown"
-              data-dropdown-offset-skidding="-60"
-              class="cursor-pointer inline-flex size-5 items-center justify-center text-zinc-400">
-              <span class="heroicons--chevron-down-20-solid"></span>
-            </button>
-
-            <!-- competitions dropdown -->
-            <div
-              id="competitions-dropdown"
-              class="z-20 hidden overflow-hidden rounded-sm bg-white shadow-sm">
-              <ul class="text-zinc-500">
-                <li>
-                  <a href="${BASE_PATH}competitions/jr" class="block px-4 py-2 hover:bg-zinc-100">
-                    초등부 대회
-                  </a>
-                </li>
-                <li>
-                  <a href="${BASE_PATH}competitions/sr" class="block px-4 py-2 hover:bg-zinc-100">
-                    중·고등부 대회
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="${BASE_PATH}capstone" class="hover-transition text-white hover:text-zinc-400">
-              Capstone
-            </a>
-          </li>
-          <li>
-            <a href="${BASE_PATH}sprint" class="hover-transition text-white hover:text-zinc-400">
-              Sprint
-            </a>
-          </li>
-          <li>
-            <a
-              href="${BASE_PATH}personalprojects"
-              class="hover-transition text-white hover:text-zinc-400">
-              Personal Projects
-            </a>
-          </li>
+          ${navJson.map(buildDesktopNavItem).join('')}
         </ul>
         <a href="#" class="link--blog btn hidden md:flex">
           <span>Blog</span>
@@ -214,170 +158,9 @@ function injectHeader() {
         <span id="drawer-label" class="sr-only">mobile navigation menu</span>
         <ul class="mt-20 flex flex-col text-lg text-zinc-500">
           <li>
-            <a
-              href="/"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              Home
-            </a>
+            <a href="/" class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">Home</a>
           </li>
-          <li data-accordion="collapse">
-            <button
-              type="button"
-              id="accordion-about-button"
-              data-accordion-target="#accordion-about"
-              data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal">
-              <span>About</span>
-              <span
-                data-accordion-icon
-                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
-            </button>
-            <div
-              id="accordion-about"
-              class="hidden border-b border-neutral-200"
-              aria-labelledby="accordion-about-button">
-              <ul class="flex flex-col text-base text-zinc-500">
-                <li>
-                  <a
-                    href="${BASE_PATH}about"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}about#team"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}about#news"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    News
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <!-- <li>
-            <a
-              href="${BASE_PATH}courses"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              Courses
-            </a>
-          </li> -->
-          <li data-accordion="collapse">
-            <button
-              type="button"
-              id="accordion-courses-button"
-              data-accordion-target="#accordion-courses"
-              data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              <span>Courses</span>
-              <span
-                data-accordion-icon
-                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
-            </button>
-            <div
-              id="accordion-courses"
-              class="hidden border-b border-neutral-200"
-              aria-labelledby="accordion-courses-button">
-              <ul class="flex flex-col text-base text-zinc-500">
-                <li>
-                  <a
-                    href="${BASE_PATH}courses/summer"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    2026 여름 특강
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}courses/winterbreak"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    2025 겨울방학 특강
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}courses/fall"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    2025 가을학기 정규반
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}courses/competitions-jr"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    초등부 대회
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}courses/competitions-sr"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    중·고등부 대회
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li data-accordion="collapse">
-            <button
-              type="button"
-              id="accordion-competitions-button"
-              data-accordion-target="#accordion-competitions"
-              data-active-classes="bg-zinc-100"
-              class="flex w-full cursor-pointer items-center justify-between px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              <span>Competitions</span>
-              <span
-                data-accordion-icon
-                class="heroicons--chevron-up-20-solid rotate-180 text-zinc-400"></span>
-            </button>
-            <div
-              id="accordion-competitions"
-              class="hidden border-b border-neutral-200"
-              aria-labelledby="accordion-competitions-button">
-              <ul class="flex flex-col text-base text-zinc-500">
-                <li>
-                  <a
-                    href="${BASE_PATH}competitions/jr"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    초등부 대회
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="${BASE_PATH}competitions/sr"
-                    class="block px-7 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-                    중·고등부 대회
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a
-              href="${BASE_PATH}capstone"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              Capstone
-            </a>
-          </li>
-          <li>
-            <a
-              href="${BASE_PATH}sprint"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              Sprint
-            </a>
-          </li>
-          <li>
-            <a
-              href="${BASE_PATH}personalprojects"
-              class="block px-4 py-3 hover:bg-zinc-100 hover:font-normal active:bg-zinc-100 active:font-normal">
-              Personal Project
-            </a>
-          </li>
+          ${navJson.map(buildMobileNavItem).join('')}
         </ul>
         <div class="flex px-4 py-3">
           <a href="#" class="link--blog btn w-full justify-between text-lg sm:w-auto">

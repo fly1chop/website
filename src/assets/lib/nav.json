@@ -1,0 +1,36 @@
+[
+  {
+    "name": "About",
+    "href": "/about",
+    "dropdownSkidding": -10,
+    "children": [
+      { "name": "About Us", "href": "/about" },
+      { "name": "Team", "href": "/about#team" },
+      { "name": "News", "href": "/about#news" }
+    ]
+  },
+  {
+    "name": "Courses",
+    "href": "/courses",
+    "dropdownSkidding": 10,
+    "children": [
+      { "name": "2026 여름 특강", "href": "/courses/summer" },
+      { "name": "2026 여름/가을 대회 트랙", "href": "/courses/competitions-2026" },
+      { "name": "초등부 대회", "href": "/courses/competitions-jr" },
+      { "name": "중·고등부 대회", "href": "/courses/competitions-sr" }
+    ]
+  },
+  {
+    "name": "Competitions",
+    "href": "/competitions",
+    "dropdownSkidding": -60,
+    "children": [
+      { "name": "2026 여름/가을 대회", "href": "/competitions/2026" },
+      { "name": "초등부 대회", "href": "/competitions/jr" },
+      { "name": "중·고등부 대회", "href": "/competitions/sr" }
+    ]
+  },
+  { "name": "Capstone", "href": "/capstone" },
+  { "name": "Sprint", "href": "/sprint" },
+  { "name": "Personal Projects", "href": "/personalprojects" }
+]
