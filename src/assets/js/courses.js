@@ -5,6 +5,7 @@ const $courseSubMenu = document.getElementById('courses-sub-menu');
 const courseSubMenuHtml = `
   <ul class="mx-auto mt-auto flex h-full max-w-7xl gap-6 overflow-x-auto px-4 text-sm sm:text-base lg:px-12">
     ${courseSubMenuJson
+      .filter((i) => !i.hide)
       .map(
         (item) => `
         <a
