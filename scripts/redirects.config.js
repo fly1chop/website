@@ -17,5 +17,5 @@ module.exports = {
   '/aura_en': '/capstone/aura_en',
   '/resq_en': '/capstone/resq_en',
   '/bridgemun_en': '/capstone/bridgemun_en',
-  '/contactUs': 'contact-us',
+  '/contactUs': '/contact-us',
 };
