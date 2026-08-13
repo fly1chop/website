@@ -7,7 +7,7 @@ module.exports = {
   '/team': '/about#team',
   '/competitions': '/competitions/sr',
   '/contests': '/courses/competitions-sr',
-  '/courses': '/courses/summer',
+  '/courses': '/courses/fall',
   '/winterbreak': '/courses/winterbreak',
   '/summer': '/courses/summer',
   '/bridgelab': '/sprint/bridgelab',
@@ -18,4 +18,5 @@ module.exports = {
   '/resq_en': '/capstone/resq_en',
   '/bridgemun_en': '/capstone/bridgemun_en',
   '/contactUs': '/contact-us',
+  '/fall': '/courses/fall',
 };
