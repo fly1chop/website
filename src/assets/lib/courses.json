@@ -1,7 +1,12 @@
 [
   {
+    "name": "가을학기 정규반",
+    "href": "/courses/fall"
+  },
+  {
     "name": "여름방학 특강",
-    "href": "/courses/summer"
+    "href": "/courses/summer",
+    "hide": true
   },
   {
     "name": "2026 여름/가을 대회 트랙",
