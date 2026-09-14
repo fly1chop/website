@@ -28,29 +28,11 @@
   },
   {
     "category": "staff",
-    "name": "Elena",
-    "school": "",
-    "position": "Project Manager",
-    "field": [],
-    "image": "elena.png",
-    "isMain": false
-  },
-  {
-    "category": "staff",
     "name": "Young Joong",
     "school": "",
     "position": "Project Manager",
     "field": [],
     "image": "youngjoong.png",
-    "isMain": false
-  },
-  {
-    "category": "staff",
-    "name": "Rachel",
-    "school": "",
-    "position": "Education Manager",
-    "field": [],
-    "image": "Rachel.jpg",
     "isMain": false
   },
   {
@@ -213,15 +195,6 @@
     "position": "",
     "field": ["풀스택 개발", "알고리즘"],
     "image": "sunny.jpg",
-    "isMain": false
-  },
-  {
-    "category": "instructor",
-    "name": "Taegyun",
-    "school": "부산외국어대학교",
-    "position": "",
-    "field": ["임베디드 소프트웨어"],
-    "image": "Taegyun.jpg",
     "isMain": false
   },
   {
