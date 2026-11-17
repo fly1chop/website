@@ -28,15 +28,6 @@
   },
   {
     "category": "staff",
-    "name": "Young Joong",
-    "school": "",
-    "position": "Project Manager",
-    "field": [],
-    "image": "youngjoong.png",
-    "isMain": false
-  },
-  {
-    "category": "staff",
     "name": "Duke",
     "school": "",
     "position": "Education Manager",
@@ -69,15 +60,6 @@
     "position": "",
     "field": ["데이터 사이언스", "알고리즘", "UI/UX", "CAE"],
     "image": "Blaire.jpg",
-    "isMain": false
-  },
-  {
-    "category": "instructor",
-    "name": "Dongmin",
-    "school": "연세대학교",
-    "position": "",
-    "field": ["로보틱스"],
-    "image": "dongmin.png",
     "isMain": false
   },
   {
@@ -142,15 +124,6 @@
     "field": ["알고리즘", "데이터 사이언스"],
     "image": "kijun.jpg",
     "isMain": true
-  },
-  {
-    "category": "instructor",
-    "name": "Kikang",
-    "school": "서울과학기술대학교",
-    "position": "",
-    "field": ["로보틱스"],
-    "image": "Kikang.jpg",
-    "isMain": false
   },
   {
     "category": "instructor",
